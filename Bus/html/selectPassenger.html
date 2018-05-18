@@ -34,39 +34,53 @@
     {{ if (it && it.length > 0){ }}
     {{ for (var i = 0; i < it.length; i++){ }}
         <li class="select-passenger-list-item bottom-border">
-            <input type="checkbox"/>
+            <input type="checkbox" name="select_passenger"/>
             <span class="type">{{=it[i].type}}</span>
             <span class="name">{{=it[i].name}}</span>
             <span class="id-number">身份证{{=it[i].idNumber}}</span>
         </li>
     {{ } }}
-    {{ } else { }}
-        <li>没有数据。</li>
     {{ } }}
 </script>
 <script type="text/javascript" src="../js/jquery-1.8.1.min.js"></script>
 <script type="text/javascript" src="../js/doT.js"></script>
 <script type="text/javascript">
     $(function () {
-         var data = localStorage.getItem("data");
-         console.log(data);
-         var json = JSON.parse(data);
-         console.log(json.name);
+        var passenger_list_storage = localStorage.getItem("passenger_list");
+        if (passenger_list_storage != null){
+            passenger_list_storage = JSON.parse(passenger_list_storage);
+        }
+
         //添加新的乘客
         $(".select-passenger-head-add").bind("click",function(){
             location.href = './addPassenger.html';
         });
+
         //保存选中的乘客
         $(".select-passenger-btn").bind("click",function(){
+            var select_passenger_list = [];
+            var select_passenger = document.getElementsByName('select_passenger');
+            for (var i = 0; i<select_passenger.length; i++) {
+                if(select_passenger[i].checked) {
+                    console.log("checked + " + i);
+                    select_passenger_list.push(passenger_list_storage[i]);
+                }
+            }
+            console.log("select_passenger_list + " + JSON.stringify(select_passenger_list));
+            if (select_passenger_list.length > 0) {
+                localStorage.setItem("select_passenger_list", JSON.stringify(select_passenger_list));
+            }
             window.history.back();
             window.location.reload();
         });
+
+        //渲染可以选择的乘客列表
         var template=document.getElementById('template_1').innerHTML;
-        var obj=[{type: '成人票', name:'张三', idNumber:'500230451515151515'},
-            {type: '成人票', name:'李四', idNumber:'560254505556234592'},
-            {type: '儿童票', name:'小米', idNumber:'142566598992646266'}];
+//        var obj=[{type: '成人票', name:'张三', idNumber:'500230451515151515'},
+//            {type: '成人票', name:'李四', idNumber:'560254505556234592'},
+//            {type: '儿童票', name:'小米', idNumber:'142566598992646266'}];
         //传递一个有数据的数组进去
-        document.getElementById('showInfo').innerHTML = doT.template( template )( obj );
+        document.getElementById('showInfo').innerHTML = doT.template( template )( passenger_list_storage );
     });
 </script>
 </html>

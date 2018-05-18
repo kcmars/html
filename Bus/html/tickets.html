@@ -45,11 +45,11 @@
                 <div class="tickets-content-msg">
                     <div class="tickets-content-row bottom-border">
                         <span class="tip">手机号：</span>
-                        <input type="number" value="" placeholder="乘车人的联系方式"/>
+                        <input id="phone" type="number" value="" placeholder="乘车人的联系方式"/>
                     </div>
                     <div class="tickets-content-row">
                         <span class="tip">行程备注：</span>
-                        <input type="text" value="" placeholder="备注信息"/>
+                        <input id="note-info" type="text" value="" placeholder="备注信息"/>
                     </div>
                 </div>
             </div>
@@ -78,50 +78,72 @@
 <script type="text/javascript" src="../js/doT.js"></script>
 <script type="text/javascript" src="../js/my-loading-alert-js.js"></script>
 <script type="text/javascript" src="../js/main.js"></script>
+<script type="text/javascript" src="../js/my-toast-alert-js.js"></script>
 <script type="text/javascript">
-    var obj=[{type: '成人票', name:'张三', idNumber:'500230451515151515'},
-        {type: '成人票', name:'李四', idNumber:'560254505556234592'},
-        {type: '儿童票', name:'小米', idNumber:'142566598992646266'}];
+    var select_passenger_list;
+//    var obj=[{type: '成人票', name:'张三', idNumber:'500230451515151515'},
+//        {type: '成人票', name:'李四', idNumber:'560254505556234592'},
+//        {type: '儿童票', name:'小米', idNumber:'142566598992646266'}];
     $(function () {
 //        getRequest(getParams);
 //        loadAlertShow("等到中...");
-        console.log(localStorage.getItem("data"));
+        localStorage.removeItem("tickets-info");
 
         //添加乘客
         $(".tickets-content-add-id").bind("click",function(){
-            var data = {
-                name:'参数1',
-                value:'110',
-                arr: ['xx','cc','bb']
-            };
-//            console.log(data);
-            localStorage.setItem("data", JSON.stringify(data));
             location.href = './selectPassenger.html';
         });
+
         //预订购票
         $(".tickets-btn").bind("click",function(){
-            var data = localStorage.getItem("data");
-            console.log(data);
+            var phone = $("#phone").val();
+            var noteInfo = $("#note-info").val();
+            if (select_passenger_list == null || select_passenger_list.length < 1) {
+                toastAlertShow("请至少添加一位乘客");
+                return;
+            }
+            if (phone == "") {
+                toastAlertShow("请输入联系电话");
+                return;
+            }
+            var ticketsInfo = [
+                {passenger_list: select_passenger_list},
+                {phone: phone},
+                {noteInfo: noteInfo}
+            ];
+            localStorage.setItem("tickets-info", JSON.stringify(ticketsInfo));
             location.href = './ticketDetails.html';
         });
+
         //详情
         $(".tickets-head-info-detail").bind("click",function(){
             location.href = './refundInstructions.html';
         });
-        var template=document.getElementById('template_passenger').innerHTML;
 
+        //渲染选择的乘客列表
+        var template=document.getElementById('template_passenger').innerHTML;
+        select_passenger_list = localStorage.getItem("select_passenger_list");
+        console.log("select_passenger_list + " + select_passenger_list);
+        if (select_passenger_list != null){
+            select_passenger_list = JSON.parse(select_passenger_list);
+        }
         //传递一个有数据的数组进去
-        document.getElementById('passenger-list').innerHTML = doT.template( template )( obj );
+        document.getElementById('passenger-list').innerHTML = doT.template( template )( select_passenger_list );
     });
+
+    //获取app传递过来的参数
     function getParams() {
         alert(param + "==" + "===" + param.user_id);
         console.log(param);
     }
+
+    //删除选择的乘客
     function remove(index) {
-        obj.splice(index, 1);
+        select_passenger_list.splice(index, 1);
+        localStorage.setItem("select_passenger_list", JSON.stringify(select_passenger_list));
         var template=document.getElementById('template_passenger').innerHTML;
         //传递一个有数据的数组进去
-        document.getElementById('passenger-list').innerHTML = doT.template( template )( obj );
+        document.getElementById('passenger-list').innerHTML = doT.template( template )( select_passenger_list );
     }
 </script>
 </html>
