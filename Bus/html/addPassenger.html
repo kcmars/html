@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Language" content="zh-CN"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="yes" name="apple-touch-fullscreen">
+    <meta content="telephone=no,email=no" name="format-detection">
+    <title>添加乘客</title>
+    <script type="text/javascript" src="../js/auto-size.js"></script>
+    <link href="../css/main.css" type="text/css" rel="stylesheet">
+    <link href="../css/add-passenger-css.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+<div class="main">
+    <div class="add-passenger-content">
+        <div class="add-passenger-select-type">
+            <div class="add-passenger-type add-passenger-type-selected" onclick="selectType(this, 1)">
+                成人票<br/><span>全价</span>
+            </div>
+            <div class="add-passenger-type" onclick="selectType(this, 2)">
+                儿童票<br/><span>1.2米-1.5米之间</span>
+            </div>
+        </div>
+        <div class="add-passenger-row bottom-border">
+            <span class="tip">姓名</span>
+            <input type="text" value="" placeholder="与证件姓名一致"/>
+        </div>
+        <div class="add-passenger-row bottom-border">
+            <span class="tip">身份证</span>
+            <input type="number" value="" placeholder="乘车人身份证号码"/>
+        </div>
+        <div class="add-passenger-tip none">
+            1.身高1.2米-1.5米的儿童，可购买儿童票。<br/>
+            2.身高1.5米以上的儿童，须购买全价票。<br/>
+            3.身高1.5米以下的儿童不能独自乘车，须成人陪同。<br/>
+            4.请根据儿童实际身高购票，检票乘车时售票员会测量身高，若因身高不符需补票或无法乘车，平台不承担此责任。
+        </div>
+    </div>
+    <div class="add-passenger-btn">
+        保存
+    </div>
+</div>
+</body>
+<script type="text/javascript" src="../js/jquery-1.8.1.min.js"></script>
+<script type="text/javascript" src="../js/main.js"></script>
+<script type="text/javascript">
+    $(function () {
+        //保存
+        $(".add-passenger-btn").bind("click",function(){
+            window.history.back();
+            window.location.reload();
+        });
+    });
+    //选择票种
+    function selectType(obj, index) {
+        $(obj).addClass("add-passenger-type-selected").siblings().removeClass("add-passenger-type-selected");
+        if (index === 1) {
+            $(".add-passenger-tip").hide();
+        } else {
+            $(".add-passenger-tip").show();
+        }
+    }
+</script>
+</html>

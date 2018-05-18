@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Language" content="zh-CN"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="yes" name="apple-touch-fullscreen">
+    <meta content="telephone=no,email=no" name="format-detection">
+    <title>购票详情</title>
+    <script type="text/javascript" src="../js/auto-size.js"></script>
+    <link href="../css/main.css" type="text/css" rel="stylesheet">
+    <link href="../css/ticket-details-css.css" type="text/css" rel="stylesheet">
+    <link href="../css/my-alert-css.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+    <div class="ticket-details-main">
+        <div class="ticket-details-head">
+            <div class="tickets-details-head-time">01月10日 09:00 出发</div>
+            <div class="tickets-details-head-address">
+                <span>石羊场汽车站</span>
+                <img src="../img/icon_white_right_arrow.png" />
+                <span>德阳市人民政务中心</span>
+            </div>
+            <div class="tickets-details-head-info">
+                <div class="item passenger">
+                    <span>乘车人</span>
+                    <img src="../img/icon_white_down_arrow.png"/>
+                </div>
+                <div class="item m-l-r-5 phone">
+                    <span>联系电话</span>
+                    <img src="../img/icon_white_down_arrow.png"/>
+                </div>
+                <div class="item">
+                    <span>无行程备注</span>
+                </div>
+            </div>
+        </div>
+        <ul>
+            <li class="ticket-details-list-item m-t-10">
+                <div class="ticket-details-list-item-head bottom-border">
+                    <img class="head" src="../img/icon_head.png">
+                    <div class="content">
+                        <span class="name">大巴车司机</span>
+                        <span class="type">中型客车</span>
+                    </div>
+                    <img class="img-btn" src="../img/call.png">
+                    <img class="img-btn" src="../img/position.png">
+                </div>
+                <div class="ticket-details-list-item-footer">
+                    <div class="item-footer-left">
+                        <div class="row">
+                            <img src="../img/icon-time.png">
+                            <span>01-10 09:00</span>
+                        </div>
+                        <div class="row">
+                            <div class="icon1"></div>
+                            <span>石羊场汽车站</span>
+                        </div>
+                        <div class="row">
+                            <div class="icon2"></div>
+                            <span>德阳市</span>
+                        </div>
+                    </div>
+                    <div class="item-footer-right">
+                        <div class="item-footer-right-btn">
+                            已预订
+                        </div>
+                        <span class="evaluation m-t-10">
+                            评价
+                        </span>
+                    </div>
+                </div>
+            </li>
+        </ul>
+        <div class="pop-box none">
+            <div class="pop-bg"></div>
+            <div class="pop-content">
+                <div id="pop-content" class="pop-content-l-5">
+                    <img src="../img/icon_gray_close.png">
+                    <ul id="pop-list">
+                        <li class="pop-content-list-item">
+                            <span>司机</span>
+                            <span>李四</span>
+                            <span>18787878787</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script type="text/template" charset="utf-8" id='template_pop-list'>
+    {{ if (it && it.length > 0){ }}
+    {{ for (var i = 0; i < it.length; i++){ }}
+    {{ if (i==0) { }}
+        <li class="pop-content-list-item">
+    {{ } else { }}
+        <li class="pop-content-list-item top-border">
+    {{ } }}
+        {{ if (it[i].address != undefined) { }}
+            <span>{{=it[i].address}}</span>
+        {{ } }}
+        {{ if (it[i].flow_user_type != undefined) { }}
+            <span>{{=it[i].type}}</span>
+        {{ } }}
+        {{ if (it[i].flow_user_name != undefined) { }}
+            <span>{{=it[i].name}}</span>
+        {{ } }}
+        {{ if (it[i].flow_user_phone != undefined) { }}
+            <span>{{=it[i].phone}}</span>
+        {{ } }}
+        {{ if (it[i].name != undefined) { }}
+            <span>{{=it[i].name}}</span>
+        {{ } }}
+        {{ if (it[i].phone != undefined) { }}
+            <span>{{=it[i].phone}}</span>
+        {{ } }}
+    </li>
+    {{ } }}
+    {{ } }}
+</script>
+<script type="text/javascript" src="../js/jquery-1.8.1.min.js"></script>
+<script type="text/javascript" src="../js/doT.js"></script>
+<script type="text/javascript" src="../js/my-tip-alert-js.js"></script>
+<script type="text/javascript">
+    $(function () {
+        $(".item-footer-right-btn").bind("click",function(){
+            var mHtml = "";
+            //预订
+//            mHtml += '<div class="my-alert-html bottom-border"><div class="my-alert-html-left">';
+//            mHtml += '<span>01-10</span>';
+//            mHtml += '<span>09:00</span>';
+//            mHtml += '</div><div class="my-alert-html-right"><div class="my-alert-html-right-column"><div class="icon-point"><span class="icon1"></span></div>';
+//            mHtml += '<span class="text">石羊场汽车站</span>';
+//            mHtml += '</div><div class="my-alert-html-right-column"><div class="icon-point"><span class="icon2"></span></div>';
+//            mHtml += '<span class="text">德阳市</span>';
+//            mHtml += '</div><div class="my-alert-html-right-column"><img src="../img/icon_bus.png">';
+//            mHtml += '<span class="text">中型客车</span>';
+//            mHtml += '</div></div></div>';
+//            towBtnAlert('已预订', mHtml, '车票已预订成功，正在等待司机或售票员确认，可主动联系司机或售票员，请求确认售票',function(r){
+//                if(r){
+//                    //...点确定之后执行的内容
+//                }
+//            }, '放弃购票', '提醒售票');
+
+            //支付
+//            mHtml += '<div class="my-alert-html bottom-border"><div class="my-alert-html-pay-left"><img src="../img/icon_money.png">';
+//            mHtml += '<span class="money">36</span>';
+//            mHtml += '</div><div class="my-alert-html-pay-right"><span>支付计时：</span>';
+//            mHtml += '<span class="timer">30:00</span>';
+//            mHtml += '</div></div>';
+//
+//            towBtnAlert('去支付', mHtml, '1.司机或售票员已同意本次购票，请在提示支付时间内完成支付，否则系统会自动取消本次购票。<br/>' +
+//                '2.距离行程发车时间还剩大约<span class="blue-color">6小时30分</span>，请确保有足够的时间抵达上车地点，并及时验票、上车等，以免耽误您的行程',function(r){
+//                if(r){
+//                    //...点确定之后执行的内容
+//                }
+//            }, '放弃购票', '去支付', '#FF8C00');
+
+            //已付款
+            mHtml += '<div class="my-alert-qr-html"><div class="my-alert-qr-content bottom-border"><div class="my-alert-qr-html-left"><div class="my-alert-qr-html-row"><img src="../img/icon-time.png">';
+            mHtml += '<span class="text">01-10 09:30</span>';
+            mHtml += '</div><div class="my-alert-qr-html-row"><div class="icon-point"><span class="icon1"></span></div>';
+            mHtml += '<span class="text">石羊场汽车站</span>';
+            mHtml += '</div><div class="my-alert-qr-html-row"><div class="icon-point"><span class="icon2"></span></div>';
+            mHtml += '<span class="text">德阳市火车站</span>';
+            mHtml += '</div><div class="my-alert-qr-html-row"><img src="../img/icon-person.png">';
+            mHtml += '<span class="text">1位成人、1位儿童</span>';
+            mHtml += '</div></div><div class="my-alert-qr-html-right"><img src="../img/icon_money.png">';
+            mHtml += '<span class="money">36</span>';
+            mHtml += '</div></div>';
+            mHtml += '<img class="my-qr" src="../img/icon_qr.png"></div>';
+
+            towBtnAlert('已付款', mHtml, '1.司机或售票员已同意本次购票，请在提示支付时间内完成支付，否则系统会自动取消本次购票。<br/>' +
+                '2.距离行程发车时间还剩大约<span class="blue-color">6小时30分</span>，请确保有足够的时间抵达上车地点，并及时验票、上车等，以免耽误您的行程',function(r){
+                if(r){
+                    //...点确定之后执行的内容
+                }
+            }, '退票', '完成行程');
+
+            //已验票
+//            mHtml += '<div class="my-alert-check-in-html">恭喜您，已扫码验票成功！</div>';
+//            oneBtnAlert('已验票', mHtml,
+//                '请在到达目的地后，点击“完成行程”即可完成本次行程（完成行程也可在乘客界面中点击“我-行程-客运大巴”' +
+//                '页面中的“完成”即可完成本次行程）<br/>'+
+//                '若行程结束后，乘客忘记点击“完成行程”，系统将以出发时间为计时的2天后，自动默认为乘客已到达目的地。届时将结束本次行程。'
+//                ,function(r){
+//                    if(r){
+//                        //...点确定之后执行的内容
+//                    }
+//            }, '完成行程');
+
+        });
+        $(".passenger").bind("click",function(){
+            $("#pop-content").addClass("pop-content-l-5").removeClass("pop-content-l-33");
+            var obj = [{name: '小小白'},
+                {name: '米老鼠'},
+                {name: '龟儿子'}];
+            var template=document.getElementById('template_pop-list').innerHTML;
+            //传递一个有数据的数组进去
+            document.getElementById('pop-list').innerHTML = doT.template( template )( obj );
+            $(".pop-box").show();
+        });
+        $(".phone").bind("click",function(){
+            $("#pop-content").addClass("pop-content-l-33").removeClass("pop-content-l-5");
+            var obj = [{phone: '13401010101'},
+                {phone: '13203030303'},
+                {phone: '18595959595'}];
+            var template=document.getElementById('template_pop-list').innerHTML;
+            //传递一个有数据的数组进去
+            document.getElementById('pop-list').innerHTML = doT.template( template )( obj );
+            $(".pop-box").show();
+        });
+        $(".pop-box, #pop-content>img").bind("click",function(){
+           $(".pop-box").hide();
+        });
+    });
+</script>
+</html>

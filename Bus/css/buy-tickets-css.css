@@ -1,0 +1,145 @@
+.buy-tickets-head {
+    background-color: white;
+    padding: 0.28rem;
+}
+.buy-tickets-head-time {
+    font-size: 0.42rem;
+    color: #333333;
+}
+.buy-tickets-head-address {
+    font-size: 0.37rem;
+    color: #ffad18;
+    padding: 0.28rem 0;
+}
+.buy-tickets-head-address img {
+    width: 0.56rem;
+    height: auto;
+}
+.buy-tickets-head-info {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 0.28rem 0 0 0;
+}
+.buy-tickets-head-info .buy-tickets-head-info-refund {
+    background-color: #e2e2e9;
+    padding: 0.09rem 0.23rem;
+    border-radius: 0.46rem;
+    font-size: 0.28rem;
+    color: #6d6d6d;
+}
+.buy-tickets-head-info .buy-tickets-head-info-refund-tip {
+    font-size: 0.30rem;
+    flex: 1;
+    color: #6d6d6d;
+    padding: 0.09rem 0.23rem;
+}
+.buy-tickets-head-info .buy-tickets-head-info-detail {
+    font-size: 0.37rem;
+    color: #1fb1ff;
+}
+.buy-tickets-content {
+    margin-top: 0.23rem;
+}
+.buy-tickets-content .buy-tickets-content-id {
+    background-color: white;
+    padding: 0.28rem;
+}
+.buy-tickets-content-id .buy-tickets-content-id-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0.37rem 0.12rem;
+}
+.buy-tickets-content-id-list .type {
+    font-size: 0.35rem;
+    color: #1fb1ff;
+}
+.buy-tickets-content-id-list .name {
+    font-size: 0.35rem;
+    color: #66676f;
+}
+.buy-tickets-content-id-list .id-number {
+    font-size: 0.35rem;
+    color: #9b9b9b;
+}
+.buy-tickets-content {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+.buy-tickets-content-row {
+    display: flex;
+    flex-direction: row;
+    background-color: white;
+    margin-top: 0.23rem;
+    padding: 0.37rem 0.35rem;
+    justify-content: space-between;
+    font-size: 0.37rem;
+}
+.buy-tickets-content-row-text {
+    font-size: 0.35rem;
+    color: #66676f;
+    padding: 0.02rem 0.28rem;
+}
+.buy-tickets-content-row-text span {
+    font-size: 0.37rem;
+    color: #1fb1ff;
+}
+.ticket-price {
+    background-color: white;
+    padding: 0.12rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.ticket-price img {
+    width: 0.4rem;
+    height: 0.4rem;
+    margin-left: 0.20rem;
+}
+.ticket-price input {
+    flex: 1;
+    border: none;
+    font-size: 0.37rem;
+    text-align: left;
+    margin-left: 0.35rem;
+    padding: 0.28rem 0.18rem;
+}
+.reference-price {
+    font-size: 0.37rem;
+    color: #66676f;
+}
+.reference-price span {
+    font-size: 0.37rem;
+    color: #f21d20;
+}
+.buy-tickets-agreement {
+    font-size: 0.30rem;
+    color: #91929a;
+    text-align: center;
+}
+.buy-tickets-agreement a {
+    font-size: 0.30rem;
+    color: #1fb1ff;
+}
+.buy-tickets-btn {
+    margin-top: 0.35rem;
+    font-size: 0.47rem;
+    color: white;
+    display: flex;
+    flex-direction: row;
+}
+.buy-tickets-btn-left {
+    background-color: #babac1;
+    width: 2.40rem;
+    padding: 0.35rem 0;
+    text-align: center;
+}
+.buy-tickets-btn-right {
+    background-color: #1fb1ff;
+    flex: 1;
+    padding: 0.35rem 0;
+    text-align: center;
+}
