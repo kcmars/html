@@ -2,15 +2,15 @@
     $.tip = {
         alert: function(title, content, message, callback, btnText1) {
             if( title == null ) title = 'Alert';
-            $.tip._show(title, content, message, null, 'alert', function(result) {
-                if( callback ) callback(result);
+            $.tip._show(title, content, message, null, 'alert', function(result, str) {
+                if( callback ) callback(result, str);
             }, btnText1);
         },
 
         confirm: function(title, content, message, callback, btnText1, btnText2, bgColor) {
             if( title == null ) title = 'Confirm';
-            $.tip._show(title, content, message, null, 'confirm', function(result) {
-                if( callback ) callback(result);
+            $.tip._show(title, content, message, null, 'confirm', function(result, str) {
+                if( callback ) callback(result, str);
             }, btnText1, btnText2, bgColor);
         },
 
@@ -23,8 +23,8 @@
                 _html += '<div id="mt_btn_ok">'+ btnText1 +'</div>';
             }
             if (type == "confirm") {
-                _html += '<div id="mt_btn_ok">'+ btnText1 +'</div>';
-                _html += '<div id="mt_btn_no">'+ btnText2 +'</div>';
+                _html += '<div id="mt_btn_no">'+ btnText1 +'</div>';
+                _html += '<div id="mt_btn_ok">'+ btnText2 +'</div>';
             }
             _html += '</div></div><img id="mt_close_img" src="../img/icon_white_close.png"></div>';
 
@@ -42,7 +42,7 @@
                     });
                     $("#mt_close_img").click( function() {
                         $.tip._hide();
-                        callback(false);
+                        if( callback ) callback(false, true);
                     });
                     break;
                 case 'confirm':
@@ -52,13 +52,13 @@
                     });
                     $("#mt_btn_no").click( function() {
                         $.tip._hide();
-                        if( callback ) callback(false);
+                        if( callback ) callback(false, false);
                     });
                     $("#mt_close_img").click( function() {
                         $.tip._hide();
-                        if( callback ) callback(false);
+                        if( callback ) callback(false, true);
                     });
-                    $("#mt_btn_no").focus();
+                    $("#mt_btn_ok").focus();
                     $("#mt_btn_ok, #mt_btn_no").keypress( function(e) {
                         if( e.keyCode == 13 ) $("#mt_btn_ok").trigger('click');
                         if( e.keyCode == 27 ) $("#mt_btn_no").trigger('click');
@@ -116,14 +116,14 @@
 
         $("#mt_btn_box").css({ display: 'flex', flexDirection:'row', margin: '0', textAlign: 'center', borderRadius: '0 0 0.23rem 0.23rem' });
         if (type=="alert") {
-            $("#mt_btn_ok, #mt_btn_no").css({ display: 'flex', alignItems: 'center', justifyContent: 'center',
+            $("#mt_btn_ok").css({ display: 'flex', alignItems: 'center', justifyContent: 'center',
                 width: '100%', padding: '0.38rem 0', color: 'white', border: 'none', fontSize: '0.47rem', borderRadius: '0 0 0.23rem 0.23rem'});
             $("#mt_btn_ok").css({ backgroundColor: '#1fb1ff' });
         } else {
             $("#mt_btn_ok, #mt_btn_no").css({ display: 'flex', alignItems: 'center', justifyContent: 'center',
                 width: '100%', padding: '0.38rem 0', color: 'white', border: 'none', fontSize: '0.37rem' });
-            $("#mt_btn_ok").css({ backgroundColor: '#a6a3a3', borderRadius: '0 0 0 0.23rem' });
-            $("#mt_btn_no").css({ backgroundColor: bgColor ? bgColor : '#1fb1ff', borderRadius: '0 0 0.23rem 0' });
+            $("#mt_btn_no").css({ backgroundColor: '#a6a3a3', borderRadius: '0 0 0 0.23rem' });
+            $("#mt_btn_ok").css({ backgroundColor: bgColor ? bgColor : '#1fb1ff', borderRadius: '0 0 0.23rem 0' });
         }
 
         $("#mt_close_img").css({ width:'0.70rem', height:'0.70rem', marginTop:'0.60rem'});

@@ -4,8 +4,6 @@
 }
 .refund-instructions-content {
     background-color: white;
-    display: flex;
-    flex-direction: column;
     padding: 0.18rem;
     line-height: 0.47rem;
 }

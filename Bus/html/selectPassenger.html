@@ -8,9 +8,9 @@
     <meta content="yes" name="apple-touch-fullscreen">
     <meta content="telephone=no,email=no" name="format-detection">
     <title>选择乘客</title>
-    <script type="text/javascript" src="../js/auto-size.js"></script>
-    <link href="../css/main.css" type="text/css" rel="stylesheet">
-    <link href="../css/select-passenger-css.css" type="text/css" rel="stylesheet">
+    <script type="text/javascript" src="../js/auto-size.js?rnd=" + new Date().getTime()></script>
+    <link href="../css/main.css?rnd=" + new Date().getTime() type="text/css" rel="stylesheet">
+    <link href="../css/select-passenger-css.css?rnd=" + new Date().getTime() type="text/css" rel="stylesheet">
 </head>
 <body>
     <div class="main">
@@ -18,12 +18,12 @@
             +添加乘客（成人、儿童）
         </div>
         <ul id="showInfo" class="select-passenger-list top-border">
-            <li class="select-passenger-list-item bottom-border">
-                <input type="checkbox"/>
-                <span class="type">成人票</span>
-                <span class="name">李四</span>
-                <span class="id-number">身份证500222000222002020</span>
-            </li>
+            <!--<li class="flex-row select-passenger-list-item bottom-border">-->
+                <!--<input type="checkbox"/>-->
+                <!--<span class="type">成人票</span>-->
+                <!--<span class="name">李四</span>-->
+                <!--<span class="id-number">身份证500222000222002020</span>-->
+            <!--</li>-->
         </ul>
         <div class="select-passenger-btn">
             确定
@@ -33,54 +33,22 @@
 <script type="text/template" charset="utf-8" id='template_1'>
     {{ if (it && it.length > 0){ }}
     {{ for (var i = 0; i < it.length; i++){ }}
-        <li class="select-passenger-list-item bottom-border">
+        <li class="flex-row select-passenger-list-item bottom-border">
             <input type="checkbox" name="select_passenger"/>
-            <span class="type">{{=it[i].type}}</span>
+            <span class="type">{{=$.getTypeStatus(it[i].user_type)}}</span>
             <span class="name">{{=it[i].name}}</span>
-            <span class="id-number">身份证{{=it[i].idNumber}}</span>
+            <span class="id-number">身份证{{=it[i].card_id}}</span>
         </li>
     {{ } }}
     {{ } }}
 </script>
 <script type="text/javascript" src="../js/jquery-1.8.1.min.js"></script>
 <script type="text/javascript" src="../js/doT.js"></script>
-<script type="text/javascript">
-    $(function () {
-        var passenger_list_storage = localStorage.getItem("passenger_list");
-        if (passenger_list_storage != null){
-            passenger_list_storage = JSON.parse(passenger_list_storage);
-        }
+<script type="text/javascript" src="../js/exif.js"></script>
+<script type="text/javascript" src="../js/js-activity.js?rnd=" + new Date().getTime()></script>
+<script type="text/javascript" src="../js/main.js?rnd=" + new Date().getTime()></script>
+<script type="text/javascript" src="../js/my-loading-alert-js.js?rnd=" + new Date().getTime()></script>
+<script type="text/javascript" src="../js/my-toast-alert-js.js?rnd=" + new Date().getTime()></script>
+<script type="text/javascript" src="../js/selectPassenger-js.js?rnd=" + new Date().getTime()></script>
 
-        //添加新的乘客
-        $(".select-passenger-head-add").bind("click",function(){
-            location.href = './addPassenger.html';
-        });
-
-        //保存选中的乘客
-        $(".select-passenger-btn").bind("click",function(){
-            var select_passenger_list = [];
-            var select_passenger = document.getElementsByName('select_passenger');
-            for (var i = 0; i<select_passenger.length; i++) {
-                if(select_passenger[i].checked) {
-                    console.log("checked + " + i);
-                    select_passenger_list.push(passenger_list_storage[i]);
-                }
-            }
-            console.log("select_passenger_list + " + JSON.stringify(select_passenger_list));
-            if (select_passenger_list.length > 0) {
-                localStorage.setItem("select_passenger_list", JSON.stringify(select_passenger_list));
-            }
-            window.history.back();
-            window.location.reload();
-        });
-
-        //渲染可以选择的乘客列表
-        var template=document.getElementById('template_1').innerHTML;
-//        var obj=[{type: '成人票', name:'张三', idNumber:'500230451515151515'},
-//            {type: '成人票', name:'李四', idNumber:'560254505556234592'},
-//            {type: '儿童票', name:'小米', idNumber:'142566598992646266'}];
-        //传递一个有数据的数组进去
-        document.getElementById('showInfo').innerHTML = doT.template( template )( passenger_list_storage );
-    });
-</script>
 </html>

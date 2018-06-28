@@ -21,9 +21,16 @@ time, mark, audio, video {
 }
 html {
     overflow:hidden;
+    -webkit-touch-callout:none;/*系统默认菜单被禁用*/
+    -webkit-user-select:none;/*webkit浏览器*/
+    -khtml-user-select:none;/*早起浏览器*/
+    -moz-user-select:none;/*火狐浏览器*/
+    -ms-user-select:none;/*IE浏览器*/
+    user-select:none;/*用户是否能够选中文本*/
 }
 body {
     display: flex;
+    flex-direction: column;
     line-height:1;
     font-family: "微软雅黑", serif;
     background-color: #f1f3f5;
@@ -38,6 +45,14 @@ body {
 }
 .none {
     display: none;
+}
+.flex-row {
+    display: flex;
+    flex-direction: row;
+}
+.flex-column {
+    display: flex;
+    flex-direction: column;
 }
 .of-scroll {
     overflow: scroll;
@@ -143,9 +158,10 @@ body {
     margin: 0.12rem;
 }
 .pop-content-list-item {
-    display: flex;
     padding: 0.26rem;
-    flex-direction: row;
     align-items: center;
     justify-content: space-between;
+}
+.pop-content-list-item-span {
+    margin: 0 0.20rem;
 }

@@ -5,7 +5,7 @@
     function setFontSize() {
         // 获取window 宽度
         // zepto实现 $(window).width()就是这么干的
-        var winWidth = window.innerWidth;
+        var winWidth = window.innerWidth || 375;
         console.log("当前移动设备屏幕宽度："+winWidth);
         doc.documentElement.style.fontSize = (winWidth / 750) * 100 + 'px';
     }

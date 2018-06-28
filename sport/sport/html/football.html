@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Language" content="zh-CN"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="yes" name="apple-touch-fullscreen">
+    <meta content="telephone=no,email=no" name="format-detection">
+    <title>足球—英超</title>
+    <link rel="stylesheet" href="../css/swiper.min.css">
+    <link rel="stylesheet" href="../font/iconfont.css" />
+    <link rel="stylesheet" type="text/css" href="../css/main.css">
+    <link rel="stylesheet" type="text/css" href="../css/index.css">
+</head>
+<body>
+<div class="main">
+    <!-- 头部--->
+    <div class="header">
+        <span>搜索</span>
+        <span>logo</span>
+        <span>登录</span>
+        <span>注册</span>
+    </div>
+    <!-- tab--->
+    <div class="top-tab">
+        <ul class="top-name">
+            <li>首页</li>
+            <li>即时比分</li>
+            <li>即时指数</li>
+            <li>完场赛程</li>
+            <li>资料库</li>
+            <li>资讯</li>
+            <li>情报</li>
+        </ul>
+        <div class="top-menu">
+            <a>首页 ></a>
+            <span><a href="football.html">足球</a></span>
+            <span><a href="index.html">资料库</a> ></span>
+            <span><a href="team.html">英超</a></span>
+        </div>
+    </div>
+    <div class="football-bar">
+        <div class="super-league">
+            <div>
+                <img src="../image/h.jpg" alt="">
+            </div>
+            <div class="super-league-select">
+                <h2>英格兰超级联赛</h2>
+                <div class="select">
+                    <select name="赛季" id="season">
+                        <option value="2017-2018赛季">2017-2018赛季</option>
+                        <option value="2016-2017赛季">2016-2017赛季</option>
+                        <option value="2015-2016赛季">2015-2016赛季</option>
+                    </select>
+                    <select name="球队筛选" id="sel-team">
+                        <!--<option value="利物浦">利物浦</option>-->
+                        <!--<option value="恩波利">恩波利</option>-->
+                        <!--<option value="水晶宫">水晶宫</option>-->
+                        <!--<option value="恩波利">恩波利</option>-->
+                        <!--<option value="水晶宫">水晶宫</option>-->
+                        <!--<option value="恩波利">恩波利</option>-->
+                        <!--<option value="水晶宫">水晶宫</option>-->
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="super-league-menu">
+            <ul>
+                <li>热门赛事推荐:世界杯</li>
+                <li>中超</li>
+                <li>英超</li>
+                <li>西甲</li>
+                <li>德甲</li>
+                <li>意甲</li>
+                <li>情报</li>
+            </ul>
+        </div>
+    </div>
+    <div>
+        <!--内容左-->
+        <div class="super-league-content-left">
+            <div class="super-league-content-top">
+                <div class="super-league-num">
+                    <span>英超第1轮</span>
+                    <table id="game-num">
+                        <tr>
+                            <td class="current">1</td>
+                            <td>2</td>
+                            <td>3</td>
+                            <td>4</td>
+                            <td>5</td>
+                            <td>6</td>
+                            <td>7</td>
+                            <td>8</td>
+                            <td>9</td>
+                            <td>10</td>
+                            <td>11</td>
+                            <td>12</td>
+                            <td>13</td>
+                            <td>14</td>
+                            <td>15</td>
+                            <td>16</td>
+                            <td>17</td>
+                            <td>18</td>
+                            <td>19</td>
+                        </tr>
+                        <tr>
+                            <td>20</td>
+                            <td>21</td>
+                            <td>22</td>
+                            <td>23</td>
+                            <td>24</td>
+                            <td>25</td>
+                            <td>26</td>
+                            <td>27</td>
+                            <td>28</td>
+                            <td>29</td>
+                            <td>30</td>
+                            <td>31</td>
+                            <td>32</td>
+                            <td>33</td>
+                            <td>34</td>
+                            <td>35</td>
+                            <td>36</td>
+                            <td>37</td>
+                            <td>38</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="super-league-result-data">
+                    <table class="super-league-result-data-table">
+                        <thead>
+                            <tr>
+                            <th>比赛时间</th>
+                            <th>主队</th>
+                            <th>比分</th>
+                            <th>客队</th>
+                            <th>半场</th>
+                            <th>胜负</th>
+                            <th>欧指</th>
+                            <th>亚指</th>
+                            <th>大小</th>
+                            <th>数据中心</th>
+                        </tr>
+                        </thead>
+                        <tbody id="super-league-table">
+                            <!--<tr>-->
+                                <!--<td>02:45 2017/08/12</td>-->
+                                <!--<td>阿森纳</td>-->
+                                <!--<td>4-3</td>-->
+                                <!--<td>莱切斯特城</td>-->
+                                <!--<td>2-2</td>-->
+                                <!--<td>胜</td>-->
+                                <!--<td></td>-->
+                                <!--<td></td>-->
+                                <!--<td></td>-->
+                                <!--<td>析 亚欧大</td>-->
+                            <!--</tr>-->
+                        </tbody>
+                    </table>
+                    <div class="super-league-time">以上资料进攻参考 跟新于 2018年05月23日 10:53</div>
+                </div>
+            </div>
+            <div class="statistics">
+                <div class="title-one">杯赛数据统计</div>
+                <ol class="bar-graph">
+                    <li class="home" style="height: 46.13%;">
+                        <div class="text">
+                            <i class="line"></i>
+                            <span class="num home_win_num"></span>
+                            <span class="bar home_win_sper"></span>
+                            <span class="tip">主场胜出</span>
+                        </div>
+                        <div class="graph bck-color-f25451">
+                        &nbsp;</div>
+                    </li>
+                    <li class="tied" style="height: 23.51%;">
+                        <div class="text">
+                            <i class="line"></i>
+                            <span class="num draw_num"></span>
+                            <span class="bar draw_sper"></span>
+                            <span class="tip">平局</span>
+                        </div>
+                        <div class="graph bck-color-ddd">&nbsp;</div>
+                    </li>
+                    <li class="away" style="height: 30.36%;">
+                        <div class="text">
+                            <i class="line"></i>
+                            <span class="num away_win_num"></span>
+                            <span class="bar away_sper"></span>
+                            <span class="tip">客场胜出</span>
+                        </div>
+                        <div class="graph bck-color-56a4d5">&nbsp;</div>
+                    </li>
+                </ol>
+                <div class="pie-chart-panel">
+                    <div class="radius">
+                        <span class="finish_num"></span>
+                        <span>已赛</span>
+                    </div>
+                </div>
+                <ol class="statistics-goals">
+                    <li>
+                        <p class="tip bgcolor-yellow4">总进球数</p>
+                        <p class="num color-yellow4  total_goal"></p>
+                        <p class="count total_avg_goal"></p>
+                    </li>
+                    <li>
+                        <p class="tip bgcolor-red3">主场进球数</p>
+                        <p class="num color-red3 home_goal"></p>
+                        <p class="count home_agv_goal"></p>
+                    </li>
+                    <li>
+                        <p class="tip bgcolor-blue1">客场进球数</p>
+                        <p class="num color-blue1 away_goal"></p>
+                        <p class="count away_agv_goal"></p>
+                    </li>
+                </ol>
+                <ol class="statistics-table">
+                    <li class="bgcolor-red3">
+                        <ol class="list">
+                            <li>
+                                <span class="find w-145">攻击力最强</span>
+                                <span class="find w-140 goal_max_team"></span>
+                                <span class="find w-50 goal_max_num"></span>
+                            </li>
+                            <li>
+                                <span class="find w-145">主场攻击力最强</span>
+                                <span class="find w-140 home_goal_max_team"></span>
+                                <span class="find w-50 home_goal_max_num"></span>
+                            </li>
+                            <li>
+                                <span class="find w-145">客场攻击力最强</span>
+                                <span class="find w-140 away_goal_max_team"></span>
+                                <span class="find w-50 away_goal_max_num"></span>
+                            </li>
+                            <li>
+                                <span class="find w-145">防守最佳</span>
+                                <span class="find w-140  defensive_max_team"></span>
+                                <span class="find w-50  defensive_max_lose_num"></span>
+                            </li>
+                            <li>
+                                <span class="find w-145">主场防守最佳</span>
+                                <span class="find w-140 home_defensive_max_team"></span>
+                                <span class="find w-50  home_defensive_max_lose_num"></span>
+                            </li>
+                            <li>
+                                <span class="find w-145">客场防守最佳</span>
+                                <span class="find w-140 away_defensive_max_team"></span>
+                                <span class="find w-50 away_defensive_max_lose_num"></span>
+                            </li>
+                        </ol>
+                    </li>
+                    <li class="bgcolor-blue1">
+                        <ol class="list">
+                            <li>
+                                <span class="find w-145">攻击力最弱</span>
+                                <span class="find w-140 goal_min_team"></span>
+                                <span class="find w-50 goal_min_num"></span>
+                            </li>
+                            <li>
+                                <span class="find w-145">主场攻击力最弱</span>
+                                <span class="find w-140 home_goal_min_team"></span>
+                                <span class="find w-50 home_goal_min_num"></span>
+                            </li>
+                            <li>
+                                <span class="find w-145">客场攻击力最弱</span>
+                                <span class="find w-140 away_goal_min_team"></span>
+                                <span class="find w-50 away_goal_min_num"></span>
+                            </li>
+                            <li>
+                                <span class="find w-145">防守最差</span>
+                                <span class="find w-140 defensive_min_team"></span>
+                                <span class="find w-50 defensive_min_lose_num"></span>
+                            </li>
+                            <li>
+                                <span class="find w-145">主场防守最差</span>
+                                <span class="find w-140 home_defensive_min_team"></span>
+                                <span class="find w-50 home_defensive_min_lose_num"></span>
+                            </li>
+                            <li>
+                                <span class="find w-145">客场防守最差</span>
+                                <span class="find w-140 away_defensive_min_team"></span>
+                                <span class="find w-50 away_defensive_min_lose_num"></span>
+                            </li>
+                        </ol>
+                    </li>
+                </ol>
+            </div>
+            <div class="related-news">
+                <span class="news-title">相关新闻</span>
+                <div class="news-content">
+                    <div>
+                        <img src="../image/i.jpg" alt="">
+                    </div>
+                    <div class="news-content-main">
+                        <h3>莫拉塔希望重回尤文 亚冠1/4决赛抽签揭晓，权健将战鹿岛 亚冠1/4决赛抽签揭晓，权健将战鹿岛</h3>
+                        <div>
+                            <span>
+                                 <i class="iconfont icon-icon_datum"></i>
+                                2018/05/24 10:53
+                            </span>
+                            <span>
+                                 <i class="iconfont icon-icon_datum"></i>
+                                465人 阅读
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="news-content">
+                    <div>
+                        <img src="../image/i.jpg" alt="">
+                    </div>
+                    <div class="news-content-main">
+                        <h3>莫拉塔希望重回尤文 亚冠1/4决赛抽签揭晓，权健将战鹿岛 亚冠1/4决赛抽签揭晓，权健将战鹿岛</h3>
+                        <div>
+                            <span>
+                                 <i class="iconfont icon-icon_datum"></i>
+                                2018/05/24 10:53                            </span>
+                            <span>
+                                 <i class="iconfont icon-icon_datum"></i>
+                                465人 阅读                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="news-content">
+                    <div>
+                        <img src="../image/i.jpg" alt="">
+                    </div>
+                    <div class="news-content-main">
+                        <h3>莫拉塔希望重回尤文 亚冠1/4决赛抽签揭晓，权健将战鹿岛 亚冠1/4决赛抽签揭晓，权健将战鹿岛</h3>
+                        <div>
+                            <span>
+                                 <i class="iconfont icon-icon_datum"></i>
+                                2018/05/24 10:53
+                            </span>
+                            <span>
+                                 <i class="iconfont icon-icon_datum"></i>
+                                465人 阅读
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="highlight">
+                <span class="highlight-title">英超精彩瞬间</span>
+                <div class="highlight-content">
+                    <div class="highlight-content-left">
+                        <img src="../image/j.jpg" alt="">
+                    </div>
+                    <div class="highlight-content-right">
+                        <img src="../image/g.jpg" alt="">
+                        <img src="../image/i.jpg" alt="">
+                        <img src="../image/k.jpg" alt="">
+                        <img src="../image/j.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="format">
+                <span class="format-title">英超赛制</span>
+                <div class="format-content">
+                        <p id="profile">
+                            <!--造了现代足球的历史，他们在1888年建立了足球联赛并延续发展。英格兰联赛100多年的悠久历史也创下了诸多纪录。而英超联赛创立于1992年2月20日，并于1992/93的赛季成为英格兰的顶级足球联赛。百余年以来英格兰足球联赛分为四个级别的历史正式结束。-->
+                            <!--20世纪80年代中后期，已经有很多的事件清楚显示着职业足球需要进行一场本质性的改革。-->
+                            <!--1985年5月11日，56名球迷在布拉德福德球场的大火中丧生。5月29日，在比利时布鲁塞尔的海瑟尔球场，1984/85赛季欧洲冠军杯（欧洲冠军联赛前身）决赛利物浦对尤文图斯的比赛更是酿成了著名的海瑟尔惨案——不同球队的支持者之间发生暴力事件，结果导致39名球迷死亡——英格兰俱乐部更是因此被欧洲足联禁止参加欧洲赛事达5年之久。而1989年又发生了另一场足球惨剧，在谢菲尔德周三的希尔斯堡球场举行的英格兰足总杯利物浦对诺丁汉森林的半决赛中，由于人数拥挤造成看台坍塌，结果96名球迷死亡，150多人受伤。-->
+                            <!--英国足球明显在低迷期：球场拥挤不堪、设施破旧、足球流氓到处都是，并且被赶离了欧洲赛场；本土俱乐部日渐式微，很多顶级球员受到欧洲大陆的俱乐部的金钱诱惑而转会。-->
+                        </p>
+                </div>
+            </div>
+        </div>
+        <!--内容右-->
+        <div>
+            <div class="float-right">
+                <div class="data-center">
+                    <div class="title">
+                        <i class="iconfont icon-icon_datum"></i>
+                        杯赛数据中心
+                    </div>
+                    <div class="d-panel">
+                        <div class="line"></div>
+                        <span class="spot" style="top: 15px;">
+                            <span class="radius"></span>
+                        </span>
+                        <ol class="nav-list">
+                            <li class="active">
+                                <span class="radius"></span>
+                                <a class="color-black" href="">
+                                    <span class="count">赛程赛果</span>
+                                </a>
+                            </li>
+                            <li class="">
+                                <span class="radius"></span>
+                                <a class="color-black" href="#">
+                                    <span class="count">联赛积分</span>
+                                </a>
+                            </li>
+                            <li class="">
+                            <span class="radius">
+
+                            </span>
+                                <a class="color-black" href="#">
+                                    <span class="count">让球盘路</span>
+                                </a>
+                            </li>
+                            <li class="">
+                                <span class="radius"></span>
+                                <a class="color-black" href="#">
+                                    <span class="count">大小球盘路</span>
+                                </a>
+                            </li>
+                            <li class="">
+                                <span class="radius"></span>
+                                <a class="color-black" href="#">
+                                    <span class="count">比分统计</span>
+                                </a>
+                            </li>
+                            <li class="">
+                                <span class="radius"></span>
+                                <a class="color-black" href="#">
+                                    <span class="count">半全场胜负</span>
+                                </a>
+                            </li>
+                            <li class="">
+                                <span class="radius"></span>
+                                <a class="color-black" href="#">
+                                    <span class="count">进球单双数统计</span>
+                                </a>
+                            </li>
+                            <li class="">
+                                <span class="radius"></span>
+                                <a class="color-black" href="#">
+                                    <span class="count">净胜/净负球</span>
+                                </a>
+                            </li>
+                            <li class="">
+                                <span class="radius"></span>
+                                <a class="color-black" href="#">
+                                    <span class="count">上下半场进球情况统计</span>
+                                </a>
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+                <div class="integral-table">
+                    <div class="title-one">
+                        英超积分榜
+                        <a class="more" href="#" target="_blank">更多</a>
+                    </div>
+                    <div class="table-panel">
+                        <table class="table-list">
+                            <tbody>
+                                <tr>
+                                    <th>排名</th>
+                                    <th class="w-90">球队</th>
+                                    <th>赛</th>
+                                    <th>胜</th>
+                                    <th>平</th>
+                                    <th>负</th>
+                                    <th>积分</th>
+                                </tr>
+                                <tr>
+                                    <td><i class="serial color-red">1</i></td>
+                                    <td>
+                                        <a class="team-link alt" href="#" target="_blank">
+                                            <font class="alt-right"><i></i><span>南安普敦</span></font>
+                                        </a>
+                                    </td>
+                                    <td></td>
+                                    <td></td>
+                                    <td>0</td>
+                                    <td></td>
+                                    <td>0</td>
+                                </tr>
+                                <tr>
+                                    <td><i class="serial color-red">2</i></td>
+                                    <td>
+                                        <a class="team-link alt" href="#" target="_blank">
+                                            <font class="alt-right"><i></i><span>托特纳姆热刺</span></font>
+                                        </a>
+                                    </td>
+                                    <td></td>
+                                    <td></td>
+                                    <td>0</td>
+                                    <td></td>
+                                    <td>0</td>
+                                </tr>
+                                <tr>
+                                    <td><i class="serial color-red">3</i></td>
+                                    <td>
+                                        <a class="team-link alt" href="#" target="_blank">
+                                            <font class="alt-right"><i></i><span>南安普敦</span></font>
+                                        </a>
+                                    </td>
+                                    <td></td>
+                                    <td></td>
+                                    <td>0</td>
+                                    <td></td>
+                                    <td>0</td>
+                                </tr>
+                                <tr>
+                                    <td><i class="serial color-red">4</i></td>
+                                    <td>
+                                        <a class="team-link alt" href="#" target="_blank">
+                                            <font class="alt-right"><i></i><span>托特纳姆热刺</span></font>
+                                        </a>
+                                    </td>
+                                    <td></td>
+                                    <td></td>
+                                    <td>0</td>
+                                    <td></td>
+                                    <td>0</td>
+                                </tr>
+                                <tr>
+                                    <td><i class="serial color-red">5</i></td>
+                                    <td>
+                                        <a class="team-link alt" href="#" target="_blank">
+                                            <font class="alt-right"><i></i><span>南安普敦</span></font>
+                                        </a>
+                                    </td>
+                                    <td></td>
+                                    <td></td>
+                                    <td>0</td>
+                                    <td></td>
+                                    <td>0</td>
+                                </tr>
+                                <tr>
+                                    <td><i class="serial color-red">6</i></td>
+                                    <td>
+                                        <a class="team-link alt" href="#" target="_blank">
+                                            <font class="alt-right"><i></i><span>托特纳姆热刺</span></font>
+                                        </a>
+                                    </td>
+                                    <td></td>
+                                    <td></td>
+                                    <td>0</td>
+                                    <td></td>
+                                    <td>0</td>
+                                </tr>
+                                <tr>
+                                    <td><i class="serial color-red">7</i></td>
+                                    <td>
+                                        <a class="team-link alt" href="#" target="_blank">
+                                            <font class="alt-right"><i></i><span>南安普敦</span></font>
+                                        </a>
+                                    </td>
+                                    <td></td>
+                                    <td></td>
+                                    <td>0</td>
+                                    <td></td>
+                                    <td>0</td>
+                                </tr>
+                                <tr>
+                                    <td><i class="serial color-red">8</i></td>
+                                    <td>
+                                        <a class="team-link alt" href="#" target="_blank">
+                                            <font class="alt-right"><i></i><span>托特纳姆热刺</span></font>
+                                        </a>
+                                    </td>
+                                    <td></td>
+                                    <td></td>
+                                    <td>0</td>
+                                    <td></td>
+                                    <td>0</td>
+                                </tr>
+                                <tr>
+                                    <td><i class="serial color-red">9</i></td>
+                                    <td>
+                                        <a class="team-link alt" href="#" target="_blank">
+                                            <font class="alt-right"><i></i><span>南安普敦</span></font>
+                                        </a>
+                                    </td>
+                                    <td></td>
+                                    <td></td>
+                                    <td>0</td>
+                                    <td></td>
+                                    <td>0</td>
+                                </tr>
+                                <tr>
+                                    <td><i class="serial color-red">10</i></td>
+                                    <td>
+                                        <a class="team-link alt" href="#" target="_blank">
+                                            <font class="alt-right"><i></i><span>托特纳姆热刺</span></font>
+                                        </a>
+                                    </td>
+                                    <td></td>
+                                    <td></td>
+                                    <td>0</td>
+                                    <td></td>
+                                    <td>0</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="show-all" onclick="deTails.integral.target(this)">
+                        <span class="tip">展开全部</span>
+                        <i class="iconfont icon-top"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+<script type="text/template" charset="utf-8" id='template-super-league-table-list'>
+    {{ if (it && it.length > 0){ }}
+    {{ for (var i = 0; i < it.length; i++){ }}
+    <tr>
+        <td>{{=it[i].time}}</td>
+        <td>{{=it[i].home_tn}}</td>
+        <td>{{=it[i].scores}}</td>
+        <td>{{=it[i].away_tn}}</td>
+        <td>{{=it[i].scores}}</td>
+        <td>胜</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>析 亚欧大</td>
+    </tr>
+    {{ } }}
+    {{ } }}
+</script>
+<script type="text/javascript" src='../js/jquery-1.11.3.js'></script>
+<script type="text/javascript" src="../js/doT.js"></script>
+<script type="text/javascript" src="../js/index.js"></script>
+<script type="text/javascript" src="../js/team_details.js"></script>
+<script>
+    $("#game-num tr td").on(
+        "click",function(e){
+            $(this).addClass("current").siblings().removeClass("current");
+            showDataTable(e.delegateTarget.innerText)
+        })
+</script>
+</body>
+</html>

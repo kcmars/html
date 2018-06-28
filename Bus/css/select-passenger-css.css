@@ -11,8 +11,6 @@
     flex: 1;
 }
 .select-passenger-list-item {
-    display: flex;
-    flex-direction: row;
     justify-content: space-between;
     font-size: 0.33rem;
     padding: 0.35rem 0.18rem;

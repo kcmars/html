@@ -8,14 +8,14 @@
     <meta content="yes" name="apple-touch-fullscreen">
     <meta content="telephone=no,email=no" name="format-detection">
     <title>添加乘客</title>
-    <script type="text/javascript" src="../js/auto-size.js"></script>
-    <link href="../css/main.css" type="text/css" rel="stylesheet">
-    <link href="../css/add-passenger-css.css" type="text/css" rel="stylesheet">
+    <script type="text/javascript" src="../js/auto-size.js?rnd=" + new Date().getTime()></script>
+    <link href="../css/main.css?rnd=" + new Date().getTime() type="text/css" rel="stylesheet">
+    <link href="../css/add-passenger-css.css?rnd=" + new Date().getTime() type="text/css" rel="stylesheet">
 </head>
 <body>
 <div class="main">
     <div class="add-passenger-content">
-        <div class="add-passenger-select-type">
+        <div class="flex-row">
             <div class="add-passenger-type add-passenger-type-selected" onclick="selectType(this, 1)">
                 成人票<br/><span>全价</span>
             </div>
@@ -23,13 +23,13 @@
                 儿童票<br/><span>1.2米-1.5米之间</span>
             </div>
         </div>
-        <div class="add-passenger-row bottom-border">
+        <div class="flex-row add-passenger-row bottom-border">
             <span class="tip">姓名</span>
-            <input id="name" type="text" value="" placeholder="与证件姓名一致"/>
+            <input id="name" maxlength="8" type="text" value="" placeholder="与证件姓名一致"/>
         </div>
-        <div class="add-passenger-row bottom-border">
+        <div class="flex-row add-passenger-row bottom-border">
             <span class="tip">身份证</span>
-            <input id="id-number" type="number" value="" placeholder="乘车人身份证号码"/>
+            <input id="id-number" maxlength="18" type="text" value="" placeholder="乘车人身份证号码"/>
         </div>
         <div class="add-passenger-tip none">
             1.身高1.2米-1.5米的儿童，可购买儿童票。<br/>
@@ -44,62 +44,10 @@
 </div>
 </body>
 <script type="text/javascript" src="../js/jquery-1.8.1.min.js"></script>
-<script type="text/javascript" src="../js/main.js"></script>
-<script type="text/javascript" src="../js/my-loading-alert-js.js"></script>
-<script type="text/javascript" src="../js/my-toast-alert-js.js"></script>
-<script type="text/javascript">
-    var type = "成人票"; // adult 成人； children 儿童
-    $(function () {
-//        localStorage.clear();
-        //获取已经添加过的乘客
-        var passenger_list = [];
-        var passenger_list_storage = localStorage.getItem("passenger_list");
-        console.log("save+" + passenger_list_storage);
-        if (passenger_list_storage != null){
-            passenger_list = JSON.parse(passenger_list_storage);
-        }
+<script type="text/javascript" src="../js/main.js?rnd=" + new Date().getTime()></script>
+<script type="text/javascript" src="../js/js-activity.js?rnd=" + new Date().getTime()></script>
+<script type="text/javascript" src="../js/my-loading-alert-js.js?rnd=" + new Date().getTime()></script>
+<script type="text/javascript" src="../js/my-toast-alert-js.js?rnd=" + new Date().getTime()></script>
+<script type="text/javascript" src="../js/addPassenger-js.js?rnd=" + new Date().getTime()></script>
 
-        //保存
-        $(".add-passenger-btn").bind("click",function(){
-            var name = $("#name").val();
-            var idNumber = $("#id-number").val();
-            if (name == "") {
-                toastAlertShow("请输入乘客名字");
-                return;
-            }
-            if (idNumber == "") {
-                toastAlertShow("请输入乘客身份证号码");
-                return;
-            }
-            var passenger = {
-                type: type,
-                name: name,
-                idNumber: idNumber
-            };
-            console.log("name = " + name);
-            console.log("idNumber = " + idNumber);
-            loadAlertShow("正在保存...");
-            passenger_list.push(passenger);
-            localStorage.setItem("passenger_list", JSON.stringify(passenger_list));
-            setTimeout(function () {
-                loadAlertHide();
-                console.log(localStorage.getItem("passenger_list"));
-                window.history.go(-1);
-                window.location.reload();
-            },1000);
-        });
-    });
-
-    //选择票种
-    function selectType(obj, index) {
-        $(obj).addClass("add-passenger-type-selected").siblings().removeClass("add-passenger-type-selected");
-        if (index === 1) {
-            type = "成人票";
-            $(".add-passenger-tip").hide();
-        } else {
-            type = "儿童票";
-            $(".add-passenger-tip").show();
-        }
-    }
-</script>
 </html>

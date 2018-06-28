@@ -16,8 +16,6 @@
     height: auto;
 }
 .buy-tickets-head-info {
-    display: flex;
-    flex-direction: row;
     justify-content: center;
     align-items: center;
     padding: 0.28rem 0 0 0;
@@ -47,8 +45,6 @@
     padding: 0.28rem;
 }
 .buy-tickets-content-id .buy-tickets-content-id-list {
-    display: flex;
-    flex-direction: row;
     justify-content: space-between;
     padding: 0.37rem 0.12rem;
 }
@@ -65,13 +61,9 @@
     color: #9b9b9b;
 }
 .buy-tickets-content {
-    display: flex;
-    flex-direction: column;
     flex: 1;
 }
 .buy-tickets-content-row {
-    display: flex;
-    flex-direction: row;
     background-color: white;
     margin-top: 0.23rem;
     padding: 0.37rem 0.35rem;
@@ -90,8 +82,6 @@
 .ticket-price {
     background-color: white;
     padding: 0.12rem;
-    display: flex;
-    flex-direction: row;
     align-items: center;
 }
 .ticket-price img {
@@ -119,6 +109,7 @@
     font-size: 0.30rem;
     color: #91929a;
     text-align: center;
+    margin-top: 0.20rem;
 }
 .buy-tickets-agreement a {
     font-size: 0.30rem;
@@ -128,8 +119,6 @@
     margin-top: 0.35rem;
     font-size: 0.47rem;
     color: white;
-    display: flex;
-    flex-direction: row;
 }
 .buy-tickets-btn-left {
     background-color: #babac1;

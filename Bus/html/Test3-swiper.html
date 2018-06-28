@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Language" content="zh-CN"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="yes" name="apple-touch-fullscreen">
+    <meta content="telephone=no,email=no" name="format-detection">
+    <link href="../css/swiper.min.css?rnd=" + new Date().getTime() type="text/css" rel="stylesheet">
+    <link href="../css/main.css?rnd=" + new Date().getTime() type="text/css" rel="stylesheet">
+    <title>购票</title>
+    <style>
+        .swiper-container {
+            width: 100%;
+            height: 200px;
+            padding: 20px;
+            background: #eee;
+        }
+        .swiper-slide {
+            text-align: center;
+            font-size: 18px;
+            background: #fff;
+            color: #000;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            flex-direction: column;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            -webkit-justify-content: center;
+            justify-content: center;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            -webkit-align-items: center;
+            align-items: center;
+            border: 1px salmon solid;
+        }
+    </style>
+</head>
+<body>
+    <div class="swiper-container">
+        <ul class="swiper-wrapper">
+            <li class="swiper-slide">
+                <img src="../img/position.png" alt=""/>
+                <span>西班牙</span>
+            </li>
+            <li class="swiper-slide">
+                <img src="../img/position.png" alt=""/>
+                <span>西班牙</span>
+            </li>
+            <li class="swiper-slide">
+                <img src="../img/position.png" alt=""/>
+                <span>西班牙</span>
+            </li>
+            <li class="swiper-slide">
+                <img src="../img/position.png" alt=""/>
+                <span>西班牙</span>
+            </li>
+            <li class="swiper-slide">
+                <img src="../img/position.png" alt=""/>
+                <span>西班牙</span>
+            </li>
+            <li class="swiper-slide">
+                <img src="../img/position.png" alt=""/>
+                <span>西班牙</span>
+            </li>
+            <li class="swiper-slide">
+                <img src="../img/position.png" alt=""/>
+                <span>西班牙</span>
+            </li>
+        </ul>
+        <div class="swiper-button-prev"></div><!--左箭头-->
+        <div class="swiper-button-next"></div><!--右箭头-->
+    </div>
+</body>
+<script type="text/javascript" src="../js/jquery-1.8.1.min.js"></script>
+<script type="text/javascript" src="../js/swiper.min.js"></script>
+<script type="text/javascript">
+    var mySwiper = new Swiper('.swiper-container',{
+        slidesPerView: 3,
+        spaceBetween : 20,
+        loop : true,
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+    })
+</script>
+</html>

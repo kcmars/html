@@ -5,10 +5,6 @@
     flex: 1;
     padding: 0.23rem;
 }
-.add-passenger-select-type {
-    display: flex;
-    flex-direction: row;
-}
 .add-passenger-type {
     border: 0.02rem solid #a6a3a3;
     padding: 0.35rem 0;
@@ -26,8 +22,6 @@
     font-size: 0.30rem;
 }
 .add-passenger-row {
-    display: flex;
-    flex-direction: row;
     justify-content: space-between;
     margin-top: 0.23rem;
 }

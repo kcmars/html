@@ -1,0 +1,39 @@
+.page1 {
+    width: 100%;
+    height: 100%;
+}
+.header-title {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+    width: 100%;
+    height: 1500px;
+    background-color: aqua;
+ }
+.header-title h1 {
+    font-size: 30px;
+    color: white;
+}
+.about-wrapper {
+    height: 30em;
+    width: 100px;
+}
+.about-text {
+    position: relative;
+    width: 30em;
+    height: 20em;
+}
+.show {
+    position: absolute;
+    left: -30em;
+    width: 30em;
+    height: 20em;
+    -webkit-animation: slide-in 1s forwards;
+    animation: slide-in 1s forwards;
+}
+@-webkit-keyframes slide-in {
+    100% { left: 0 }
+}
+@keyframes slide-in {
+    100% { left: 0 }
+}

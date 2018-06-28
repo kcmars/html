@@ -1,8 +1,6 @@
 .ticket-details-main {
-    display: block;
     width: 100%;
     height: 100%;
-    flex-direction: column;
     background-color: #f1f3f5;
 }
 .ticket-details-head {
@@ -21,13 +19,7 @@
     width: 0.56rem;
     height: auto;
 }
-.tickets-details-head-info {
-    display: flex;
-    flex-direction: row;
-}
-.tickets-details-head-info .item {
-    display: flex;
-    flex-direction: row;
+.item {
     background-color: #82c6ff;
     border: 0.02rem solid #82c6ff;
     padding: 0.18rem 0.28rem;
@@ -43,79 +35,74 @@
 }
 .ticket-details-list-item {
     background-color: white;
-    display: flex;
-    flex-direction: column;
     padding: 0 0.23rem;
 }
 .ticket-details-list-item-head {
-    display: flex;
-    flex-direction: row;
     padding: 0.14rem;
     align-items: center;
 }
 .ticket-details-list-item-head .head {
-    width: 1.41rem;
-    height: 1.41rem;
+    width: 0.90rem;
+    height: 0.90rem;
 }
 .ticket-details-list-item-head .content {
-    display: flex;
-    flex-direction: column;
     flex: 1;
     margin: 0 0.18rem;
 }
 .ticket-details-list-item-head .content span {
     padding: 0.12rem;
-    font-size: 0.37rem;
+    font-size: 0.33rem;
     color: #333333;
 }
+.ticket-details-list-item-head .content .type {
+    font-size: 0.30rem;
+    color: #666666;
+}
 .ticket-details-list-item-head .img-btn {
-    width: 0.93rem;
+    width: 0.60rem;
     height: auto;
     margin: 0 0.23rem;
 }
 .ticket-details-list-item-footer {
-    display: flex;
-    flex-direction: row;
     padding: 0.18rem;
     align-items: center;
     justify-content: space-between;
 }
 .item-footer-left {
-    display: flex;
-    flex-direction: column;
     flex: 1;
 }
 .item-footer-left .row {
-    display: flex;
     padding: 0.12rem 0;
-    flex-direction: row;
     align-items: center;
 }
+
 .item-footer-left img {
-    width: 0.30rem;
-    height: 0.30rem;
-}
-.item-footer-left .icon1 {
-    width: 0.28rem;
-    height: 0.28rem;
-    background-color: darkgreen;
-    border-radius: 0.28rem;
-}
-.item-footer-left .icon2 {
-    width: 0.28rem;
-    height: 0.28rem;
-    background-color: darkorange;
-    border-radius: 0.28rem;
+    width: 0.15rem;
+    height: 0.15rem;
 }
 .item-footer-left span {
     margin-left: 0.28rem;
-    font-size: 0.37rem;
+    font-size: 0.33rem;
     color: #333333;
     flex: 1;
 }
+.item-footer-left .pass-point-row {
+    padding: 0.06rem 0.30rem;
+    align-items: center;
+}
+.item-footer-left .pass-point-row span {
+    font-size: 0.28rem;
+}
+.pass-point {
+    padding: 0 0.30rem;
+    font-size: 0.30rem;
+    color: #555555;
+}
+.pass-point img {
+    width: 0.20rem;
+    height: 0.20rem;
+}
 .item-footer-right {
-    display: flex;
-    flex-direction: column;
     align-items: center;
 }
 .item-footer-right .item-footer-right-btn {

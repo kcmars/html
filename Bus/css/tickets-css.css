@@ -16,8 +16,6 @@
     height: auto;
 }
 .tickets-head-info {
-    display: flex;
-    flex-direction: row;
     justify-content: center;
     align-items: center;
     padding: 0.28rem 0 0 0;
@@ -47,8 +45,6 @@
     padding: 0.28rem;
 }
 .tickets-content-id .tickets-content-id-list {
-    display: flex;
-    flex-direction: row;
     justify-content: space-between;
     padding: 0.37rem 0.10rem;
     font-size: 0.33rem;
@@ -80,20 +76,12 @@
     text-align: center;
 }
 .tickets-content {
-    display: flex;
-    flex-direction: column;
     flex: 1;
 }
 .tickets-content .tickets-content-msg {
     background-color: white;
     padding: 0.19rem;
     margin-top: 0.23rem;
-    display: flex;
-    flex-direction: column;
-}
-.tickets-content-row {
-    display: flex;
-    flex-direction: row;
 }
 .tickets-content-row .tip {
     width: 5rem;

@@ -1,61 +1,73 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>无标题文档</title>
+    <title> New Document </title>
+    <meta name="Generator" content="EditPlus">
+    <meta name="Author" content="">
+    <meta name="Keywords" content="">
+    <meta name="Description" content="">
 </head>
-<style type="text/css">
-    /* 基本样式 */
-    .tip {
-        background: #eee;
-        border: 1px solid #ccc;
-        padding: 10px;
-        border-radius: 8px;
-        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-        position: relative;
-        width: 200px;
+<style>
+    ul {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
     }
-    /* 箭头 - :before and :after, 一起组成了好看的气泡小箭头 */
-    .tip:before {
-        position: absolute;
-        display: inline-block;
-        border-top: 7px solid transparent;
-        border-right: 7px solid #eee;
-        border-bottom: 7px solid transparent;
-        border-right-color: rgba(0, 0, 0, 0.2);
-        left: -8px;
-        top: 20px;
-        content: '';
+    ul li {
+        width: 30%;
+        list-style: none;
+        background-color: #1fb1ff;
+        border: 1px solid salmon;
+        padding: 20px;
+        display: flex;
+        align-content: center;
+        justify-content: center;
     }
-    /* 背景阴影*/
-    .tip:after {
-        position: absolute;
-        display: inline-block;
-        border-top: 6px solid transparent;
-        border-right: 6px solid #eee;
-        border-bottom: 6px solid transparent;
-        left: -6px;
-        top: 21px;
-        content: '';
+    .myDiv {
+        width: 100%;
+        background-color: #f21d20;
+        border: 6px solid #f21d20;
+        padding: 20px;
     }
 </style>
 <body>
-<div id="contentHolder">
-
-    <h2>CSS 箭头气泡 ，使用 伪类(Pseudo-Element)</h2>
-    <div style="position:relative;">
-        <div class="tip">
-            企业级开发首选技术是什么？JavaEE和.Net哪个技术更好？在JavaEE开发中主要用哪些框架？另外在移动大热的趋势下如何开发出一个成功的Android产品？
-        </div>
-        <br/>
-        <div class="tip">
-            向左的箭头: 只有三个边：上、下、右。而 < | 总体来看，向左三角形的高=上+下边框的长度。 宽=右边框的长度
-
-            向右的箭头: 只有三个边：上、下、左。而 |> 总体来看，向右三角形的高=上+下边框的长度。 宽=左边框的长度
-
-            向上的箭头,类似于A,只有三个边，不能指定上边框
-        </div>
-    </div>
-</div>
+    <ul id="game-all-name-list">
+        <li name="mLi" onclick="test(this)">A</li>
+        <li name="mLi" onclick="test(this)">B</li>
+        <li name="mLi" onclick="test(this)">C</li>
+        <li name="mLi" onclick="test(this)">D</li>
+        <li name="mLi" onclick="test(this)">E</li>
+        <li name="mLi" onclick="test(this)">F</li>
+        <li name="mLi" onclick="test(this)">G</li>
+        <li name="mLi" onclick="test(this)">H</li>
+        <li name="mLi" onclick="test(this)">K</li>
+    </ul>
 </body>
 </html>
+<script type="text/javascript" src="../js/jquery-1.8.1.min.js"></script>
+<script type="text/javascript">
+    function test(obj) {
+        let n = 3; //表示一行显示几个
+        let text = $(obj).text();
+        let index = $("#game-all-name-list li").index($(obj)); //获取点击的li在ul中的下标
+        let li = $('li[name="mLi"]');//获取当前ul中所有li
+        let last = Math.ceil(li.length/n); //获取行数
+        for(let i=0; i<li.length; i++) {
+            if (i === index) {
+                let div = li[i];//获取第i个li
+                let myDiv = document.getElementById("myDiv");
+                if(myDiv){
+                    div.parentNode.removeChild(myDiv);
+                }
+                let mHtml = '<div id="myDiv" class="myDiv">我是新的'+ text +'</div>';
+                let id = Math.floor(index / n);
+                //如果是最后一行，则直接加在末尾，如果不是，则加在当前行的后面
+                if ((id + 1) === last) {
+                    $("#game-all-name-list").append(mHtml);
+                } else {
+                    $("#game-all-name-list li").eq(n*id + (n - 1)).after(mHtml);
+                }
+            }
+        }
+    }
+</script>
