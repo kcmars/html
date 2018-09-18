@@ -1,0 +1,51 @@
+.team-lineup {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px;
+}
+.team-lineup-tab {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    color: #555555;
+}
+.team-lineup-tab span {
+    padding: 5px;
+    background-color: #1fb1ff;
+}
+.team-lineup-tab-active {
+    color: red;
+    border-bottom:2px solid yellow;
+}
+.team-content-table{
+    display:flex;
+    flex-direction: row;
+}
+.team-title-tips{
+    display:flex;
+    flex-direction: row;
+}
+.sel-tip{
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: flex-end;
+    padding: 10px;
+    flex: 1;
+}
+.sel-tip select{
+    margin:0 10px;
+    border: 1px solid #6dbcee;
+    border-radius: 5px;
+}
+.state-active{
+    background-color: orange;
+}
+.show{
+    display: block;
+}
+.hidden{
+    display: none;
+}

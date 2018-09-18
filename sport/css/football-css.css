@@ -1,0 +1,89 @@
+ul li {
+    list-style: none;
+}
+.super-league-num {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-bottom: 2px #f21d20 solid;
+    margin: 0 20px;
+    padding: 20px 0;
+}
+.super-league-num .game-title{
+    padding: 5px 10px;
+    background-color: #de1e30;
+    color: #ffffff;
+    font-size: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.game-title span {
+    padding: 5px 20px;
+}
+.game-num-head {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-left: 80px;
+}
+.current {
+    width: 5%;
+    padding: 10px;
+    margin: 5px;
+    background-color: #d5d5dc;
+    text-align: center;
+}
+.current-active{
+    background-color: #f21d20;
+    color:#fff;
+}
+.hidden{
+    display:none;
+}
+.show{
+    display:block;
+}
+.nav-active span{
+    background-color: #1fb1ff;
+    color:#fff;
+}
+.integral{
+    display: flex;
+    flex-direction: row;
+    justify-items: stretch;
+    background-color: #f3f3f4;
+    border-top: 1px solid #ddd;
+}
+.integral span{
+    display: flex;
+    flex-direction: row;
+    padding:20px;
+}
+.active-tip{
+    color: #de1e30;
+    background: #fff;
+    border-top: 2px solid #de1e30;
+}
+.integral-table{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    width:100%;
+}
+.integral-table table{
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+.integral-table table th ,.integral-table table td{
+    margin: 0;
+    color: #666;
+    /*width:10.7%;*/
+    height: 50px;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 50px;
+}

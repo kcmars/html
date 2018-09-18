@@ -1,0 +1,111 @@
+.main-head {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 90;
+    padding: 16px 20px 0 20px;
+    background-color: #ffffff;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.18);
+}
+.main-head ul {
+    flex: 1;
+    margin: 0 20px;
+}
+.main-head ul li .nav-link {
+    font-size: 14px;
+    height: 48px;
+    text-decoration: none;
+    line-height: 45px;
+    padding: 0 12px;
+    display: block;
+    position: relative;
+    color:#333;
+}
+.nav-link:after, .nav-link:before {
+    transition: .2s;
+    -webkit-transition: .2s;
+    -moz-transition: .2s;
+    -o-transition: .2s;
+    transform-style: preserve-3d;
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    -o-transform-style: preserve-3d;
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: #de1e30;
+}
+.nav-link:before {
+    right: 50%;
+}
+.nav-link:after {
+    left: 50%;
+}
+.main-head ul li:hover>.nav-link:after,
+.main-head ul li:hover>.nav-link:before{
+    width:50%;
+}
+.nav-link.active:after, .nav-link.active:before {
+    width: 50%;
+}
+.main-head .head-right {
+    right: 25px;
+}
+.main-head .head-right .head-login,
+.main-head .head-right .head-register {
+    width: 50px;
+    text-align: center;
+    line-height: 24px;
+    height: 24px;
+    border-radius: 0;
+    float: left;
+    margin-left: 10px;
+}
+.head-login {
+    line-height: 30px;
+    padding: 0 10px;
+    border-radius: 3px;
+    display: inline-block;
+    cursor: pointer;
+    color: #666;
+    font-size: 12px;
+    transition: .25s;
+    -webkit-transition: .25s;
+    -moz-transition: .25s;
+    -o-transition: .25s;
+    transform-style: preserve-3d;
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    -o-transform-style: preserve-3d;
+    background-color: #fff;
+    line-height: 28px;
+    border: 1px solid #ddd;
+}
+.head-register {
+    line-height: 30px;
+    padding: 0 10px;
+    border-radius: 3px;
+    display: inline-block;
+    cursor: pointer;
+    color: #666;
+    font-size: 12px;
+    transition: .25s;
+    -webkit-transition: .25s;
+    -moz-transition: .25s;
+    -o-transition: .25s;
+    transform-style: preserve-3d;
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    -o-transform-style: preserve-3d;
+    background-color: #fff;
+}
+.head-register.active,
+.head-register:hover,
+.head-login:hover {
+    background-color: #de1e30;
+    color: #fff;
+}

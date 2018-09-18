@@ -1,0 +1,5398 @@
+
+    {
+        "id": 1,
+        "name": "欧洲赛事",
+        "game_type": "1",
+        "area_list": [
+            {
+                "id": 9,
+                "name": "欧洲杯赛",
+                "type": 1,
+                "match_list": [
+                    {
+                        "id": 11,
+                        "name": "欧足联球队排名",
+                        "type": "1",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 31,
+                        "name": "欧锦赛",
+                        "type": "1",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 50,
+                        "name": "超级杯",
+                        "type": "1",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 65,
+                        "name": "欧冠杯",
+                        "type": "1",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 80,
+                        "name": "欧罗巴",
+                        "type": "1",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 88,
+                        "name": "图图杯",
+                        "type": "1",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 109,
+                        "name": "皇家联",
+                        "type": "1",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 118,
+                        "name": "欧U21",
+                        "type": "1",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 142,
+                        "name": "欧U21外",
+                        "type": "1",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 149,
+                        "name": "欧U19",
+                        "type": "1",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 171,
+                        "name": "欧U17",
+                        "type": "1",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 192,
+                        "name": "酋长杯",
+                        "type": "1",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 193,
+                        "name": "阿姆杯",
+                        "type": "1",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 199,
+                        "name": "地中运",
+                        "type": "1",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 200,
+                        "name": "波罗的海",
+                        "type": "1",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 240,
+                        "name": "波罗杯",
+                        "type": "1",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 249,
+                        "name": "女波罗杯",
+                        "type": "1",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 250,
+                        "name": "CO杯",
+                        "type": "1",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 251,
+                        "name": "独联体杯",
+                        "type": "1",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 262,
+                        "name": "TIP联",
+                        "type": "1",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 263,
+                        "name": "女欧锦赛",
+                        "type": "1",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 264,
+                        "name": "欧U19冠",
+                        "type": "1",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 265,
+                        "name": "奥迪杯",
+                        "type": "1",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 276,
+                        "name": "女欧外围",
+                        "type": "1",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 277,
+                        "name": "女欧U19",
+                        "type": "1",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 278,
+                        "name": "女欧U17",
+                        "type": "1",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 279,
+                        "name": "女欧协杯",
+                        "type": "1",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 288,
+                        "name": "欧室锦标",
+                        "type": "1",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 469,
+                        "name": "欧室U21",
+                        "type": "1",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 477,
+                        "name": "北欧U17",
+                        "type": "1",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 486,
+                        "name": "北欧女U23",
+                        "type": "1",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 508,
+                        "name": "北欧女U16",
+                        "type": "1",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 509,
+                        "name": "GF杯U19",
+                        "type": "1",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 569,
+                        "name": "太阳杯",
+                        "type": "1",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 574,
+                        "name": "不列颠杯",
+                        "type": "1",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 592,
+                        "name": "斯堪彩杯",
+                        "type": "1",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 615,
+                        "name": "斯堪锦标",
+                        "type": "1",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 637,
+                        "name": "世女欧预",
+                        "type": "1",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 645,
+                        "name": "欧预选",
+                        "type": "1",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 666,
+                        "name": "欧联U19",
+                        "type": "1",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 772,
+                        "name": "欧国联",
+                        "type": "2",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 779,
+                        "name": "大西洋杯",
+                        "type": "1",
+                        "game_type": "1"
+                    }
+                ]
+            },
+            {
+                "id": 26,
+                "name": "英格兰",
+                "type": 2,
+                "match_list": [
+                    {
+                        "id": 91,
+                        "name": "英超",
+                        "type": "2",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 283,
+                        "name": "英冠",
+                        "type": "2",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 295,
+                        "name": "英甲",
+                        "type": "2",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 440,
+                        "name": "英乙",
+                        "type": "2",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 452,
+                        "name": "英非联",
+                        "type": "2",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 538,
+                        "name": "英非北",
+                        "type": "2",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 571,
+                        "name": "英非南",
+                        "type": "2",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 585,
+                        "name": "英北超",
+                        "type": "2",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 612,
+                        "name": "英南超",
+                        "type": "2",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 640,
+                        "name": "英依联超",
+                        "type": "2",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 664,
+                        "name": "英女超",
+                        "type": "2",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 738,
+                        "name": "英足总",
+                        "type": "1",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 747,
+                        "name": "英联杯",
+                        "type": "1",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 754,
+                        "name": "英锦赛",
+                        "type": "1",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 774,
+                        "name": "英挑杯",
+                        "type": "1",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 806,
+                        "name": "英女足总",
+                        "type": "1",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 949,
+                        "name": "英U21",
+                        "type": "2",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 957,
+                        "name": "英U21乙",
+                        "type": "2",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 961,
+                        "name": "英总女超",
+                        "type": "2",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 962,
+                        "name": "英女北",
+                        "type": "2",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 968,
+                        "name": "英女南",
+                        "type": "2",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 969,
+                        "name": "英女杯",
+                        "type": "1",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 984,
+                        "name": "英青杯",
+                        "type": "1",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 998,
+                        "name": "英社盾",
+                        "type": "1",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 999,
+                        "name": "英U23",
+                        "type": "2",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 1000,
+                        "name": "英联杯U23",
+                        "type": "1",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 1004,
+                        "name": "英U23乙",
+                        "type": "2",
+                        "game_type": "1"
+                    }
+                ]
+            },
+            {
+                "id": 35,
+                "name": "意大利",
+                "type": 2,
+                "match_list": [
+                    {
+                        "id": 92,
+                        "name": "意甲",
+                        "type": "2",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 282,
+                        "name": "意乙",
+                        "type": "2",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 301,
+                        "name": "意丙1A",
+                        "type": "2",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 439,
+                        "name": "意丙1B",
+                        "type": "2",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 511,
+                        "name": "意丙1C",
+                        "type": "2",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 606,
+                        "name": "意丙附",
+                        "type": "2",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 631,
+                        "name": "意青联",
+                        "type": "2",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 681,
+                        "name": "意女甲",
+                        "type": "2",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 700,
+                        "name": "意大利杯",
+                        "type": "1",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 717,
+                        "name": "意超杯",
+                        "type": "1",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 732,
+                        "name": "TIM杯",
+                        "type": "1",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 733,
+                        "name": "维亚杯",
+                        "type": "1",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 746,
+                        "name": "意丙杯",
+                        "type": "1",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 764,
+                        "name": "意青杯",
+                        "type": "1",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 980,
+                        "name": "多塞纳杯",
+                        "type": "1",
+                        "game_type": "1"
+                    }
+                ]
+            },
+            {
+                "id": 36,
+                "name": "德国",
+                "type": 2,
+                "match_list": [
+                    {
+                        "id": 93,
+                        "name": "德甲",
+                        "type": "2",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 281,
+                        "name": "德乙",
+                        "type": "2",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 330,
+                        "name": "德丙",
+                        "type": "2",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 438,
+                        "name": "德南联",
+                        "type": "2",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 453,
+                        "name": "德北联",
+                        "type": "2",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 532,
+                        "name": "德西联",
+                        "type": "2",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 572,
+                        "name": "德巴联",
+                        "type": "2",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 577,
+                        "name": "德东北联",
+                        "type": "2",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 605,
+                        "name": "德青北",
+                        "type": "2",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 648,
+                        "name": "德青南",
+                        "type": "2",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 658,
+                        "name": "德青西",
+                        "type": "2",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 692,
+                        "name": "德U17北",
+                        "type": "2",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 724,
+                        "name": "德U17西",
+                        "type": "2",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 725,
+                        "name": "德U17南",
+                        "type": "2",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 739,
+                        "name": "德女甲",
+                        "type": "2",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 809,
+                        "name": "德国杯",
+                        "type": "1",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 810,
+                        "name": "德超杯",
+                        "type": "1",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 811,
+                        "name": "德青杯",
+                        "type": "1",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 945,
+                        "name": "德女杯",
+                        "type": "1",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 947,
+                        "name": "德电信杯",
+                        "type": "1",
+                        "game_type": "1"
+                    }
+                ]
+            },
+            {
+                "id": 37,
+                "name": "西班牙",
+                "type": 2,
+                "match_list": [
+                    {
+                        "id": 94,
+                        "name": "西甲",
+                        "type": "2",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 271,
+                        "name": "西乙",
+                        "type": "2",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 302,
+                        "name": "西丙1",
+                        "type": "2",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 428,
+                        "name": "西丙2",
+                        "type": "2",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 463,
+                        "name": "西丙3",
+                        "type": "2",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 548,
+                        "name": "西丙4",
+                        "type": "2",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 559,
+                        "name": "西丙附",
+                        "type": "2",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 601,
+                        "name": "西女超",
+                        "type": "2",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 616,
+                        "name": "西室内足",
+                        "type": "2",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 649,
+                        "name": "西班牙杯",
+                        "type": "1",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 671,
+                        "name": "西超杯",
+                        "type": "1",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 687,
+                        "name": "西联杯",
+                        "type": "1",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 977,
+                        "name": "皇后杯",
+                        "type": "1",
+                        "game_type": "1"
+                    }
+                ]
+            },
+            {
+                "id": 38,
+                "name": "法国",
+                "type": 2,
+                "match_list": [
+                    {
+                        "id": 103,
+                        "name": "法甲",
+                        "type": "2",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 269,
+                        "name": "法乙",
+                        "type": "2",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 309,
+                        "name": "法丙",
+                        "type": "2",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 390,
+                        "name": "法丁A",
+                        "type": "2",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 490,
+                        "name": "法丁B",
+                        "type": "2",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 525,
+                        "name": "法丁C",
+                        "type": "2",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 565,
+                        "name": "法丁D",
+                        "type": "2",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 591,
+                        "name": "法女甲",
+                        "type": "2",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 623,
+                        "name": "法U19A",
+                        "type": "2",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 635,
+                        "name": "法U19B",
+                        "type": "2",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 673,
+                        "name": "法U19C",
+                        "type": "2",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 691,
+                        "name": "法U19D",
+                        "type": "2",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 773,
+                        "name": "法国杯",
+                        "type": "1",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 782,
+                        "name": "法联杯",
+                        "type": "1",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 789,
+                        "name": "法超杯",
+                        "type": "1",
+                        "game_type": "1"
+                    }
+                ]
+            },
+            {
+                "id": 45,
+                "name": "荷兰",
+                "type": 2,
+                "match_list": [
+                    {
+                        "id": 832,
+                        "name": "荷甲",
+                        "type": "2",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 833,
+                        "name": "荷乙",
+                        "type": "2",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 834,
+                        "name": "荷青联",
+                        "type": "2",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 914,
+                        "name": "荷青乙",
+                        "type": "2",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 917,
+                        "name": "比荷女联",
+                        "type": "2",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 933,
+                        "name": "荷女甲",
+                        "type": "2",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 946,
+                        "name": "荷兰杯",
+                        "type": "1",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 964,
+                        "name": "荷超杯",
+                        "type": "1",
+                        "game_type": "1"
+                    }
+                ]
+            },
+            {
+                "id": 46,
+                "name": "俄罗斯",
+                "type": 2,
+                "match_list": [
+                    {
+                        "id": 102,
+                        "name": "俄超",
+                        "type": "2",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 270,
+                        "name": "俄甲",
+                        "type": "2",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 339,
+                        "name": "俄乙东",
+                        "type": "2",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 383,
+                        "name": "俄乙西",
+                        "type": "2",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 497,
+                        "name": "俄乙南",
+                        "type": "2",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 524,
+                        "name": "俄乙中",
+                        "type": "2",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 566,
+                        "name": "俄乙乌",
+                        "type": "2",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 590,
+                        "name": "俄青联",
+                        "type": "2",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 617,
+                        "name": "俄女超",
+                        "type": "2",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 657,
+                        "name": "俄杯",
+                        "type": "1",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 1001,
+                        "name": "FNL杯",
+                        "type": "1",
+                        "game_type": "1"
+                    }
+                ]
+            },
+            {
+                "id": 47,
+                "name": "罗马尼亚",
+                "type": 2,
+                "match_list": [
+                    {
+                        "id": 813,
+                        "name": "罗甲",
+                        "type": "2",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 815,
+                        "name": "罗乙",
+                        "type": "2",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 816,
+                        "name": "罗乙2",
+                        "type": "2",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 817,
+                        "name": "罗杯",
+                        "type": "1",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 976,
+                        "name": "罗乙附",
+                        "type": "1",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 978,
+                        "name": "罗联杯",
+                        "type": "1",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 997,
+                        "name": "罗超杯",
+                        "type": "1",
+                        "game_type": "1"
+                    }
+                ]
+            },
+            {
+                "id": 62,
+                "name": "土耳其",
+                "type": 2,
+                "match_list": [
+                    {
+                        "id": 104,
+                        "name": "土超",
+                        "type": "2",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 257,
+                        "name": "土甲",
+                        "type": "2",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 353,
+                        "name": "土乙白",
+                        "type": "2",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 618,
+                        "name": "土乙红",
+                        "type": "2",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 798,
+                        "name": "土女甲",
+                        "type": "2",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 940,
+                        "name": "土丙1",
+                        "type": "2",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 942,
+                        "name": "土丙2",
+                        "type": "2",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 943,
+                        "name": "土丙3",
+                        "type": "2",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 979,
+                        "name": "土U21超",
+                        "type": "2",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 981,
+                        "name": "土丙附",
+                        "type": "1",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 982,
+                        "name": "土超杯",
+                        "type": "1",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 983,
+                        "name": "土杯",
+                        "type": "1",
+                        "game_type": "1"
+                    }
+                ]
+            },
+            {
+                "id": 63,
+                "name": "哈萨克斯坦",
+                "type": 2,
+                "match_list": [
+                    {
+                        "id": 812,
+                        "name": "哈萨超",
+                        "type": "2",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 925,
+                        "name": "哈萨甲",
+                        "type": "2",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 955,
+                        "name": "哈萨杯",
+                        "type": "1",
+                        "game_type": "1"
+                    }
+                ]
+            },
+            {
+                "id": 64,
+                "name": "乌克兰",
+                "type": 2,
+                "match_list": [
+                    {
+                        "id": 115,
+                        "name": "乌克超",
+                        "type": "2",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 205,
+                        "name": "乌克甲",
+                        "type": "2",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 359,
+                        "name": "乌克U21",
+                        "type": "2",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 926,
+                        "name": "乌克杯",
+                        "type": "1",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 970,
+                        "name": "乌克超杯",
+                        "type": "1",
+                        "game_type": "1"
+                    }
+                ]
+            },
+            {
+                "id": 69,
+                "name": "瑞典",
+                "type": 2,
+                "match_list": [
+                    {
+                        "id": 113,
+                        "name": "瑞典超",
+                        "type": "2",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 256,
+                        "name": "瑞典甲",
+                        "type": "2",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 310,
+                        "name": "瑞典乙南",
+                        "type": "2",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 427,
+                        "name": "瑞典乙北",
+                        "type": "2",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 464,
+                        "name": "瑞典丙N",
+                        "type": "2",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 549,
+                        "name": "瑞典丙NS",
+                        "type": "2",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 600,
+                        "name": "瑞典丙OG",
+                        "type": "2",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 622,
+                        "name": "瑞典丙NG",
+                        "type": "2",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 708,
+                        "name": "瑞典丙SS",
+                        "type": "2",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 709,
+                        "name": "瑞典丙VG",
+                        "type": "2",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 755,
+                        "name": "瑞典女超",
+                        "type": "2",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 794,
+                        "name": "瑞典杯",
+                        "type": "1",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 796,
+                        "name": "女瑞典杯",
+                        "type": "1",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 799,
+                        "name": "瑞青超北",
+                        "type": "2",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 805,
+                        "name": "瑞青超南",
+                        "type": "2",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 807,
+                        "name": "瑞青甲北",
+                        "type": "2",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 808,
+                        "name": "瑞青甲南",
+                        "type": "2",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 975,
+                        "name": "瑞典女乙",
+                        "type": "2",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 985,
+                        "name": "瑞典丙SG",
+                        "type": "2",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 987,
+                        "name": "瑞典超杯",
+                        "type": "1",
+                        "game_type": "1"
+                    }
+                ]
+            },
+            {
+                "id": 70,
+                "name": "芬兰",
+                "type": 2,
+                "match_list": [
+                    {
+                        "id": 114,
+                        "name": "芬超",
+                        "type": "2",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 255,
+                        "name": "芬甲",
+                        "type": "2",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 329,
+                        "name": "芬女超",
+                        "type": "2",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 414,
+                        "name": "芬兰杯",
+                        "type": "1",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 474,
+                        "name": "芬联杯",
+                        "type": "1",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 530,
+                        "name": "芬女联杯",
+                        "type": "1",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 951,
+                        "name": "芬乙西",
+                        "type": "2",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 952,
+                        "name": "芬乙北",
+                        "type": "2",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 953,
+                        "name": "芬乙东",
+                        "type": "2",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 954,
+                        "name": "芬乙南",
+                        "type": "2",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 993,
+                        "name": "芬乙A",
+                        "type": "2",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 994,
+                        "name": "芬乙B",
+                        "type": "2",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 995,
+                        "name": "芬乙C",
+                        "type": "2",
+                        "game_type": "1"
+                    }
+                ]
+            },
+            {
+                "id": 71,
+                "name": "挪威",
+                "type": 2,
+                "match_list": [
+                    {
+                        "id": 127,
+                        "name": "挪超",
+                        "type": "2",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 246,
+                        "name": "挪甲",
+                        "type": "2",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 311,
+                        "name": "挪乙A",
+                        "type": "2",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 413,
+                        "name": "挪乙B",
+                        "type": "2",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 475,
+                        "name": "挪乙C",
+                        "type": "2",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 543,
+                        "name": "挪乙D",
+                        "type": "2",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 596,
+                        "name": "挪女超",
+                        "type": "2",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 607,
+                        "name": "挪威杯",
+                        "type": "1",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 639,
+                        "name": "女挪威杯",
+                        "type": "1",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 672,
+                        "name": "挪精英赛",
+                        "type": "1",
+                        "game_type": "1"
+                    }
+                ]
+            },
+            {
+                "id": 72,
+                "name": "波兰",
+                "type": 2,
+                "match_list": [
+                    {
+                        "id": 157,
+                        "name": "波兰甲",
+                        "type": "2",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 236,
+                        "name": "波兰乙",
+                        "type": "2",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 293,
+                        "name": "波兰丙",
+                        "type": "2",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 480,
+                        "name": "波青联",
+                        "type": "2",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 513,
+                        "name": "波女甲",
+                        "type": "2",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 553,
+                        "name": "波兰杯",
+                        "type": "1",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 595,
+                        "name": "波联杯",
+                        "type": "1",
+                        "game_type": "1"
+                    }
+                ]
+            },
+            {
+                "id": 77,
+                "name": "白俄罗斯",
+                "type": 2,
+                "match_list": [
+                    {
+                        "id": 863,
+                        "name": "白俄超",
+                        "type": "2",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 921,
+                        "name": "白俄甲",
+                        "type": "2",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 928,
+                        "name": "白俄杯",
+                        "type": "1",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 967,
+                        "name": "白俄女超",
+                        "type": "2",
+                        "game_type": "1"
+                    }
+                ]
+            },
+            {
+                "id": 78,
+                "name": "希腊",
+                "type": 2,
+                "match_list": [
+                    {
+                        "id": 864,
+                        "name": "希腊超",
+                        "type": "2",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 867,
+                        "name": "希腊甲",
+                        "type": "2",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 868,
+                        "name": "希杯",
+                        "type": "1",
+                        "game_type": "1"
+                    }
+                ]
+            },
+            {
+                "id": 79,
+                "name": "保加利亚",
+                "type": 2,
+                "match_list": [
+                    {
+                        "id": 168,
+                        "name": "保超",
+                        "type": "2",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 196,
+                        "name": "保乙",
+                        "type": "2",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 482,
+                        "name": "保杯",
+                        "type": "1",
+                        "game_type": "1"
+                    }
+                ]
+            },
+            {
+                "id": 80,
+                "name": "冰岛",
+                "type": 2,
+                "match_list": [
+                    {
+                        "id": 169,
+                        "name": "冰岛超",
+                        "type": "2",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 225,
+                        "name": "冰岛甲",
+                        "type": "2",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 344,
+                        "name": "冰岛乙",
+                        "type": "2",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 376,
+                        "name": "冰女超",
+                        "type": "2",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 505,
+                        "name": "冰女甲",
+                        "type": "2",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 542,
+                        "name": "冰岛杯",
+                        "type": "1",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 564,
+                        "name": "冰联杯",
+                        "type": "1",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 583,
+                        "name": "雷克锦标",
+                        "type": "1",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 629,
+                        "name": "冰岛锦",
+                        "type": "1",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 630,
+                        "name": "冰岛锦B",
+                        "type": "1",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 989,
+                        "name": "冰女杯",
+                        "type": "1",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 990,
+                        "name": "冰女联杯",
+                        "type": "1",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 992,
+                        "name": "雷克女锦",
+                        "type": "1",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 1006,
+                        "name": "冰联杯B",
+                        "type": "1",
+                        "game_type": "1"
+                    }
+                ]
+            },
+            {
+                "id": 83,
+                "name": "塞尔维亚",
+                "type": 2,
+                "match_list": [
+                    {
+                        "id": 871,
+                        "name": "塞尔超",
+                        "type": "2",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 872,
+                        "name": "塞尔甲",
+                        "type": "2",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 944,
+                        "name": "塞尔杯",
+                        "type": "1",
+                        "game_type": "1"
+                    }
+                ]
+            },
+            {
+                "id": 84,
+                "name": "匈牙利",
+                "type": 2,
+                "match_list": [
+                    {
+                        "id": 177,
+                        "name": "匈甲",
+                        "type": "2",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 218,
+                        "name": "匈乙",
+                        "type": "2",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 405,
+                        "name": "匈杯",
+                        "type": "1",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 481,
+                        "name": "匈联杯",
+                        "type": "1",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 941,
+                        "name": "匈女甲",
+                        "type": "2",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 971,
+                        "name": "匈U19",
+                        "type": "2",
+                        "game_type": "1"
+                    }
+                ]
+            },
+            {
+                "id": 85,
+                "name": "葡萄牙",
+                "type": 2,
+                "match_list": [
+                    {
+                        "id": 167,
+                        "name": "葡超",
+                        "type": "2",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 226,
+                        "name": "葡甲",
+                        "type": "2",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 693,
+                        "name": "葡青A1北",
+                        "type": "2",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 716,
+                        "name": "葡青A1南",
+                        "type": "2",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 726,
+                        "name": "葡青A1附",
+                        "type": "2",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 740,
+                        "name": "葡U17A",
+                        "type": "2",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 745,
+                        "name": "葡U17B",
+                        "type": "2",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 763,
+                        "name": "葡U17C",
+                        "type": "2",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 765,
+                        "name": "葡U17D",
+                        "type": "2",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 783,
+                        "name": "葡U17E",
+                        "type": "2",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 790,
+                        "name": "葡杯",
+                        "type": "1",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 795,
+                        "name": "葡联杯",
+                        "type": "1",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 800,
+                        "name": "葡超杯",
+                        "type": "1",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 956,
+                        "name": "尤西比杯",
+                        "type": "1",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 974,
+                        "name": "葡U17冠",
+                        "type": "2",
+                        "game_type": "1"
+                    }
+                ]
+            },
+            {
+                "id": 86,
+                "name": "阿塞拜疆",
+                "type": 2,
+                "match_list": [
+                    {
+                        "id": 869,
+                        "name": "阿塞超",
+                        "type": "2",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 920,
+                        "name": "阿塞杯",
+                        "type": "1",
+                        "game_type": "1"
+                    }
+                ]
+            },
+            {
+                "id": 88,
+                "name": "奥地利",
+                "type": 2,
+                "match_list": [
+                    {
+                        "id": 166,
+                        "name": "奥甲",
+                        "type": "2",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 234,
+                        "name": "奥乙",
+                        "type": "2",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 338,
+                        "name": "奥丙东",
+                        "type": "2",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 389,
+                        "name": "奥丙中",
+                        "type": "2",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 491,
+                        "name": "奥丙西",
+                        "type": "2",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 517,
+                        "name": "奥女甲",
+                        "type": "2",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 959,
+                        "name": "奥杯",
+                        "type": "1",
+                        "game_type": "1"
+                    }
+                ]
+            },
+            {
+                "id": 89,
+                "name": "捷克",
+                "type": 2,
+                "match_list": [
+                    {
+                        "id": 158,
+                        "name": "捷甲",
+                        "type": "2",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 235,
+                        "name": "捷乙",
+                        "type": "2",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 324,
+                        "name": "捷丙",
+                        "type": "2",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 374,
+                        "name": "捷丙M",
+                        "type": "2",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 506,
+                        "name": "捷U21",
+                        "type": "2",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 934,
+                        "name": "捷U19",
+                        "type": "2",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 958,
+                        "name": "捷女甲",
+                        "type": "2",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 960,
+                        "name": "捷克杯",
+                        "type": "1",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 986,
+                        "name": "捷超杯",
+                        "type": "1",
+                        "game_type": "1"
+                    }
+                ]
+            },
+            {
+                "id": 90,
+                "name": "苏格兰",
+                "type": 2,
+                "match_list": [
+                    {
+                        "id": 851,
+                        "name": "苏超",
+                        "type": "2",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 852,
+                        "name": "苏冠",
+                        "type": "2",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 853,
+                        "name": "苏甲",
+                        "type": "2",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 857,
+                        "name": "苏乙",
+                        "type": "2",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 858,
+                        "name": "苏后备",
+                        "type": "2",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 859,
+                        "name": "苏青联",
+                        "type": "2",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 862,
+                        "name": "苏高地联",
+                        "type": "2",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 915,
+                        "name": "苏联杯",
+                        "type": "1",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 916,
+                        "name": "苏足总",
+                        "type": "1",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 927,
+                        "name": "苏挑杯",
+                        "type": "1",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 966,
+                        "name": "苏女超",
+                        "type": "2",
+                        "game_type": "1"
+                    }
+                ]
+            },
+            {
+                "id": 91,
+                "name": "爱尔兰",
+                "type": 2,
+                "match_list": [
+                    {
+                        "id": 156,
+                        "name": "爱超",
+                        "type": "2",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 237,
+                        "name": "爱甲",
+                        "type": "2",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 318,
+                        "name": "爱足总",
+                        "type": "1",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 406,
+                        "name": "爱联杯",
+                        "type": "1",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 476,
+                        "name": "爱斯坦杯",
+                        "type": "1",
+                        "game_type": "1"
+                    }
+                ]
+            },
+            {
+                "id": 92,
+                "name": "格鲁吉亚",
+                "type": 2,
+                "match_list": [
+                    {
+                        "id": 848,
+                        "name": "格鲁超",
+                        "type": "2",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 937,
+                        "name": "格鲁甲",
+                        "type": "2",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 972,
+                        "name": "格鲁杯",
+                        "type": "1",
+                        "game_type": "1"
+                    }
+                ]
+            },
+            {
+                "id": 93,
+                "name": "拉脱维亚",
+                "type": 2,
+                "match_list": [
+                    {
+                        "id": 846,
+                        "name": "拉脱甲",
+                        "type": "2",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 847,
+                        "name": "拉脱乙",
+                        "type": "2",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 939,
+                        "name": "拉脱杯",
+                        "type": "1",
+                        "game_type": "1"
+                    }
+                ]
+            },
+            {
+                "id": 94,
+                "name": "立陶宛",
+                "type": 2,
+                "match_list": [
+                    {
+                        "id": 843,
+                        "name": "立陶甲",
+                        "type": "2",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 932,
+                        "name": "立陶杯",
+                        "type": "1",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 938,
+                        "name": "立陶乙",
+                        "type": "2",
+                        "game_type": "1"
+                    }
+                ]
+            },
+            {
+                "id": 95,
+                "name": "克罗地亚",
+                "type": 2,
+                "match_list": [
+                    {
+                        "id": 841,
+                        "name": "克罗甲",
+                        "type": "2",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 842,
+                        "name": "克罗杯",
+                        "type": "1",
+                        "game_type": "1"
+                    }
+                ]
+            },
+            {
+                "id": 96,
+                "name": "波黑",
+                "type": 2,
+                "match_list": [
+                    {
+                        "id": 838,
+                        "name": "波黑超",
+                        "type": "2",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 918,
+                        "name": "波黑杯",
+                        "type": "1",
+                        "game_type": "1"
+                    }
+                ]
+            },
+            {
+                "id": 97,
+                "name": "斯洛伐克",
+                "type": 2,
+                "match_list": [
+                    {
+                        "id": 836,
+                        "name": "斯伐甲",
+                        "type": "2",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 837,
+                        "name": "斯伐乙",
+                        "type": "2",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 930,
+                        "name": "斯伐乙西",
+                        "type": "2",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 931,
+                        "name": "斯伐杯",
+                        "type": "1",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 936,
+                        "name": "斯伐杯U18",
+                        "type": "1",
+                        "game_type": "1"
+                    }
+                ]
+            },
+            {
+                "id": 98,
+                "name": "爱沙尼亚",
+                "type": 2,
+                "match_list": [
+                    {
+                        "id": 155,
+                        "name": "爱沙甲",
+                        "type": "2",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 208,
+                        "name": "爱沙乙",
+                        "type": "2",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 360,
+                        "name": "爱沙乙B",
+                        "type": "2",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 367,
+                        "name": "爱沙女甲",
+                        "type": "2",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 531,
+                        "name": "爱沙杯",
+                        "type": "1",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 991,
+                        "name": "爱沙冬锦",
+                        "type": "1",
+                        "game_type": "1"
+                    }
+                ]
+            },
+            {
+                "id": 99,
+                "name": "丹麦",
+                "type": 2,
+                "match_list": [
+                    {
+                        "id": 148,
+                        "name": "丹超",
+                        "type": "2",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 243,
+                        "name": "丹甲",
+                        "type": "2",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 317,
+                        "name": "丹乙A",
+                        "type": "2",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 412,
+                        "name": "丹乙B",
+                        "type": "2",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 512,
+                        "name": "丹乙C",
+                        "type": "2",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 537,
+                        "name": "丹女超",
+                        "type": "2",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 558,
+                        "name": "丹女甲",
+                        "type": "2",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 584,
+                        "name": "丹后备",
+                        "type": "2",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 624,
+                        "name": "丹麦U19",
+                        "type": "2",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 686,
+                        "name": "丹麦U17",
+                        "type": "2",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 924,
+                        "name": "丹杯",
+                        "type": "1",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 1002,
+                        "name": "丹女杯",
+                        "type": "1",
+                        "game_type": "1"
+                    }
+                ]
+            },
+            {
+                "id": 100,
+                "name": "瑞士",
+                "type": 2,
+                "match_list": [
+                    {
+                        "id": 146,
+                        "name": "瑞士超",
+                        "type": "2",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 244,
+                        "name": "瑞士甲",
+                        "type": "2",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 345,
+                        "name": "瑞士乙1",
+                        "type": "2",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 375,
+                        "name": "瑞士乙2",
+                        "type": "2",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 499,
+                        "name": "瑞士乙3",
+                        "type": "2",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 544,
+                        "name": "瑞士杯",
+                        "type": "1",
+                        "game_type": "1"
+                    }
+                ]
+            },
+            {
+                "id": 101,
+                "name": "摩尔多瓦",
+                "type": 2,
+                "match_list": [
+                    {
+                        "id": 147,
+                        "name": "摩尔甲",
+                        "type": "2",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 217,
+                        "name": "摩尔乙",
+                        "type": "2",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 346,
+                        "name": "摩尔杯",
+                        "type": "1",
+                        "game_type": "1"
+                    }
+                ]
+            },
+            {
+                "id": 102,
+                "name": "比利时",
+                "type": 2,
+                "match_list": [
+                    {
+                        "id": 137,
+                        "name": "比甲",
+                        "type": "2",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 245,
+                        "name": "比乙",
+                        "type": "2",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 294,
+                        "name": "比业余",
+                        "type": "2",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 384,
+                        "name": "比丙A",
+                        "type": "2",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 492,
+                        "name": "比丙B",
+                        "type": "2",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 519,
+                        "name": "比荷女联",
+                        "type": "2",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 576,
+                        "name": "比女超",
+                        "type": "2",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 963,
+                        "name": "比女甲",
+                        "type": "2",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 988,
+                        "name": "比利时杯",
+                        "type": "1",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 996,
+                        "name": "比超杯",
+                        "type": "1",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 1003,
+                        "name": "比U21",
+                        "type": "2",
+                        "game_type": "1"
+                    }
+                ]
+            },
+            {
+                "id": 103,
+                "name": "阿美尼亚",
+                "type": 2,
+                "match_list": [
+                    {
+                        "id": 136,
+                        "name": "亚美超",
+                        "type": "2",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 216,
+                        "name": "亚美甲",
+                        "type": "2",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 332,
+                        "name": "亚美杯",
+                        "type": "1",
+                        "game_type": "1"
+                    }
+                ]
+            },
+            {
+                "id": 104,
+                "name": "阿尔巴尼亚",
+                "type": 2,
+                "match_list": [
+                    {
+                        "id": 830,
+                        "name": "阿尔巴超",
+                        "type": "2",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 831,
+                        "name": "阿尔巴杯",
+                        "type": "1",
+                        "game_type": "1"
+                    }
+                ]
+            },
+            {
+                "id": 105,
+                "name": "马其顿",
+                "type": 2,
+                "match_list": [
+                    {
+                        "id": 829,
+                        "name": "马其甲",
+                        "type": "2",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 919,
+                        "name": "马其乙",
+                        "type": "2",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 929,
+                        "name": "马其杯",
+                        "type": "1",
+                        "game_type": "1"
+                    }
+                ]
+            },
+            {
+                "id": 106,
+                "name": "以色列",
+                "type": 2,
+                "match_list": [
+                    {
+                        "id": 126,
+                        "name": "以超",
+                        "type": "2",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 254,
+                        "name": "以甲",
+                        "type": "2",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 347,
+                        "name": "以乙",
+                        "type": "2",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 392,
+                        "name": "以杯",
+                        "type": "1",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 500,
+                        "name": "以超杯",
+                        "type": "1",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 523,
+                        "name": "以甲杯",
+                        "type": "1",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 965,
+                        "name": "以女甲",
+                        "type": "2",
+                        "game_type": "1"
+                    }
+                ]
+            },
+            {
+                "id": 107,
+                "name": "斯洛文尼亚",
+                "type": 2,
+                "match_list": [
+                    {
+                        "id": 826,
+                        "name": "斯尼甲",
+                        "type": "2",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 827,
+                        "name": "斯尼乙",
+                        "type": "2",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 913,
+                        "name": "斯尼杯",
+                        "type": "1",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 948,
+                        "name": "斯尼超杯",
+                        "type": "1",
+                        "game_type": "1"
+                    }
+                ]
+            },
+            {
+                "id": 108,
+                "name": "威尔士",
+                "type": 2,
+                "match_list": [
+                    {
+                        "id": 125,
+                        "name": "威超",
+                        "type": "2",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 188,
+                        "name": "威甲",
+                        "type": "2",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 354,
+                        "name": "威联盟",
+                        "type": "2",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 426,
+                        "name": "威杯",
+                        "type": "1",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 465,
+                        "name": "威联杯",
+                        "type": "1",
+                        "game_type": "1"
+                    }
+                ]
+            },
+            {
+                "id": 109,
+                "name": "北爱尔兰",
+                "type": 2,
+                "match_list": [
+                    {
+                        "id": 124,
+                        "name": "北爱超",
+                        "type": "2",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 206,
+                        "name": "北爱冠",
+                        "type": "2",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 331,
+                        "name": "北爱杯",
+                        "type": "1",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 398,
+                        "name": "北爱联杯",
+                        "type": "1",
+                        "game_type": "1"
+                    }
+                ]
+            },
+            {
+                "id": 110,
+                "name": "黑山",
+                "type": 2,
+                "match_list": [
+                    {
+                        "id": 825,
+                        "name": "黑山甲",
+                        "type": "2",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 922,
+                        "name": "黑山乙",
+                        "type": "2",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 923,
+                        "name": "黑山杯",
+                        "type": "1",
+                        "game_type": "1"
+                    }
+                ]
+            },
+            {
+                "id": 111,
+                "name": "塞浦路斯",
+                "type": 2,
+                "match_list": [
+                    {
+                        "id": 819,
+                        "name": "塞浦甲",
+                        "type": "2",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 820,
+                        "name": "塞浦乙",
+                        "type": "2",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 935,
+                        "name": "塞浦杯",
+                        "type": "1",
+                        "game_type": "1"
+                    }
+                ]
+            },
+            {
+                "id": 112,
+                "name": "马耳他",
+                "type": 2,
+                "match_list": [
+                    {
+                        "id": 135,
+                        "name": "马耳超",
+                        "type": "2",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 207,
+                        "name": "马耳甲",
+                        "type": "2",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 361,
+                        "name": "马耳女甲",
+                        "type": "2",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 391,
+                        "name": "马耳杯",
+                        "type": "1",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 498,
+                        "name": "马耳超杯",
+                        "type": "1",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 518,
+                        "name": "AME杯",
+                        "type": "1",
+                        "game_type": "1"
+                    }
+                ]
+            },
+            {
+                "id": 113,
+                "name": "卢森堡",
+                "type": 2,
+                "match_list": [
+                    {
+                        "id": 818,
+                        "name": "卢森甲",
+                        "type": "2",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 973,
+                        "name": "卢森堡杯",
+                        "type": "1",
+                        "game_type": "1"
+                    }
+                ]
+            },
+            {
+                "id": 114,
+                "name": "法罗群岛",
+                "type": 2,
+                "match_list": [
+                    {
+                        "id": 116,
+                        "name": "法罗甲",
+                        "type": "2",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 197,
+                        "name": "法罗杯",
+                        "type": "1",
+                        "game_type": "1"
+                    }
+                ]
+            },
+            {
+                "id": 117,
+                "name": "安道尔",
+                "type": 2,
+                "match_list": [
+                    {
+                        "id": 182,
+                        "name": "安道超",
+                        "type": "2",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 189,
+                        "name": "安道杯",
+                        "type": "1",
+                        "game_type": "1"
+                    }
+                ]
+            },
+            {
+                "id": 122,
+                "name": "圣马力诺",
+                "type": 2,
+                "match_list": [
+                    {
+                        "id": 950,
+                        "name": "圣马甲",
+                        "type": "2",
+                        "game_type": "1"
+                    }
+                ]
+            },
+            {
+                "id": 123,
+                "name": "科索沃",
+                "type": 2,
+                "match_list": [
+                    {
+                        "id": 1005,
+                        "name": "科索超",
+                        "type": "2",
+                        "game_type": "1"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "name": "美洲赛事",
+        "game_type": "1",
+        "area_list": [
+            {
+                "id": 1,
+                "name": "阿根廷",
+                "type": 2,
+                "match_list": [
+                    {
+                        "id": 4,
+                        "name": "阿超",
+                        "type": "2",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 22,
+                        "name": "阿乙",
+                        "type": "2",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 48,
+                        "name": "阿乙M1",
+                        "type": "2",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 49,
+                        "name": "阿乙M2",
+                        "type": "2",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 76,
+                        "name": "阿乙M3",
+                        "type": "2",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 106,
+                        "name": "阿根廷杯",
+                        "type": "1",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 117,
+                        "name": "阿夏赛",
+                        "type": "1",
+                        "game_type": "1"
+                    }
+                ]
+            },
+            {
+                "id": 2,
+                "name": "巴西",
+                "type": 2,
+                "match_list": [
+                    {
+                        "id": 3,
+                        "name": "巴甲",
+                        "type": "2",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 23,
+                        "name": "巴乙",
+                        "type": "2",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 32,
+                        "name": "巴圣锦标",
+                        "type": "1",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 63,
+                        "name": "里约锦标",
+                        "type": "1",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 83,
+                        "name": "巴丙",
+                        "type": "2",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 95,
+                        "name": "巴伯联",
+                        "type": "2",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 105,
+                        "name": "巴波联",
+                        "type": "2",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 128,
+                        "name": "巴国诺联",
+                        "type": "2",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 138,
+                        "name": "巴米甲",
+                        "type": "2",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 159,
+                        "name": "巴卡德联",
+                        "type": "2",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 170,
+                        "name": "巴帕联",
+                        "type": "2",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 190,
+                        "name": "巴巴亚联",
+                        "type": "2",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 198,
+                        "name": "巴高甲",
+                        "type": "2",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 209,
+                        "name": "巴伊联",
+                        "type": "2",
+                        "game_type": "1"
+                    },
+                    {
+                        "id": 210,
+                        "name": "巴塞阿甲",
+                        "type": "2",
+                        "game_type": "1"
+                    },
+    {
+    "id": 219,
+    "name": "巴青锦标",
+    "type": "1",
+    "game_type": "1"
+    },
+    {
+    "id": 227,
+    "name": "巴圣甲",
+    "type": "2",
+    "game_type": "1"
+    },
+    {
+    "id": 228,
+    "name": "巴西杯",
+    "type": "1",
+    "game_type": "1"
+    },
+    {
+    "id": 651,
+    "name": "巴西青杯",
+    "type": "1",
+    "game_type": "1"
+    },
+    {
+    "id": 712,
+    "name": "巴圣杯",
+    "type": "1",
+    "game_type": "1"
+    },
+    {
+    "id": 727,
+    "name": "巴圣青杯",
+    "type": "1",
+    "game_type": "1"
+    },
+    {
+    "id": 758,
+    "name": "巴超联杯",
+    "type": "1",
+    "game_type": "1"
+    },
+    {
+    "id": 769,
+    "name": "巴维杯",
+    "type": "1",
+    "game_type": "1"
+    },
+    {
+    "id": 803,
+    "name": "巴东北杯",
+    "type": "1",
+    "game_type": "1"
+    }
+    ]
+    },
+    {
+    "id": 3,
+    "name": "加拿大",
+    "type": 2,
+    "match_list": [
+    {
+    "id": 1,
+    "name": "加拿超",
+    "type": "2",
+    "game_type": "1"
+    },
+    {
+    "id": 554,
+    "name": "加拿冠",
+    "type": "1",
+    "game_type": "1"
+    }
+    ]
+    },
+    {
+    "id": 4,
+    "name": "乌拉圭",
+    "type": 2,
+    "match_list": [
+    {
+    "id": 275,
+    "name": "乌拉甲",
+    "type": "2",
+    "game_type": "1"
+    }
+    ]
+    },
+    {
+    "id": 5,
+    "name": "美国",
+    "type": 2,
+    "match_list": [
+    {
+    "id": 2,
+    "name": "美联",
+    "type": "2",
+    "game_type": "1"
+    },
+    {
+    "id": 24,
+    "name": "美甲",
+    "type": "2",
+    "game_type": "1"
+    },
+    {
+    "id": 43,
+    "name": "美乙",
+    "type": "2",
+    "game_type": "1"
+    },
+    {
+    "id": 55,
+    "name": "美女联",
+    "type": "2",
+    "game_type": "1"
+    },
+    {
+    "id": 69,
+    "name": "美公开杯",
+    "type": "2",
+    "game_type": "1"
+    },
+    {
+    "id": 84,
+    "name": "美精英赛",
+    "type": "1",
+    "game_type": "1"
+    },
+    {
+    "id": 586,
+    "name": "北美联",
+    "type": "2",
+    "game_type": "1"
+    },
+    {
+    "id": 652,
+    "name": "钻石杯",
+    "type": "1",
+    "game_type": "1"
+    },
+    {
+    "id": 697,
+    "name": "卡罗莱杯",
+    "type": "1",
+    "game_type": "1"
+    }
+    ]
+    },
+    {
+    "id": 6,
+    "name": "墨西哥",
+    "type": 2,
+    "match_list": [
+    {
+    "id": 247,
+    "name": "墨联",
+    "type": "2",
+    "game_type": "1"
+    },
+    {
+    "id": 258,
+    "name": "墨西乙",
+    "type": "2",
+    "game_type": "1"
+    },
+    {
+    "id": 560,
+    "name": "墨西杯",
+    "type": "1",
+    "game_type": "1"
+    }
+    ]
+    },
+    {
+    "id": 7,
+    "name": "秘鲁",
+    "type": 2,
+    "match_list": [
+    {
+    "id": 259,
+    "name": "秘鲁甲",
+    "type": "2",
+    "game_type": "1"
+    },
+    {
+    "id": 728,
+    "name": "秘印加杯",
+    "type": "1",
+    "game_type": "1"
+    }
+    ]
+    },
+    {
+    "id": 8,
+    "name": "哥伦比亚",
+    "type": 2,
+    "match_list": [
+    {
+    "id": 260,
+    "name": "哥伦甲",
+    "type": "2",
+    "game_type": "1"
+    },
+    {
+    "id": 501,
+    "name": "哥伦杯",
+    "type": "1",
+    "game_type": "1"
+    },
+    {
+    "id": 526,
+    "name": "哥伦乙",
+    "type": "2",
+    "game_type": "1"
+    }
+    ]
+    },
+    {
+    "id": 10,
+    "name": "美洲杯赛",
+    "type": 1,
+    "match_list": [
+    {
+    "id": 7,
+    "name": "美洲杯",
+    "type": "1",
+    "game_type": "1"
+    },
+    {
+    "id": 18,
+    "name": "美洲金杯",
+    "type": "1",
+    "game_type": "1"
+    },
+    {
+    "id": 36,
+    "name": "解放者杯",
+    "type": "1",
+    "game_type": "1"
+    },
+    {
+    "id": 62,
+    "name": "南球杯",
+    "type": "1",
+    "game_type": "1"
+    },
+    {
+    "id": 72,
+    "name": "南美超杯",
+    "type": "1",
+    "game_type": "1"
+    },
+    {
+    "id": 85,
+    "name": "泛美男足",
+    "type": "1",
+    "game_type": "1"
+    },
+    {
+    "id": 86,
+    "name": "泛美女足",
+    "type": "1",
+    "game_type": "1"
+    },
+    {
+    "id": 119,
+    "name": "南冠U20",
+    "type": "1",
+    "game_type": "1"
+    },
+    {
+    "id": 141,
+    "name": "南冠U17",
+    "type": "1",
+    "game_type": "1"
+    },
+    {
+    "id": 160,
+    "name": "南冠U15",
+    "type": "1",
+    "game_type": "1"
+    },
+    {
+    "id": 221,
+    "name": "中北美冠",
+    "type": "1",
+    "game_type": "1"
+    },
+    {
+    "id": 222,
+    "name": "中美洲杯",
+    "type": "1",
+    "game_type": "1"
+    },
+    {
+    "id": 223,
+    "name": "美青杯",
+    "type": "1",
+    "game_type": "1"
+    },
+    {
+    "id": 229,
+    "name": "美青U17",
+    "type": "1",
+    "game_type": "1"
+    },
+    {
+    "id": 230,
+    "name": "北美超",
+    "type": "1",
+    "game_type": "1"
+    },
+    {
+    "id": 231,
+    "name": "女南冠U20",
+    "type": "1",
+    "game_type": "1"
+    },
+    {
+    "id": 238,
+    "name": "女南冠U17",
+    "type": "1",
+    "game_type": "1"
+    },
+    {
+    "id": 239,
+    "name": "女北美U20",
+    "type": "1",
+    "game_type": "1"
+    },
+    {
+    "id": 248,
+    "name": "女北美U17",
+    "type": "1",
+    "game_type": "1"
+    },
+    {
+    "id": 410,
+    "name": "中美加运",
+    "type": "1",
+    "game_type": "1"
+    },
+    {
+    "id": 411,
+    "name": "奥北美预",
+    "type": "1",
+    "game_type": "1"
+    },
+    {
+    "id": 421,
+    "name": "女南冠",
+    "type": "1",
+    "game_type": "1"
+    },
+    {
+    "id": 422,
+    "name": "女奥北美",
+    "type": "1",
+    "game_type": "1"
+    },
+    {
+    "id": 446,
+    "name": "北美室内",
+    "type": "1",
+    "game_type": "1"
+    },
+    {
+    "id": 484,
+    "name": "南美室内",
+    "type": "1",
+    "game_type": "1"
+    },
+    {
+    "id": 529,
+    "name": "女解放杯",
+    "type": "2",
+    "game_type": "1"
+    },
+    {
+    "id": 562,
+    "name": "世女美预",
+    "type": "1",
+    "game_type": "1"
+    },
+    {
+    "id": 579,
+    "name": "北美预",
+    "type": "2",
+    "game_type": "1"
+    },
+    {
+    "id": 581,
+    "name": "解放者杯U20",
+    "type": "1",
+    "game_type": "1"
+    },
+    {
+    "id": 634,
+    "name": "中美运",
+    "type": "1",
+    "game_type": "1"
+    },
+    {
+    "id": 636,
+    "name": "中美运女",
+    "type": "1",
+    "game_type": "1"
+    },
+    {
+    "id": 677,
+    "name": "南美女运",
+    "type": "1",
+    "game_type": "1"
+    },
+    {
+    "id": 685,
+    "name": "女中美运",
+    "type": "1",
+    "game_type": "1"
+    },
+    {
+    "id": 695,
+    "name": "美加杯",
+    "type": "1",
+    "game_type": "1"
+    },
+    {
+    "id": 696,
+    "name": "南美预",
+    "type": "1",
+    "game_type": "1"
+    },
+    {
+    "id": 787,
+    "name": "女美加预",
+    "type": "1",
+    "game_type": "1"
+    },
+    {
+    "id": 788,
+    "name": "南运男足",
+    "type": "1",
+    "game_type": "1"
+    }
+    ]
+    },
+    {
+    "id": 13,
+    "name": "玻利维亚",
+    "type": 2,
+    "match_list": [
+    {
+    "id": 261,
+    "name": "玻利甲",
+    "type": "2",
+    "game_type": "1"
+    },
+    {
+    "id": 741,
+    "name": "玻日比杯",
+    "type": "1",
+    "game_type": "1"
+    }
+    ]
+    },
+    {
+    "id": 16,
+    "name": "洪都拉斯",
+    "type": 2,
+    "match_list": [
+    {
+    "id": 284,
+    "name": "洪都甲",
+    "type": "2",
+    "game_type": "1"
+    }
+    ]
+    },
+    {
+    "id": 17,
+    "name": "智利",
+    "type": 2,
+    "match_list": [
+    {
+    "id": 5,
+    "name": "智甲",
+    "type": "2",
+    "game_type": "1"
+    },
+    {
+    "id": 21,
+    "name": "智乙",
+    "type": "2",
+    "game_type": "1"
+    },
+    {
+    "id": 41,
+    "name": "智利杯",
+    "type": "1",
+    "game_type": "1"
+    },
+    {
+    "id": 778,
+    "name": "智超杯",
+    "type": "1",
+    "game_type": "1"
+    }
+    ]
+    },
+    {
+    "id": 18,
+    "name": "巴拉圭",
+    "type": 2,
+    "match_list": [
+    {
+    "id": 272,
+    "name": "巴拉甲",
+    "type": "2",
+    "game_type": "1"
+    },
+    {
+    "id": 578,
+    "name": "巴拉乙",
+    "type": "2",
+    "game_type": "1"
+    }
+    ]
+    },
+    {
+    "id": 27,
+    "name": "厄瓜多尔",
+    "type": 2,
+    "match_list": [
+    {
+    "id": 273,
+    "name": "厄瓜甲",
+    "type": "2",
+    "game_type": "1"
+    }
+    ]
+    },
+    {
+    "id": 28,
+    "name": "委内瑞拉",
+    "type": 2,
+    "match_list": [
+    {
+    "id": 274,
+    "name": "委内超",
+    "type": "2",
+    "game_type": "1"
+    },
+    {
+    "id": 608,
+    "name": "委内杯",
+    "type": "1",
+    "game_type": "1"
+    }
+    ]
+    },
+    {
+    "id": 29,
+    "name": "危地马拉",
+    "type": 2,
+    "match_list": [
+    {
+    "id": 285,
+    "name": "危地甲",
+    "type": "2",
+    "game_type": "1"
+    }
+    ]
+    },
+    {
+    "id": 30,
+    "name": "哥斯达黎加",
+    "type": 2,
+    "match_list": [
+    {
+    "id": 286,
+    "name": "哥斯甲",
+    "type": "2",
+    "game_type": "1"
+    },
+    {
+    "id": 682,
+    "name": "哥斯杯",
+    "type": "1",
+    "game_type": "1"
+    }
+    ]
+    },
+    {
+    "id": 39,
+    "name": "萨尔瓦多",
+    "type": 2,
+    "match_list": [
+    {
+    "id": 287,
+    "name": "萨尔超",
+    "type": "2",
+    "game_type": "1"
+    }
+    ]
+    }
+    ]
+    },
+    {
+    "id": 3,
+    "name": "亚洲赛事",
+    "game_type": "1",
+    "area_list": [
+    {
+    "id": 11,
+    "name": "亚洲杯赛",
+    "type": 1,
+    "match_list": [
+    {
+    "id": 8,
+    "name": "亚洲杯",
+    "type": "1",
+    "game_type": "1"
+    },
+    {
+    "id": 17,
+    "name": "东亚杯",
+    "type": "1",
+    "game_type": "1"
+    },
+    {
+    "id": 38,
+    "name": "西亚杯",
+    "type": "1",
+    "game_type": "1"
+    },
+    {
+    "id": 58,
+    "name": "亚冠杯",
+    "type": "1",
+    "game_type": "1"
+    },
+    {
+    "id": 70,
+    "name": "亚协杯",
+    "type": "1",
+    "game_type": "1"
+    },
+    {
+    "id": 121,
+    "name": "麒麟杯",
+    "type": "1",
+    "game_type": "1"
+    },
+    {
+    "id": 140,
+    "name": "南亚杯",
+    "type": "1",
+    "game_type": "1"
+    },
+    {
+    "id": 150,
+    "name": "海湾杯",
+    "type": "1",
+    "game_type": "1"
+    },
+    {
+    "id": 172,
+    "name": "海湾锦标",
+    "type": "1",
+    "game_type": "1"
+    },
+    {
+    "id": 174,
+    "name": "东南锦",
+    "type": "1",
+    "game_type": "1"
+    },
+    {
+    "id": 178,
+    "name": "东亚运",
+    "type": "1",
+    "game_type": "1"
+    },
+    {
+    "id": 180,
+    "name": "西亚运",
+    "type": "1",
+    "game_type": "1"
+    },
+    {
+    "id": 183,
+    "name": "东南运",
+    "type": "1",
+    "game_type": "1"
+    },
+    {
+    "id": 184,
+    "name": "泛阿拉运",
+    "type": "1",
+    "game_type": "1"
+    },
+    {
+    "id": 185,
+    "name": "阿拉冠",
+    "type": "1",
+    "game_type": "1"
+    },
+    {
+    "id": 186,
+    "name": "阿拉伯杯",
+    "type": "1",
+    "game_type": "1"
+    },
+    {
+    "id": 191,
+    "name": "麦迪杯",
+    "type": "1",
+    "game_type": "1"
+    },
+    {
+    "id": 365,
+    "name": "亚挑杯",
+    "type": "1",
+    "game_type": "1"
+    },
+    {
+    "id": 368,
+    "name": "亚青杯",
+    "type": "1",
+    "game_type": "1"
+    },
+    {
+    "id": 369,
+    "name": "东南青冠",
+    "type": "1",
+    "game_type": "1"
+    },
+    {
+    "id": 370,
+    "name": "东南亚U20",
+    "type": "1",
+    "game_type": "1"
+    },
+    {
+    "id": 371,
+    "name": "东南亚U18",
+    "type": "1",
+    "game_type": "1"
+    },
+    {
+    "id": 377,
+    "name": "东南亚U16",
+    "type": "1",
+    "game_type": "1"
+    },
+    {
+    "id": 378,
+    "name": "亚运男足",
+    "type": "1",
+    "game_type": "1"
+    },
+    {
+    "id": 379,
+    "name": "亚运女足",
+    "type": "1",
+    "game_type": "1"
+    },
+    {
+    "id": 385,
+    "name": "女亚洲杯",
+    "type": "1",
+    "game_type": "1"
+    },
+    {
+    "id": 386,
+    "name": "女东南运",
+    "type": "1",
+    "game_type": "1"
+    },
+    {
+    "id": 387,
+    "name": "东亚女子",
+    "type": "1",
+    "game_type": "1"
+    },
+    {
+    "id": 393,
+    "name": "女东南锦",
+    "type": "1",
+    "game_type": "1"
+    },
+    {
+    "id": 394,
+    "name": "女亚冠U19",
+    "type": "1",
+    "game_type": "1"
+    },
+    {
+    "id": 395,
+    "name": "女亚冠U16",
+    "type": "1",
+    "game_type": "1"
+    },
+    {
+    "id": 399,
+    "name": "亚室锦标",
+    "type": "1",
+    "game_type": "1"
+    },
+    {
+    "id": 408,
+    "name": "奥亚预",
+    "type": "1",
+    "game_type": "1"
+    },
+    {
+    "id": 419,
+    "name": "女奥亚预",
+    "type": "1",
+    "game_type": "1"
+    },
+    {
+    "id": 515,
+    "name": "内鲁杯",
+    "type": "1",
+    "game_type": "1"
+    },
+    {
+    "id": 520,
+    "name": "海湾U17",
+    "type": "1",
+    "game_type": "1"
+    },
+    {
+    "id": 527,
+    "name": "亚青U16",
+    "type": "1",
+    "game_type": "1"
+    },
+    {
+    "id": 539,
+    "name": "西亚女锦",
+    "type": "1",
+    "game_type": "1"
+    },
+    {
+    "id": 551,
+    "name": "海湾奥杯",
+    "type": "1",
+    "game_type": "1"
+    },
+    {
+    "id": 570,
+    "name": "亚主席杯",
+    "type": "1",
+    "game_type": "1"
+    },
+    {
+    "id": 588,
+    "name": "东南亚U23",
+    "type": "1",
+    "game_type": "1"
+    },
+    {
+    "id": 589,
+    "name": "印度洋运",
+    "type": "1",
+    "game_type": "1"
+    },
+    {
+    "id": 621,
+    "name": "亚青U23",
+    "type": "1",
+    "game_type": "1"
+    },
+    {
+    "id": 628,
+    "name": "阿拉伯U20",
+    "type": "1",
+    "game_type": "1"
+    },
+    {
+    "id": 632,
+    "name": "阿拉青U17",
+    "type": "1",
+    "game_type": "1"
+    },
+    {
+    "id": 638,
+    "name": "女亚杯预",
+    "type": "1",
+    "game_type": "1"
+    },
+    {
+    "id": 684,
+    "name": "南亚女锦",
+    "type": "1",
+    "game_type": "1"
+    },
+    {
+    "id": 694,
+    "name": "亚洲预",
+    "type": "1",
+    "game_type": "1"
+    },
+    {
+    "id": 703,
+    "name": "南亚U19",
+    "type": "1",
+    "game_type": "1"
+    },
+    {
+    "id": 705,
+    "name": "西亚U16",
+    "type": "1",
+    "game_type": "1"
+    },
+    {
+    "id": 720,
+    "name": "南亚运",
+    "type": "1",
+    "game_type": "1"
+    },
+    {
+    "id": 721,
+    "name": "女南亚运",
+    "type": "1",
+    "game_type": "1"
+    }
+    ]
+    },
+    {
+    "id": 14,
+    "name": "中国",
+    "type": 2,
+    "match_list": [
+    {
+    "id": 19,
+    "name": "中超",
+    "type": "2",
+    "game_type": "1"
+    },
+    {
+    "id": 82,
+    "name": "中甲",
+    "type": "2",
+    "game_type": "1"
+    },
+    {
+    "id": 110,
+    "name": "中乙",
+    "type": "2",
+    "game_type": "1"
+    },
+    {
+    "id": 133,
+    "name": "中女超",
+    "type": "2",
+    "game_type": "1"
+    },
+    {
+    "id": 176,
+    "name": "中足杯",
+    "type": "1",
+    "game_type": "1"
+    },
+    {
+    "id": 195,
+    "name": "中超杯",
+    "type": "1",
+    "game_type": "1"
+    },
+    {
+    "id": 233,
+    "name": "全运男足",
+    "type": "1",
+    "game_type": "1"
+    },
+    {
+    "id": 252,
+    "name": "全运女足",
+    "type": "1",
+    "game_type": "1"
+    },
+    {
+    "id": 315,
+    "name": "潍坊杯",
+    "type": "1",
+    "game_type": "1"
+    },
+    {
+    "id": 337,
+    "name": "贺岁杯",
+    "type": "1",
+    "game_type": "1"
+    },
+    {
+    "id": 343,
+    "name": "老甲A",
+    "type": "2",
+    "game_type": "1"
+    },
+    {
+    "id": 352,
+    "name": "香港超",
+    "type": "2",
+    "game_type": "1"
+    },
+    {
+    "id": 372,
+    "name": "香港甲",
+    "type": "2",
+    "game_type": "1"
+    },
+    {
+    "id": 373,
+    "name": "港足总杯",
+    "type": "1",
+    "game_type": "1"
+    },
+    {
+    "id": 381,
+    "name": "港联杯",
+    "type": "1",
+    "game_type": "1"
+    },
+    {
+    "id": 396,
+    "name": "港贺岁杯",
+    "type": "1",
+    "game_type": "1"
+    },
+    {
+    "id": 397,
+    "name": "港主席杯",
+    "type": "1",
+    "game_type": "1"
+    },
+    {
+    "id": 403,
+    "name": "高级银牌",
+    "type": "1",
+    "game_type": "1"
+    },
+    {
+    "id": 839,
+    "name": "全运U18",
+    "type": "1",
+    "game_type": "1"
+    },
+    {
+    "id": 840,
+    "name": "全运女U18",
+    "type": "1",
+    "game_type": "1"
+    },
+    {
+    "id": 866,
+    "name": "澳门甲",
+    "type": "2",
+    "game_type": "1"
+    },
+    {
+    "id": 894,
+    "name": "全运U20",
+    "type": "1",
+    "game_type": "1"
+    },
+    {
+    "id": 895,
+    "name": "京津冀冠",
+    "type": "1",
+    "game_type": "1"
+    },
+    {
+    "id": 897,
+    "name": "香港乙",
+    "type": "2",
+    "game_type": "1"
+    }
+    ]
+    },
+    {
+    "id": 15,
+    "name": "日本",
+    "type": 2,
+    "match_list": [
+    {
+    "id": 28,
+    "name": "日联",
+    "type": "2",
+    "game_type": "1"
+    },
+    {
+    "id": 81,
+    "name": "日乙",
+    "type": "2",
+    "game_type": "1"
+    },
+    {
+    "id": 112,
+    "name": "日丙",
+    "type": "2",
+    "game_type": "1"
+    },
+    {
+    "id": 144,
+    "name": "日足联",
+    "type": "2",
+    "game_type": "1"
+    },
+    {
+    "id": 204,
+    "name": "日女甲",
+    "type": "2",
+    "game_type": "1"
+    },
+    {
+    "id": 224,
+    "name": "日女乙",
+    "type": "2",
+    "game_type": "1"
+    },
+    {
+    "id": 253,
+    "name": "日联杯",
+    "type": "1",
+    "game_type": "1"
+    },
+    {
+    "id": 280,
+    "name": "天皇杯",
+    "type": "1",
+    "game_type": "1"
+    },
+    {
+    "id": 300,
+    "name": "日超杯",
+    "type": "1",
+    "game_type": "1"
+    },
+    {
+    "id": 328,
+    "name": "日撒杯",
+    "type": "1",
+    "game_type": "1"
+    },
+    {
+    "id": 358,
+    "name": "日女联杯",
+    "type": "1",
+    "game_type": "1"
+    },
+    {
+    "id": 849,
+    "name": "日女锦标",
+    "type": "1",
+    "game_type": "1"
+    },
+    {
+    "id": 875,
+    "name": "日皇后杯",
+    "type": "1",
+    "game_type": "1"
+    },
+    {
+    "id": 883,
+    "name": "日新杯",
+    "type": "1",
+    "game_type": "1"
+    },
+    {
+    "id": 890,
+    "name": "日女杯乙",
+    "type": "1",
+    "game_type": "1"
+    }
+    ]
+    },
+    {
+    "id": 22,
+    "name": "韩国",
+    "type": 2,
+    "match_list": [
+    {
+    "id": 30,
+    "name": "韩职联",
+    "type": "2",
+    "game_type": "1"
+    },
+    {
+    "id": 53,
+    "name": "K2联赛",
+    "type": "2",
+    "game_type": "1"
+    },
+    {
+    "id": 89,
+    "name": "韩联盟",
+    "type": "2",
+    "game_type": "1"
+    },
+    {
+    "id": 164,
+    "name": "韩K3联",
+    "type": "2",
+    "game_type": "1"
+    },
+    {
+    "id": 232,
+    "name": "韩女联",
+    "type": "2",
+    "game_type": "1"
+    },
+    {
+    "id": 267,
+    "name": "韩足总",
+    "type": "1",
+    "game_type": "1"
+    },
+    {
+    "id": 308,
+    "name": "韩锦赛",
+    "type": "1",
+    "game_type": "1"
+    }
+    ]
+    },
+    {
+    "id": 23,
+    "name": "沙特阿拉伯",
+    "type": 2,
+    "match_list": [
+    {
+    "id": 20,
+    "name": "沙特联",
+    "type": "2",
+    "game_type": "1"
+    },
+    {
+    "id": 67,
+    "name": "沙特甲",
+    "type": "2",
+    "game_type": "1"
+    },
+    {
+    "id": 100,
+    "name": "沙特乙",
+    "type": "2",
+    "game_type": "1"
+    },
+    {
+    "id": 145,
+    "name": "沙青联",
+    "type": "2",
+    "game_type": "1"
+    },
+    {
+    "id": 214,
+    "name": "沙王杯",
+    "type": "1",
+    "game_type": "1"
+    },
+    {
+    "id": 266,
+    "name": "费王杯",
+    "type": "1",
+    "game_type": "1"
+    },
+    {
+    "id": 291,
+    "name": "沙青杯",
+    "type": "1",
+    "game_type": "1"
+    },
+    {
+    "id": 316,
+    "name": "沙王冠",
+    "type": "1",
+    "game_type": "1"
+    },
+    {
+    "id": 336,
+    "name": "沙杯U17",
+    "type": "1",
+    "game_type": "1"
+    }
+    ]
+    },
+    {
+    "id": 24,
+    "name": "伊朗",
+    "type": 2,
+    "match_list": [
+    {
+    "id": 423,
+    "name": "伊朗超",
+    "type": "2",
+    "game_type": "1"
+    },
+    {
+    "id": 722,
+    "name": "伊朗甲",
+    "type": "2",
+    "game_type": "1"
+    },
+    {
+    "id": 723,
+    "name": "伊朗杯",
+    "type": "1",
+    "game_type": "1"
+    }
+    ]
+    },
+    {
+    "id": 25,
+    "name": "也门",
+    "type": 2,
+    "match_list": [
+    {
+    "id": 27,
+    "name": "也门甲",
+    "type": "2",
+    "game_type": "1"
+    },
+    {
+    "id": 61,
+    "name": "也门乙",
+    "type": "1",
+    "game_type": "1"
+    },
+    {
+    "id": 152,
+    "name": "也统杯",
+    "type": "1",
+    "game_type": "1"
+    }
+    ]
+    },
+    {
+    "id": 32,
+    "name": "泰国",
+    "type": 2,
+    "match_list": [
+    {
+    "id": 39,
+    "name": "泰超",
+    "type": "2",
+    "game_type": "1"
+    },
+    {
+    "id": 74,
+    "name": "泰甲",
+    "type": "2",
+    "game_type": "1"
+    },
+    {
+    "id": 154,
+    "name": "泰足总",
+    "type": "1",
+    "game_type": "1"
+    },
+    {
+    "id": 187,
+    "name": "泰联杯",
+    "type": "1",
+    "game_type": "1"
+    },
+    {
+    "id": 194,
+    "name": "泰王杯",
+    "type": "1",
+    "game_type": "1"
+    }
+    ]
+    },
+    {
+    "id": 33,
+    "name": "马来西亚",
+    "type": 2,
+    "match_list": [
+    {
+    "id": 424,
+    "name": "马来超",
+    "type": "2",
+    "game_type": "1"
+    },
+    {
+    "id": 425,
+    "name": "马来甲",
+    "type": "2",
+    "game_type": "1"
+    },
+    {
+    "id": 435,
+    "name": "马来杯",
+    "type": "1",
+    "game_type": "1"
+    },
+    {
+    "id": 436,
+    "name": "马来足总",
+    "type": "1",
+    "game_type": "1"
+    },
+    {
+    "id": 510,
+    "name": "洲际杯",
+    "type": "1",
+    "game_type": "1"
+    }
+    ]
+    },
+    {
+    "id": 34,
+    "name": "阿曼",
+    "type": 2,
+    "match_list": [
+    {
+    "id": 437,
+    "name": "阿曼联",
+    "type": "2",
+    "game_type": "1"
+    },
+    {
+    "id": 762,
+    "name": "阿曼杯",
+    "type": "1",
+    "game_type": "1"
+    },
+    {
+    "id": 835,
+    "name": "阿曼苏杯",
+    "type": "1",
+    "game_type": "1"
+    }
+    ]
+    },
+    {
+    "id": 52,
+    "name": "约旦",
+    "type": 2,
+    "match_list": [
+    {
+    "id": 448,
+    "name": "约旦超",
+    "type": "2",
+    "game_type": "1"
+    },
+    {
+    "id": 449,
+    "name": "约旦杯",
+    "type": "1",
+    "game_type": "1"
+    },
+    {
+    "id": 737,
+    "name": "约盾杯",
+    "type": "1",
+    "game_type": "1"
+    },
+    {
+    "id": 814,
+    "name": "约旦甲",
+    "type": "2",
+    "game_type": "1"
+    }
+    ]
+    },
+    {
+    "id": 53,
+    "name": "阿联酋",
+    "type": 2,
+    "match_list": [
+    {
+    "id": 450,
+    "name": "阿联酋超",
+    "type": "2",
+    "game_type": "1"
+    },
+    {
+    "id": 451,
+    "name": "阿联酋甲",
+    "type": "2",
+    "game_type": "1"
+    },
+    {
+    "id": 460,
+    "name": "阿联酋杯",
+    "type": "1",
+    "game_type": "1"
+    },
+    {
+    "id": 461,
+    "name": "迪拜杯",
+    "type": "1",
+    "game_type": "1"
+    },
+    {
+    "id": 656,
+    "name": "阿联杯",
+    "type": "1",
+    "game_type": "1"
+    },
+    {
+    "id": 804,
+    "name": "阿联超杯",
+    "type": "1",
+    "game_type": "1"
+    }
+    ]
+    },
+    {
+    "id": 54,
+    "name": "科威特",
+    "type": 2,
+    "match_list": [
+    {
+    "id": 29,
+    "name": "科威特联",
+    "type": "2",
+    "game_type": "1"
+    },
+    {
+    "id": 68,
+    "name": "科威特甲",
+    "type": "2",
+    "game_type": "1"
+    },
+    {
+    "id": 165,
+    "name": "科威联杯",
+    "type": "1",
+    "game_type": "1"
+    },
+    {
+    "id": 175,
+    "name": "科王子杯",
+    "type": "1",
+    "game_type": "1"
+    },
+    {
+    "id": 215,
+    "name": "科元首杯",
+    "type": "1",
+    "game_type": "1"
+    },
+    {
+    "id": 241,
+    "name": "科超杯",
+    "type": "1",
+    "game_type": "1"
+    }
+    ]
+    },
+    {
+    "id": 55,
+    "name": "卡塔尔",
+    "type": 2,
+    "match_list": [
+    {
+    "id": 462,
+    "name": "卡塔联",
+    "type": "2",
+    "game_type": "1"
+    },
+    {
+    "id": 679,
+    "name": "卡王子杯",
+    "type": "1",
+    "game_type": "1"
+    },
+    {
+    "id": 680,
+    "name": "卡王储杯",
+    "type": "1",
+    "game_type": "1"
+    },
+    {
+    "id": 706,
+    "name": "卡塔杯",
+    "type": "1",
+    "game_type": "1"
+    },
+    {
+    "id": 752,
+    "name": "贾西姆杯",
+    "type": "1",
+    "game_type": "1"
+    }
+    ]
+    },
+    {
+    "id": 58,
+    "name": "黎巴嫩",
+    "type": 2,
+    "match_list": [
+    {
+    "id": 470,
+    "name": "黎巴联",
+    "type": "2",
+    "game_type": "1"
+    },
+    {
+    "id": 663,
+    "name": "黎巴嫩杯",
+    "type": "1",
+    "game_type": "1"
+    },
+    {
+    "id": 699,
+    "name": "黎精英杯",
+    "type": "1",
+    "game_type": "1"
+    }
+    ]
+    },
+    {
+    "id": 59,
+    "name": "新加坡",
+    "type": 2,
+    "match_list": [
+    {
+    "id": 471,
+    "name": "新加联",
+    "type": "2",
+    "game_type": "1"
+    },
+    {
+    "id": 472,
+    "name": "新加坡杯",
+    "type": "1",
+    "game_type": "1"
+    },
+    {
+    "id": 473,
+    "name": "新联杯",
+    "type": "1",
+    "game_type": "1"
+    }
+    ]
+    },
+    {
+    "id": 60,
+    "name": "巴林",
+    "type": 2,
+    "match_list": [
+    {
+    "id": 34,
+    "name": "巴林超",
+    "type": "2",
+    "game_type": "1"
+    },
+    {
+    "id": 60,
+    "name": "巴林乙",
+    "type": "2",
+    "game_type": "1"
+    },
+    {
+    "id": 111,
+    "name": "巴林杯",
+    "type": "1",
+    "game_type": "1"
+    },
+    {
+    "id": 143,
+    "name": "巴林王杯",
+    "type": "1",
+    "game_type": "1"
+    },
+    {
+    "id": 904,
+    "name": "巴林精杯",
+    "type": "1",
+    "game_type": "1"
+    }
+    ]
+    },
+    {
+    "id": 61,
+    "name": "伊拉克",
+    "type": 2,
+    "match_list": [
+    {
+    "id": 45,
+    "name": "伊拉克联",
+    "type": "2",
+    "game_type": "1"
+    }
+    ]
+    },
+    {
+    "id": 74,
+    "name": "澳大利亚",
+    "type": 2,
+    "match_list": [
+    {
+    "id": 35,
+    "name": "澳A联",
+    "type": "2",
+    "game_type": "1"
+    },
+    {
+    "id": 75,
+    "name": "澳威超",
+    "type": "2",
+    "game_type": "1"
+    },
+    {
+    "id": 90,
+    "name": "澳维超",
+    "type": "2",
+    "game_type": "1"
+    },
+    {
+    "id": 153,
+    "name": "澳维甲",
+    "type": "2",
+    "game_type": "1"
+    },
+    {
+    "id": 181,
+    "name": "澳布超",
+    "type": "2",
+    "game_type": "1"
+    },
+    {
+    "id": 203,
+    "name": "澳南超",
+    "type": "2",
+    "game_type": "1"
+    },
+    {
+    "id": 242,
+    "name": "澳南甲",
+    "type": "2",
+    "game_type": "1"
+    },
+    {
+    "id": 268,
+    "name": "澳西超",
+    "type": "2",
+    "game_type": "1"
+    },
+    {
+    "id": 292,
+    "name": "澳首超",
+    "type": "2",
+    "game_type": "1"
+    },
+    {
+    "id": 307,
+    "name": "澳昆超",
+    "type": "2",
+    "game_type": "1"
+    },
+    {
+    "id": 323,
+    "name": "澳维U20",
+    "type": "2",
+    "game_type": "1"
+    },
+    {
+    "id": 366,
+    "name": "澳西夜赛",
+    "type": "2",
+    "game_type": "1"
+    },
+    {
+    "id": 380,
+    "name": "澳女联",
+    "type": "2",
+    "game_type": "1"
+    },
+    {
+    "id": 382,
+    "name": "澳维女超",
+    "type": "2",
+    "game_type": "1"
+    },
+    {
+    "id": 388,
+    "name": "澳青联",
+    "type": "2",
+    "game_type": "1"
+    },
+    {
+    "id": 404,
+    "name": "澳维杯",
+    "type": "1",
+    "game_type": "1"
+    },
+    {
+    "id": 850,
+    "name": "澳威杯",
+    "type": "1",
+    "game_type": "1"
+    },
+    {
+    "id": 856,
+    "name": "澳足总",
+    "type": "1",
+    "game_type": "1"
+    },
+    {
+    "id": 878,
+    "name": "澳布甲",
+    "type": "2",
+    "game_type": "1"
+    },
+    {
+    "id": 879,
+    "name": "澳塔超",
+    "type": "2",
+    "game_type": "1"
+    },
+    {
+    "id": 888,
+    "name": "澳西U20",
+    "type": "2",
+    "game_type": "1"
+    },
+    {
+    "id": 901,
+    "name": "澳布杯",
+    "type": "1",
+    "game_type": "1"
+    }
+    ]
+    },
+    {
+    "id": 75,
+    "name": "印度",
+    "type": 2,
+    "match_list": [
+    {
+    "id": 669,
+    "name": "印度超",
+    "type": "2",
+    "game_type": "1"
+    },
+    {
+    "id": 670,
+    "name": "印度甲",
+    "type": "2",
+    "game_type": "1"
+    },
+    {
+    "id": 753,
+    "name": "印联杯",
+    "type": "1",
+    "game_type": "1"
+    },
+    {
+    "id": 824,
+    "name": "印度盾",
+    "type": "1",
+    "game_type": "1"
+    },
+    {
+    "id": 900,
+    "name": "印度超杯",
+    "type": "1",
+    "game_type": "1"
+    }
+    ]
+    },
+    {
+    "id": 76,
+    "name": "越南",
+    "type": 2,
+    "match_list": [
+    {
+    "id": 46,
+    "name": "越南联",
+    "type": "2",
+    "game_type": "1"
+    },
+    {
+    "id": 54,
+    "name": "越南甲",
+    "type": "2",
+    "game_type": "1"
+    },
+    {
+    "id": 122,
+    "name": "VFF杯",
+    "type": "1",
+    "game_type": "1"
+    },
+    {
+    "id": 123,
+    "name": "越南杯",
+    "type": "1",
+    "game_type": "1"
+    }
+    ]
+    },
+    {
+    "id": 81,
+    "name": "乌兹别克斯坦",
+    "type": 2,
+    "match_list": [
+    {
+    "id": 47,
+    "name": "乌兹超",
+    "type": "2",
+    "game_type": "1"
+    },
+    {
+    "id": 59,
+    "name": "乌兹甲",
+    "type": "2",
+    "game_type": "1"
+    },
+    {
+    "id": 101,
+    "name": "乌兹杯",
+    "type": "1",
+    "game_type": "1"
+    },
+    {
+    "id": 134,
+    "name": "乌兹联杯",
+    "type": "1",
+    "game_type": "1"
+    }
+    ]
+    },
+    {
+    "id": 82,
+    "name": "印度尼西亚",
+    "type": 2,
+    "match_list": [
+    {
+    "id": 707,
+    "name": "印尼甲",
+    "type": "2",
+    "game_type": "1"
+    },
+    {
+    "id": 887,
+    "name": "印尼杯",
+    "type": "1",
+    "game_type": "1"
+    }
+    ]
+    },
+    {
+    "id": 87,
+    "name": "缅甸",
+    "type": 2,
+    "match_list": [
+    {
+    "id": 886,
+    "name": "缅甸联",
+    "type": "2",
+    "game_type": "1"
+    }
+    ]
+    }
+    ]
+    },
+    {
+    "id": 4,
+    "name": "大洋洲|非洲赛事",
+    "game_type": "1",
+    "area_list": [
+    {
+    "id": 12,
+    "name": "非洲杯赛",
+    "type": 1,
+    "match_list": [
+    {
+    "id": 6,
+    "name": "非洲杯",
+    "type": "1",
+    "game_type": "1"
+    },
+    {
+    "id": 15,
+    "name": "西非杯",
+    "type": "1",
+    "game_type": "1"
+    },
+    {
+    "id": 37,
+    "name": "中东非杯",
+    "type": "1",
+    "game_type": "1"
+    },
+    {
+    "id": 51,
+    "name": "非国锦标",
+    "type": "1",
+    "game_type": "1"
+    },
+    {
+    "id": 64,
+    "name": "非青杯",
+    "type": "1",
+    "game_type": "1"
+    },
+    {
+    "id": 77,
+    "name": "非青U17",
+    "type": "1",
+    "game_type": "1"
+    },
+    {
+    "id": 87,
+    "name": "非冠杯",
+    "type": "1",
+    "game_type": "1"
+    },
+    {
+    "id": 108,
+    "name": "非联杯",
+    "type": "1",
+    "game_type": "1"
+    },
+    {
+    "id": 120,
+    "name": "北非冠",
+    "type": "1",
+    "game_type": "1"
+    },
+    {
+    "id": 132,
+    "name": "中东非俱",
+    "type": "1",
+    "game_type": "1"
+    },
+    {
+    "id": 161,
+    "name": "非超杯",
+    "type": "1",
+    "game_type": "1"
+    },
+    {
+    "id": 409,
+    "name": "奥非预",
+    "type": "1",
+    "game_type": "1"
+    },
+    {
+    "id": 568,
+    "name": "尼罗河杯",
+    "type": "1",
+    "game_type": "1"
+    },
+    {
+    "id": 597,
+    "name": "非运男足",
+    "type": "1",
+    "game_type": "1"
+    },
+    {
+    "id": 598,
+    "name": "非运女足",
+    "type": "1",
+    "game_type": "1"
+    },
+    {
+    "id": 604,
+    "name": "非洲预",
+    "type": "1",
+    "game_type": "1"
+    },
+    {
+    "id": 609,
+    "name": "北非杯U23",
+    "type": "1",
+    "game_type": "1"
+    },
+    {
+    "id": 610,
+    "name": "北非杯U17",
+    "type": "1",
+    "game_type": "1"
+    },
+    {
+    "id": 613,
+    "name": "女非国杯",
+    "type": "1",
+    "game_type": "1"
+    },
+    {
+    "id": 660,
+    "name": "非青杯外",
+    "type": "1",
+    "game_type": "1"
+    },
+    {
+    "id": 698,
+    "name": "南非洲杯",
+    "type": "1",
+    "game_type": "1"
+    },
+    {
+    "id": 730,
+    "name": "西非锦",
+    "type": "1",
+    "game_type": "1"
+    },
+    {
+    "id": 734,
+    "name": "南联杯U20",
+    "type": "1",
+    "game_type": "1"
+    }
+    ]
+    },
+    {
+    "id": 19,
+    "name": "新西兰",
+    "type": 2,
+    "match_list": [
+    {
+    "id": 220,
+    "name": "新西联",
+    "type": "2",
+    "game_type": "1"
+    }
+    ]
+    },
+    {
+    "id": 20,
+    "name": "阿尔及利亚",
+    "type": 2,
+    "match_list": [
+    {
+    "id": 201,
+    "name": "阿尔甲",
+    "type": "2",
+    "game_type": "1"
+    },
+    {
+    "id": 487,
+    "name": "阿尔乙",
+    "type": "2",
+    "game_type": "1"
+    },
+    {
+    "id": 495,
+    "name": "阿尔杯",
+    "type": "1",
+    "game_type": "1"
+    }
+    ]
+    },
+    {
+    "id": 21,
+    "name": "南非",
+    "type": 2,
+    "match_list": [
+    {
+    "id": 202,
+    "name": "南非超",
+    "type": "2",
+    "game_type": "1"
+    },
+    {
+    "id": 493,
+    "name": "南非甲",
+    "type": "2",
+    "game_type": "1"
+    },
+    {
+    "id": 502,
+    "name": "南非杯",
+    "type": "1",
+    "game_type": "1"
+    },
+    {
+    "id": 668,
+    "name": "南非联杯",
+    "type": "1",
+    "game_type": "1"
+    }
+    ]
+    },
+    {
+    "id": 31,
+    "name": "埃及",
+    "type": 2,
+    "match_list": [
+    {
+    "id": 211,
+    "name": "埃及甲",
+    "type": "2",
+    "game_type": "1"
+    },
+    {
+    "id": 212,
+    "name": "埃及杯",
+    "type": "1",
+    "game_type": "1"
+    }
+    ]
+    },
+    {
+    "id": 43,
+    "name": "摩洛哥",
+    "type": 2,
+    "match_list": [
+    {
+    "id": 213,
+    "name": "摩洛超",
+    "type": "2",
+    "game_type": "1"
+    },
+    {
+    "id": 447,
+    "name": "摩洛乙",
+    "type": "2",
+    "game_type": "1"
+    },
+    {
+    "id": 496,
+    "name": "摩洛杯",
+    "type": "1",
+    "game_type": "1"
+    },
+    {
+    "id": 516,
+    "name": "摩夏日杯",
+    "type": "1",
+    "game_type": "1"
+    }
+    ]
+    },
+    {
+    "id": 44,
+    "name": "突尼斯",
+    "type": 2,
+    "match_list": [
+    {
+    "id": 14,
+    "name": "突尼甲",
+    "type": "2",
+    "game_type": "1"
+    },
+    {
+    "id": 26,
+    "name": "突尼乙",
+    "type": "2",
+    "game_type": "1"
+    },
+    {
+    "id": 44,
+    "name": "突尼杯",
+    "type": "1",
+    "game_type": "1"
+    }
+    ]
+    },
+    {
+    "id": 56,
+    "name": "利比亚",
+    "type": 2,
+    "match_list": [
+    {
+    "id": 485,
+    "name": "利比甲",
+    "type": "2",
+    "game_type": "1"
+    }
+    ]
+    },
+    {
+    "id": 57,
+    "name": "加纳",
+    "type": 2,
+    "match_list": [
+    {
+    "id": 488,
+    "name": "加纳超",
+    "type": "2",
+    "game_type": "1"
+    }
+    ]
+    },
+    {
+    "id": 65,
+    "name": "纳米比亚",
+    "type": 2,
+    "match_list": [
+    {
+    "id": 494,
+    "name": "纳米超",
+    "type": "2",
+    "game_type": "1"
+    }
+    ]
+    },
+    {
+    "id": 66,
+    "name": "苏丹",
+    "type": 2,
+    "match_list": [
+    {
+    "id": 567,
+    "name": "苏丹超",
+    "type": "2",
+    "game_type": "1"
+    }
+    ]
+    },
+    {
+    "id": 67,
+    "name": "尼日利亚",
+    "type": 2,
+    "match_list": [
+    {
+    "id": 535,
+    "name": "尼日超",
+    "type": "2",
+    "game_type": "1"
+    }
+    ]
+    },
+    {
+    "id": 68,
+    "name": "安哥拉",
+    "type": 2,
+    "match_list": [
+    {
+    "id": 540,
+    "name": "安哥甲",
+    "type": "2",
+    "game_type": "1"
+    }
+    ]
+    },
+    {
+    "id": 73,
+    "name": "津巴布韦",
+    "type": 2,
+    "match_list": [
+    {
+    "id": 563,
+    "name": "津巴超",
+    "type": "2",
+    "game_type": "1"
+    }
+    ]
+    }
+    ]
+    },
+    {
+    "id": 6,
+    "name": "国际",
+    "game_type": "1",
+    "area_list": [
+    {
+    "id": 247,
+    "name": "墨联",
+    "type": "2",
+    "game_type": "1"
+    },
+    {
+    "id": 258,
+    "name": "墨西乙",
+    "type": "2",
+    "game_type": "1"
+    },
+    {
+    "id": 560,
+    "name": "墨西杯",
+    "type": "1",
+    "game_type": "1"
+    }
+    ]
+    }
+    ]
+    }

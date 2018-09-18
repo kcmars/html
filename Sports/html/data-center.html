@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Language" content="zh-CN"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="yes" name="apple-touch-fullscreen">
+    <meta content="telephone=no,email=no" name="format-detection">
+    <title>足球</title>
+    <link href='../css/main.css'  rel="stylesheet" type="text/css" />
+    <link href='../css/data-center.css'  rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div class="data-center">
+    <div class="title">
+        <i class="iconfont icon-icon_datum"></i>
+        杯赛数据中心
+    </div>
+    <div class="d-panel">
+        <div class="line"></div>
+        <ol class="nav-list">
+            <li class="active">
+                <span class="radius"></span>
+                <a class="color-black" href="">
+                    <span class="count">赛程赛果</span>
+                </a>
+            </li>
+            <li class="">
+                <span class="radius"></span>
+                <a class="color-black" href="//data.leisu.com/zuqiu-171/jifen-17758/">
+                    <span class="count">联赛积分</span>
+                </a>
+            </li>
+            <li class="">
+                <span class="radius"></span>
+                <a class="color-black" href="//data.leisu.com/zuqiu-171/rangqiu-17758/">
+                    <span class="count">让球盘路</span>
+                </a>
+            </li>
+            <li class="">
+                    <span class="radius">
+
+                    </span>
+                <a class="color-black" href="//data.leisu.com/zuqiu-171/daxiaoqiu-17758/">
+                    <span class="count">大小球盘路</span>
+                </a>
+            </li>
+            <li class="">
+                <span class="radius"></span>
+                <a class="color-black" href="//data.leisu.com/zuqiu-171/bifen-17758/">
+                    <span class="count">比分统计</span>
+                </a>
+            </li>
+            <li class="">
+                <span class="radius"></span>
+                <a class="color-black" href="//data.leisu.com/zuqiu-171/shengfu-17758/">
+                    <span class="count">半全场胜负</span>
+                </a>
+            </li>
+            <li class="">
+                <span class="radius"></span>
+                <a class="color-black" href="//data.leisu.com/zuqiu-171/jinqiushu-17758/">
+                    <span class="count">进球单双数统计</span>
+                </a>
+            </li>
+            <li class="">
+                <span class="radius"></span>
+                <a class="color-black" href="//data.leisu.com/zuqiu-171/jingshengfu-17758/">
+                    <span class="count">净胜/净负球</span>
+                </a>
+            </li>
+            <li class="">
+                <span class="radius"></span>
+                <a class="color-black" href="//data.leisu.com/zuqiu-171/banchang-17758/">
+                    <span class="count">上下半场进球情况统计</span>
+                </a>
+            </li>
+        </ol>
+        <span class="spot">
+                <span class="radius"></span>
+            </span>
+    </div>
+</div>
+</body>
+<script type="text/javascript" src="../js/jquery-1.8.1.min.js"></script>
+<script type="text/javascript">
+    $(function () {
+        //鼠标进出
+        $(".nav-list li").hover(function() {
+            $(".spot").css({top: 15 + $(this).context.clientHeight * $(this).index()})
+        }, function() {
+            $(".spot").css({top: 15})
+        });
+    });
+</script>
+</html>

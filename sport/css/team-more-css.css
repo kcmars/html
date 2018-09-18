@@ -1,0 +1,26 @@
+.title-tips{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.tip-intro{
+    margin:10px;
+    border:1px solid #ddd;
+    padding:10px;
+}
+.tip-intro p{
+    padding:10px;
+}
+.show{
+    display: block;
+}
+.hidden{
+    display:none;
+}
+.intro-active{
+    background-color: deepskyblue;
+}
+
+.state-active{
+    background-color: orange;
+}
