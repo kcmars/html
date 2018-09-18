@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="Content-Language" content="zh-CN"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <title>分页</title>
+    <link rel="stylesheet" href="../css/paging.css">
+</head>
+<body>
+    <div class="table-main">
+        <ul id="table-content" class="table-content">
+        </ul>
+        <div class="table-btn">
+            <div id="btn-pre" class="btn">上一页</div>
+            <ul id="table-round" class="table-round">
+
+            </ul>
+            <div id="btn-next" class="btn">下一页</div>
+        </div>
+    </div>
+</body>
+<!--内容展示-->
+<script type="text/template" charset="utf-8" id='template-table-content'>
+    {{ if (it && it.length > 0){ }}
+    {{ for (var i = 0; i < it.length; i++){ }}
+    <li>{{=it[i]}}</li>
+    {{ } }}
+    {{ } }}
+</script>
+<!--round展示-->
+<script type="text/template" charset="utf-8" id='template-table-round'>
+    {{ if (it && it.length > 0){ }}
+    {{ for (var i = 0; i < it.length; i++){ }}
+    <li onclick="changeRound('{{=it[i]}}', '{{=i}}')">{{=it[i]}}</li>
+    {{ } }}
+    {{ } }}
+</script>
+<script type="text/javascript" src='../../js/jquery-1.8.1.min.js'></script>
+<script type="text/javascript" src='../../js/doT.js'></script>
+<script type="text/javascript" src='../js/paging.js'></script>
+</html>

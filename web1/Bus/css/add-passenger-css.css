@@ -1,0 +1,55 @@
+.main {
+    background-color: white;
+}
+.add-passenger-content {
+    flex: 1;
+    padding: 0.23rem;
+}
+.add-passenger-type {
+    border: 0.02rem solid #a6a3a3;
+    padding: 0.35rem 0;
+    text-align: center;
+    flex: 1;
+    margin: 0.23rem;
+    font-size: 0.42rem;
+    color: #a6a3a3;
+}
+.add-passenger-type-selected {
+    border: 0.02rem solid #1fb1ff;
+    color: #1fb1ff;
+}
+.add-passenger-type span {
+    font-size: 0.30rem;
+}
+.add-passenger-row {
+    justify-content: space-between;
+    margin-top: 0.23rem;
+}
+.add-passenger-row .tip {
+    font-size: 0.37rem;
+    color: #333333;
+    width: 1.64rem;
+    padding: 0.35rem 0.12rem;
+}
+.add-passenger-row input {
+    flex: 1;
+    border: none;
+    font-size: 0.37rem;
+    text-align: left;
+    max-lines: 1;
+    padding: 0.35rem 0.12rem;
+}
+.add-passenger-tip {
+    margin-top: 0.47rem;
+    font-size: 0.33rem;
+    color: #7f7f7f;
+    line-height: 0.47rem;
+}
+.add-passenger-btn {
+    margin-top: 0.35rem;
+    background-color: #1fb1ff;
+    font-size: 0.47rem;
+    color: white;
+    text-align: center;
+    padding: 0.35rem 0;
+}

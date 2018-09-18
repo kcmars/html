@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Language" content="zh-CN"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="yes" name="apple-touch-fullscreen">
+    <meta content="telephone=no,email=no" name="format-detection">
+    <title>全部车型</title>
+    <script type="text/javascript" src="../../js/auto-size.js?rnd=" + new Date().getTime()></script>
+    <link href="../../css/main.css?rnd=" + new Date().getTime() type="text/css" rel="stylesheet">
+    <link href="../css/car.css?rnd=" + new Date().getTime() type="text/css" rel="stylesheet">
+</head>
+<body>
+    <div class="car-main">
+        <div id="firstLayer" class="first-layer">
+            <div class="layer-left">
+                <div class="header">
+                    <img alt="Smile" src="https://static.didialift.com/pinche/gift/resource/1b08b56e0fc1b3ac46b590c3f112a290-face_icon.png"/>
+                    <div class="header-text">
+                        <span class="header-name">你好，王建波</span>
+                        <span class="header-msg">完善信息成为车主「 顺路接单 分摊油费 」</span>
+                    </div>
+                </div>
+                <div class="popular-brand">
+                    <div class="text-hint">
+                        <span>选择车辆品牌</span>
+                        <span>本人或他人车辆均可</span>
+                    </div>
+                    <ul id="hot-models-list">
+                    </ul>
+                </div>
+                <ul id="all-models-list" class="brand-list">
+                </ul>
+            </div>
+            <ul id="letter-list" class="letter">
+            </ul>
+        </div>
+        <div id="secondLayer" class="second-layer">
+            <ul id="car-series-list" class="car-series-item-list">
+            </ul>
+        </div>
+        <div id="thirdLayer" class="third-layer">
+            <ul id="car-color-list" class="car-color-item-list">
+            </ul>
+        </div>
+        <ul id="letter-model" class="none">
+        </ul>
+        <div id="toast" class="none">
+            <div id="toast-letter" class="toast">
+                A
+            </div>
+        </div>
+    </div>
+</body>
+<script type="text/template" charset="utf-8" id='template-hot-models-list'>
+    {{ if (it && it.length > 0){ }}
+    {{ for (var i = 0; i < it.length; i++){ }}
+    <li>
+        <img alt="logo" src="https://static.didialift.com/pinche/xiaojushow/logo/dazhong.png"/>
+        <span>{{=it[i].name}}</span>
+    </li>
+    {{ } }}
+    {{ } }}
+</script>
+<script type="text/template" charset="utf-8" id='template-all-models-list'>
+    {{ if (it && it.length > 0){ }}
+    {{ for (var i = 0; i < it.length; i++){ }}
+    <li key={index}>
+        <span class="list-letter">{{=it[i].letter}}</span>
+        <ul class="brand-list-item-list">
+            {{ if (it && it[i].module.length > 0){ }}
+            {{ for (var n = 0; n < it[i].module.length; n++){ }}
+            <li>
+                <img alt="logo" src="https://static.didialift.com/pinche/xiaojushow/logo/dazhong.png"/>
+                <span>{{=it[i].module[n].name}}</span>
+            </li>
+            {{ } }}
+            {{ } }}
+        </ul>
+    </li>
+    {{ } }}
+    {{ } }}
+</script>
+<script type="text/template" charset="utf-8" id='template-letter-list'>
+    {{ if (it && it.length > 0){ }}
+    {{ for (var i = 0; i < it.length; i++){ }}
+    <li id={{=i}}>
+        {{=it[i]}}
+    </li>
+    {{ } }}
+    {{ } }}
+</script>
+<script type="text/template" charset="utf-8" id='template-car-series-list'>
+    {{ if (it && it.length > 0){ }}
+    {{ for (var i = 0; i < it.length; i++){ }}
+    <li>
+        <div class="car-series-item">
+            <div class="car-series"></div>
+            <span>
+            {{=it[i].name}}
+            </span>
+        </div>
+    </li>
+    {{ } }}
+    {{ } }}
+</script>
+<script type="text/template" charset="utf-8" id='template-car-color-list'>
+    {{ if (it && it.length > 0){ }}
+    {{ for (var i = 0; i < it.length; i++){ }}
+    <li>
+        <div class="car-color-item">
+            <div class="car-color {{=it[i].color}}"></div>
+            <span>{{=it[i].name}}</span>
+        </div>
+    </li>
+    {{ } }}
+    {{ } }}
+</script>
+<script type="text/template" charset="utf-8" id='template-letter-model-list'>
+    {{ if (it && it.length > 0){ }}
+    {{ for (var i = 0; i < it.length; i++){ }}
+    <li>
+        {{=it[i]}}
+    </li>
+    {{ } }}
+    {{ } }}
+</script>
+<script type="text/javascript" src="../../js/jquery-1.8.1.min.js"></script>
+<script type="text/javascript" src="../../js/doT.js"></script>
+<script type="text/javascript" src="../../js/exif.js"></script>
+<script type="text/javascript" src="../../js/main.js?rnd=" + new Date().getTime()></script>
+<script type="text/javascript" src="../js/car.js?rnd=" + new Date().getTime()></script>
+
+</html>

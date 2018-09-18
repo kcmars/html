@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Language" content="zh-CN"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="yes" name="apple-touch-fullscreen">
+    <meta content="telephone=no,email=no" name="format-detection">
+    <title>售票详情</title>
+    <script type="text/javascript" src="../../js/auto-size.js?rnd=" + new Date().getTime()></script>
+    <link href="../../css/main.css?rnd=" + new Date().getTime() type="text/css" rel="stylesheet">
+    <link href="../css/buy-details-css.css?rnd=" + new Date().getTime() type="text/css" rel="stylesheet">
+    <link href="../../css/my-alert-css.css?rnd=" + new Date().getTime() type="text/css" rel="stylesheet">
+    <link href="../../css/base.css?rnd=" + new Date().getTime() type="text/css" rel="stylesheet">
+    <link href="../../css/listloading.css?rnd=" + new Date().getTime() type="text/css" rel="stylesheet">
+</head>
+<body>
+    <div class="buy-details-main">
+        <div class="buy-details-head">
+            <div id="bus-start-time" class="buy-details-head-time"></div>
+            <div class="buy-details-head-address">
+                <span id="bus-start-address"></span>
+                <img src="../img/icon_white_right_arrow.png" />
+                <span id="bus-end-address"></span>
+            </div>
+            <div class="flex-row">
+                <div class="flex-row item pass-point">
+                    <span>途径点</span>
+                    <img src="../img/icon_white_down_arrow.png"/>
+                </div>
+                <div class="flex-row item m-l-5 flow-user">
+                    <span>随车人</span>
+                    <img src="../img/icon_white_down_arrow.png"/>
+                </div>
+                 <div class="flex-row item m-l-r-5">
+                    <span id="bus-plate"></span>
+                </div>
+                <div id="bus-seats-num" class="flex-row item">
+                    <span id="bus-eat-num"></span>
+                </div>
+            </div>
+        </div>
+        <div id="listloading" class="listloading-list">
+            <div>
+                <ul id="tickets-passenger-list">
+                    <li class="flex-column buy-details-list-item m-t-10">
+                        <div class="flex-row buy-details-list-item-head bottom-border">
+                            <img class="head" src="../img/icon_head.png">
+                            <div class="flex-column content">
+                                <span class="name">大巴车乘客</span>
+                            </div>
+                            <img id="phone" class="img-btn" src="../img/call.png">
+                            <img id="location" class="img-btn" src="../img/position.png">
+                        </div>
+                        <div class="flex-row buy-details-list-item-footer">
+                            <div class="flex-column item-footer-left">
+                                <div class="flex-row row">
+                                    <img src="../img/icon_time.png">
+                                    <span>01-10 09:00</span>
+                                </div>
+                                <div class="flex-row row">
+                                    <img class="icon" src="../img/icon_start.png"/>
+                                    <span>石羊场汽车站</span>
+                                </div>
+                                <div class="flex-row row">
+                                    <img class="icon" src="../img/icon_end.png"/>
+                                    <span>德阳市</span>
+                                </div>
+                            </div>
+                            <div class="flex-column item-footer-right">
+                                <div class="item-footer-right-btn">
+                                    已验票
+                                </div>
+                                <span class="evaluation m-t-10">
+                    评价/投诉
+                    </span>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="pop-box none">
+            <div class="pop-bg"></div>
+            <div class="pop-content">
+                <div id="pop-content" class="pop-content-l-5">
+                    <img src="../img/icon_gray_close.png">
+                    <ul id="pop-list">
+                        <!--<li class="pop-content-list-item">-->
+                            <!--<span>司机</span>-->
+                            <!--<span>李四</span>-->
+                            <!--<span>18787878787</span>-->
+                        <!--</li>-->
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script type="text/template" charset="utf-8" id='template-tickets-passenger-list'>
+    {{ if (it && it.length > 0){ }}
+    {{ for (var i = 0; i < it.length; i++){ }}
+    <li class="flex-column buy-details-list-item m-t-10">
+        <div class="flex-row buy-details-list-item-head bottom-border">
+            <img class="head" src="../img/icon_head.png">
+            <div class="flex-column content">
+                <span class="name">大巴车乘客</span>
+            </div>
+            <img class="img-btn" src="../img/call.png"
+                 onclick="callPassengerPhone('{{=it[i].phone}}')">
+            <img class="img-btn" src="../img/position.png"
+                 onclick="lookPassengerLocation('{{=i}}')">
+        </div>
+        <div class="flex-row buy-details-list-item-footer">
+            <div class="flex-column item-footer-left">
+                <div class="flex-row row">
+                    <img src="../img/icon_time.png">
+                    <span>{{=$.format(it[i].setout_time, "MM-dd hh:mm")}}</span>
+                </div>
+                <div class="flex-row row">
+                    <img class="icon" src="../img/icon_start.png"/>
+                    <span>{{=it[i].start_name}}</span>
+                </div>
+                <div class="flex-row row">
+                    <img class="icon" src="../img/icon_end.png"/>
+                    <span>{{=it[i].end_name}}</span>
+                </div>
+            </div>
+            <div class="flex-column item-footer-right">
+                <div class="item-footer-right-btn" onclick="btnClick('{{=i}}')">
+                    {{=$.getOrderStatus(it[i].status)}}
+                </div>
+            </div>
+        </div>
+    </li>
+    {{ } }}
+    {{ } }}
+</script>
+<script type="text/template" charset="utf-8" id='template_pop-list'>
+    {{ if (it && it.length > 0){ }}
+    {{ for (var i = 0; i < it.length; i++){ }}
+    {{ if (i==0) { }}
+        <li class="pop-content-list-item">
+    {{ } else { }}
+        <li class="pop-content-list-item top-border">
+    {{ } }}
+        {{ if (it[i].address != undefined) { }}
+        <span>{{=it[i].address}}</span>&nbsp;&nbsp;
+        {{ } }}
+        {{ if (it[i].employee_type != undefined) { }}
+        <span>{{=$.getEmployeeTypeStatus(it[i].employee_type)}}</span>&nbsp;&nbsp;
+        {{ } }}
+        {{ if (it[i].employee_name != undefined) { }}
+        <span>{{=it[i].employee_name}}</span>&nbsp;&nbsp;
+        {{ } }}
+        {{ if (it[i].employee_tel != undefined) { }}
+        <span>{{=it[i].employee_tel}}</span>&nbsp;&nbsp;
+        {{ } }}
+        {{ if (it[i].name != undefined) { }}
+        <span>{{=it[i].name}}</span>&nbsp;&nbsp;
+        {{ } }}
+        {{ if (it[i].phone != undefined) { }}
+        <span>{{=it[i].phone}}</span>
+        {{ } }}
+    </li>
+    {{ } }}
+    {{ } }}
+</script>
+<script type="text/javascript" src="../../js/jquery-1.8.1.min.js"></script>
+<script type="text/javascript" src="../../js/exif.js"></script>
+<script type="text/javascript" src="../../js/js-activity.js?rnd=" + new Date().getTime()></script>
+<script type="text/javascript" src="../../js/doT.js"></script>
+<script type="text/javascript" src="../../js/main.js?rnd=" + new Date().getTime()></script>
+<script type="text/javascript" src="../../js/iscroll.min.js"></script>
+<script type="text/javascript" src="../../js/zepto.min.js"></script>
+<script type="text/javascript" src="../../js/listloading.js?rnd=" + new Date().getTime()></script>
+<script type="text/javascript" src="../../js/my-tip-alert-js.js?rnd=" + new Date().getTime()></script>
+<script type="text/javascript" src="../../js/my-loading-alert-js.js?rnd=" + new Date().getTime()></script>
+<script type="text/javascript" src="../../js/my-toast-alert-js.js?rnd=" + new Date().getTime()></script>
+<script type="text/javascript" src="../js/buyDetails-js.js?rnd=" + new Date().getTime()></script>
+
+</html>

@@ -1,0 +1,47 @@
+.main {
+    background-color: white;
+}
+.select-passenger-head-add {
+    font-size: 0.35rem;
+    color: #1fb1ff;
+    text-align: center;
+    padding: 0.47rem;
+}
+.select-passenger-list {
+    flex: 1;
+}
+.select-passenger-list-item {
+    justify-content: space-between;
+    font-size: 0.33rem;
+    padding: 0.35rem 0.18rem;
+    align-items: center;
+}
+.select-passenger-list-item input {
+    width: 0.47rem;
+    height: 0.47rem;
+    background-color: white;
+    color: #1fb1ff;
+}
+.select-passenger-list-item .type {
+    font-size: 0.33rem;
+    color: #1fb1ff;
+    margin: 0 0.12rem;
+}
+.select-passenger-list-item .name {
+    font-size: 0.33rem;
+    color: #66676f;
+}
+.select-passenger-list-item .id-number {
+    flex: 1;
+    text-align: center;
+    font-size: 0.30rem;
+    color: #9b9b9b;
+}
+.select-passenger-btn {
+    margin-top: 0.35rem;
+    background-color: #1fb1ff;
+    font-size: 0.47rem;
+    color: white;
+    text-align: center;
+    padding: 0.35rem 0;
+}

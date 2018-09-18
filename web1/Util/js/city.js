@@ -1,0 +1,238 @@
+/**
+ * Created by Administrator on 2018/7/11.
+ */
+let mProvinces = []; //所有省
+let mCities = []; //省下面的城市
+let mAds = []; //城市下面的区县
+let province = ""; //选择的省
+let pro_code = ""; //选择的省code
+let city = ""; //选择的市
+let city_code = ""; //选择的市code
+let dist = ""; //选择的区
+let ad_code = ""; //选择的区code
+let thirdLayerTouchStartX = 0; //三级菜单触摸起点x位置
+let secondLayerTouchStartX = 0; //二级菜单触摸起点x位置
+let firstLayerTouchStartX = 0; //一级菜单触摸起点x位置
+let firstLayerTouchStartY = 0; //一级菜单触摸起点y位置
+let secondLayerShow = false; //二级页面是否显示
+let thirdLayerShow = false; //三级页面是否显示
+
+$(function () {
+    //获取省数据
+    getRequest(getProvinces);
+    // getProvinces();
+
+    //第三层页面触摸开始
+    $("#thirdLayer").on("touchstart", function (event) {
+        thirdLayerTouchStartX = event.originalEvent.targetTouches[0].clientX;
+    });
+
+    //第三层页面触摸移动
+    $("#thirdLayer").on("touchmove", function (event) {
+        let mX = event.originalEvent.targetTouches[0].clientX;
+        if ((mX - thirdLayerTouchStartX) > 40) {
+            $("#city-list li").find("span").removeClass("orange-text");
+            $("#thirdLayer").removeClass("third-layer-animation-in").addClass("third-layer-animation-out");
+        }
+    });
+
+    //第二层页面触摸开始
+    $("#secondLayer").on("touchstart", function (event) {
+        secondLayerTouchStartX = event.originalEvent.targetTouches[0].clientX;
+    });
+
+    //第二层页面触摸移动
+    $("#secondLayer").on("touchmove", function (event) {
+        let mX = event.originalEvent.targetTouches[0].clientX;
+        if((mX - secondLayerTouchStartX) > 40){
+            $("#province-list li, #city-list li").find("span").removeClass("orange-text");
+            $("#secondLayer").removeClass("second-layer-animation-in").addClass("second-layer-animation-out");
+            if(thirdLayerShow){
+                thirdLayerShow = false;
+                $("#thirdLayer").removeClass("third-layer-animation-in").addClass("third-layer-animation-out");
+            }
+        }
+    });
+
+    //第一层页面触摸开始
+    $("#firstLayer").on("touchstart", function (event) {
+        firstLayerTouchStartX = event.originalEvent.targetTouches[0].clientX;
+        firstLayerTouchStartY = event.originalEvent.targetTouches[0].clientY;
+    });
+
+    //第一层页面滚动监听
+    $("#firstLayer").on("touchmove", function (event) {
+        let mX = event.originalEvent.targetTouches[0].clientX;
+        let mY = event.originalEvent.targetTouches[0].clientY;
+        if ((mX - firstLayerTouchStartX) > 80) {
+            if(secondLayerShow) {
+                secondLayerShow = false;
+                $("#province-list li, #city-list li").find("span").removeClass("orange-text");
+                $("#secondLayer").removeClass("second-layer-animation-in").addClass("second-layer-animation-out");
+                if(thirdLayerShow){
+                    secondLayerShow = false;
+                    $("#thirdLayer").removeClass("third-layer-animation-in").addClass("third-layer-animation-out");
+                }
+            }
+            $("#select-model-box").removeClass("plate-model-animation-in").addClass("plate-model-animation-out");
+
+        } else if ((mX - firstLayerTouchStartX) > 30 || Math.abs(mY - firstLayerTouchStartY) > 30) {
+            if(secondLayerShow) {
+                secondLayerShow = false;
+                $("#province-list li, #city-list li").find("span").removeClass("orange-text");
+                $("#secondLayer").removeClass("second-layer-animation-in").addClass("second-layer-animation-out");
+                if(thirdLayerShow){
+                    secondLayerShow = false;
+                    $("#thirdLayer").removeClass("third-layer-animation-in").addClass("third-layer-animation-out");
+                }
+            }
+        }
+    });
+});
+
+/**
+ * 获取省
+ */
+function getProvinces() {
+    $.ajax({
+        type: 'POST',
+        url: $.getProvinces,
+        data: {
+            user_id: param.user_id
+            // user_id: "989bfba1-a957-49b0-b5f0-8701c0c06767"
+        },
+        success: function (res) {
+            console.log(res);
+            if(res.status == 1){
+                mProvinces = [];
+                mProvinces = res.data;
+                let template = document.getElementById('template-province-list').innerHTML;
+                document.getElementById('province-list').innerHTML = doT.template(template)(mProvinces);
+            } else {
+            }
+        },
+        error: function (err) {
+            console.log(err);
+            // window.location.href = "../../Util/html/error.html";
+        }
+    });
+}
+/**
+ * 获取城市
+ * @param obj
+ * @param pro
+ * @param code
+ */
+function getCities(obj, pro, code) {
+    secondLayerShow = true;
+    $("#secondLayer").removeClass("second-layer-animation-out").addClass("second-layer-animation-in");
+    if(thirdLayerShow){
+        thirdLayerShow = false;
+        $("#thirdLayer").removeClass("third-layer-animation-in").addClass("third-layer-animation-out");
+    }
+    $(obj).addClass("orange-text").siblings().removeClass("orange-text");
+    province = pro;
+    pro_code = code;
+    $.ajax({
+        type: 'POST',
+        url: $.getCities,
+        data: {
+            user_id: param.user_id,
+            pro_code: code
+            // user_id: "989bfba1-a957-49b0-b5f0-8701c0c06767",
+            // pro_code: code
+        },
+        success: function (res) {
+            console.log(res);
+            if(res.status == 1){
+                mCities = [];
+                mCities = res.data;
+                let templateCarSeries = document.getElementById('template-city-list').innerHTML;
+                document.getElementById('city-list').innerHTML = doT.template(templateCarSeries)(mCities);
+
+            } else {
+            }
+        },
+        error: function (err) {
+            console.log(err);
+            // window.location.href = "../../Util/html/error.html";
+        }
+    });
+}
+/**
+ * 获取区县
+ * @param obj
+ * @param c
+ * @param code
+ */
+function getAds(obj, c, code) {
+    let type = $("#type").val();
+    if(type == "express"){
+        secondLayerShow = false;
+        $("#province-list li, #city-list li").find("span").removeClass("orange-text");
+        $("#secondLayer").removeClass("second-layer-animation-in").addClass("second-layer-animation-out");
+        let cityInfo = {   //选择城市信息
+            province: province,
+            pro_code: pro_code,
+            city: c,
+            city_code: code
+        };
+        sessionStorage.setItem("cityInfo", JSON.stringify(cityInfo));
+        $("#select-model-box").removeClass("plate-model-animation-in").addClass("plate-model-animation-out");
+        $("#city").val(cityInfo.province + " " + cityInfo.city);
+    } else {
+        thirdLayerShow = true;
+        $("#thirdLayer").removeClass("third-layer-animation-out").addClass("third-layer-animation-in");
+        $(obj).addClass("orange-text").siblings().removeClass("orange-text");
+        city = c;
+        city_code = code;
+        $.ajax({
+            type: 'POST',
+            url: $.getAds,
+            data: {
+                user_id: param.user_id,
+                city_code: code
+                // user_id: "989bfba1-a957-49b0-b5f0-8701c0c06767",
+                // city_code: code
+            },
+            success: function (res) {
+                console.log(res);
+                if(res.status == 1){
+                    mAds = [];
+                    mAds = res.data;
+                    let templateCarColor = document.getElementById('template-ad-list').innerHTML;
+                    document.getElementById('ad-list').innerHTML = doT.template(templateCarColor)(mAds);
+                } else {
+                }
+            },
+            error: function (err) {
+                console.log(err);
+                // window.location.href = "../../Util/html/error.html";
+            }
+        });
+    }
+}
+/**
+ * 选择好区县
+ * @param obj
+ * @param dist
+ * @param ad_code
+ */
+function selectAds(obj, dist, ad_code) {
+    secondLayerShow = false;
+    thirdLayerShow = false;
+    $("#province-list li, #city-list li").find("span").removeClass("orange-text");
+    $("#thirdLayer").removeClass("third-layer-animation-in").addClass("third-layer-animation-out");
+    $("#secondLayer").removeClass("second-layer-animation-in").addClass("second-layer-animation-out");
+    let cityInfo = {   //选择城市信息
+        province: province,
+        pro_code: pro_code,
+        city: city,
+        city_code: city_code,
+        dist: dist,
+        ad_code: ad_code
+    };
+    sessionStorage.setItem("cityInfo", JSON.stringify(cityInfo));
+    $("#select-model-box").removeClass("plate-model-animation-in").addClass("plate-model-animation-out");
+    $("#city").val(cityInfo.province + " " + cityInfo.city + " " + cityInfo.dist);
+}

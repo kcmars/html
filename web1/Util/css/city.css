@@ -1,0 +1,171 @@
+.car-main {
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff;
+    font-size: 0.28rem;
+}
+.first-layer {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+}
+.layer-left {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    overflow: scroll;
+}
+.header {
+    background-color: dodgerblue;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0.40rem 0.24rem;
+    margin: 0.40rem 0.60rem;
+    border-radius: 0.10rem;
+}
+.header img {
+    width: 0.32rem;
+    height: 0.32rem;
+    margin-right: 0.20rem;
+    margin-top: -0.30rem;
+}
+.header-text {
+    display: flex;
+    flex-direction: column;
+}
+.header-text span:first-child {
+    font-size: 0.28rem;
+    color: #ffffff;
+}
+.header-text span:last-child {
+    font-size: 0.20rem;
+    color: #ffffff;
+    margin-top: 0.10rem;
+}
+.brand-list {
+    display: flex;
+    flex-direction: column;
+}
+.brand-list li {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    padding: 0.50rem 0.30rem;
+    border-bottom: 0.02rem solid #eeeeee;
+    align-items: center;
+    font-size: 0.28rem;
+    color: #333333;
+}
+.brand-list li img {
+    width: 0.52rem;
+    height: 0.52rem;
+    margin-right: 0.40rem;
+}
+/** 二级菜单*/
+.second-layer {
+    width: 65%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    position: fixed;
+    z-index: 1002;
+    right: -65%;
+    top: 0;
+    border-left: 0.02rem solid #cccccc;
+    box-shadow: -0.02rem 0 0.02rem #cccccc;
+}
+.second-layer-animation-in {
+    -webkit-animation: second-slide-in 0.5s forwards;
+    animation: second-slide-in 0.5s forwards;
+}
+@-webkit-keyframes second-slide-in {
+    0% { right: -65%}
+    100% { right: 0 }
+}
+@keyframes second-slide-in {
+    0% { right: -65%}
+    100% { right: 0 }
+}
+.second-layer-animation-out {
+    -webkit-animation: second-slide-out 0.5s backwards;
+    animation: second-slide-out 0.5s backwards;
+}
+@-webkit-keyframes second-slide-out {
+    0% { right: 0}
+    100% { right: -65% }
+}
+@keyframes second-slide-out {
+    0% { right: 0}
+    100% { right: -65% }
+}
+.car-color-item-list,
+.car-series-item-list {
+    width: 100%;
+    overflow: scroll;
+    background-color: #eeeeee;
+}
+.car-color-item-list li,
+.car-series-item-list li{
+    width: 100%;
+    background-color: #ffffff;
+}
+.car-color-item,
+.car-series-item {
+    padding: 0.40rem 0;
+    margin-left: 0.40rem;
+    font-size: 0.28rem;
+    color: #333333;
+    border-bottom: 0.02rem solid #eeeeee;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+/** 三级菜单*/
+.third-layer {
+    width: 35%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    position: fixed;
+    z-index: 1003;
+    right: -35%;
+    top: 0;
+    border-left: 0.02rem solid #cccccc;
+    box-shadow: -0.02rem 0 0.02rem #cccccc;
+}
+.third-layer-animation-in {
+    -webkit-animation: third-slide-in 0.5s forwards;
+    animation: third-slide-in 0.5s forwards;
+}
+@-webkit-keyframes third-slide-in {
+    0% { right: -35%}
+    100% { right: 0 }
+}
+@keyframes third-slide-in {
+    0% { right: -35%}
+    100% { right: 0 }
+}
+.third-layer-animation-out {
+    -webkit-animation: third-slide-out 0.5s forwards;
+    animation: third-slide-out 0.5s forwards;
+}
+@-webkit-keyframes third-slide-out {
+    0% { right: 0}
+    100% { right: -35% }
+}
+@keyframes third-slide-out {
+    0% { right: 0}
+    100% { right: -35% }
+}
+.car-color {
+    background-color: #666666;
+    border: 0.02rem solid #cccccc;
+    width: 0.40rem;
+    height: 0.40rem;
+    border-radius: 0.40rem;
+    margin-right: 0.10rem;
+    text-align: justify;
+}

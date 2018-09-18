@@ -1,0 +1,68 @@
+.mp-main {
+    width: 100%;
+    background-color: #ffffff;
+    height: auto;
+}
+.mp-box-title {
+    font-size: 0.40rem;
+    padding: 0.20rem 0.25rem;
+    align-items: center;
+}
+.mp-box-title img {
+    width: 0.50rem;
+    height: 0.50rem
+}
+.title {
+    color: #1fb1ff;
+    flex: 1;
+    text-align: center
+}
+.title-right {
+    width: 0.50rem;
+    height: 0.50rem
+}
+.mp-alert-pay-type {
+    flex: 1;
+    margin: 0.25rem 0
+}
+.price-row,
+.discount-money-row {
+    padding: 0.25rem 0.45rem;
+    font-size: 0.33rem;
+    align-items: center
+}
+.discount-money-row span {
+    flex: 1;
+    text-align: center;
+    color: #ffad18;
+}
+.price-row span {
+    flex: 1;
+    text-align: center;
+    color: #333333;
+}
+.mp-alert-pay-type-row {
+    padding: 0.25rem 0.45rem;
+    font-size: 0.35rem;
+    align-items: center
+}
+.mp-alert-pay-type-row .img {
+    width: 0.45rem;
+    height: 0.45rem
+}
+.mp-alert-pay-type-row .span {
+    flex: 1;
+    margin: 0 0.2rem
+}
+.mp-alert-pay-type-row .input {
+    width: 0.45rem;
+    height: 0.45rem;
+    color: #1fb1ff
+}
+.mp-alert-pay-btn {
+    background-color: #1fb1ff;
+    font-size: 0.47rem;
+    color: white;
+    text-align: center;
+    padding: 0.35rem 0
+}
