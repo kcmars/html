@@ -1,0 +1,10 @@
+.home-main {
+    width: 100%;
+    height: 100%;
+    background-color: #f1f3f5;
+    font-size: 0.28rem;
+}
+.swiper-container {
+    width: 100%;
+    height: 3rem;
+}
