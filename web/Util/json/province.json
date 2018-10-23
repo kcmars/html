@@ -2,6 +2,8 @@
   {
     "province_code": "110100",
     "province_name": "北京市",
+    "city_code": "110100",
+    "city_name": "北京市",
     "lon": "116.395645",
     "lat": "39.929985",
     "type": 2
@@ -9,6 +11,8 @@
   {
     "province_code": "120100",
     "province_name": "天津市",
+    "city_code": "120100",
+    "city_name": "天津市",
     "lon": "117.210813",
     "lat": "39.143929",
     "type": 2
@@ -16,6 +20,8 @@
   {
     "province_code": "130000",
     "province_name": "河北省",
+    "city_code": "130100",
+    "city_name": "石家庄市",
     "lon": "114.522081",
     "lat": "38.048958",
     "type": 1
@@ -23,6 +29,8 @@
   {
     "province_code": "140000",
     "province_name": "山西省",
+    "city_code": "140100",
+    "city_name": "太原市",
     "lon": "112.550863",
     "lat": "37.890277",
     "type": 1
@@ -30,6 +38,8 @@
   {
     "province_code": "150000",
     "province_name": "内蒙古自治区",
+    "city_code": "150100",
+    "city_name": "呼和浩特市",
     "lon": "111.660350",
     "lat": "40.828318",
     "type": 1
@@ -37,6 +47,8 @@
   {
     "province_code": "210000",
     "province_name": "辽宁省",
+    "city_code": "210100",
+    "city_name": "沈阳市",
     "lon": "123.432790",
     "lat": "41.808644",
     "type": 1
@@ -44,6 +56,8 @@
   {
     "province_code": "220000",
     "province_name": "吉林省",
+    "city_code": "220100",
+    "city_name": "长春市",
     "lon": "125.313642",
     "lat": "43.898337",
     "type": 1
@@ -51,6 +65,8 @@
   {
     "province_code": "230000",
     "province_name": "黑龙江省",
+    "city_code": "230100",
+    "city_name": "哈尔滨市",
     "lon": "126.657716",
     "lat": "45.773224",
     "type": 1
@@ -58,6 +74,8 @@
   {
     "province_code": "310000",
     "province_name": "上海市",
+    "city_code": "310100",
+    "city_name": "上海市",
     "lon": "121.487899",
     "lat": "31.249161",
     "type": 2
@@ -65,6 +83,8 @@
   {
     "province_code": "320000",
     "province_name": "江苏省",
+    "city_code": "320100",
+    "city_name": "南京市",
     "lon": "118.778074",
     "lat": "32.057235",
     "type": 1
@@ -72,6 +92,8 @@
   {
     "province_code": "330000",
     "province_name": "浙江省",
+    "city_code": "330100",
+    "city_name": "杭州市",
     "lon": "120.219375",
     "lat": "30.259244",
     "type": 1
@@ -79,6 +101,8 @@
   {
     "province_code": "340000",
     "province_name": "安徽省",
+    "city_code": "340100",
+    "city_name": "合肥市",
     "lon": "117.282699",
     "lat": "31.866942",
     "type": 1
@@ -86,6 +110,8 @@
   {
     "province_code": "350000",
     "province_name": "福建省",
+    "city_code": "350100",
+    "city_name": "福州市",
     "lon": "119.330221",
     "lat": "26.047125",
     "type": 1
@@ -93,6 +119,8 @@
   {
     "province_code": "360000",
     "province_name": "江西省",
+    "city_code": "360100",
+    "city_name": "南昌市",
     "lon": "115.893527",
     "lat": "28.689578",
     "type": 1
@@ -100,6 +128,8 @@
   {
     "province_code": "370000",
     "province_name": "山东省",
+    "city_code": "370100",
+    "city_name": "济南市",
     "lon": "117.024967",
     "lat": "36.682784",
     "type": 1
@@ -107,6 +137,8 @@
   {
     "province_code": "410000",
     "province_name": "河南省",
+    "city_code": "410100",
+    "city_name": "郑州市",
     "lon": "113.649643",
     "lat": "34.756610",
     "type": 1
@@ -114,6 +146,8 @@
   {
     "province_code": "420000",
     "province_name": "湖北省",
+    "city_code": "420100",
+    "city_name": "武汉市",
     "lon": "114.316200",
     "lat": "30.581084",
     "type": 1
@@ -121,6 +155,8 @@
   {
     "province_code": "430000",
     "province_name": "湖南省",
+    "city_code": "430100",
+    "city_name": "长沙市",
     "lon": "112.979352",
     "lat": "28.213478",
     "type": 1
@@ -128,6 +164,8 @@
   {
     "province_code": "440000",
     "province_name": "广东省",
+    "city_code": "440100",
+    "city_name": "广州市",
     "lon": "113.307649",
     "lat": "23.120049",
     "type": 1
@@ -135,6 +173,8 @@
   {
     "province_code": "450000",
     "province_name": "广西壮族自治区",
+    "city_code": "450100",
+    "city_name": "南宁市",
     "lon": "108.297233",
     "lat": "22.806492",
     "type": 1
@@ -142,6 +182,8 @@
   {
     "province_code": "460000",
     "province_name": "海南省",
+    "city_code": "460100",
+    "city_name": "海口市",
     "lon": "110.330801",
     "lat": "20.022071",
     "type": 1
@@ -149,6 +191,8 @@
   {
     "province_code": "500000",
     "province_name": "重庆市",
+    "city_code": "500100",
+    "city_name": "重庆市",
     "lon": "106.530635",
     "lat": "29.544606",
     "type": 2
@@ -156,6 +200,8 @@
   {
     "province_code": "510000",
     "province_name": "四川省",
+    "city_code": "510100",
+    "city_name": "成都市",
     "lon": "104.067923",
     "lat": "30.679942",
     "type": 1
@@ -163,6 +209,8 @@
   {
     "province_code": "520000",
     "province_name": "贵州省",
+    "city_code": "520100",
+    "city_name": "贵阳市",
     "lon": "106.709177",
     "lat": "26.629906",
     "type": 1
@@ -170,6 +218,8 @@
   {
     "province_code": "530000",
     "province_name": "云南省",
+    "city_code": "530100",
+    "city_name": "昆明市",
     "lon": "102.714601",
     "lat": "25.049153",
     "type": 1
@@ -177,6 +227,8 @@
   {
     "province_code": "540000",
     "province_name": "西藏自治区",
+    "city_code": "540100",
+    "city_name": "拉萨市",
     "lon": "91.111890",
     "lat": "29.662557",
     "type": 1
@@ -184,6 +236,8 @@
   {
     "province_code": "610000",
     "province_name": "陕西省",
+    "city_code": "610100",
+    "city_name": "西安市",
     "lon": "108.953098",
     "lat": "34.277799",
     "type": 1
@@ -191,6 +245,8 @@
   {
     "province_code": "620000",
     "province_name": "甘肃省",
+    "city_code": "620100",
+    "city_name": "兰州市",
     "lon": "103.823305",
     "lat": "36.064225",
     "type": 1
@@ -198,6 +254,8 @@
   {
     "province_code": "630000",
     "province_name": "青海省",
+    "city_code": "630100",
+    "city_name": "西宁市",
     "lon": "101.767920",
     "lat": "36.640738",
     "type": 1
@@ -205,6 +263,8 @@
   {
     "province_code": "640000",
     "province_name": "宁夏回族自治区",
+    "city_code": "640100",
+    "city_name": "银川市",
     "lon": "106.206478",
     "lat": "38.502621",
     "type": 1
@@ -212,6 +272,8 @@
   {
     "province_code": "650000",
     "province_name": "新疆维吾尔自治区",
+    "city_code": "650100",
+    "city_name": "乌鲁木齐市",
     "lon": "87.564987",
     "lat": "43.840380",
     "type": 1
@@ -219,6 +281,8 @@
   {
     "province_code": "710000",
     "province_name": "台湾省",
+    "city_code": "",
+    "city_name": "",
     "name_en": "Taiwan",
     "lon": "121.50",
     "lat": "25.03",
@@ -227,6 +291,8 @@
   {
     "province_code": "720000",
     "province_name": "香港",
+    "city_code": "",
+    "city_name": "",
     "name_en": "Hongkong",
     "lon": "114.08",
     "lat": "22.20",
@@ -235,6 +301,8 @@
   {
     "province_code": "730000",
     "province_name": "澳门",
+    "city_code": "",
+    "city_name": "",
     "name_en": "Macau",
     "lon": "113.33",
     "lat": "22.13",
