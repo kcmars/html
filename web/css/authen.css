@@ -154,6 +154,27 @@
     flex-direction: row;
     align-items: center;
 }
+.car-color-item {
+    padding: 0.20rem 0;
+    margin-left: 0.40rem;
+    font-size: 0.28rem;
+    color: #333333;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.car-color {
+    background-color: #666666;
+    border: 0.02rem solid #cccccc;
+    width: 0.40rem;
+    height: 0.40rem;
+    border-radius: 0.40rem;
+    margin-right: 0.10rem;
+    text-align: justify;
+}
+.authen-main .input .item-right #plate-seats {
+    text-align: center;
+}
 .authen-main .input .item-right .item-right-box {
     border: 0.02rem solid #cccccc;
     padding: 0.12rem;
@@ -260,6 +281,12 @@
     margin-top: 0.60rem;
     margin-bottom: 1rem;
 }
+.demo-none {
+    display: none;
+    opacity: 0;
+    top: 100%;
+    overflow: hidden;
+}
 .demo-model {
     position: fixed;
     width: 100%;
@@ -337,12 +364,59 @@
     height: 100%;
     z-index: 123;
 }
+.bus-color {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 100%;
+    height: 100%;
+    z-index: 124;
+}
+.bus-type {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 100%;
+    height: 100%;
+    z-index: 125;
+}
+.bus-type2 {
+    position: fixed;
+    top: 0;
+    right: -50%;
+    width: 50%;
+    height: 100%;
+    z-index: 126;
+    border-left: 0.02rem solid #cccccc;
+    box-shadow: -0.02rem 0 0.02rem #cccccc;
+}
+.bus-color .model,
+.bus-type .model,
 .plate-model .model {
     width: 100%;
     height: 100%;
     background-color: #000000;
     opacity: 0.5;
 }
+.bus-type ul {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 80%;
+    height: 100%;
+    overflow: scroll;
+    background-color: #ffffff;
+}
+.bus-type2 ul {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    overflow: scroll;
+    background-color: #ffffff;
+}
+.bus-color ul,
 .plate-model ul {
     position: absolute;
     top: 0;
@@ -352,12 +426,18 @@
     overflow: scroll;
     background-color: #ffffff;
 }
+.bus-color ul li,
+.bus-type ul li,
+.bus-type2 ul li,
 .plate-model ul li {
     border-bottom: 0.02rem solid #eeeeee;
     padding: 0.30rem;
     font-size: 0.33rem;
     color: #333333;
 }
+.bus-color ul li .orange-text,
+.bus-type ul li .orange-text,
+.bus-type2 ul li .orange-text,
 .plate-model ul li .orange-text {
     color: #ffad18;
 }
@@ -401,4 +481,44 @@
     padding: 0;
     margin: 0;
     border: 0;
+}
+/* 颜色 "白色","红色","黑色","银色","香槟色","灰色","蓝色","黄色","绿色","咖啡色","橙色","其他" */
+.orange-text {
+    color: orange;
+}
+.white {
+    background-color: white;
+}
+.red {
+    background-color: red;
+}
+.black {
+    background-color: black;
+}
+.silver {
+    background-color: silver;
+}
+.champagne {
+    background-color: sandybrown;
+}
+.gray {
+    background-color: gray;
+}
+.blue {
+    background-color: blue;
+}
+.yellow {
+    background-color: yellow;
+}
+.green {
+    background-color: green;
+}
+.coffee {
+    background-color: chocolate;
+}
+.orange {
+    background-color: orange;
+}
+.other {
+    background-color: #eeeeee;
 }

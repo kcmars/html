@@ -104,12 +104,8 @@ $(function () {
                 console.log(date);
             }}
     );
-
-    var plateShortList = ["京", "津", "沪", "渝", "黑", "吉", "辽", "甘", "陕", "贵", "云", "川", "晋", "冀", "青",
-        "鲁", "豫", "苏", "皖", "浙", "闽", "赣", "湘", "鄂", "粤", "琼", "蒙", "新", "藏", "宁", "桂", "港", "澳"];
     var templatePlateModels = document.getElementById('template-plate-short-list').innerHTML;
-    document.getElementById('plate-short-list').innerHTML = doT.template(templatePlateModels)(plateShortList);
-
+    document.getElementById('plate-short-list').innerHTML = doT.template(templatePlateModels)($.plateShortList);
     //选择车牌简称
     $("#plate-no-short-box").bind("click", function () {
         if(driverInfo){
@@ -125,7 +121,7 @@ $(function () {
         $("#plate-short-list li, #plate-model > .model").bind("click", function () {
             $(this).find("span").addClass("orange-text");
             $("#plate-model").removeClass("plate-model-animation-in").addClass("plate-model-animation-out");
-            $("#plate-no-short").val(plateShortList[$(this).index()]);
+            $("#plate-no-short").val($.plateShortList[$(this).index()]);
         });
     });
 
@@ -371,18 +367,18 @@ function showExpressDriverInfo() {
             img3 = driverInfo.image_drivers;
             $("#driver-license ul li div").removeClass("none authen-status-over").addClass("authen-status-ing");
             $("#driver-license ul li div b").html("审核中");
-        } else if (realNameStatus == 2 || realNameStatus == 3) { //成功
+        } else if (driversLicenseStatus == 2 || driversLicenseStatus == 3) { //成功
             $("#driver-license input").attr("disabled", true);
             $("#driver-license #first-issue").val(driverInfo.first_issue);
             $("#driver-license #img3").attr("src", $.server2 + driverInfo.image_drivers);
             img3 = driverInfo.image_drivers;
             $("#driver-license ul li div").removeClass("none authen-status-over").addClass("authen-status-ing");
             $("#driver-license ul li div b").html("审核通过");
-        } else if(realNameStatus == 0 || realNameStatus == -1) { //未提交认证 数据无效
+        } else if(driversLicenseStatus == 0 || driversLicenseStatus == -1) { //未提交认证 数据无效
             $("#driver-license input").attr("disabled", false);
             $("#driver-license ul li div").addClass("none");
             $("#driver-license ul li div b").html("");
-        } else if(realNameStatus == -2) { //失败
+        } else if(driversLicenseStatus == -2) { //失败
             $("#driver-license input").attr("disabled", false);
             $("#driver-license #first-issue").val(driverInfo.first_issue);
             $("#driver-license #img3").attr("src", $.server2 + driverInfo.image_drivers);
@@ -405,7 +401,7 @@ function showExpressDriverInfo() {
             img5 = driverInfo.image_driving_b;
             $("#driving-license ul li div").removeClass("none authen-status-over").addClass("authen-status-ing");
             $("#driving-license ul li div b").html("审核中");
-        } else if (realNameStatus == 2 || realNameStatus == 3) { //成功
+        } else if (drivingLicenseStatus == 2 || drivingLicenseStatus == 3) { //成功
             $("#driving-license input").attr("disabled", true);
             $("#driving-license #car").val(driverInfo.brand + " " + driverInfo.model + " " + driverInfo.color);
             $("#driving-license #plate-no-short").val(driverInfo.plate_no_short);
@@ -419,12 +415,12 @@ function showExpressDriverInfo() {
             img5 = driverInfo.image_driving_b;
             $("#driving-license ul li div").removeClass("none authen-status-over").addClass("authen-status-ing");
             $("#driving-license ul li div b").html("审核通过");
-        } else if(realNameStatus == 0 || realNameStatus == -1) { //未提交认证 数据无效
+        } else if(drivingLicenseStatus == 0 || drivingLicenseStatus == -1) { //未提交认证 数据无效
             $("#driving-license input").attr("disabled", false);
             $("#driving-license input").attr("readonly", false);
             $("#driving-license ul li div").addClass("none");
             $("#driving-license ul li div b").html("");
-        } else if(realNameStatus == -2) { //失败
+        } else if(drivingLicenseStatus == -2) { //失败
             $("#driving-license input").attr("disabled", false);
             $("#driving-license #car").val(driverInfo.brand + " " + driverInfo.model + " " + driverInfo.color);
             $("#driving-license #plate-no-short").val(driverInfo.plate_no_short);
@@ -445,15 +441,15 @@ function showExpressDriverInfo() {
             img6 = driverInfo.image_group;
             $("#photo-person-car-box ul li div").removeClass("none authen-status-over").addClass("authen-status-ing");
             $("#photo-person-car-box ul li div b").html("审核中");
-        } else if (realNameStatus == 2 || realNameStatus == 3) { //成功
+        } else if (photoGroupStatus == 2 || photoGroupStatus == 3) { //成功
             $("#photo-person-car-box #img6").attr("src", $.server2 + driverInfo.image_group);
             img6 = driverInfo.image_group;
             $("#photo-person-car-box ul li div").removeClass("none authen-status-over").addClass("authen-status-ing");
             $("#photo-person-car-box ul li div b").html("审核通过");
-        } else if(realNameStatus == 0 || realNameStatus == -1) { //未提交认证 数据无效
+        } else if(photoGroupStatus == 0 || photoGroupStatus == -1) { //未提交认证 数据无效
             $("#photo-person-car-box ul li div").addClass("none");
             $("#photo-person-car-box ul li div b").html("");
-        } else if(realNameStatus == -2) { //失败
+        } else if(photoGroupStatus == -2) { //失败
             $("#photo-person-car-box #img6").attr("src", $.server2 + driverInfo.image_group);
             img6 = driverInfo.image_group;
             $("#photo-person-car-box ul li div").removeClass("none authen-status-ing").addClass("authen-status-over");
@@ -492,6 +488,7 @@ function showImg(index) {
     if (!flag){
         return;
     }
+    $("#demo-model").removeClass("none").addClass("demo-model");
     $("#demo-model").animate({top: "0", opacity: 1}, 300);
     $("#demo-model > .content > .title").text(demoImg[index].text);
     $("#demo-model > .content > .legend > img").attr("src", demoImg[index].img);
@@ -499,9 +496,15 @@ function showImg(index) {
         $("#demo-model").animate({top: "100%", opacity: 0}, 300);
         $("#file").val("");
         $("#file").off("change");
+        setTimeout(function () {
+            $("#demo-model").removeClass("demo-model").addClass("none");
+        }, 300);
     });
     $("#file").on("click", function () {
         $("#demo-model").animate({top: "100%", opacity: 0}, 300);
+        setTimeout(function () {
+            $("#demo-model").removeClass("demo-model").addClass("none");
+        }, 300);
     });
     $("#file").val("");
     $("#file").off("change");

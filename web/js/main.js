@@ -70,6 +70,22 @@ $(function () {
     $.getTaxiDriverInfo = ip1 + "Authentication/getTaxiDriverInfo";
     //提交司机快车认证
     $.submitTaxiDriver = ip1 + "Authentication/taxiDriver";
+    //获取大巴车管理者认证
+    $.getBusManagerInfo = ip1 + "Authentication/getBusManagerInfo";
+    //提交大巴车管理者认证
+    $.submitBusManager = ip1 + "Authentication/busManager";
+    //获取大巴车认证
+    $.getBusInfo = ip1 + "Driver/getBusInfo";
+    //提交大巴车认证
+    $.submitBusInfo = ip1 + "Driver/addBus";
+    //获取大巴车类型
+    $.getBusType = ip1 + "Common/getBusType";
+    //获取大巴车雇员认证
+    $.getBusEmployees = ip1 + "Driver/getEmployeeInfo";
+    //获取大巴车雇员信息
+    $.getEmployeesInfo = ip1 + "Driver/getBusEmployeeInfo";
+    //提交大巴车雇员类型
+    $.submitBusEmployees = ip1 + "Driver/addEmployee";
 
     /**
      * 支付相关接口
@@ -112,6 +128,20 @@ $(function () {
     //获取区县
     $.getAds = ip1 + "Common/getAds";
 
+    $.plateShortList = ["京", "津", "沪", "渝", "黑", "吉", "辽", "甘", "陕", "贵", "云", "川", "晋", "冀", "青",
+        "鲁", "豫", "苏", "皖", "浙", "闽", "赣", "湘", "鄂", "粤", "琼", "蒙", "新", "藏", "宁", "桂", "港", "澳"];
+    $.color = [{color:"white", name: "白色"},
+        {color:"red", name: "红色"},
+        {color:"black", name: "黑色"},
+        {color:"silver", name: "银色"},
+        {color:"champagne", name: "香槟色"},
+        {color:"gray", name: "灰色"},
+        {color:"blue", name: "蓝色"},
+        {color:"yellow", name: "黄色"},
+        {color:"green", name: "绿色"},
+        {color:"coffee", name: "咖啡色"},
+        {color:"orange", name: "橙色"},
+        {color:"other", name: "其他"}];
 
     //防止键盘把当前输入框给挡住
     $('input').on('click', function () {
@@ -433,7 +463,7 @@ $(function () {
                 str = "请输入公司全称";
                 break;
             case "name":
-                str = "请输入真实姓名";
+                str = "请输入姓名";
                 break;
             case "ID":
                 str = "请输入身份证号码";
@@ -457,7 +487,7 @@ $(function () {
                 str = "请选择注册车辆";
                 break;
             case "color":
-                str = "请选择注册车辆";
+                str = "请选择注册车辆颜色";
                 break;
             case "plate_no_short":
                 str = "请选择注册车辆车牌简称";
@@ -478,13 +508,34 @@ $(function () {
                 str = "请上传行驶证副本照";
                 break;
             case "image_group":
-                str = "请上传人车合照";
+                str = "请上传照片";
                 break;
             case "qualification_no":
                 str = "请输入服务证编号";
                 break;
             case "image_qualification":
                 str = "请上传服务证照";
+                break;
+            case "image":
+                str = "请上传照片";
+                break;
+            case "short_no":
+                str = "请选择车牌简称";
+                break;
+            case "seats":
+                str = "请填写核载人数";
+                break;
+            case "type":
+                str = "请填写核载人数";
+                break;
+            case "unified_social_credit_code":
+                str = "请填写企业代码";
+                break;
+            case "image_enterprise_license":
+                str = "请上传企业营业执照照";
+                break;
+            case "phone":
+                str = "请填写联系电话";
                 break;
             default: break;
         }

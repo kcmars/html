@@ -183,9 +183,9 @@ function getParams() {
         taxiDriverInfo = JSON.parse(sessionStorage.getItem("taxiDriverInfo"));
     }
     if(taxiDriverInfo) {
-        showTaxitaxiDriverInfo();
+        showTaxiDriverInfo();
     } else {
-        getTaxitaxiDriverInfo();
+        getTaxiDriverInfo();
     }
     //保存
     $("#submit").bind("click", function () {
@@ -194,7 +194,7 @@ function getParams() {
 }
 
 //获取司机实名认证信息
-function getTaxitaxiDriverInfo() {
+function getTaxiDriverInfo() {
     let params = {
         // user_id: "7f33897b-6562-4753-b831-7d145d147b46"
         user_id: param.user_id
@@ -202,7 +202,7 @@ function getTaxitaxiDriverInfo() {
     loadAlertShow("获取中...");
     $.ajax({
         type: 'POST',
-        url: $.getTaxitaxiDriverInfo,
+        url: $.getTaxiDriverInfo,
         data: params,
         success: function (res) {
             console.log(res);
@@ -211,7 +211,7 @@ function getTaxitaxiDriverInfo() {
                 taxiDriverInfo = res.data;
                 if(taxiDriverInfo) {
                     sessionStorage.setItem("taxiDriverInfo", JSON.stringify(taxiDriverInfo));
-                    showTaxitaxiDriverInfo();
+                    showTaxiDriverInfo();
                 }
             } else {
                 toastAlertShow(res.msg, 2500);
@@ -291,7 +291,7 @@ function submitTaxiDriver() {
 /**
  * 显示司机认证信息
  */
-function showTaxitaxiDriverInfo() {
+function showTaxiDriverInfo() {
     if(taxiDriverInfo){
         let taxiCompanyStatus = taxiDriverInfo.taxi_company_status;
         let realNameStatus = taxiDriverInfo.real_name_status;
@@ -527,6 +527,7 @@ function showImg(index) {
     if (!flag1){
         return;
     }
+    $("#demo-model").removeClass("none").addClass("demo-model");
     $("#demo-model").animate({top: "0", opacity: 1}, 300);
     $("#demo-model > .content > .title").text(demoImg[index].text);
     $("#demo-model > .content > .legend > img").attr("src", demoImg[index].img);
@@ -534,9 +535,15 @@ function showImg(index) {
         $("#demo-model").animate({top: "100%", opacity: 0}, 300);
         $("#file").val("");
         $("#file").off("change");
+        setTimeout(function () {
+            $("#demo-model").removeClass("demo-model").addClass("none");
+        }, 300);
     });
     $("#file").on("click", function () {
         $("#demo-model").animate({top: "100%", opacity: 0}, 300);
+        setTimeout(function () {
+            $("#demo-model").removeClass("demo-model").addClass("none");
+        }, 300);
     });
     $("#file").val("");
     $("#file").off("change");
