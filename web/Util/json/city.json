@@ -8,6 +8,8 @@
     "province_name": "北京市",
     "lon": "116.395645",
     "lat": "39.929985",
+    "province_id": 1,
+    "city_id": 1,
     "type": 2
   },
   {
@@ -19,6 +21,8 @@
     "province_name": "天津市",
     "lon": "117.210813",
     "lat": "39.143929",
+    "province_id": 2,
+    "city_id": 2,
     "type": 2
   },
   {
@@ -30,6 +34,8 @@
     "province_name": "河北省",
     "lon": "114.522081",
     "lat": "38.048958",
+    "province_id": 3,
+    "city_id": 3,
     "type": 2
   },
   {
@@ -41,6 +47,8 @@
     "province_name": "河北省",
     "lon": "118.183450",
     "lat": "39.650530",
+    "province_id": 3,
+    "city_id": 4,
     "type": 2
   },
   {
@@ -52,6 +60,8 @@
     "province_name": "河北省",
     "lon": "119.604367",
     "lat": "39.945461",
+    "province_id": 3,
+    "city_id": 5,
     "type": 2
   },
   {
@@ -63,6 +73,8 @@
     "province_name": "河北省",
     "lon": "114.482693",
     "lat": "36.609307",
+    "province_id": 3,
+    "city_id": 6,
     "type": 2
   },
   {
@@ -74,6 +86,8 @@
     "province_name": "河北省",
     "lon": "114.520486",
     "lat": "37.069531",
+    "province_id": 3,
+    "city_id": 7,
     "type": 2
   },
   {
@@ -85,6 +99,8 @@
     "province_name": "河北省",
     "lon": "115.494810",
     "lat": "38.886564",
+    "province_id": 3,
+    "city_id": 8,
     "type": 2
   },
   {
@@ -96,6 +112,8 @@
     "province_name": "河北省",
     "lon": "114.893781",
     "lat": "40.811188",
+    "province_id": 3,
+    "city_id": 9,
     "type": 2
   },
   {
@@ -107,6 +125,8 @@
     "province_name": "河北省",
     "lon": "117.933822",
     "lat": "40.992521",
+    "province_id": 3,
+    "city_id": 10,
     "type": 2
   },
   {
@@ -118,6 +138,8 @@
     "province_name": "河北省",
     "lon": "116.863806",
     "lat": "38.297615",
+    "province_id": 3,
+    "city_id": 11,
     "type": 2
   },
   {
@@ -129,6 +151,8 @@
     "province_name": "河北省",
     "lon": "116.703602",
     "lat": "39.518610",
+    "province_id": 3,
+    "city_id": 12,
     "type": 2
   },
   {
@@ -140,6 +164,8 @@
     "province_name": "河北省",
     "lon": "115.686228",
     "lat": "37.746929",
+    "province_id": 3,
+    "city_id": 13,
     "type": 2
   },
   {
@@ -151,6 +177,8 @@
     "province_name": "河北省",
     "lon": "114.982548",
     "lat": "38.515915",
+    "province_id": 3,
+    "city_id": 14,
     "type": 3
   },
   {
@@ -162,6 +190,8 @@
     "province_name": "河北省",
     "lon": "115.215175",
     "lat": "37.938394",
+    "province_id": 3,
+    "city_id": 15,
     "type": 3
   },
   {
@@ -173,6 +203,8 @@
     "province_name": "山西省",
     "lon": "112.550863",
     "lat": "37.890277",
+    "province_id": 4,
+    "city_id": 16,
     "type": 2
   },
   {
@@ -184,6 +216,8 @@
     "province_name": "山西省",
     "lon": "113.290508",
     "lat": "40.113744",
+    "province_id": 4,
+    "city_id": 17,
     "type": 2
   },
   {
@@ -195,6 +229,8 @@
     "province_name": "山西省",
     "lon": "113.569237",
     "lat": "37.869529",
+    "province_id": 4,
+    "city_id": 18,
     "type": 2
   },
   {
@@ -206,6 +242,8 @@
     "province_name": "山西省",
     "lon": "113.120292",
     "lat": "36.201664",
+    "province_id": 4,
+    "city_id": 19,
     "type": 2
   },
   {
@@ -217,6 +255,8 @@
     "province_name": "山西省",
     "lon": "112.867332",
     "lat": "35.499834",
+    "province_id": 4,
+    "city_id": 20,
     "type": 2
   },
   {
@@ -228,6 +268,8 @@
     "province_name": "山西省",
     "lon": "112.479927",
     "lat": "39.337671",
+    "province_id": 4,
+    "city_id": 21,
     "type": 2
   },
   {
@@ -239,6 +281,8 @@
     "province_name": "山西省",
     "lon": "112.738514",
     "lat": "37.693361",
+    "province_id": 4,
+    "city_id": 22,
     "type": 2
   },
   {
@@ -250,6 +294,8 @@
     "province_name": "山西省",
     "lon": "111.006853",
     "lat": "35.038859",
+    "province_id": 4,
+    "city_id": 23,
     "type": 2
   },
   {
@@ -261,6 +307,8 @@
     "province_name": "山西省",
     "lon": "112.727938",
     "lat": "38.461030",
+    "province_id": 4,
+    "city_id": 24,
     "type": 2
   },
   {
@@ -272,6 +320,8 @@
     "province_name": "山西省",
     "lon": "111.538787",
     "lat": "36.099745",
+    "province_id": 4,
+    "city_id": 25,
     "type": 2
   },
   {
@@ -283,6 +333,8 @@
     "province_name": "山西省",
     "lon": "111.143156",
     "lat": "37.527316",
+    "province_id": 4,
+    "city_id": 26,
     "type": 2
   },
   {
@@ -294,6 +346,8 @@
     "province_name": "内蒙古自治区",
     "lon": "111.660350",
     "lat": "40.828318",
+    "province_id": 5,
+    "city_id": 27,
     "type": 2
   },
   {
@@ -305,6 +359,8 @@
     "province_name": "内蒙古自治区",
     "lon": "109.846238",
     "lat": "40.647119",
+    "province_id": 5,
+    "city_id": 28,
     "type": 2
   },
   {
@@ -316,6 +372,8 @@
     "province_name": "内蒙古自治区",
     "lon": "106.831999",
     "lat": "39.683177",
+    "province_id": 5,
+    "city_id": 29,
     "type": 2
   },
   {
@@ -327,6 +385,8 @@
     "province_name": "内蒙古自治区",
     "lon": "118.930761",
     "lat": "42.297112",
+    "province_id": 5,
+    "city_id": 30,
     "type": 2
   },
   {
@@ -338,6 +398,8 @@
     "province_name": "内蒙古自治区",
     "lon": "122.260363",
     "lat": "43.633756",
+    "province_id": 5,
+    "city_id": 31,
     "type": 2
   },
   {
@@ -349,6 +411,8 @@
     "province_name": "内蒙古自治区",
     "lon": "109.993706",
     "lat": "39.816489",
+    "province_id": 5,
+    "city_id": 32,
     "type": 2
   },
   {
@@ -360,6 +424,8 @@
     "province_name": "内蒙古自治区",
     "lon": "119.760821",
     "lat": "49.201636",
+    "province_id": 5,
+    "city_id": 33,
     "type": 2
   },
   {
@@ -371,6 +437,8 @@
     "province_name": "内蒙古自治区",
     "lon": "107.423806",
     "lat": "40.769179",
+    "province_id": 5,
+    "city_id": 34,
     "type": 2
   },
   {
@@ -382,6 +450,8 @@
     "province_name": "内蒙古自治区",
     "lon": "113.112846",
     "lat": "41.022362",
+    "province_id": 5,
+    "city_id": 35,
     "type": 2
   },
   {
@@ -393,6 +463,8 @@
     "province_name": "内蒙古自治区",
     "lon": "122.048166",
     "lat": "46.083757",
+    "province_id": 5,
+    "city_id": 36,
     "type": 2
   },
   {
@@ -404,6 +476,8 @@
     "province_name": "内蒙古自治区",
     "lon": "116.027339",
     "lat": "43.939704",
+    "province_id": 5,
+    "city_id": 37,
     "type": 2
   },
   {
@@ -415,6 +489,8 @@
     "province_name": "内蒙古自治区",
     "lon": "105.695682",
     "lat": "38.843075",
+    "province_id": 5,
+    "city_id": 38,
     "type": 2
   },
   {
@@ -426,6 +502,8 @@
     "province_name": "辽宁省",
     "lon": "123.432790",
     "lat": "41.808644",
+    "province_id": 6,
+    "city_id": 39,
     "type": 2
   },
   {
@@ -437,6 +515,8 @@
     "province_name": "辽宁省",
     "lon": "121.593477",
     "lat": "38.948709",
+    "province_id": 6,
+    "city_id": 40,
     "type": 2
   },
   {
@@ -448,6 +528,8 @@
     "province_name": "辽宁省",
     "lon": "123.007763",
     "lat": "41.118743",
+    "province_id": 6,
+    "city_id": 41,
     "type": 2
   },
   {
@@ -459,6 +541,8 @@
     "province_name": "辽宁省",
     "lon": "123.929819",
     "lat": "41.877303",
+    "province_id": 6,
+    "city_id": 42,
     "type": 2
   },
   {
@@ -470,6 +554,8 @@
     "province_name": "辽宁省",
     "lon": "123.778062",
     "lat": "41.325837",
+    "province_id": 6,
+    "city_id": 43,
     "type": 2
   },
   {
@@ -481,6 +567,8 @@
     "province_name": "辽宁省",
     "lon": "124.338543",
     "lat": "40.129022",
+    "province_id": 6,
+    "city_id": 44,
     "type": 2
   },
   {
@@ -492,6 +580,8 @@
     "province_name": "辽宁省",
     "lon": "121.147748",
     "lat": "41.130878",
+    "province_id": 6,
+    "city_id": 45,
     "type": 2
   },
   {
@@ -503,6 +593,8 @@
     "province_name": "辽宁省",
     "lon": "122.233391",
     "lat": "40.668651",
+    "province_id": 6,
+    "city_id": 46,
     "type": 2
   },
   {
@@ -514,6 +606,8 @@
     "province_name": "辽宁省",
     "lon": "121.660822",
     "lat": "42.019250",
+    "province_id": 6,
+    "city_id": 47,
     "type": 2
   },
   {
@@ -525,6 +619,8 @@
     "province_name": "辽宁省",
     "lon": "123.172451",
     "lat": "41.273339",
+    "province_id": 6,
+    "city_id": 48,
     "type": 2
   },
   {
@@ -536,6 +632,8 @@
     "province_name": "辽宁省",
     "lon": "122.073227",
     "lat": "41.141248",
+    "province_id": 6,
+    "city_id": 49,
     "type": 2
   },
   {
@@ -547,6 +645,8 @@
     "province_name": "辽宁省",
     "lon": "123.854849",
     "lat": "42.299757",
+    "province_id": 6,
+    "city_id": 50,
     "type": 2
   },
   {
@@ -558,6 +658,8 @@
     "province_name": "辽宁省",
     "lon": "120.446162",
     "lat": "41.571827",
+    "province_id": 6,
+    "city_id": 51,
     "type": 2
   },
   {
@@ -569,6 +671,8 @@
     "province_name": "辽宁省",
     "lon": "120.860757",
     "lat": "40.743029",
+    "province_id": 6,
+    "city_id": 52,
     "type": 2
   },
   {
@@ -580,6 +684,8 @@
     "province_name": "吉林省",
     "lon": "125.313642",
     "lat": "43.898337",
+    "province_id": 7,
+    "city_id": 53,
     "type": 2
   },
   {
@@ -591,6 +697,8 @@
     "province_name": "吉林省",
     "lon": "126.564543",
     "lat": "43.871988",
+    "province_id": 7,
+    "city_id": 54,
     "type": 2
   },
   {
@@ -602,6 +710,8 @@
     "province_name": "吉林省",
     "lon": "124.391382",
     "lat": "43.175524",
+    "province_id": 7,
+    "city_id": 55,
     "type": 2
   },
   {
@@ -613,6 +723,8 @@
     "province_name": "吉林省",
     "lon": "125.133686",
     "lat": "42.923302",
+    "province_id": 7,
+    "city_id": 56,
     "type": 2
   },
   {
@@ -624,6 +736,8 @@
     "province_name": "吉林省",
     "lon": "125.942650",
     "lat": "41.736397",
+    "province_id": 7,
+    "city_id": 57,
     "type": 2
   },
   {
@@ -635,6 +749,8 @@
     "province_name": "吉林省",
     "lon": "126.435797",
     "lat": "41.945859",
+    "province_id": 7,
+    "city_id": 58,
     "type": 2
   },
   {
@@ -646,6 +762,8 @@
     "province_name": "吉林省",
     "lon": "124.832994",
     "lat": "45.136048",
+    "province_id": 7,
+    "city_id": 59,
     "type": 2
   },
   {
@@ -657,6 +775,8 @@
     "province_name": "吉林省",
     "lon": "122.840776",
     "lat": "45.621086",
+    "province_id": 7,
+    "city_id": 60,
     "type": 2
   },
   {
@@ -668,6 +788,8 @@
     "province_name": "吉林省",
     "lon": "129.485901",
     "lat": "42.896413",
+    "province_id": 7,
+    "city_id": 61,
     "type": 2
   },
   {
@@ -679,6 +801,8 @@
     "province_name": "黑龙江省",
     "lon": "126.657716",
     "lat": "45.773224",
+    "province_id": 8,
+    "city_id": 62,
     "type": 2
   },
   {
@@ -690,6 +814,8 @@
     "province_name": "黑龙江省",
     "lon": "123.987288",
     "lat": "47.347699",
+    "province_id": 8,
+    "city_id": 63,
     "type": 2
   },
   {
@@ -701,6 +827,8 @@
     "province_name": "黑龙江省",
     "lon": "130.941767",
     "lat": "45.321539",
+    "province_id": 8,
+    "city_id": 64,
     "type": 2
   },
   {
@@ -712,6 +840,8 @@
     "province_name": "黑龙江省",
     "lon": "130.292472",
     "lat": "47.338665",
+    "province_id": 8,
+    "city_id": 65,
     "type": 2
   },
   {
@@ -723,6 +853,8 @@
     "province_name": "黑龙江省",
     "lon": "131.171401",
     "lat": "46.655102",
+    "province_id": 8,
+    "city_id": 66,
     "type": 2
   },
   {
@@ -734,6 +866,8 @@
     "province_name": "黑龙江省",
     "lon": "125.021839",
     "lat": "46.596709",
+    "province_id": 8,
+    "city_id": 67,
     "type": 2
   },
   {
@@ -745,6 +879,8 @@
     "province_name": "黑龙江省",
     "lon": "128.910765",
     "lat": "47.734685",
+    "province_id": 8,
+    "city_id": 68,
     "type": 2
   },
   {
@@ -756,6 +892,8 @@
     "province_name": "黑龙江省",
     "lon": "130.284734",
     "lat": "46.813779",
+    "province_id": 8,
+    "city_id": 69,
     "type": 2
   },
   {
@@ -767,6 +905,8 @@
     "province_name": "黑龙江省",
     "lon": "131.019048",
     "lat": "45.775005",
+    "province_id": 8,
+    "city_id": 70,
     "type": 2
   },
   {
@@ -778,6 +918,8 @@
     "province_name": "黑龙江省",
     "lon": "129.608035",
     "lat": "44.588521",
+    "province_id": 8,
+    "city_id": 71,
     "type": 2
   },
   {
@@ -789,6 +931,8 @@
     "province_name": "黑龙江省",
     "lon": "127.500830",
     "lat": "50.250690",
+    "province_id": 8,
+    "city_id": 72,
     "type": 2
   },
   {
@@ -800,6 +944,8 @@
     "province_name": "黑龙江省",
     "lon": "126.989094",
     "lat": "46.646063",
+    "province_id": 8,
+    "city_id": 73,
     "type": 2
   },
   {
@@ -811,6 +957,8 @@
     "province_name": "黑龙江省",
     "lon": "124.196104",
     "lat": "51.991788",
+    "province_id": 8,
+    "city_id": 74,
     "type": 2
   },
   {
@@ -822,6 +970,8 @@
     "province_name": "上海市",
     "lon": "121.487899",
     "lat": "31.249161",
+    "province_id": 9,
+    "city_id": 75,
     "type": 2
   },
   {
@@ -833,6 +983,8 @@
     "province_name": "江苏省",
     "lon": "118.778074",
     "lat": "32.057235",
+    "province_id": 10,
+    "city_id": 76,
     "type": 2
   },
   {
@@ -844,6 +996,8 @@
     "province_name": "江苏省",
     "lon": "120.305455",
     "lat": "31.570037",
+    "province_id": 10,
+    "city_id": 77,
     "type": 2
   },
   {
@@ -855,6 +1009,8 @@
     "province_name": "江苏省",
     "lon": "117.188106",
     "lat": "34.271553",
+    "province_id": 10,
+    "city_id": 78,
     "type": 2
   },
   {
@@ -866,6 +1022,8 @@
     "province_name": "江苏省",
     "lon": "119.981861",
     "lat": "31.771396",
+    "province_id": 10,
+    "city_id": 79,
     "type": 2
   },
   {
@@ -877,6 +1035,8 @@
     "province_name": "江苏省",
     "lon": "120.619907",
     "lat": "31.317987",
+    "province_id": 10,
+    "city_id": 80,
     "type": 2
   },
   {
@@ -888,6 +1048,8 @@
     "province_name": "江苏省",
     "lon": "120.873800",
     "lat": "32.014664",
+    "province_id": 10,
+    "city_id": 81,
     "type": 2
   },
   {
@@ -899,6 +1061,8 @@
     "province_name": "江苏省",
     "lon": "119.173872",
     "lat": "34.601548",
+    "province_id": 10,
+    "city_id": 82,
     "type": 2
   },
   {
@@ -910,6 +1074,8 @@
     "province_name": "江苏省",
     "lon": "119.030186",
     "lat": "33.606512",
+    "province_id": 10,
+    "city_id": 83,
     "type": 2
   },
   {
@@ -921,6 +1087,8 @@
     "province_name": "江苏省",
     "lon": "120.148871",
     "lat": "33.379861",
+    "province_id": 10,
+    "city_id": 84,
     "type": 2
   },
   {
@@ -932,6 +1100,8 @@
     "province_name": "江苏省",
     "lon": "119.427777",
     "lat": "32.408505",
+    "province_id": 10,
+    "city_id": 85,
     "type": 2
   },
   {
@@ -943,6 +1113,8 @@
     "province_name": "江苏省",
     "lon": "119.455835",
     "lat": "32.204409",
+    "province_id": 10,
+    "city_id": 86,
     "type": 2
   },
   {
@@ -954,6 +1126,8 @@
     "province_name": "江苏省",
     "lon": "119.919606",
     "lat": "32.476053",
+    "province_id": 10,
+    "city_id": 87,
     "type": 2
   },
   {
@@ -965,6 +1139,8 @@
     "province_name": "江苏省",
     "lon": "118.296893",
     "lat": "33.952049",
+    "province_id": 10,
+    "city_id": 88,
     "type": 2
   },
   {
@@ -976,6 +1152,8 @@
     "province_name": "浙江省",
     "lon": "120.219375",
     "lat": "30.259244",
+    "province_id": 11,
+    "city_id": 89,
     "type": 2
   },
   {
@@ -987,6 +1165,8 @@
     "province_name": "浙江省",
     "lon": "121.579005",
     "lat": "29.885258",
+    "province_id": 11,
+    "city_id": 90,
     "type": 2
   },
   {
@@ -998,6 +1178,8 @@
     "province_name": "浙江省",
     "lon": "120.690634",
     "lat": "28.002837",
+    "province_id": 11,
+    "city_id": 91,
     "type": 2
   },
   {
@@ -1009,6 +1191,8 @@
     "province_name": "浙江省",
     "lon": "120.760427",
     "lat": "30.773992",
+    "province_id": 11,
+    "city_id": 92,
     "type": 2
   },
   {
@@ -1020,6 +1204,8 @@
     "province_name": "浙江省",
     "lon": "120.137243",
     "lat": "30.877925",
+    "province_id": 11,
+    "city_id": 93,
     "type": 2
   },
   {
@@ -1031,6 +1217,8 @@
     "province_name": "浙江省",
     "lon": "120.592467",
     "lat": "30.002364",
+    "province_id": 11,
+    "city_id": 94,
     "type": 2
   },
   {
@@ -1042,6 +1230,8 @@
     "province_name": "浙江省",
     "lon": "119.652575",
     "lat": "29.102899",
+    "province_id": 11,
+    "city_id": 95,
     "type": 2
   },
   {
@@ -1053,6 +1243,8 @@
     "province_name": "浙江省",
     "lon": "118.875841",
     "lat": "28.956910",
+    "province_id": 11,
+    "city_id": 96,
     "type": 2
   },
   {
@@ -1064,6 +1256,8 @@
     "province_name": "浙江省",
     "lon": "122.169872",
     "lat": "30.036010",
+    "province_id": 11,
+    "city_id": 97,
     "type": 2
   },
   {
@@ -1075,6 +1269,8 @@
     "province_name": "浙江省",
     "lon": "121.440612",
     "lat": "28.668283",
+    "province_id": 11,
+    "city_id": 98,
     "type": 2
   },
   {
@@ -1086,6 +1282,8 @@
     "province_name": "浙江省",
     "lon": "119.929575",
     "lat": "28.456299",
+    "province_id": 11,
+    "city_id": 99,
     "type": 2
   },
   {
@@ -1097,6 +1295,8 @@
     "province_name": "安徽省",
     "lon": "117.282699",
     "lat": "31.866942",
+    "province_id": 12,
+    "city_id": 100,
     "type": 2
   },
   {
@@ -1108,6 +1308,8 @@
     "province_name": "安徽省",
     "lon": "118.384108",
     "lat": "31.366019",
+    "province_id": 12,
+    "city_id": 101,
     "type": 2
   },
   {
@@ -1119,6 +1321,8 @@
     "province_name": "安徽省",
     "lon": "117.357079",
     "lat": "32.929498",
+    "province_id": 12,
+    "city_id": 102,
     "type": 2
   },
   {
@@ -1130,6 +1334,8 @@
     "province_name": "安徽省",
     "lon": "117.018638",
     "lat": "32.642811",
+    "province_id": 12,
+    "city_id": 103,
     "type": 2
   },
   {
@@ -1141,6 +1347,8 @@
     "province_name": "安徽省",
     "lon": "118.515881",
     "lat": "31.688528",
+    "province_id": 12,
+    "city_id": 104,
     "type": 2
   },
   {
@@ -1152,6 +1360,8 @@
     "province_name": "安徽省",
     "lon": "116.791447",
     "lat": "33.960023",
+    "province_id": 12,
+    "city_id": 105,
     "type": 2
   },
   {
@@ -1163,6 +1373,8 @@
     "province_name": "安徽省",
     "lon": "117.819428",
     "lat": "30.940929",
+    "province_id": 12,
+    "city_id": 106,
     "type": 2
   },
   {
@@ -1174,6 +1386,8 @@
     "province_name": "安徽省",
     "lon": "117.058738",
     "lat": "30.537897",
+    "province_id": 12,
+    "city_id": 107,
     "type": 2
   },
   {
@@ -1185,6 +1399,8 @@
     "province_name": "安徽省",
     "lon": "118.293569",
     "lat": "29.734434",
+    "province_id": 12,
+    "city_id": 108,
     "type": 2
   },
   {
@@ -1196,6 +1412,8 @@
     "province_name": "安徽省",
     "lon": "118.324570",
     "lat": "32.317350",
+    "province_id": 12,
+    "city_id": 109,
     "type": 2
   },
   {
@@ -1207,6 +1425,8 @@
     "province_name": "安徽省",
     "lon": "115.820932",
     "lat": "32.901211",
+    "province_id": 12,
+    "city_id": 110,
     "type": 2
   },
   {
@@ -1218,6 +1438,8 @@
     "province_name": "安徽省",
     "lon": "116.988692",
     "lat": "33.636772",
+    "province_id": 12,
+    "city_id": 111,
     "type": 2
   },
   {
@@ -1229,6 +1451,8 @@
     "province_name": "安徽省",
     "lon": "116.505252",
     "lat": "31.755558",
+    "province_id": 12,
+    "city_id": 112,
     "type": 2
   },
   {
@@ -1240,6 +1464,8 @@
     "province_name": "安徽省",
     "lon": "115.787928",
     "lat": "33.871210",
+    "province_id": 12,
+    "city_id": 113,
     "type": 2
   },
   {
@@ -1251,6 +1477,8 @@
     "province_name": "安徽省",
     "lon": "117.494476",
     "lat": "30.660019",
+    "province_id": 12,
+    "city_id": 114,
     "type": 2
   },
   {
@@ -1262,6 +1490,8 @@
     "province_name": "安徽省",
     "lon": "118.752096",
     "lat": "30.951642",
+    "province_id": 12,
+    "city_id": 115,
     "type": 2
   },
   {
@@ -1273,6 +1503,8 @@
     "province_name": "福建省",
     "lon": "119.330221",
     "lat": "26.047125",
+    "province_id": 13,
+    "city_id": 116,
     "type": 2
   },
   {
@@ -1284,6 +1516,8 @@
     "province_name": "福建省",
     "lon": "118.103886",
     "lat": "24.489230",
+    "province_id": 13,
+    "city_id": 117,
     "type": 2
   },
   {
@@ -1295,6 +1529,8 @@
     "province_name": "福建省",
     "lon": "119.077730",
     "lat": "25.448450",
+    "province_id": 13,
+    "city_id": 118,
     "type": 2
   },
   {
@@ -1306,6 +1542,8 @@
     "province_name": "福建省",
     "lon": "117.642193",
     "lat": "26.270835",
+    "province_id": 13,
+    "city_id": 119,
     "type": 2
   },
   {
@@ -1317,6 +1555,8 @@
     "province_name": "福建省",
     "lon": "118.600362",
     "lat": "24.901652",
+    "province_id": 13,
+    "city_id": 120,
     "type": 2
   },
   {
@@ -1328,6 +1568,8 @@
     "province_name": "福建省",
     "lon": "117.676204",
     "lat": "24.517064",
+    "province_id": 13,
+    "city_id": 121,
     "type": 2
   },
   {
@@ -1339,6 +1581,8 @@
     "province_name": "福建省",
     "lon": "118.181882",
     "lat": "26.643626",
+    "province_id": 13,
+    "city_id": 122,
     "type": 2
   },
   {
@@ -1350,6 +1594,8 @@
     "province_name": "福建省",
     "lon": "117.017996",
     "lat": "25.078685",
+    "province_id": 13,
+    "city_id": 123,
     "type": 2
   },
   {
@@ -1361,6 +1607,8 @@
     "province_name": "福建省",
     "lon": "119.542082",
     "lat": "26.656527",
+    "province_id": 13,
+    "city_id": 124,
     "type": 2
   },
   {
@@ -1372,6 +1620,8 @@
     "province_name": "江西省",
     "lon": "115.893527",
     "lat": "28.689578",
+    "province_id": 14,
+    "city_id": 125,
     "type": 2
   },
   {
@@ -1383,6 +1633,8 @@
     "province_name": "江西省",
     "lon": "117.186522",
     "lat": "29.303562",
+    "province_id": 14,
+    "city_id": 126,
     "type": 2
   },
   {
@@ -1394,6 +1646,8 @@
     "province_name": "江西省",
     "lon": "113.859917",
     "lat": "27.639544",
+    "province_id": 14,
+    "city_id": 127,
     "type": 2
   },
   {
@@ -1405,6 +1659,8 @@
     "province_name": "江西省",
     "lon": "115.999848",
     "lat": "29.719639",
+    "province_id": 14,
+    "city_id": 128,
     "type": 2
   },
   {
@@ -1416,6 +1672,8 @@
     "province_name": "江西省",
     "lon": "114.947117",
     "lat": "27.822321",
+    "province_id": 14,
+    "city_id": 129,
     "type": 2
   },
   {
@@ -1427,6 +1685,8 @@
     "province_name": "江西省",
     "lon": "117.035450",
     "lat": "28.241309",
+    "province_id": 14,
+    "city_id": 130,
     "type": 2
   },
   {
@@ -1438,6 +1698,8 @@
     "province_name": "江西省",
     "lon": "114.935909",
     "lat": "25.845295",
+    "province_id": 14,
+    "city_id": 131,
     "type": 2
   },
   {
@@ -1449,6 +1711,8 @@
     "province_name": "江西省",
     "lon": "114.992038",
     "lat": "27.113847",
+    "province_id": 14,
+    "city_id": 132,
     "type": 2
   },
   {
@@ -1460,6 +1724,8 @@
     "province_name": "江西省",
     "lon": "114.400038",
     "lat": "27.811129",
+    "province_id": 14,
+    "city_id": 133,
     "type": 2
   },
   {
@@ -1471,6 +1737,8 @@
     "province_name": "江西省",
     "lon": "116.360918",
     "lat": "27.954545",
+    "province_id": 14,
+    "city_id": 134,
     "type": 2
   },
   {
@@ -1482,6 +1750,8 @@
     "province_name": "江西省",
     "lon": "117.955463",
     "lat": "28.457622",
+    "province_id": 14,
+    "city_id": 135,
     "type": 2
   },
   {
@@ -1493,6 +1763,8 @@
     "province_name": "山东省",
     "lon": "117.024967",
     "lat": "36.682784",
+    "province_id": 15,
+    "city_id": 136,
     "type": 2
   },
   {
@@ -1504,6 +1776,8 @@
     "province_name": "山东省",
     "lon": "120.384428",
     "lat": "36.105214",
+    "province_id": 15,
+    "city_id": 137,
     "type": 2
   },
   {
@@ -1515,6 +1789,8 @@
     "province_name": "山东省",
     "lon": "118.059134",
     "lat": "36.804684",
+    "province_id": 15,
+    "city_id": 138,
     "type": 2
   },
   {
@@ -1526,6 +1802,8 @@
     "province_name": "山东省",
     "lon": "117.279305",
     "lat": "34.807883",
+    "province_id": 15,
+    "city_id": 139,
     "type": 2
   },
   {
@@ -1537,6 +1815,8 @@
     "province_name": "山东省",
     "lon": "118.583926",
     "lat": "37.487121",
+    "province_id": 15,
+    "city_id": 140,
     "type": 2
   },
   {
@@ -1548,6 +1828,8 @@
     "province_name": "山东省",
     "lon": "121.309555",
     "lat": "37.536561",
+    "province_id": 15,
+    "city_id": 141,
     "type": 2
   },
   {
@@ -1559,6 +1841,8 @@
     "province_name": "山东省",
     "lon": "119.142633",
     "lat": "36.716114",
+    "province_id": 15,
+    "city_id": 142,
     "type": 2
   },
   {
@@ -1570,6 +1854,8 @@
     "province_name": "山东省",
     "lon": "116.600797",
     "lat": "35.402121",
+    "province_id": 15,
+    "city_id": 143,
     "type": 2
   },
   {
@@ -1581,6 +1867,8 @@
     "province_name": "山东省",
     "lon": "117.089414",
     "lat": "36.188077",
+    "province_id": 15,
+    "city_id": 144,
     "type": 2
   },
   {
@@ -1592,6 +1880,8 @@
     "province_name": "山东省",
     "lon": "122.093958",
     "lat": "37.528787",
+    "province_id": 15,
+    "city_id": 145,
     "type": 2
   },
   {
@@ -1603,6 +1893,8 @@
     "province_name": "山东省",
     "lon": "119.507179",
     "lat": "35.420225",
+    "province_id": 15,
+    "city_id": 146,
     "type": 2
   },
   {
@@ -1614,6 +1906,8 @@
     "province_name": "山东省",
     "lon": "117.684666",
     "lat": "36.233654",
+    "province_id": 15,
+    "city_id": 147,
     "type": 2
   },
   {
@@ -1625,6 +1919,8 @@
     "province_name": "山东省",
     "lon": "118.340768",
     "lat": "35.072409",
+    "province_id": 15,
+    "city_id": 148,
     "type": 2
   },
   {
@@ -1636,6 +1932,8 @@
     "province_name": "山东省",
     "lon": "116.328161",
     "lat": "37.460825",
+    "province_id": 15,
+    "city_id": 149,
     "type": 2
   },
   {
@@ -1647,6 +1945,8 @@
     "province_name": "山东省",
     "lon": "115.986869",
     "lat": "36.455828",
+    "province_id": 15,
+    "city_id": 150,
     "type": 2
   },
   {
@@ -1658,6 +1958,8 @@
     "province_name": "山东省",
     "lon": "117.968292",
     "lat": "37.405313",
+    "province_id": 15,
+    "city_id": 151,
     "type": 2
   },
   {
@@ -1669,6 +1971,8 @@
     "province_name": "山东省",
     "lon": "115.463359",
     "lat": "35.262440",
+    "province_id": 15,
+    "city_id": 152,
     "type": 2
   },
   {
@@ -1680,6 +1984,8 @@
     "province_name": "河南省",
     "lon": "113.649643",
     "lat": "34.756610",
+    "province_id": 16,
+    "city_id": 153,
     "type": 2
   },
   {
@@ -1691,6 +1997,8 @@
     "province_name": "河南省",
     "lon": "114.351642",
     "lat": "34.801854",
+    "province_id": 16,
+    "city_id": 154,
     "type": 2
   },
   {
@@ -1702,6 +2010,8 @@
     "province_name": "河南省",
     "lon": "112.447524",
     "lat": "34.657367",
+    "province_id": 16,
+    "city_id": 155,
     "type": 2
   },
   {
@@ -1713,6 +2023,8 @@
     "province_name": "河南省",
     "lon": "113.300848",
     "lat": "33.745301",
+    "province_id": 16,
+    "city_id": 156,
     "type": 2
   },
   {
@@ -1724,6 +2036,8 @@
     "province_name": "河南省",
     "lon": "114.351806",
     "lat": "36.110266",
+    "province_id": 16,
+    "city_id": 157,
     "type": 2
   },
   {
@@ -1735,6 +2049,8 @@
     "province_name": "河南省",
     "lon": "114.297769",
     "lat": "35.755425",
+    "province_id": 16,
+    "city_id": 158,
     "type": 2
   },
   {
@@ -1746,6 +2062,8 @@
     "province_name": "河南省",
     "lon": "113.912690",
     "lat": "35.307257",
+    "province_id": 16,
+    "city_id": 159,
     "type": 2
   },
   {
@@ -1757,6 +2075,8 @@
     "province_name": "河南省",
     "lon": "113.211835",
     "lat": "35.234607",
+    "province_id": 16,
+    "city_id": 160,
     "type": 2
   },
   {
@@ -1768,6 +2088,8 @@
     "province_name": "河南省",
     "lon": "115.026627",
     "lat": "35.753297",
+    "province_id": 16,
+    "city_id": 161,
     "type": 2
   },
   {
@@ -1779,6 +2101,8 @@
     "province_name": "河南省",
     "lon": "113.835312",
     "lat": "34.026739",
+    "province_id": 16,
+    "city_id": 162,
     "type": 2
   },
   {
@@ -1790,6 +2114,8 @@
     "province_name": "河南省",
     "lon": "114.046061",
     "lat": "33.576278",
+    "province_id": 16,
+    "city_id": 163,
     "type": 2
   },
   {
@@ -1801,6 +2127,8 @@
     "province_name": "河南省",
     "lon": "111.181262",
     "lat": "34.783319",
+    "province_id": 16,
+    "city_id": 164,
     "type": 2
   },
   {
@@ -1812,6 +2140,8 @@
     "province_name": "河南省",
     "lon": "112.542841",
     "lat": "33.011419",
+    "province_id": 16,
+    "city_id": 165,
     "type": 2
   },
   {
@@ -1823,6 +2153,8 @@
     "province_name": "河南省",
     "lon": "115.641885",
     "lat": "34.438588",
+    "province_id": 16,
+    "city_id": 166,
     "type": 2
   },
   {
@@ -1834,6 +2166,8 @@
     "province_name": "河南省",
     "lon": "114.085490",
     "lat": "32.128582",
+    "province_id": 16,
+    "city_id": 167,
     "type": 2
   },
   {
@@ -1845,6 +2179,8 @@
     "province_name": "河南省",
     "lon": "114.654101",
     "lat": "33.623740",
+    "province_id": 16,
+    "city_id": 168,
     "type": 2
   },
   {
@@ -1856,6 +2192,8 @@
     "province_name": "河南省",
     "lon": "114.049153",
     "lat": "32.983158",
+    "province_id": 16,
+    "city_id": 169,
     "type": 2
   },
   {
@@ -1867,6 +2205,8 @@
     "province_name": "河南省",
     "lon": "112.581741",
     "lat": "35.084568",
+    "province_id": 16,
+    "city_id": 170,
     "type": 3
   },
   {
@@ -1878,6 +2218,8 @@
     "province_name": "湖北省",
     "lon": "114.316200",
     "lat": "30.581084",
+    "province_id": 17,
+    "city_id": 171,
     "type": 2
   },
   {
@@ -1889,6 +2231,8 @@
     "province_name": "湖北省",
     "lon": "115.050683",
     "lat": "30.216127",
+    "province_id": 17,
+    "city_id": 172,
     "type": 2
   },
   {
@@ -1900,6 +2244,8 @@
     "province_name": "湖北省",
     "lon": "110.801228",
     "lat": "32.636994",
+    "province_id": 17,
+    "city_id": 173,
     "type": 2
   },
   {
@@ -1911,6 +2257,8 @@
     "province_name": "湖北省",
     "lon": "111.310981",
     "lat": "30.732757",
+    "province_id": 17,
+    "city_id": 174,
     "type": 2
   },
   {
@@ -1922,6 +2270,8 @@
     "province_name": "湖北省",
     "lon": "112.250092",
     "lat": "32.229168",
+    "province_id": 17,
+    "city_id": 175,
     "type": 2
   },
   {
@@ -1933,6 +2283,8 @@
     "province_name": "湖北省",
     "lon": "114.895594",
     "lat": "30.384439",
+    "province_id": 17,
+    "city_id": 176,
     "type": 2
   },
   {
@@ -1944,6 +2296,8 @@
     "province_name": "湖北省",
     "lon": "112.217330",
     "lat": "31.042611",
+    "province_id": 17,
+    "city_id": 177,
     "type": 2
   },
   {
@@ -1955,6 +2309,8 @@
     "province_name": "湖北省",
     "lon": "113.935734",
     "lat": "30.927954",
+    "province_id": 17,
+    "city_id": 178,
     "type": 2
   },
   {
@@ -1966,6 +2322,8 @@
     "province_name": "湖北省",
     "lon": "112.241865",
     "lat": "30.332590",
+    "province_id": 17,
+    "city_id": 179,
     "type": 2
   },
   {
@@ -1977,6 +2335,8 @@
     "province_name": "湖北省",
     "lon": "114.906618",
     "lat": "30.446108",
+    "province_id": 17,
+    "city_id": 180,
     "type": 2
   },
   {
@@ -1988,6 +2348,8 @@
     "province_name": "湖北省",
     "lon": "114.300060",
     "lat": "29.880656",
+    "province_id": 17,
+    "city_id": 181,
     "type": 2
   },
   {
@@ -1999,6 +2361,8 @@
     "province_name": "湖北省",
     "lon": "113.379358",
     "lat": "31.717857",
+    "province_id": 17,
+    "city_id": 182,
     "type": 2
   },
   {
@@ -2010,6 +2374,8 @@
     "province_name": "湖北省",
     "lon": "109.491923",
     "lat": "30.285888",
+    "province_id": 17,
+    "city_id": 183,
     "type": 2
   },
   {
@@ -2021,6 +2387,8 @@
     "province_name": "湖北省",
     "lon": "113.453063",
     "lat": "30.368728",
+    "province_id": 17,
+    "city_id": 184,
     "type": 3
   },
   {
@@ -2032,6 +2400,8 @@
     "province_name": "湖北省",
     "lon": "112.892417",
     "lat": "30.425437",
+    "province_id": 17,
+    "city_id": 185,
     "type": 3
   },
   {
@@ -2043,6 +2413,8 @@
     "province_name": "湖北省",
     "lon": "113.164329",
     "lat": "30.651499",
+    "province_id": 17,
+    "city_id": 186,
     "type": 3
   },
   {
@@ -2054,6 +2426,8 @@
     "province_name": "湖北省",
     "lon": "110.811710",
     "lat": "31.657180",
+    "province_id": 17,
+    "city_id": 187,
     "type": 3
   },
   {
@@ -2065,6 +2439,8 @@
     "province_name": "湖南省",
     "lon": "112.979352",
     "lat": "28.213478",
+    "province_id": 18,
+    "city_id": 188,
     "type": 2
   },
   {
@@ -2076,6 +2452,8 @@
     "province_name": "湖南省",
     "lon": "113.131695",
     "lat": "27.827432",
+    "province_id": 18,
+    "city_id": 189,
     "type": 2
   },
   {
@@ -2087,6 +2465,8 @@
     "province_name": "湖南省",
     "lon": "112.935555",
     "lat": "27.835095",
+    "province_id": 18,
+    "city_id": 190,
     "type": 2
   },
   {
@@ -2098,6 +2478,8 @@
     "province_name": "湖南省",
     "lon": "112.583818",
     "lat": "26.898164",
+    "province_id": 18,
+    "city_id": 191,
     "type": 2
   },
   {
@@ -2109,6 +2491,8 @@
     "province_name": "湖南省",
     "lon": "111.461525",
     "lat": "27.236811",
+    "province_id": 18,
+    "city_id": 192,
     "type": 2
   },
   {
@@ -2120,6 +2504,8 @@
     "province_name": "湖南省",
     "lon": "113.146195",
     "lat": "29.378007",
+    "province_id": 18,
+    "city_id": 193,
     "type": 2
   },
   {
@@ -2131,6 +2517,8 @@
     "province_name": "湖南省",
     "lon": "111.653718",
     "lat": "29.012148",
+    "province_id": 18,
+    "city_id": 194,
     "type": 2
   },
   {
@@ -2142,6 +2530,8 @@
     "province_name": "湖南省",
     "lon": "110.481620",
     "lat": "29.124889",
+    "province_id": 18,
+    "city_id": 195,
     "type": 2
   },
   {
@@ -2153,6 +2543,8 @@
     "province_name": "湖南省",
     "lon": "112.366546",
     "lat": "28.588087",
+    "province_id": 18,
+    "city_id": 196,
     "type": 2
   },
   {
@@ -2164,6 +2556,8 @@
     "province_name": "湖南省",
     "lon": "113.037704",
     "lat": "25.782263",
+    "province_id": 18,
+    "city_id": 197,
     "type": 2
   },
   {
@@ -2175,6 +2569,8 @@
     "province_name": "湖南省",
     "lon": "111.614647",
     "lat": "26.435971",
+    "province_id": 18,
+    "city_id": 198,
     "type": 2
   },
   {
@@ -2186,6 +2582,8 @@
     "province_name": "湖南省",
     "lon": "109.986958",
     "lat": "27.557482",
+    "province_id": 18,
+    "city_id": 199,
     "type": 2
   },
   {
@@ -2197,6 +2595,8 @@
     "province_name": "湖南省",
     "lon": "111.996396",
     "lat": "27.741073",
+    "province_id": 18,
+    "city_id": 200,
     "type": 2
   },
   {
@@ -2208,6 +2608,8 @@
     "province_name": "湖南省",
     "lon": "109.745745",
     "lat": "28.317950",
+    "province_id": 18,
+    "city_id": 201,
     "type": 2
   },
   {
@@ -2219,6 +2621,8 @@
     "province_name": "广东省",
     "lon": "113.307649",
     "lat": "23.120049",
+    "province_id": 19,
+    "city_id": 202,
     "type": 2
   },
   {
@@ -2230,6 +2634,8 @@
     "province_name": "广东省",
     "lon": "113.594461",
     "lat": "24.802960",
+    "province_id": 19,
+    "city_id": 203,
     "type": 2
   },
   {
@@ -2241,6 +2647,8 @@
     "province_name": "广东省",
     "lon": "114.025973",
     "lat": "22.546053",
+    "province_id": 19,
+    "city_id": 204,
     "type": 2
   },
   {
@@ -2252,6 +2660,8 @@
     "province_name": "广东省",
     "lon": "113.562447",
     "lat": "22.256914",
+    "province_id": 19,
+    "city_id": 205,
     "type": 2
   },
   {
@@ -2263,6 +2673,8 @@
     "province_name": "广东省",
     "lon": "116.728650",
     "lat": "23.383908",
+    "province_id": 19,
+    "city_id": 206,
     "type": 2
   },
   {
@@ -2274,6 +2686,8 @@
     "province_name": "广东省",
     "lon": "113.134025",
     "lat": "23.035094",
+    "province_id": 19,
+    "city_id": 207,
     "type": 2
   },
   {
@@ -2285,6 +2699,8 @@
     "province_name": "广东省",
     "lon": "113.078125",
     "lat": "22.575116",
+    "province_id": 19,
+    "city_id": 208,
     "type": 2
   },
   {
@@ -2296,6 +2712,8 @@
     "province_name": "广东省",
     "lon": "110.365067",
     "lat": "21.257463",
+    "province_id": 19,
+    "city_id": 209,
     "type": 2
   },
   {
@@ -2307,6 +2725,8 @@
     "province_name": "广东省",
     "lon": "110.931245",
     "lat": "21.668225",
+    "province_id": 19,
+    "city_id": 210,
     "type": 2
   },
   {
@@ -2318,6 +2738,8 @@
     "province_name": "广东省",
     "lon": "112.479653",
     "lat": "23.078663",
+    "province_id": 19,
+    "city_id": 211,
     "type": 2
   },
   {
@@ -2329,6 +2751,8 @@
     "province_name": "广东省",
     "lon": "114.410658",
     "lat": "23.113539",
+    "province_id": 19,
+    "city_id": 212,
     "type": 2
   },
   {
@@ -2340,6 +2764,8 @@
     "province_name": "广东省",
     "lon": "116.126403",
     "lat": "24.304570",
+    "province_id": 19,
+    "city_id": 213,
     "type": 2
   },
   {
@@ -2351,6 +2777,8 @@
     "province_name": "广东省",
     "lon": "115.372924",
     "lat": "22.778730",
+    "province_id": 19,
+    "city_id": 214,
     "type": 2
   },
   {
@@ -2362,6 +2790,8 @@
     "province_name": "广东省",
     "lon": "114.713721",
     "lat": "23.757250",
+    "province_id": 19,
+    "city_id": 215,
     "type": 2
   },
   {
@@ -2373,6 +2803,8 @@
     "province_name": "广东省",
     "lon": "111.977009",
     "lat": "21.871517",
+    "province_id": 19,
+    "city_id": 216,
     "type": 2
   },
   {
@@ -2384,6 +2816,8 @@
     "province_name": "广东省",
     "lon": "113.040773",
     "lat": "23.698468",
+    "province_id": 19,
+    "city_id": 217,
     "type": 2
   },
   {
@@ -2395,6 +2829,8 @@
     "province_name": "广东省",
     "lon": "113.763433",
     "lat": "23.043023",
+    "province_id": 19,
+    "city_id": 218,
     "type": 3
   },
   {
@@ -2406,6 +2842,8 @@
     "province_name": "广东省",
     "lon": "113.422060",
     "lat": "22.545177",
+    "province_id": 19,
+    "city_id": 219,
     "type": 3
   },
   {
@@ -2417,6 +2855,8 @@
     "province_name": "广东省",
     "lon": "116.630075",
     "lat": "23.661811",
+    "province_id": 19,
+    "city_id": 220,
     "type": 2
   },
   {
@@ -2428,6 +2868,8 @@
     "province_name": "广东省",
     "lon": "116.379500",
     "lat": "23.547999",
+    "province_id": 19,
+    "city_id": 221,
     "type": 2
   },
   {
@@ -2439,6 +2881,8 @@
     "province_name": "广东省",
     "lon": "112.050945",
     "lat": "22.937975",
+    "province_id": 19,
+    "city_id": 222,
     "type": 2
   },
   {
@@ -2450,6 +2894,8 @@
     "province_name": "广西壮族自治区",
     "lon": "108.297233",
     "lat": "22.806492",
+    "province_id": 20,
+    "city_id": 223,
     "type": 2
   },
   {
@@ -2461,6 +2907,8 @@
     "province_name": "广西壮族自治区",
     "lon": "109.422401",
     "lat": "24.329053",
+    "province_id": 20,
+    "city_id": 224,
     "type": 2
   },
   {
@@ -2472,6 +2920,8 @@
     "province_name": "广西壮族自治区",
     "lon": "110.260920",
     "lat": "25.262901",
+    "province_id": 20,
+    "city_id": 225,
     "type": 2
   },
   {
@@ -2483,6 +2933,8 @@
     "province_name": "广西壮族自治区",
     "lon": "111.305471",
     "lat": "23.485394",
+    "province_id": 20,
+    "city_id": 226,
     "type": 2
   },
   {
@@ -2494,6 +2946,8 @@
     "province_name": "广西壮族自治区",
     "lon": "109.122627",
     "lat": "21.472718",
+    "province_id": 20,
+    "city_id": 227,
     "type": 2
   },
   {
@@ -2505,6 +2959,8 @@
     "province_name": "广西壮族自治区",
     "lon": "108.351791",
     "lat": "21.617398",
+    "province_id": 20,
+    "city_id": 228,
     "type": 2
   },
   {
@@ -2516,6 +2972,8 @@
     "province_name": "广西壮族自治区",
     "lon": "108.638798",
     "lat": "21.973350",
+    "province_id": 20,
+    "city_id": 229,
     "type": 2
   },
   {
@@ -2527,6 +2985,8 @@
     "province_name": "广西壮族自治区",
     "lon": "109.613707",
     "lat": "23.103373",
+    "province_id": 20,
+    "city_id": 230,
     "type": 2
   },
   {
@@ -2538,6 +2998,8 @@
     "province_name": "广西壮族自治区",
     "lon": "110.151676",
     "lat": "22.643973",
+    "province_id": 20,
+    "city_id": 231,
     "type": 2
   },
   {
@@ -2549,6 +3011,8 @@
     "province_name": "广西壮族自治区",
     "lon": "106.631821",
     "lat": "23.901512",
+    "province_id": 20,
+    "city_id": 232,
     "type": 2
   },
   {
@@ -2560,6 +3024,8 @@
     "province_name": "广西壮族自治区",
     "lon": "111.552594",
     "lat": "24.411053",
+    "province_id": 20,
+    "city_id": 233,
     "type": 2
   },
   {
@@ -2571,6 +3037,8 @@
     "province_name": "广西壮族自治区",
     "lon": "108.069947",
     "lat": "24.699520",
+    "province_id": 20,
+    "city_id": 234,
     "type": 2
   },
   {
@@ -2582,6 +3050,8 @@
     "province_name": "广西壮族自治区",
     "lon": "109.231816",
     "lat": "23.741165",
+    "province_id": 20,
+    "city_id": 235,
     "type": 2
   },
   {
@@ -2593,6 +3063,8 @@
     "province_name": "广西壮族自治区",
     "lon": "107.357322",
     "lat": "22.415455",
+    "province_id": 20,
+    "city_id": 236,
     "type": 2
   },
   {
@@ -2604,6 +3076,8 @@
     "province_name": "海南省",
     "lon": "110.330801",
     "lat": "20.022071",
+    "province_id": 21,
+    "city_id": 237,
     "type": 2
   },
   {
@@ -2615,6 +3089,8 @@
     "province_name": "海南省",
     "lon": "109.522771",
     "lat": "18.257775",
+    "province_id": 21,
+    "city_id": 238,
     "type": 2
   },
   {
@@ -2626,6 +3102,8 @@
     "province_name": "海南省",
     "lon": "109.562772",
     "lat": "18.240529",
+    "province_id": 21,
+    "city_id": 239,
     "type": 3
   },
   {
@@ -2637,6 +3115,8 @@
     "province_name": "海南省",
     "lon": "109.582932",
     "lat": "19.518527",
+    "province_id": 21,
+    "city_id": 240,
     "type": 3
   },
   {
@@ -2648,6 +3128,8 @@
     "province_name": "海南省",
     "lon": "109.519761",
     "lat": "18.784270",
+    "province_id": 21,
+    "city_id": 241,
     "type": 3
   },
   {
@@ -2659,6 +3141,8 @@
     "province_name": "海南省",
     "lon": "110.474198",
     "lat": "19.258150",
+    "province_id": 21,
+    "city_id": 242,
     "type": 3
   },
   {
@@ -2670,6 +3154,8 @@
     "province_name": "海南省",
     "lon": "110.801041",
     "lat": "19.550883",
+    "province_id": 21,
+    "city_id": 243,
     "type": 3
   },
   {
@@ -2681,6 +3167,8 @@
     "province_name": "海南省",
     "lon": "110.389054",
     "lat": "18.806371",
+    "province_id": 21,
+    "city_id": 244,
     "type": 3
   },
   {
@@ -2692,6 +3180,8 @@
     "province_name": "海南省",
     "lon": "108.691666",
     "lat": "19.099907",
+    "province_id": 21,
+    "city_id": 245,
     "type": 3
   },
   {
@@ -2703,6 +3193,8 @@
     "province_name": "海南省",
     "lon": "110.361588",
     "lat": "19.682829",
+    "province_id": 21,
+    "city_id": 246,
     "type": 3
   },
   {
@@ -2714,6 +3206,8 @@
     "province_name": "海南省",
     "lon": "110.100663",
     "lat": "19.348876",
+    "province_id": 21,
+    "city_id": 247,
     "type": 3
   },
   {
@@ -2725,6 +3219,8 @@
     "province_name": "海南省",
     "lon": "110.012772",
     "lat": "19.739713",
+    "province_id": 21,
+    "city_id": 248,
     "type": 3
   },
   {
@@ -2736,6 +3232,8 @@
     "province_name": "海南省",
     "lon": "109.688676",
     "lat": "19.897331",
+    "province_id": 21,
+    "city_id": 249,
     "type": 3
   },
   {
@@ -2747,6 +3245,8 @@
     "province_name": "海南省",
     "lon": "109.422257",
     "lat": "19.232219",
+    "province_id": 21,
+    "city_id": 250,
     "type": 3
   },
   {
@@ -2758,6 +3258,8 @@
     "province_name": "海南省",
     "lon": "109.040482",
     "lat": "19.291854",
+    "province_id": 21,
+    "city_id": 251,
     "type": 3
   },
   {
@@ -2769,6 +3271,8 @@
     "province_name": "海南省",
     "lon": "109.164078",
     "lat": "18.754364",
+    "province_id": 21,
+    "city_id": 252,
     "type": 3
   },
   {
@@ -2780,6 +3284,8 @@
     "province_name": "海南省",
     "lon": "110.042985",
     "lat": "18.509716",
+    "province_id": 21,
+    "city_id": 253,
     "type": 3
   },
   {
@@ -2791,6 +3297,8 @@
     "province_name": "海南省",
     "lon": "109.699662",
     "lat": "18.632084",
+    "province_id": 21,
+    "city_id": 254,
     "type": 3
   },
   {
@@ -2802,6 +3310,8 @@
     "province_name": "海南省",
     "lon": "109.845231",
     "lat": "19.055780",
+    "province_id": 21,
+    "city_id": 255,
     "type": 3
   },
   {
@@ -2813,6 +3323,8 @@
     "province_name": "重庆市",
     "lon": "106.530635",
     "lat": "29.544606",
+    "province_id": 22,
+    "city_id": 256,
     "type": 2
   },
   {
@@ -2824,6 +3336,8 @@
     "province_name": "四川省",
     "lon": "104.067923",
     "lat": "30.679942",
+    "province_id": 23,
+    "city_id": 257,
     "type": 2
   },
   {
@@ -2835,6 +3349,8 @@
     "province_name": "四川省",
     "lon": "104.776071",
     "lat": "29.359156",
+    "province_id": 23,
+    "city_id": 258,
     "type": 2
   },
   {
@@ -2846,6 +3362,8 @@
     "province_name": "四川省",
     "lon": "101.722423",
     "lat": "26.587571",
+    "province_id": 23,
+    "city_id": 259,
     "type": 2
   },
   {
@@ -2857,6 +3375,8 @@
     "province_name": "四川省",
     "lon": "105.443970",
     "lat": "28.895929",
+    "province_id": 23,
+    "city_id": 260,
     "type": 2
   },
   {
@@ -2868,6 +3388,8 @@
     "province_name": "四川省",
     "lon": "104.402397",
     "lat": "31.131139",
+    "province_id": 23,
+    "city_id": 261,
     "type": 2
   },
   {
@@ -2879,6 +3401,8 @@
     "province_name": "四川省",
     "lon": "104.705518",
     "lat": "31.504701",
+    "province_id": 23,
+    "city_id": 262,
     "type": 2
   },
   {
@@ -2890,6 +3414,8 @@
     "province_name": "四川省",
     "lon": "105.819686",
     "lat": "32.441040",
+    "province_id": 23,
+    "city_id": 263,
     "type": 2
   },
   {
@@ -2901,6 +3427,8 @@
     "province_name": "四川省",
     "lon": "105.564887",
     "lat": "30.557491",
+    "province_id": 23,
+    "city_id": 264,
     "type": 2
   },
   {
@@ -2912,6 +3440,8 @@
     "province_name": "四川省",
     "lon": "105.073055",
     "lat": "29.599461",
+    "province_id": 23,
+    "city_id": 265,
     "type": 2
   },
   {
@@ -2923,6 +3453,8 @@
     "province_name": "四川省",
     "lon": "103.760824",
     "lat": "29.600957",
+    "province_id": 23,
+    "city_id": 266,
     "type": 2
   },
   {
@@ -2934,6 +3466,8 @@
     "province_name": "四川省",
     "lon": "106.105553",
     "lat": "30.800965",
+    "province_id": 23,
+    "city_id": 267,
     "type": 2
   },
   {
@@ -2945,6 +3479,8 @@
     "province_name": "四川省",
     "lon": "103.841429",
     "lat": "30.061115",
+    "province_id": 23,
+    "city_id": 268,
     "type": 2
   },
   {
@@ -2956,6 +3492,8 @@
     "province_name": "四川省",
     "lon": "104.633019",
     "lat": "28.769674",
+    "province_id": 23,
+    "city_id": 269,
     "type": 2
   },
   {
@@ -2967,6 +3505,8 @@
     "province_name": "四川省",
     "lon": "106.635720",
     "lat": "30.463983",
+    "province_id": 23,
+    "city_id": 270,
     "type": 2
   },
   {
@@ -2978,6 +3518,8 @@
     "province_name": "四川省",
     "lon": "107.494973",
     "lat": "31.214198",
+    "province_id": 23,
+    "city_id": 271,
     "type": 2
   },
   {
@@ -2989,6 +3531,8 @@
     "province_name": "四川省",
     "lon": "103.009356",
     "lat": "29.999716",
+    "province_id": 23,
+    "city_id": 272,
     "type": 2
   },
   {
@@ -3000,6 +3544,8 @@
     "province_name": "四川省",
     "lon": "106.757915",
     "lat": "31.869189",
+    "province_id": 23,
+    "city_id": 273,
     "type": 2
   },
   {
@@ -3011,6 +3557,8 @@
     "province_name": "四川省",
     "lon": "104.635930",
     "lat": "30.132191",
+    "province_id": 23,
+    "city_id": 274,
     "type": 2
   },
   {
@@ -3022,6 +3570,8 @@
     "province_name": "四川省",
     "lon": "102.228564",
     "lat": "31.905762",
+    "province_id": 23,
+    "city_id": 275,
     "type": 2
   },
   {
@@ -3033,6 +3583,8 @@
     "province_name": "四川省",
     "lon": "101.969232",
     "lat": "30.055144",
+    "province_id": 23,
+    "city_id": 276,
     "type": 2
   },
   {
@@ -3044,6 +3596,8 @@
     "province_name": "四川省",
     "lon": "102.259590",
     "lat": "27.892392",
+    "province_id": 23,
+    "city_id": 277,
     "type": 2
   },
   {
@@ -3055,6 +3609,8 @@
     "province_name": "贵州省",
     "lon": "106.709177",
     "lat": "26.629906",
+    "province_id": 24,
+    "city_id": 278,
     "type": 2
   },
   {
@@ -3066,6 +3622,8 @@
     "province_name": "贵州省",
     "lon": "104.852086",
     "lat": "26.591866",
+    "province_id": 24,
+    "city_id": 279,
     "type": 2
   },
   {
@@ -3077,6 +3635,8 @@
     "province_name": "贵州省",
     "lon": "106.931260",
     "lat": "27.699961",
+    "province_id": 24,
+    "city_id": 280,
     "type": 2
   },
   {
@@ -3088,6 +3648,8 @@
     "province_name": "贵州省",
     "lon": "105.928269",
     "lat": "26.228594",
+    "province_id": 24,
+    "city_id": 281,
     "type": 2
   },
   {
@@ -3099,6 +3661,8 @@
     "province_name": "贵州省",
     "lon": "105.333323",
     "lat": "27.408562",
+    "province_id": 24,
+    "city_id": 282,
     "type": 2
   },
   {
@@ -3110,6 +3674,8 @@
     "province_name": "贵州省",
     "lon": "109.168558",
     "lat": "27.674902",
+    "province_id": 24,
+    "city_id": 283,
     "type": 2
   },
   {
@@ -3121,6 +3687,8 @@
     "province_name": "贵州省",
     "lon": "104.900557",
     "lat": "25.095148",
+    "province_id": 24,
+    "city_id": 284,
     "type": 2
   },
   {
@@ -3132,6 +3700,8 @@
     "province_name": "贵州省",
     "lon": "107.985352",
     "lat": "26.583991",
+    "province_id": 24,
+    "city_id": 285,
     "type": 2
   },
   {
@@ -3143,6 +3713,8 @@
     "province_name": "贵州省",
     "lon": "107.523205",
     "lat": "26.264535",
+    "province_id": 24,
+    "city_id": 286,
     "type": 2
   },
   {
@@ -3154,6 +3726,8 @@
     "province_name": "云南省",
     "lon": "102.714601",
     "lat": "25.049153",
+    "province_id": 25,
+    "city_id": 287,
     "type": 2
   },
   {
@@ -3165,6 +3739,8 @@
     "province_name": "云南省",
     "lon": "103.782538",
     "lat": "25.520758",
+    "province_id": 25,
+    "city_id": 288,
     "type": 2
   },
   {
@@ -3176,6 +3752,8 @@
     "province_name": "云南省",
     "lon": "102.545067",
     "lat": "24.370447",
+    "province_id": 25,
+    "city_id": 289,
     "type": 2
   },
   {
@@ -3187,6 +3765,8 @@
     "province_name": "云南省",
     "lon": "99.177995",
     "lat": "25.120489",
+    "province_id": 25,
+    "city_id": 290,
     "type": 2
   },
   {
@@ -3198,6 +3778,8 @@
     "province_name": "云南省",
     "lon": "103.725020",
     "lat": "27.340632",
+    "province_id": 25,
+    "city_id": 291,
     "type": 2
   },
   {
@@ -3209,6 +3791,8 @@
     "province_name": "云南省",
     "lon": "100.229628",
     "lat": "26.875351",
+    "province_id": 25,
+    "city_id": 292,
     "type": 2
   },
   {
@@ -3220,6 +3804,8 @@
     "province_name": "云南省",
     "lon": "100.980057",
     "lat": "22.788777",
+    "province_id": 25,
+    "city_id": 293,
     "type": 2
   },
   {
@@ -3231,6 +3817,8 @@
     "province_name": "云南省",
     "lon": "100.092612",
     "lat": "23.887806",
+    "province_id": 25,
+    "city_id": 294,
     "type": 2
   },
   {
@@ -3242,6 +3830,8 @@
     "province_name": "云南省",
     "lon": "101.529382",
     "lat": "25.066355",
+    "province_id": 25,
+    "city_id": 295,
     "type": 2
   },
   {
@@ -3253,6 +3843,8 @@
     "province_name": "云南省",
     "lon": "103.384064",
     "lat": "23.367717",
+    "province_id": 25,
+    "city_id": 296,
     "type": 2
   },
   {
@@ -3264,6 +3856,8 @@
     "province_name": "云南省",
     "lon": "104.246294",
     "lat": "23.374086",
+    "province_id": 25,
+    "city_id": 297,
     "type": 2
   },
   {
@@ -3275,6 +3869,8 @@
     "province_name": "云南省",
     "lon": "100.803038",
     "lat": "22.009433",
+    "province_id": 25,
+    "city_id": 298,
     "type": 2
   },
   {
@@ -3286,6 +3882,8 @@
     "province_name": "云南省",
     "lon": "100.223674",
     "lat": "25.596899",
+    "province_id": 25,
+    "city_id": 299,
     "type": 2
   },
   {
@@ -3297,6 +3895,8 @@
     "province_name": "云南省",
     "lon": "98.589434",
     "lat": "24.441239",
+    "province_id": 25,
+    "city_id": 300,
     "type": 2
   },
   {
@@ -3308,6 +3908,8 @@
     "province_name": "云南省",
     "lon": "98.859932",
     "lat": "25.860676",
+    "province_id": 25,
+    "city_id": 301,
     "type": 2
   },
   {
@@ -3319,6 +3921,8 @@
     "province_name": "云南省",
     "lon": "99.713681",
     "lat": "27.831029",
+    "province_id": 25,
+    "city_id": 302,
     "type": 2
   },
   {
@@ -3330,6 +3934,8 @@
     "province_name": "西藏自治区",
     "lon": "91.111890",
     "lat": "29.662557",
+    "province_id": 26,
+    "city_id": 303,
     "type": 2
   },
   {
@@ -3341,6 +3947,8 @@
     "province_name": "西藏自治区",
     "lon": "88.855863",
     "lat": "29.214144",
+    "province_id": 26,
+    "city_id": 304,
     "type": 2
   },
   {
@@ -3352,6 +3960,8 @@
     "province_name": "西藏自治区",
     "lon": "97.185581",
     "lat": "31.140575",
+    "province_id": 26,
+    "city_id": 305,
     "type": 2
   },
   {
@@ -3363,6 +3973,8 @@
     "province_name": "西藏自治区",
     "lon": "94.349985",
     "lat": "29.666940",
+    "province_id": 26,
+    "city_id": 306,
     "type": 2
   },
   {
@@ -3374,6 +3986,8 @@
     "province_name": "西藏自治区",
     "lon": "91.750643",
     "lat": "29.229026",
+    "province_id": 26,
+    "city_id": 307,
     "type": 2
   },
   {
@@ -3385,6 +3999,8 @@
     "province_name": "西藏自治区",
     "lon": "92.067018",
     "lat": "31.480679",
+    "province_id": 26,
+    "city_id": 308,
     "type": 2
   },
   {
@@ -3396,6 +4012,8 @@
     "province_name": "西藏自治区",
     "lon": "81.107668",
     "lat": "30.404556",
+    "province_id": 26,
+    "city_id": 309,
     "type": 2
   },
   {
@@ -3407,6 +4025,8 @@
     "province_name": "陕西省",
     "lon": "108.953098",
     "lat": "34.277799",
+    "province_id": 27,
+    "city_id": 310,
     "type": 2
   },
   {
@@ -3418,6 +4038,8 @@
     "province_name": "陕西省",
     "lon": "108.968067",
     "lat": "34.908367",
+    "province_id": 27,
+    "city_id": 311,
     "type": 2
   },
   {
@@ -3429,6 +4051,8 @@
     "province_name": "陕西省",
     "lon": "107.170645",
     "lat": "34.364080",
+    "province_id": 27,
+    "city_id": 312,
     "type": 2
   },
   {
@@ -3440,6 +4064,8 @@
     "province_name": "陕西省",
     "lon": "108.707509",
     "lat": "34.345372",
+    "province_id": 27,
+    "city_id": 313,
     "type": 2
   },
   {
@@ -3451,6 +4077,8 @@
     "province_name": "陕西省",
     "lon": "109.483932",
     "lat": "34.502357",
+    "province_id": 27,
+    "city_id": 314,
     "type": 2
   },
   {
@@ -3462,6 +4090,8 @@
     "province_name": "陕西省",
     "lon": "109.500509",
     "lat": "36.603320",
+    "province_id": 27,
+    "city_id": 315,
     "type": 2
   },
   {
@@ -3473,6 +4103,8 @@
     "province_name": "陕西省",
     "lon": "107.045477",
     "lat": "33.081568",
+    "province_id": 27,
+    "city_id": 316,
     "type": 2
   },
   {
@@ -3484,6 +4116,8 @@
     "province_name": "陕西省",
     "lon": "109.745925",
     "lat": "38.279439",
+    "province_id": 27,
+    "city_id": 317,
     "type": 2
   },
   {
@@ -3495,6 +4129,8 @@
     "province_name": "陕西省",
     "lon": "109.038044",
     "lat": "32.704370",
+    "province_id": 27,
+    "city_id": 318,
     "type": 2
   },
   {
@@ -3506,6 +4142,8 @@
     "province_name": "陕西省",
     "lon": "109.934208",
     "lat": "33.873907",
+    "province_id": 27,
+    "city_id": 319,
     "type": 2
   },
   {
@@ -3517,6 +4155,8 @@
     "province_name": "甘肃省",
     "lon": "103.823305",
     "lat": "36.064225",
+    "province_id": 28,
+    "city_id": 320,
     "type": 2
   },
   {
@@ -3528,6 +4168,8 @@
     "province_name": "甘肃省",
     "lon": "98.2816345",
     "lat": "39.802397",
+    "province_id": 28,
+    "city_id": 321,
     "type": 3
   },
   {
@@ -3539,6 +4181,8 @@
     "province_name": "甘肃省",
     "lon": "102.208126",
     "lat": "38.516071",
+    "province_id": 28,
+    "city_id": 322,
     "type": 2
   },
   {
@@ -3550,6 +4194,8 @@
     "province_name": "甘肃省",
     "lon": "104.171240",
     "lat": "36.546681",
+    "province_id": 28,
+    "city_id": 323,
     "type": 2
   },
   {
@@ -3561,6 +4207,8 @@
     "province_name": "甘肃省",
     "lon": "105.736931",
     "lat": "34.584319",
+    "province_id": 28,
+    "city_id": 324,
     "type": 2
   },
   {
@@ -3572,6 +4220,8 @@
     "province_name": "甘肃省",
     "lon": "102.640147",
     "lat": "37.933172",
+    "province_id": 28,
+    "city_id": 325,
     "type": 2
   },
   {
@@ -3583,6 +4233,8 @@
     "province_name": "甘肃省",
     "lon": "100.459891",
     "lat": "38.939320",
+    "province_id": 28,
+    "city_id": 326,
     "type": 2
   },
   {
@@ -3594,6 +4246,8 @@
     "province_name": "甘肃省",
     "lon": "106.688911",
     "lat": "35.550110",
+    "province_id": 28,
+    "city_id": 327,
     "type": 2
   },
   {
@@ -3605,6 +4259,8 @@
     "province_name": "甘肃省",
     "lon": "98.508414",
     "lat": "39.741473",
+    "province_id": 28,
+    "city_id": 328,
     "type": 2
   },
   {
@@ -3616,6 +4272,8 @@
     "province_name": "甘肃省",
     "lon": "107.644227",
     "lat": "35.726800",
+    "province_id": 28,
+    "city_id": 329,
     "type": 2
   },
   {
@@ -3627,6 +4285,8 @@
     "province_name": "甘肃省",
     "lon": "104.626637",
     "lat": "35.586056",
+    "province_id": 28,
+    "city_id": 330,
     "type": 2
   },
   {
@@ -3638,6 +4298,8 @@
     "province_name": "甘肃省",
     "lon": "104.934573",
     "lat": "33.394479",
+    "province_id": 28,
+    "city_id": 331,
     "type": 2
   },
   {
@@ -3649,6 +4311,8 @@
     "province_name": "甘肃省",
     "lon": "103.215249",
     "lat": "35.598514",
+    "province_id": 28,
+    "city_id": 332,
     "type": 2
   },
   {
@@ -3660,6 +4324,8 @@
     "province_name": "甘肃省",
     "lon": "102.917442",
     "lat": "34.992211",
+    "province_id": 28,
+    "city_id": 333,
     "type": 2
   },
   {
@@ -3671,6 +4337,8 @@
     "province_name": "青海省",
     "lon": "101.767920",
     "lat": "36.640738",
+    "province_id": 28,
+    "city_id": 334,
     "type": 2
   },
   {
@@ -3682,6 +4350,8 @@
     "province_name": "青海省",
     "lon": "102.085206",
     "lat": "36.517610",
+    "province_id": 28,
+    "city_id": 335,
     "type": 2
   },
   {
@@ -3693,6 +4363,8 @@
     "province_name": "青海省",
     "lon": "100.879802",
     "lat": "36.960654",
+    "province_id": 28,
+    "city_id": 336,
     "type": 2
   },
   {
@@ -3704,6 +4376,8 @@
     "province_name": "青海省",
     "lon": "102.007600",
     "lat": "35.522851",
+    "province_id": 28,
+    "city_id": 337,
     "type": 2
   },
   {
@@ -3715,6 +4389,8 @@
     "province_name": "青海省",
     "lon": "100.624066",
     "lat": "36.284363",
+    "province_id": 28,
+    "city_id": 338,
     "type": 2
   },
   {
@@ -3726,6 +4402,8 @@
     "province_name": "青海省",
     "lon": "100.223722",
     "lat": "34.480484",
+    "province_id": 28,
+    "city_id": 339,
     "type": 2
   },
   {
@@ -3737,6 +4415,8 @@
     "province_name": "青海省",
     "lon": "97.013316",
     "lat": "33.006239",
+    "province_id": 28,
+    "city_id": 340,
     "type": 2
   },
   {
@@ -3748,6 +4428,8 @@
     "province_name": "青海省",
     "lon": "97.342625",
     "lat": "37.373799",
+    "province_id": 29,
+    "city_id": 341,
     "type": 2
   },
   {
@@ -3759,6 +4441,8 @@
     "province_name": "宁夏回族自治区",
     "lon": "106.206478",
     "lat": "38.502621",
+    "province_id": 30,
+    "city_id": 341,
     "type": 2
   },
   {
@@ -3770,6 +4454,8 @@
     "province_name": "宁夏回族自治区",
     "lon": "106.379337",
     "lat": "39.020223",
+    "province_id": 30,
+    "city_id": 342,
     "type": 2
   },
   {
@@ -3781,6 +4467,8 @@
     "province_name": "宁夏回族自治区",
     "lon": "106.208254",
     "lat": "37.993561",
+    "province_id": 30,
+    "city_id": 343,
     "type": 2
   },
   {
@@ -3792,6 +4480,8 @@
     "province_name": "宁夏回族自治区",
     "lon": "106.285267",
     "lat": "36.021523",
+    "province_id": 30,
+    "city_id": 344,
     "type": 2
   },
   {
@@ -3803,6 +4493,8 @@
     "province_name": "宁夏回族自治区",
     "lon": "105.196754",
     "lat": "37.521124",
+    "province_id": 30,
+    "city_id": 345,
     "type": 2
   },
   {
@@ -3814,6 +4506,8 @@
     "province_name": "新疆维吾尔自治区",
     "lon": "87.564987",
     "lat": "43.840380",
+    "province_id": 31,
+    "city_id": 346,
     "type": 2
   },
   {
@@ -3825,6 +4519,8 @@
     "province_name": "新疆维吾尔自治区",
     "lon": "84.881180",
     "lat": "45.594331",
+    "province_id": 31,
+    "city_id": 347,
     "type": 2
   },
   {
@@ -3836,6 +4532,8 @@
     "province_name": "新疆维吾尔自治区",
     "lon": "89.181594",
     "lat": "42.960470",
+    "province_id": 31,
+    "city_id": 348,
     "type": 2
   },
   {
@@ -3847,6 +4545,8 @@
     "province_name": "新疆维吾尔自治区",
     "lon": "93.528355",
     "lat": "42.858596",
+    "province_id": 31,
+    "city_id": 349,
     "type": 2
   },
   {
@@ -3858,6 +4558,8 @@
     "province_name": "新疆维吾尔自治区",
     "lon": "87.296038",
     "lat": "44.007057",
+    "province_id": 31,
+    "city_id": 350,
     "type": 2
   },
   {
@@ -3869,6 +4571,8 @@
     "province_name": "新疆维吾尔自治区",
     "lon": "82.052436",
     "lat": "44.913651",
+    "province_id": 31,
+    "city_id": 351,
     "type": 2
   },
   {
@@ -3880,6 +4584,8 @@
     "province_name": "新疆维吾尔自治区",
     "lon": "86.151572",
     "lat": "41.770229",
+    "province_id": 31,
+    "city_id": 352,
     "type": 2
   },
   {
@@ -3891,6 +4597,8 @@
     "province_name": "新疆维吾尔自治区",
     "lon": "80.269846",
     "lat": "41.171730",
+    "province_id": 31,
+    "city_id": 353,
     "type": 2
   },
   {
@@ -3902,6 +4610,8 @@
     "province_name": "新疆维吾尔自治区",
     "lon": "76.137564",
     "lat": "39.750345",
+    "province_id": 31,
+    "city_id": 354,
     "type": 2
   },
   {
@@ -3913,6 +4623,8 @@
     "province_name": "新疆维吾尔自治区",
     "lon": "75.992973",
     "lat": "39.470627",
+    "province_id": 31,
+    "city_id": 355,
     "type": 2
   },
   {
@@ -3924,6 +4636,8 @@
     "province_name": "新疆维吾尔自治区",
     "lon": "79.930238",
     "lat": "37.116774",
+    "province_id": 31,
+    "city_id": 356,
     "type": 2
   },
   {
@@ -3935,6 +4649,8 @@
     "province_name": "新疆维吾尔自治区",
     "lon": "81.297853",
     "lat": "43.922248",
+    "province_id": 31,
+    "city_id": 357,
     "type": 2
   },
   {
@@ -3946,6 +4662,8 @@
     "province_name": "新疆维吾尔自治区",
     "lon": "82.974880",
     "lat": "46.758683",
+    "province_id": 31,
+    "city_id": 358,
     "type": 2
   },
   {
@@ -3957,6 +4675,8 @@
     "province_name": "新疆维吾尔自治区",
     "lon": "88.137915",
     "lat": "47.839744",
+    "province_id": 31,
+    "city_id": 359,
     "type": 2
   },
   {
@@ -3968,6 +4688,8 @@
     "province_name": "新疆维吾尔自治区",
     "lon": "86.041075",
     "lat": "44.305886",
+    "province_id": 31,
+    "city_id": 360,
     "type": 3
   },
   {
@@ -3979,6 +4701,8 @@
     "province_name": "新疆维吾尔自治区",
     "lon": "81.294193",
     "lat": "40.544197",
+    "province_id": 31,
+    "city_id": 361,
     "type": 3
   },
   {
@@ -3990,6 +4714,8 @@
     "province_name": "新疆维吾尔自治区",
     "lon": "79.061222",
     "lat": "39.864554",
+    "province_id": 31,
+    "city_id": 362,
     "type": 3
   },
   {
@@ -4001,6 +4727,8 @@
     "province_name": "新疆维吾尔自治区",
     "lon": "87.535114",
     "lat": "44.171490",
+    "province_id": 31,
+    "city_id": 363,
     "type": 3
   },
   {
@@ -4012,6 +4740,47 @@
     "province_name": "新疆维吾尔自治区",
     "lon": "85.614796",
     "lat": "41.950411",
+    "province_id": 31,
+    "city_id": 364,
+    "type": 3
+  },
+  {
+    "city_code": "710000",
+    "city_name": "台湾",
+    "name_en": "Taiwan",
+    "letter": "T",
+    "province_code": "710000",
+    "province_name": "台湾",
+    "lon": "121.500000",
+    "lat": "25.030000",
+    "province_id": 32,
+    "city_id": 365,
+    "type": 3
+  },
+  {
+    "city_code": "720000",
+    "city_name": "香港",
+    "name_en": "Hongkong",
+    "letter": "H",
+    "province_code": "720000",
+    "province_name": "香港",
+    "lon": "114.080000",
+    "lat": "22.200000",
+    "province_id": 33,
+    "city_id": 366,
+    "type": 3
+  },
+  {
+    "city_code": "730000",
+    "city_name": "澳门",
+    "name_en": "Macau",
+    "letter": "M",
+    "province_code": "730000",
+    "province_name": "澳门",
+    "lon": "113.330000",
+    "lat": "22.130000",
+    "province_id": 34,
+    "city_id": 367,
     "type": 3
   }
 ]
