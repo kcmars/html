@@ -1,11 +1,12 @@
 /**
- * Created by Administrator on 2018/7/13.
+ * Created by zp on 2018/7/13.
  */
 let img1 = "";
 let index = -1;
 let busTypeId = "";
+let img_road_transport= "../img/road-transport-permit-add.jpg"; //道路运输许可证
 let demoImg = [
-    {text: "道路运输许可证", img: "../img/id-card-front-demo.jpg"}
+    {text: "道路运输许可证", img: img_road_transport}
 ];
 $(function () {
     getRequest(getParams);
@@ -14,7 +15,9 @@ $(function () {
     //车牌
     let templatePlateModels = document.getElementById('template-plate-short-list').innerHTML;
     document.getElementById('plate-short-list').innerHTML = doT.template(templatePlateModels)($.plateShortList);
-
+    //车牌字母
+    let templatePlateLetter = document.getElementById('template-plate-letter-list').innerHTML;
+    document.getElementById('plate-letter-list').innerHTML = doT.template(templatePlateLetter)($.plateletterList);
     //车辆颜色
     let templateBusColor = document.getElementById('template-plate-color').innerHTML;
     document.getElementById('bus-color-list').innerHTML = doT.template(templateBusColor)($.color);
@@ -22,7 +25,7 @@ $(function () {
     //选择车牌简称
     $("#plate-no-short-box").bind("click", function () {
         if(busInfo){
-            if(busInfo.status > 0){
+            if(busInfo.status > 0 && busInfo.status != 2){
                 return;
             }
         }
@@ -31,16 +34,26 @@ $(function () {
         }
         $("#plate-short-list li span").removeClass("orange-text");
         $("#plate-model").removeClass("plate-model-animation-out").addClass("plate-model-animation-in");
-        $("#plate-short-list li, #plate-model > .model").bind("click", function () {
-            $(this).find("span").addClass("orange-text");
+        $("#plate-model > .model").bind("click", function () {
             $("#plate-model").removeClass("plate-model-animation-in").addClass("plate-model-animation-out");
-            $("#plate-no-short").val($.plateShortList[$(this).index()]);
+        });
+        $("#plate-short-list li").bind("click", function () {
+            $(this).addClass("orange-text").siblings().removeClass("orange-text");
+            $("#plate-letter-list li").removeClass("orange-text");
+            let short = $.plateShortList[$(this).index()];
+            $("#plate-letter-list").removeClass("plate-letter-animation-out").addClass("plate-letter-animation-in");
+            $("#plate-letter-list li").bind("click", function () {
+                $(this).addClass("orange-text");
+                $("#plate-letter-list").removeClass("plate-letter-animation-in").addClass("plate-letter-animation-out");
+                $("#plate-model").removeClass("plate-model-animation-in").addClass("plate-model-animation-out");
+                $("#plate-no-short").val(short + $.plateletterList[$(this).index()]);
+            });
         });
     });
     //选择车辆颜色
     $("#plate-color").bind("click", function () {
         if(busInfo){
-            if(busInfo.status > 0){
+            if(busInfo.status > 0 && busInfo.status != 2){
                 return;
             }
         }
@@ -58,7 +71,7 @@ $(function () {
     //选择车辆类型
     $("#plate-type").bind("click", function () {
         if(busInfo){
-            if(busInfo.status > 0){
+            if(busInfo.status > 0 && busInfo.status != 2){
                 return;
             }
         }
@@ -73,7 +86,7 @@ $(function () {
 //获取车辆大类型
 function getBusType1() {
     let params = {
-        // user_id: "57ac9ac4-dfcb-4537-9122-f5a7e2b20813",
+        // user_id: "c5fa42ae-e6d8-4e10-a7b7-4df136d3c776",
         user_id: param.user_id,
         type: "1"
     };
@@ -85,7 +98,7 @@ function getBusType1() {
         success: function (res) {
             console.log(res);
             loadAlertHide();
-            if(res.status == 1){
+            if(res && res.status == 1){
                 let data = res.data;
                 //车辆类型
                 var templateBusType = document.getElementById('template-plate-type').innerHTML;
@@ -117,7 +130,7 @@ function getBusType1() {
 //获取车辆小类型
 function getBusType2(type) {
     let params = {
-        // user_id: "57ac9ac4-dfcb-4537-9122-f5a7e2b20813",
+        // user_id: "c5fa42ae-e6d8-4e10-a7b7-4df136d3c776",
         user_id: param.user_id,
         type: type
     };
@@ -129,7 +142,7 @@ function getBusType2(type) {
         success: function (res) {
             console.log(res);
             loadAlertHide();
-            if(res.status == 1){
+            if(res && res.status == 1){
                 flag3 = true;
                 let data = res.data;
                 //车辆类型
@@ -166,25 +179,28 @@ function getParams() {
         busInfo = JSON.parse(sessionStorage.getItem("busInfo"));
     }
     if(busInfo) {
+        $(".authen-main").removeClass("none");
         showBusInfo();
     } else {
         getBusInfo();
     }
+    // getBusInfo();
     //保存
     $("#submit").bind("click", function () {
         submitBusInfo();
     });
 
 }
-
-//获取司机实名认证信息
+/**
+ * 获取大巴车认证信息
+ */
 function getBusInfo() {
     if (param.bus_no == null) {
         return;
     }
     let params = {
-        // user_id: "57ac9ac4-dfcb-4537-9122-f5a7e2b20813",
-        // bus_no: "5"
+        // user_id: "c5fa42ae-e6d8-4e10-a7b7-4df136d3c776",
+        // bus_no: "3"
         user_id: param.user_id,
         bus_no: param.bus_no
     };
@@ -196,7 +212,8 @@ function getBusInfo() {
         success: function (res) {
             console.log(res);
             loadAlertHide();
-            if(res.status == 1){
+            if(res && res.status == 1){
+                $(".authen-main").removeClass("none");
                 busInfo = res.data;
                 if(busInfo){
                     sessionStorage.setItem("busInfo", JSON.stringify(busInfo));
@@ -216,15 +233,16 @@ function getBusInfo() {
 
 //提交司机实名认证信息
 function submitBusInfo() {
-    // user_id: "57ac9ac4-dfcb-4537-9122-f5a7e2b20813",
     let params = {};
     params.user_id = param.user_id;
+    // params.user_id = "c5fa42ae-e6d8-4e10-a7b7-4df136d3c776";
     if (param.bus_no != null) {
         params.bus_no = param.bus_no;
     }
     params.image = img1;
     params.name = $("#name").val().trim();
-    params.short_no = $("#plate-no-short").val().trim();
+    params.plate_no_short = $("#plate-no-short").val().trim().substring(0,1);
+    params.plate_no_alpha = $("#plate-no-short").val().trim().substring(1,2);
     params.plate_no = $("#plate-no").val().trim();
     params.color = $("#plate-color").val().trim();
     params.type = busTypeId;
@@ -238,7 +256,7 @@ function submitBusInfo() {
         toastAlertShow("请输入业主姓名");
         return;
     }
-    if (params.short_no == "" || params.short_no == null) {
+    if (params.plate_no_short == "" || params.plate_no_short == null) {
         toastAlertShow("请选择车牌简称");
         return;
     }
@@ -266,7 +284,7 @@ function submitBusInfo() {
         success: function (res) {
             console.log(res);
             loadAlertHide();
-            if(res.status == 1){
+            if(res && res.status == 1){
                 flag = false;
                 $("#submit").removeClass("submit-btn").addClass("none");
                 $("input").attr("readonly", true);
@@ -292,7 +310,7 @@ function submitBusInfo() {
 function showBusInfo() {
     if(busInfo){
         let status = busInfo.status;
-        if(status > 0) {
+        if(status > 0 && busInfo.status != 2) {
             flag = false;
             $('input:radio').attr('disabled', true);
             $("#submit").removeClass("submit-btn").addClass("none");
@@ -303,7 +321,7 @@ function showBusInfo() {
         //实名信息
         if(status == 1) { //审核中
             $("#realName #name").val(busInfo.name);
-            $("#realName #plate-no-short").val(busInfo.plate_for_short);
+            $("#realName #plate-no-short").val(busInfo.plate_for_short + busInfo.plate_no_alpha);
             $("#realName #plate-no").val(busInfo.plate_no);
             $("#realName #plate-color").val(busInfo.bus_color);
             $("#realName #plate-type").val(busInfo.bus_type_name);
@@ -313,9 +331,25 @@ function showBusInfo() {
             img1 = busInfo.image;
             $("#realName ul li div").removeClass("none authen-status-over").addClass("authen-status-ing");
             $("#realName ul li div b").html("审核中");
-        } else if (status == 2 || status == 3) { //成功
+
+        } else if (status == 2) { //待完善
+            $("#realName #name").val(busInfo.name != null ? busInfo.name : "");
+            $("#realName #plate-no-short").val(busInfo.plate_for_short != null && busInfo.plate_no_alpha != null ? busInfo.plate_for_short + busInfo.plate_no_alpha : "");
+            $("#realName #plate-no").val(busInfo.plate_no != null ? busInfo.plate_no : "");
+            $("#realName #plate-color").val(busInfo.bus_color != null ? busInfo.bus_color : "");
+            $("#realName #plate-type").val(busInfo.bus_type_name != null ? busInfo.bus_type_name : "");
+            $("#realName #plate-seats").val(busInfo.bus_seat != null ? busInfo.bus_seat : "");
+            $("#realName input").attr("readonly", false);
+            $("#realName #img1").attr("src", busInfo.image != null && busInfo.image != "" ? $.server2 + busInfo.image : img_road_transport);
+            if (busInfo.image != null && busInfo.image != "") {
+                img1 = busInfo.image;
+            }
+            $("#realName ul li div").removeClass("none authen-status-ing").addClass("authen-status-over");
+            $("#realName ul li div b").html("请完善资料");
+
+        } else if (status == 3) { //成功
             $("#realName #name").val(busInfo.name);
-            $("#realName #plate-no-short").val(busInfo.plate_for_short);
+            $("#realName #plate-no-short").val(busInfo.plate_for_short + busInfo.plate_no_alpha);
             $("#realName #plate-no").val(busInfo.plate_no);
             $("#realName #plate-color").val(busInfo.bus_color);
             $("#realName #plate-type").val(busInfo.bus_type_name);
@@ -331,7 +365,7 @@ function showBusInfo() {
             $("#realName ul li div b").html("");
         } else if(status == -2) { //失败
             $("#realName #name").val(busInfo.name);
-            $("#realName #plate-no-short").val(busInfo.plate_for_short);
+            $("#realName #plate-no-short").val(busInfo.plate_for_short + busInfo.plate_no_alpha);
             $("#realName #plate-no").val(busInfo.plate_no);
             $("#realName #plate-color").val(busInfo.bus_color);
             $("#realName #plate-type").val(busInfo.bus_type_name);
@@ -352,7 +386,7 @@ function showBusInfo() {
 function showImg(index) {
     if(busInfo){
         if(index < 2){
-            if (busInfo.real_name_status > 0) {
+            if (busInfo.status > 0 && busInfo.status != 2) {
                 return;
             }
         }
@@ -410,7 +444,7 @@ function uploadPicture(index, base64, type, extra, last_file) {
     loadAlertShow("正在上传...");
     canvasDataURL(base64, function callback(data) {
         let params = {
-            // user_id: "57ac9ac4-dfcb-4537-9122-f5a7e2b20813",
+            // user_id: "c5fa42ae-e6d8-4e10-a7b7-4df136d3c776",
             user_id: param.user_id,
             base64: data,
             type: type,
@@ -425,7 +459,7 @@ function uploadPicture(index, base64, type, extra, last_file) {
             success: function (res) {
                 //console.log(res);
                 loadAlertHide();
-                if(res.status == 1){
+                if(res && res.status == 1){
                     let path = res.data;
                     switch (index) {
                         case 0:

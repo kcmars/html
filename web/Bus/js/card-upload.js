@@ -1,5 +1,5 @@
 /**
- * Created by Administrator on 2018/7/23.
+ * Created by zp on 2018/7/23.
  */
 $(function () {
     $("#demo-picture li").bind("click", function () {

@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="yes" name="apple-touch-fullscreen">
+    <meta content="telephone=no,email=no" name="format-detection">
+    <meta name="keywords"  content="爱运科技，爱运宝，公路运输宝，自动化调配平台，运输">
+    <meta name="description"  content="爱运科技致力于运输行业,公司基于移动互联网技术开发,以“爱运宝”及“公路运输宝”APP为主导,实现了公路运输智能服务,是中国第一个客运、货运自动化调配平台">
+    <title>爱运科技有限公司 | 推广承包商中心</title>
+    <link type="text/css" rel="stylesheet" href="../css/reset.css"/>
+    <link type="text/css" rel="stylesheet" href="../css/fonts.css"/>
+    <link type="text/css" rel="stylesheet" href="../css/index_20171019.css"/>
+    <link type="text/css" rel="stylesheet" href="../css/swiper.min.css?timer=" + new Date().getTime()/>
+    <link type="text/css" rel="stylesheet" href="../css/share.css?timer=" + new Date().getTime()/>
+    <link type="text/css" rel="stylesheet" href="../css/commodity.css?timer=" + new Date().getTime()/>
+    <script type="text/javascript">
+    </script>
+</head>
+<body>
+<div class="vip vipData commodity" id="vipData">
+    <!--播放视频-->
+    <div id="play-box" class="play-box none">
+        <video id="video" src="" controls></video>
+        <i onclick="cancelBox()"></i>
+    </div>
+    <!--查看宝贝详情弹窗-->
+    <div class="puBox puBoxCommodity">
+        <div class="overLay"></div>
+        <div class="pu">
+            <div class="swiper-container">
+                <ul id="swiper-list" class="swiper-wrapper">
+                </ul>
+                <!-- 如果需要分页器 -->
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-prev"></div><!--左箭头-->
+                <div class="swiper-button-next"></div><!--右箭头-->
+            </div>
+            <div class="detail">
+                <div class="item-row">
+                    <div class="item">
+                        <span>分类：</span>
+                        <span id="pu-type"></span>
+                    </div>
+                    <div class="item">
+                        <span>编号：</span>
+                        <span id="pu-code"></span>
+                    </div>
+                </div>
+                <div class="item-row">
+                    <div class="item">
+                        <span>价格：</span>
+                        <span id="pu-price"></span>
+                    </div>
+                    <div id="detail-collection" class="item">
+                        <span>收藏</span>
+                        <i></i>
+                    </div>
+                </div>
+                <div class="item">
+                    <span>描述：</span>
+                    <span id="pu-content"></span>
+                </div>
+            </div>
+            <div id="delete-commodity" class="none">
+                <div class="delete">删除宝贝</div>
+                <div class="change">修改宝贝</div>
+            </div>
+        </div>
+    </div>
+    <!--导航开始-->
+    <header id="header">
+        <div class="logo">
+            <div class="imgBox"><img src="../img/logo.png" alt="aiyun'logo"></div><div class="nameBox"><span class="name">爱运科技</span>
+        </div>
+        </div>
+        <div class="tab">
+            <a href="index.html" class="navItem">关于爱运<span class="underLine"></span></a>
+            <a href="aiyunbao.html" class="navItem">爱运宝<span class="underLine"></span></a>
+            <a href="glysb.html" class="navItem">公路运输宝<span class="underLine"></span></a>
+            <a href="vip.html" class="navItem">VIP中心<span class="underLine"></span></a>
+            <a href="commodity.html" class="active navItem">奇珍“艺”宝<span class="underLine"></span></a>
+        </div>
+        <div class="navBarBox">
+            <div class="navBar">
+                用户入口
+                <!--<span></span>-->
+                <!--<span></span>-->
+                <!--<span></span>-->
+            </div>
+        </div>
+        <div class="tabHide">
+            <div class="tabHideInner">
+                <a href="./index.html" class="navItem">关于爱运<span class="underLine"></span></a>
+                <a href="aiyunbao.html" class="navItem">爱运宝<span class="underLine"></span></a>
+                <a href="glysb.html" class="navItem">公路运输宝<span class="underLine"></span></a>
+                <a href="vip.html" class="navItem">VIP中心<span class="underLine"></span></a>
+                <a href="commodity.html" class="active navItem">奇珍“艺”宝<span class="underLine"></span></a>
+            </div>
+            <div class="navBarHide"></div>
+        </div>
+    </header>
+    <!--导航结束-->
+    <div class="slogon">
+        <div class="slogonBg">
+            <picture>
+                <source media="(max-width: 767px)" srcset="../img/banner_6.jpg">
+                <source media="(min-width: 768px)" srcset="../img/banner6.jpg">
+                <img src="../img/banner6.jpg" alt="aiyunbao_section4bgMobile">
+            </picture>
+        </div>
+        <div class="wrapper">
+            <div class="wrapperTab clearfix">
+                <div class="active tabItem home">
+                    <span>首页</span>
+                </div>
+                <div class="tabItem seller">
+                    <span>登录入口</span>
+                </div>
+                <div class="tabItem contact">
+                    <span>联系卖家</span>
+                </div>
+                <div class="tabItem outBtn none">
+                    <span>退出登录</span>
+                </div>
+            </div>
+            <div class="wrapperContent">
+                <div class="content-home">
+                    <div class="classify">
+                        <span>分类：</span>
+                        <ul id="classify-list">
+                        </ul>
+                    </div>
+                    <div class="price">
+                        <span>价格：</span>
+                        <div class="price-box">
+                            <input type="number" maxlength="11" class="input" id="min-price" placeholder="最低价格">
+                            <b>-</b>
+                            <input type="number" maxlength="11" class="input" id="max-price" placeholder="最高价格">
+                            <span id="price-btn">搜索</span>
+                        </div>
+                    </div>
+                    <div class="content-search">
+                        <span>内容：</span>
+                        <div class="content-box">
+                            <input type="text" maxlength="11" class="input" id="content" placeholder="输入相关文字搜索">
+                            <span id="content-btn">搜索</span>
+                        </div>
+                    </div>
+                    <div class="commodity-box">
+                        <ul id="commodity-list">
+                        </ul>
+                        <!--<div class="moreBtnBox">-->
+                            <!--<span id="loadBtn" class="moreBtn" onclick="getAllCommodity()">+ 加载更多</span>-->
+                            <!--<span id="loadImg" class="loading"></span>-->
+                            <!--<p id="loadMsg" class="none"></p>-->
+                        <!--</div>-->
+                        <div id="table-btn" class="table-btn">
+                            <div id="btn-first" class="btn">首页</div>
+                            <div id="btn-pre" class="btn">上一页</div>
+                            <ul id="table-round" class="table-round">
+                            </ul>
+                            <div id="btn-next" class="btn">下一页</div>
+                            <div id="btn-last" class="btn">尾页</div>
+                        </div>
+                        <div id="table-select" class="table-select">
+                            <span>第</span>
+                            <select id="select" title="">
+                            </select>
+                            <span>页</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="content-login login-box none">
+                    <div class="content">
+                        <p class="title">账户入口</p>
+                        <p class="subTitle">请输入注册爱运宝App的手机号及登录密码</p>
+                        <div class="inputBox telInputBox">
+                            <input class="telInput" id="telInput"  maxlength="11" oninput="if(value.length>11)value=value.slice(0,11)" type="number" placeholder="手机号" required autocomplete="off">
+                            <span class="tip">请输入正确的手机号码</span>
+                            <span class="status"></span>
+                        </div>
+                        <div class="inputBox pswInputBox">
+                            <input class="pswInput" id="pswInput"  placeholder="密码" type="password" minlength="6" maxlength="16" required>
+                            <span class="tip">请输入密码</span>
+                            <span class="eye"></span>
+                        </div>
+                        <div class="inputBox clearfix captchaInputBox">
+                            <input class="captchaInput" id="captchaInput" placeholder="验证码" required autocomplete="off" maxlength="6">
+                            <div class="captchaImgBox">
+                                <img src="http://a56999.com/Aiyunbao/Treasure/getVerifyCode" alt="code" id="captchaImg">
+                                <span class="refresh">点击刷新</span>
+                            </div>
+                            <span class="tip">请输入图形验证码</span>
+                        </div>
+                        <button class="submitBtn" id="submitBtn">登  录</button>
+                    </div>
+                </div>
+                <div class="content-add none">
+                    <div class="content">
+                        <form id="add-form" enctype="multipart/form-data">
+                            <p class="title">添加宝贝</p>
+                            <input id="commodity-id" class="commodity-id" name="commodity_id" value="" readonly="readonly"/>
+                            <div class="item">
+                                <span>分类：</span>
+                                <div class="inputBox">
+                                    <input id="type" name="type" maxlength="10" value="" readonly="readonly" placeholder="选择商品类型"/>
+                                    <span id="add-class" class="add-class none">确定添加</span>
+                                </div>
+                            </div>
+                            <div class="type none">
+                                <ul id="classify-list2">
+                                </ul>
+                            </div>
+                            <div class="item">
+                                <span>编号：</span>
+                                <div class="inputBox">
+                                    <input id="code" name="code" maxlength="20" value="" placeholder="输入商品编号(数组或字母组合)"/>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <span>价格：</span>
+                                <div class="inputBox">
+                                    <input id="remarks" name="remarks" type="text" maxlength="15" value="" placeholder="备注：例如特价、一口价等，可不填"/>
+                                </div>
+                                <div class="inputBox m-l-5">
+                                    <input id="money" name="price" type="number" maxlength="15" value="" placeholder="输入商品价格，可不填"/>
+                                    <select title="" name="unit" class="select">
+                                        <option value="元">元</option>
+                                        <option value="万元">万元</option>
+                                        <option value="亿元">亿元</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <span>描述：</span>
+                                <div class="inputBox">
+                                    <input id="name" name="name" maxlength="50" value="" placeholder="输入商品名称或描述(50字内)"/>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="text">
+                                    <span>上传图片：</span>
+                                    <span>最多六张</span>
+                                </div>
+                                <ul id="pic-list">
+                                </ul>
+                            </div>
+                            <div class="item">
+                                <div class="text">
+                                    <span>上传视频：</span>
+                                    <span>最多1个</span>
+                                </div>
+                                <ul id="video-list">
+                                    <li>
+                                        <img src="../img/playon_fill.png">
+                                        <input name="video1" class="file" type="file" accept="video/*" value="">
+                                        <input name="scale_img[]" class="scale-img" value="">
+                                        <video poster="" src="" controls="controls"></video>
+                                        <i class="none" onclick="playVideo(this)"></i>
+                                        <span class="none" onclick="deleteVideo(this)"></span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="add-btn">
+                                确定上传
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="content-register login-box none">
+                    <div class="content">
+                        <p class="title">注册账户</p>
+                        <p class="subTitle">请使用手机号进行注册</p>
+                        <div class="inputBox telInputBox">
+                            <input class="telInput" id="register-phone" maxlength="11" oninput="if(value.length>11)value=value.slice(0,11)" type="number" placeholder="请输入手机号">
+                            <span class="tip">请输入正确的手机号码</span>
+                            <span class="status"></span>
+                        </div>
+                        <div class="inputBox clearfix captchaInputBox">
+                            <input class="captchaInput" id="register-code" placeholder="短信验证码" required autocomplete="off" maxlength="6">
+                            <div id="code-btn" class="code-btn">获取验证码</div>
+                            <span class="tip">请输入短信验证码</span>
+                        </div>
+                        <div class="inputBox pswInputBox">
+                            <input class="pswInput" id="register-password"  placeholder="密码" type="password" minlength="6" maxlength="16" required>
+                            <span class="tip">请输入密码</span>
+                            <span class="eye"></span>
+                        </div>
+                        <div class="inputBox telInputBox">
+                            <input class="telInput" id="register-share-phone" maxlength="11" oninput="if(value.length>11)value=value.slice(0,11)" type="text" placeholder="请输入推荐人手机号">
+                            <span class="tip">请输入正确的手机号码</span>
+                            <span class="status"></span>
+                        </div>
+                        <button class="submitBtn" id="registerBtn">注  册</button>
+                    </div>
+                </div>
+                <div class="content-contact none">
+                    <div class="model"></div>
+                    <div class="content">
+                        <p>如需购买或了解宝贝更多详情，可通过下列方式联系卖家</p>
+                        <div id="seller-name" class="item">
+                            <span>联系卖家：</span>
+                            <span class="seller-name"></span>
+                        </div>
+                        <div id="fixed-phone" class="item">
+                            <span>固定电话：</span>
+                            <span class="fixed-phone"></span>
+                        </div>
+                        <div id="mobile-phone" class="item">
+                            <span>手机号：</span>
+                            <span class="mobile-phone"></span>
+                        </div>
+                        <div id="weixin-phone" class="item">
+                            <span>微信号：</span>
+                            <span class="weixin-phone"></span>
+                        </div>
+                        <div id="address" class="item">
+                            <span>地址：</span>
+                            <span class="address"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p>Copyright © 2015, Chendu Goodluck Technology Co., Ltd. All Rights Reserved.<br>成都爱运科技有限公司&nbsp;蜀ICP备&nbsp; 15001871号</p>
+    </footer>
+</div>
+<script type="text/template" charset="utf-8" id='template-table-round'>
+    {{ if (it && it.length > 0){ }}
+    {{ for (var i = 0; i < it.length; i++){ }}
+    <li onclick="changeRound('{{=it[i]}}', '{{=i}}')">{{=it[i]}}</li>
+    {{ } }}
+    {{ } }}
+</script>
+<script id="swiper-list-tmp" type="text/template">
+    {{ if(it != null && it !=''){ }}
+    {{ for(var i=0;i<it.length;i++) { }}
+    <li class="swiper-slide">
+        <div class="item-box">
+            {{ if(it[i].type == 1) { }}
+            <img alt="img" src={{=it[i].src}} >
+            {{ } else if(it[i].type == 2) { }}
+            <video src={{=it[i].src}} poster={{=it[i].scale_img}} controls="controls"></video>
+            <img src={{=it[i].scale_img}}>
+            <i onclick="playVideo(this)"></i>
+            {{ } else { }}
+            <img src="" alt="暂无图片">
+            {{ } }}
+        </div>
+    </li>
+    {{ } }}
+    {{ } }}
+</script>
+<script id="classify-list-tmp" type="text/template">
+    {{ if(it != null && it !=''){ }}
+    {{ for(var i=0;i<it.length;i++) { }}
+        {{ if (i == 0) { }}
+            <li class="active">全部</li>
+            <li>{{=it[i].type}}</li>
+        {{ } else { }}
+            <li>{{=it[i].type}}</li>
+        {{ } }}
+    {{ } }}
+    {{ } }}
+</script>
+<script id="commodity-list-tmp" type="text/template">
+    {{ if(it != null && it !=''){ }}
+    {{ for(var i=0;i<it.length;i++) { }}
+    <li>
+        <div class="item-box">
+            {{ if(it[i].img != null && it[i].img.length > 0){ }}
+                <img src={{=it[i].img[0].src}}>
+            {{ } else if(it[i].screen != null && it[i].screen.length > 0) { }}
+                <video src={{=it[i].screen[0].src}} poster={{=it[i].screen[0].scale_img}} controls="controls"></video>
+                <img src={{=it[i].screen[0].scale_img}}>
+                <i onclick="playVideo(this)"></i>
+            {{ } else { }}
+                <img src="" alt="暂无图片">
+            {{ } }}
+        </div>
+        <div class="content" onclick="lookDetail('{{=it[i].id}}')">
+            <p>{{=it[i].content}}</p>
+            <div class="detail">
+                {{ if(it[i].price != null && it[i].price != '' && it[i].price != '0.00' && it[i].price != '0'){ }}
+                <span>{{=it[i].price}}</span>
+                {{ } else{ }}
+                <span>暂无价格</span>
+                {{ } }}
+                <span>详细&gt;</span>
+            </div>
+        </div>
+    </li>
+    {{ } }}
+    {{ } }}
+</script>
+<script id="classify-list2-tmp" type="text/template">
+    {{ if(it != null && it !=''){ }}
+    {{ for(var i=0;i<it.length;i++) { }}
+        {{ if (i == it.length -1) { }}
+            <li onclick="setClassify('{{=it[i].type}}', this)">{{=it[i].type}}</li>
+            <li class="add" onclick="addClassify()">添加分类</li>
+        {{ } else { }}
+            <li onclick="setClassify('{{=it[i].type}}', this)">{{=it[i].type}}</li>
+        {{ } }}
+    {{ } }}
+    {{ } else { }}
+        <li class="add" onclick="addClassify()">添加分类</li>
+    {{ } }}
+</script>
+<script id="pic-list-tmp" type="text/template">
+    {{ if(it != null && it !=''){ }}
+    {{ for(var i=it.length - 1;i>=0;i--) { }}
+    <li>
+        {{ if(it[i].type == 1){ }}
+            <img src={{=it[i].src}}>
+            <input id="file-pic" class="file" type="file" accept="image/jpeg,image/gif,image/png,image/jpg" value="">
+        {{ } else { }}
+            <img src={{=it[i].src}}>
+            <input class="file" name="img[]" value={{=it[i].src}}>
+            <span onclick="deletePic('{{=i}}')"></span>
+        {{ } }}
+    </li>
+    {{ } }}
+    {{ } }}
+</script>
+<script src="https://cdn.bootcss.com/jquery/1.8.0/jquery.js"></script>
+<script src="../js/index_20171019.js?timer=" + new Date().getTime()></script>
+<script src="../js/jquery-scrollLock.min.js"></script>
+<script src="../js/doT.js"></script>
+<script src="../layer/layer.js"></script>
+<script src="../js/swiper.min.js?timer=" + new Date().getTime()></script>
+<script src="../js/commodity.js?timer=" + new Date().getTime()></script>
+</body>
+</html>

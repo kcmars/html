@@ -1,0 +1,108 @@
+.vipData .rewardBox .userListBox {
+    top:50px;
+}
+.text_blue {
+    color: #005cff;
+}
+.vipData .dataBoxInner .listBox {
+    padding-bottom: 5px;
+}
+.box_title {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 15px 5px;
+    background-color: #0C56FF;
+}
+.box_title span {
+    flex: 1;
+    font-size: 16px;
+    color: #ffffff;
+}
+.list_item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 15px 5px;
+}
+.list_item span {
+    flex: 1;
+    text-align: center;
+    line-height: 20px;
+}
+.list_item span .list_item_btn {
+    display: inline-block;
+    width: 70px;
+    padding: 7px 0;
+    border-radius: 3px;
+    background: #D9DADB;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+}
+.border_top {
+    border-top: 1px solid #cccccc;
+}
+.vipData .navTabBox {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 5px 0;
+}
+.vipData .navTabBox .active span {
+    color: #0C56FF;
+}
+.vipData .navTabBox .left_btn,
+.vipData .navTabBox .right_btn {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+}
+.vipData .navTabBox .left_btn span,
+.vipData .navTabBox .right_btn span {
+    padding: 3px 0;
+}
+@media (min-width: 769px) {
+    .vipData .puBox .pu {
+        width: 50%;
+        max-width: 340px;
+    }
+}
+.vip .puBox .pu .title {
+    line-height: 20px;
+}
+.vip .puBox .pu .title .title_text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #0C56FF;
+}
+.vip .puBox .pu .title .title_text span {
+    padding: 5px;
+}
+.charity .puBox .pu .close,
+.vip .puBox .pu .close {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    -webkit-tap-highlight-color: transparent;
+}
+.vip .puBox .infoContent .infoContent_item {
+    display: flex;
+    flex-direction: column;
+}
+.vip .puBox .infoContent .infoContent_item span {
+    font-size: 16px;
+    color: #333333;
+    padding-top: 8px;
+}
+.vip .puBox .infoContent .infoContent_item .text_blue {
+    color: #005cff;
+    padding-bottom: 8px;
+}

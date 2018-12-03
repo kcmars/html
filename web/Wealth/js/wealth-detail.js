@@ -1,5 +1,5 @@
 /**
- * Created by Administrator on 2018/9/10.
+ * Created by zp on 2018/9/10.
  */
 $(function () {
    getRequest(getParams);
@@ -11,10 +11,12 @@ $(function () {
  */
 function getParams() {
     let params = {
-        // user_id: "38b8781d-5a56-47b8-98ca-a6fc9b71d8a8",
-        // id: "2018091098501019"
+        // user_id: "dd828628-d646-4cc4-9791-e5921737bb13",
+        // id: "10",
+        // log_id: "2018112748561015"
         user_id: param.user_id,
-        id: param.id
+        id: param.id,
+        log_id: param.log_id
     };
     loadAlertShow("获取中...");
     $.ajax({
@@ -24,13 +26,10 @@ function getParams() {
         success: function (res) {
             console.log(res);
             loadAlertHide();
-            if(res.status == 1){
+            if(res && res.status == 1){
+                $(".wealth-detail-main").removeClass("none");
                 let data = res.data;
-                if (data.come_from == 1) {
-                    $(".type").text("支出");
-                } else {
-                    $(".type").text("收入");
-                }
+                $(".type").text($.getNewsType(data.type));
                 $(".value").text($.formatTwoDecimal(data.value));
                 let wealthDetail = [];
                 if (data.type != null) {
@@ -51,21 +50,21 @@ function getParams() {
                     let extra = data.extra;
                     if (extra.channel != null) {
                         let channel = {
-                            text:"提现账户类型",
-                            content: $.getWealthChannel(extra.channel)
+                            text:"账户类型",
+                            content: $.getWealthChannel(extra.channel + "")
                         };
                         wealthDetail.push(channel);
                     }
                     if (extra.name != null) {
                         let name = {
-                            text:"提现账户姓名",
+                            text:"账户姓名",
                             content: extra.name
                         };
                         wealthDetail.push(name);
                     }
                     if (extra.account != null) {
                         let account = {
-                            text:"提现账户账号",
+                            text:"账户账号",
                             content: extra.account
                         };
                         wealthDetail.push(account);
@@ -92,16 +91,17 @@ function getParams() {
                     };
                     wealthDetail.push(balance);
                 }
-                if (data.remarks != null) {
+                if (data.remarks != null || (data.extra != null && data.extra.err_msg != null)) {
                     let remarks = {
                         text:"备注",
-                        content: data.remarks
+                        content: (data.remarks != null ? data.remarks : "") + (data.remarks != null && data.remarks != "" && data.extra.err_msg != null && data.extra.err_msg != "" ? "，" : "") + (data.extra.err_msg != null ? data.extra.err_msg : "")
                     };
                     wealthDetail.push(remarks);
                 }
                 let template = document.getElementById('template-wealth-detail-list').innerHTML;
                 document.getElementById('wealth-detail').innerHTML = doT.template( template )( wealthDetail );
             } else {
+                $(".wealth-detail-main").removeClass("none");
                 toastAlertShow(res.msg);
             }
         },

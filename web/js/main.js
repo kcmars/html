@@ -57,7 +57,7 @@ $(function () {
      * 认证接口地址
      */
     //上传认证图片
-    $.uploadPicture = ip1 + "Authentication/upload";
+    $.uploadPicture = $.server2 + "Api/upload";
     //获取乘客实名认证
     $.getPassengerRealNameInfo = ip1 + "Authentication/getPassengerRealNameInfo";
     //提交乘客实名认证
@@ -79,7 +79,7 @@ $(function () {
     //提交大巴车认证
     $.submitBusInfo = ip1 + "Driver/addBus";
     //获取大巴车类型
-    $.getBusType = ip1 + "Common/getBusType";
+    $.getBusType = $.server2 + "Api/getBusType";
     //获取大巴车雇员认证
     $.getBusEmployees = ip1 + "Driver/getEmployeeInfo";
     //获取大巴车雇员信息
@@ -114,7 +114,7 @@ $(function () {
     //提交评价信息
     $.submitRating = ip1 + "Judge/submitRating";
     //获取取消理由
-    $.getCancelReason = ip1 + "Common/getCancelReason";
+    $.getCancelReason = $.server2 + "Api/getCancelReason";
     //提交取消理由
     $.submitReason = ip1 + "Common/submitReason";
 
@@ -122,14 +122,25 @@ $(function () {
      * 地址相关接口
      */
     //获取省
-    $.getProvinces = ip1 + "Common/getProvinces";
+    $.getProvinces = $.server2 + "Api/getProvinces";
     //获取城市
-    $.getCities = ip1 + "Common/getCities";
+    $.getCities = $.server2 + "Api/getCities";
     //获取区县
-    $.getAds = ip1 + "Common/getAds";
+    $.getAds = $.server2 + "Api/getAds";
+
+    /**
+     * 消息相关接口
+     */
+    //获取大巴车上传记录详情
+    $.getAllUploadedBus = ip1 + "BusUploader/getAllUploadedBus";
+    //获取重复大巴车上传者信息
+    $.getBusUploaderInfo = ip1 + "BusUploader/getBusUploaderInfo";
+
 
     $.plateShortList = ["京", "津", "沪", "渝", "黑", "吉", "辽", "甘", "陕", "贵", "云", "川", "晋", "冀", "青",
         "鲁", "豫", "苏", "皖", "浙", "闽", "赣", "湘", "鄂", "粤", "琼", "蒙", "新", "藏", "宁", "桂", "港", "澳"];
+    $.plateletterList = ["A", "B", "C", "D", "E", "F", "G", "H", "J", "K", "L", "M", "N", "P", "Q",
+        "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
     $.color = [{color:"white", name: "白色"},
         {color:"red", name: "红色"},
         {color:"black", name: "黑色"},
@@ -143,7 +154,9 @@ $(function () {
         {color:"orange", name: "橙色"},
         {color:"other", name: "其他"}];
 
-    //防止键盘把当前输入框给挡住
+    /**
+     * 防止键盘把当前输入框给挡住
+     */
     $('input').on('click', function () {
         var target = this;
         setTimeout(function(){
@@ -160,7 +173,11 @@ $(function () {
         return null;
     };
 
-    //时间差格式化
+    /**
+     * 与当前时间差格式化
+     * @param times 目标时间戳字符串
+     * @returns {string}
+     */
     $.timeDifference = function (times) {
         var str = "0";
         if (times > 0) {
@@ -182,10 +199,14 @@ $(function () {
             }
         }
         return str;
-
     };
 
-    //时间格式化 new Date().Format("yyyy-MM-dd hh:mm:ss")
+    /**
+     * 时间格式化
+     * @param str 目标时间戳字符串
+     * @param format 转换格式（"yyyy-MM-dd hh:mm:ss"）
+     * @returns {*}
+     */
     $.format = function(str, format){
         var date = new Date(str*1000);
         var o = {
@@ -208,7 +229,11 @@ $(function () {
         return format;
     };
 
-    //替换电话号码或者身份证号码  $.phone("13453051970")
+    /**
+     * 替换电话号码或者身份证号码
+     * @param str 目标字符串
+     * @returns {string}
+     */
     $.number = function (str) {
         if (str != null && str != "") {
             var string = "";
@@ -227,7 +252,11 @@ $(function () {
         }
     };
 
-    //补全两位小数
+    /**
+     * 补全两位小数
+     * @param number 目标数字
+     * @returns {*}
+     */
     $.formatTwoDecimal = function (number) {
         if (isNaN(parseFloat(number))) {
             return false;
@@ -243,6 +272,27 @@ $(function () {
             s_x += '0';
         }
         return s_x;
+    };
+
+    /**
+     * 转货币单位
+     * @param number 目标数据
+     * @param places 小数位数
+     * @param symbol 钱币符号
+     * @param thousand 分割符号
+     * @param decimal 小数点符号
+     * @returns {string}
+     */
+    $.formatMoney = function (number, places, symbol, thousand, decimal) {
+        number = number || 0;
+        places = !isNaN(places = Math.abs(places)) ? places : 2;
+        symbol = symbol !== undefined ? symbol : "";
+        thousand = thousand || ",";
+        decimal = decimal || ".";
+        let negative = number < 0 ? "-" : "";
+        let  i = parseInt(number = Math.abs(+number || 0).toFixed(places), 10) + "";
+        let j = i.length > 3 ? i.length % 3 : 0;
+        return symbol + negative + (j ? i.substr(0, j) + thousand : "") + i.substr(j).replace(/(\d{3})(?=\d)/g, "$1" + thousand) + (places ? decimal + Math.abs(number - i).toFixed(places).slice(2) : "");
     };
 
     //司机身份解析 1 司机， 2 售票员
@@ -287,22 +337,13 @@ $(function () {
             var str = "";
             switch (type) {
                 case 1:
-                    str = "首单奖励";
+                    str = "支出";
                     break;
                 case 2:
-                    str = "共享收益";
+                    str = "收入";
                     break;
                 case 3:
-                    str = "承包商分红奖励";
-                    break;
-                case 4:
-                    str = "系统抽成";
-                    break;
-                case 5:
-                    str = "行程收益";
-                    break;
-                case 6:
-                    str = "提现";
+                    str = "退款";
                     break;
             }
             return str;
@@ -318,10 +359,10 @@ $(function () {
                 str = "审核中";
                 break;
             case 1:
-                str = "提现成功";
+                str = "成功";
                 break;
             case -1:
-                str = "提现失败";
+                str = "失败";
                 break;
         }
         return str;
@@ -337,26 +378,56 @@ $(function () {
             case "2":
                 str = "支付宝";
                 break;
-            case "3":
-                str = "农业银行";
-                break;
-            case "4":
-                str = "建设银行";
-                break;
-            case "5":
-                str = "平安银行";
-                break;
-            case "6":
+            case "1001":
                 str = "招商银行";
                 break;
-            case "7":
-                str = "中国银行";
-                break;
-            case "8":
+            case "1002":
                 str = "工商银行";
                 break;
-            case "9":
-                str = "中国邮政储蓄银行";
+            case "1003":
+                str = "建设银行";
+                break;
+            case "1004":
+                str = "浦发银行";
+                break;
+            case "1005":
+                str = "农业银行";
+                break;
+            case "1006":
+                str = "民生银行";
+                break;
+            case "1009":
+                str = "兴业银行";
+                break;
+            case "1010":
+                str = "平安银行";
+                break;
+            case "1020":
+                str = "交通银行";
+                break;
+            case "1021":
+                str = "中信银行";
+                break;
+            case "1022":
+                str = "光大银行";
+                break;
+            case "1025":
+                str = "华夏银行";
+                break;
+            case "1026":
+                str = "中国银行";
+                break;
+            case "1027":
+                str = "广发银行";
+                break;
+            case "1032":
+                str = "北京银行";
+                break;
+            case "1056":
+                str = "宁波银行";
+                break;
+            case "1066":
+                str = "邮储银行";
                 break;
         }
         return str;
@@ -536,6 +607,23 @@ $(function () {
                 break;
             case "phone":
                 str = "请填写联系电话";
+                break;
+            default: break;
+        }
+        return str;
+    };
+    /**
+     * 重复大巴车状态
+     * @param status
+     */
+    $.repeatType = function (status) {
+        let str = "";
+        switch (status) {
+            case 1:
+                str = "有效";
+                break;
+            case 2:
+                str = "重复";
                 break;
             default: break;
         }

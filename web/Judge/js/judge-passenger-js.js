@@ -16,8 +16,8 @@ function getRatingInfo() {
         type: 'POST',
         url: $.getRatingInfo,
         // data: {
-        //     user_id: "767ef565-80fa-4f73-b42e-51226dad7e42",
-        //     order_no: "1TRL6P7E",
+        //     user_id: "ff3110c0-8683-4a1c-a770-5dec8b675059",
+        //     order_no: "AK3TF05S",
         //     identity: "2"
         // },
         data: {
@@ -30,7 +30,8 @@ function getRatingInfo() {
             console.log(res);
             loadAlertHide();
             result = res;
-            if (res.status == 1) { //已评价
+            if (res && res.status == 1) { //已评价
+                $(".judge-main").removeClass("none");
                 let data = res.data;
                 $(".submit, input").addClass("none");
                 $(".status").text(getStatue(data.pay_status));
@@ -52,6 +53,7 @@ function getRatingInfo() {
                 document.getElementById('list-content').innerHTML = doT.template(template)(data.content);
 
             } else if(res.status == 2) { //未评价
+                $(".judge-main").removeClass("none");
                 let data = res.data;
                 $(".submit, input").removeClass("none");
                 $(".status").text(getStatue(data.pay_status));
@@ -151,8 +153,8 @@ function submitRating(user_id, order_no) {
     });
     content = content.substring(0, content.length-1);
     let param = {
-        // user_id: "767ef565-80fa-4f73-b42e-51226dad7e42",
-        // order_no: "1TRL6P7E",
+        // user_id: "ff3110c0-8683-4a1c-a770-5dec8b675059",
+        // order_no: "AK3TF05S",
         user_id: user_id,
         order_no: order_no,
         identity: "2",

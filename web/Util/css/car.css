@@ -161,7 +161,7 @@
     right: -65%;
     top: 0;
     border-left: 0.02rem solid #cccccc;
-    box-shadow: -0.02rem 0 0.02rem #cccccc;
+    box-shadow: 0 0 1rem #cccccc;
 }
 .second-layer-animation-in {
     -webkit-animation: second-slide-in 0.5s forwards;
@@ -204,7 +204,7 @@
 }
 .car-color-item,
 .car-series-item {
-    padding: 0.20rem 0;
+    padding: 0.30rem 0;
     margin-left: 0.40rem;
     font-size: 0.28rem;
     color: #333333;
@@ -224,7 +224,7 @@
     right: -35%;
     top: 0;
     border-left: 0.02rem solid #cccccc;
-    box-shadow: -0.02rem 0 0.02rem #cccccc;
+    box-shadow: 0 0 1rem #cccccc;
 }
 .third-layer-animation-in {
     -webkit-animation: third-slide-in 0.5s forwards;

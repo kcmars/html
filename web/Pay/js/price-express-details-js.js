@@ -26,7 +26,8 @@ function getPriceDetail() {
         success: function (res) {
             console.log(res);
             loadAlertHide();
-            if(res.status == 1){
+            if(res && res.status == 1){
+                $(".main").removeClass("none");
                 let data = res.data;
                 $("#price").text(data.price);
                 if(data.distance_info && parseFloat(data.distance_info.price) != 0.00){
@@ -80,6 +81,7 @@ function getPriceDetail() {
                 let template = document.getElementById('template-price-detail').innerHTML;
                 document.getElementById('price-detail').innerHTML = doT.template( template )( priceData );
             } else {
+                $(".main").removeClass("none");
                 toastAlertShow(res.msg);
             }
         },

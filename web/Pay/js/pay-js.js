@@ -10,7 +10,7 @@ function getPayInfo() {
     $.ajax({
         type: 'POST',
         url: $.getPayInfo,
-           // data: {user_id: "dde23f2b-ccda-4e87-a4d9-3a9dc246d14c", order_no: "SS44MC8K"},
+           // data: {user_id: "ff3110c0-8683-4a1c-a770-5dec8b675059", order_no: "AK3TF05S"},
         data: {
             user_id: param.user_id,
             order_no: param.order_no
@@ -31,6 +31,10 @@ function getPayInfo() {
                     }
                     $(".mp-alert-pay-btn").text("确认支付 " + data.pay_price + " 元");
                 }
+            } else if (result.status == 3) {
+                window.location.href = result;
+            } else {
+                toastAlertShow(result.msg);
             }
         },
         error: function (err) {
@@ -70,10 +74,10 @@ function pay(payType, order_no, user_id) {
         type: 'POST',
         url: $.unifiedOrder,
         data: {
-            user_id: user_id,
-            order_no: order_no,
-            // user_id: "474b4062-8a08-4c44-8113-188106c1c45b",
-            // order_no: "SS44MC8K",
+            // user_id: user_id,
+            // order_no: order_no,
+            user_id: "474b4062-8a08-4c44-8113-188106c1c45b",
+            order_no: "AK3TF05S",
             channel: payType
         },
         dataType: 'json',
@@ -84,7 +88,9 @@ function pay(payType, order_no, user_id) {
                 var res = result.data;
                 console.log(res);
                 window.location = res ;
-            }else{//统一下单失败
+            } else if (result.status == 5) {//已经支付过
+                window.location.href = result;
+            } else {//统一下单失败
                 toastAlertShow(result.msg);
             }
         },

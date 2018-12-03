@@ -8,16 +8,16 @@
                     <span class="header-msg">请选择您要注册的城市</span>
                 </div>
             </div>
-            <ul id="province-list" class="brand-list">
+            <ul id="province-list" class="province-list">
             </ul>
         </div>
     </div>
     <div id="secondLayer" class="second-layer">
-        <ul id="city-list" class="car-series-item-list">
+        <ul id="city-list" class="city-item-list">
         </ul>
     </div>
     <div id="thirdLayer" class="third-layer">
-        <ul id="ad-list" class="car-color-item-list">
+        <ul id="ad-list" class="ad-item-list">
         </ul>
     </div>
 </div>
@@ -35,7 +35,7 @@
     {{ if (it && it.length > 0){ }}
     {{ for (var i = 0; i < it.length; i++){ }}
     <li onclick="getAds(this, '{{=it[i].city}}',  '{{=it[i].code}}')">
-        <div class="car-series-item">
+        <div class="city-item">
             <span>
             {{=it[i].city}}
             </span>
@@ -48,7 +48,7 @@
     {{ if (it && it.length > 0){ }}
     {{ for (var i = 0; i < it.length; i++){ }}
     <li onclick="selectAds(this, '{{=it[i].district}}', '{{=it[i].district_code}}')">
-        <div class="car-color-item">
+        <div class="ad-item">
             <span>{{=it[i].district}}</span>
         </div>
     </li>

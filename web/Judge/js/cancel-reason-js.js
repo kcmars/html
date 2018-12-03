@@ -1,5 +1,5 @@
 /**
- * Created by Administrator on 2018/8/21.
+ * Created by zp on 2018/8/21.
  */
 $(function () {
     getRequest(getCancelReason);
@@ -27,7 +27,8 @@ function getCancelReason() {
             console.log(res);
             loadAlertHide();
             result = res;
-            if (res.status == 1) {
+            if (res && res.status == 1) {
+                $(".cancel-main").removeClass("none");
                 let resultReason = res.data;
                 let template = document.getElementById('template-cancel-reason-list').innerHTML;
                 document.getElementById('cancel-reason').innerHTML = doT.template(template)(resultReason);

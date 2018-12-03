@@ -74,7 +74,7 @@ function getParams() {
 //获取我的分享二维码
 function getShareQR() {
     let params = {
-        // user_id: "851c6aba-2a3a-465c-b873-446a58bf15e2"
+        // user_id: "67b3934b-dfbd-4439-b6bd-ab2c92649cba"
         user_id: param.user_id
     };
     loadAlertShow("获取中...");
@@ -120,9 +120,9 @@ function showShareQR() {
 //获取我的分享信息
 function getShareContent(index) {
     let params = {
-        city_code: param.city_code,
         // city_code: "028",
-        // user_id: "851c6aba-2a3a-465c-b873-446a58bf15e2",
+        // user_id: "67b3934b-dfbd-4439-b6bd-ab2c92649cba",
+        city_code: param.city_code,
         user_id: param.user_id,
         share_type: index
     };
@@ -170,6 +170,7 @@ function showShareDemo(index, data) {
             $("#share-demo-model").animate({top: "100%", opacity: 0}, 300);
             setTimeout(function () {
                 $("#share-demo-model").removeClass("share-demo-model").addClass("none");
+                $("#share-demo-model .content img").unbind("click");
             }, 300);
         });
         $("#share-demo-model .model").bind("click", function () {

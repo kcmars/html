@@ -1,16 +1,23 @@
 /**
- * Created by Administrator on 2018/7/13.
+ * Created by zp on 2018/7/13.
  */
 var img1 = "";
 var img2 = "";
 var img3 = "";
 var img4 = "";
 var index = -1;
+let img_id_card_front = "../img/id-card-front-demo.jpg";//身份证正面照
+let img_id_card_back = "../img/id-card-back-demo.jpg";//身份证反面照
+let img_driver_license = "../img/driver-license-front-demo.jpg";//驾驶证正本照
 var demoImg = [
-    {text: "身份证正面照", img: "../img/id-card-front-demo.jpg"},
-    {text: "身份证反面照", img: "../img/id-card-back-demo.jpg"},
-    {text: "驾驶证正本照", img: "../img/driver-license-front-demo.jpg"}
+    {text: "身份证正面照", img: img_id_card_front},
+    {text: "身份证反面照", img: img_id_card_back},
+    {text: "驾驶证正本照", img: img_driver_license}
 ];
+
+var flag = true; //阻止点击事件
+var busEmployeesInfo; //大巴经营者认证信息
+
 $(function () {
     var type = $("input[name='radio']:checked").val();
     if(type == "person"){
@@ -91,14 +98,12 @@ $(function () {
 
 });
 
-var flag = true; //阻止点击事件
-var busEmployeesInfo; //大巴经营者认证信息
-
 function getParams() {
     if(sessionStorage.getItem("busEmployeesInfo") != null){
         busEmployeesInfo = JSON.parse(sessionStorage.getItem("busEmployeesInfo"));
     }
     if(busEmployeesInfo) {
+        $(".authen-main").removeClass("none");
         showBusEmployeesInfo();
     } else {
         getBusEmployeesInfo();
@@ -109,20 +114,21 @@ function getParams() {
         submitBusEmployeesInfo();
     });
 }
-
-//获取雇员实名认证信息getEmployeesInfo
+/**
+ * 获取雇员实名认证信息getEmployeesInfo
+ */
 function getBusEmployeesInfo() {
     let params = {};
     let url = "";
     if (param.type == "selfInfo") {
-        // params.user_id = "7bd85ba4-9568-46ec-8e53-991eff616cff";
+        // params.user_id = "c5fa42ae-e6d8-4e10-a7b7-4df136d3c776";
         params.user_id = param.user_id;
         url = $.getEmployeesInfo;
     } else {
         if (param.employee_id == null) {
             return;
         }
-        // params.user_id = "7bd85ba4-9568-46ec-8e53-991eff616cffd";
+        // params.user_id = "c5fa42ae-e6d8-4e10-a7b7-4df136d3c776";
         // params.type = "1";
         // params.employee_id = "1";
         params.user_id = param.user_id;
@@ -138,7 +144,8 @@ function getBusEmployeesInfo() {
         success: function (res) {
             console.log(res);
             loadAlertHide();
-            if(res.status == 1){
+            if(res && res.status == 1){
+                $(".authen-main").removeClass("none");
                 busEmployeesInfo = res.data;
                 if(busEmployeesInfo){
                     sessionStorage.setItem("busEmployeesInfo", JSON.stringify(busEmployeesInfo));
@@ -158,9 +165,9 @@ function getBusEmployeesInfo() {
 
 //提交司机实名认证信息
 function submitBusEmployeesInfo() {
-    // user_id: "57ac9ac4-dfcb-4537-9122-f5a7e2b20813",
     let params = {};
     params.user_id = param.user_id;
+    // params.user_id = "c5fa42ae-e6d8-4e10-a7b7-4df136d3c776";
     if (param.employee_id != null) {
         params.employee_id = param.employee_id;
     }
@@ -211,7 +218,7 @@ function submitBusEmployeesInfo() {
         success: function (res) {
             console.log(res);
             loadAlertHide();
-            if(res.status == 1){
+            if(res && res.status == 1){
                 flag = false;
                 $("#submit").removeClass("submit-btn").addClass("none");
                 $("input").attr("readonly", true);
@@ -236,25 +243,28 @@ function submitBusEmployeesInfo() {
  */
 function showBusEmployeesInfo() {
     if(busEmployeesInfo){
+        let status = busEmployeesInfo.status;
         let realNameStatus = busEmployeesInfo.real_name_status;
         let driverStatus = busEmployeesInfo.driver_license_status;
         let type = param.type;
         if (type == "1") {
-            if(realNameStatus > 0 && driverStatus > 0) {
+            if(realNameStatus > 0 && driverStatus > 0 && status != 2) {
                 flag = false;
                 $('input:radio').attr('disabled', true);
                 $("#submit").removeClass("submit-btn").addClass("none");
             } else {
                 flag = true;
+                $('input:radio').attr('disabled', false);
                 $("#submit").removeClass("none").addClass("submit-btn");
             }
         } else {
-            if(realNameStatus > 0) {
+            if(realNameStatus > 0 && status != 2) {
                 flag = false;
                 $('input:radio').attr('disabled', true);
                 $("#submit").removeClass("submit-btn").addClass("none");
             } else {
                 flag = true;
+                $('input:radio').attr('disabled', false);
                 $("#submit").removeClass("none").addClass("submit-btn");
             }
         }
@@ -280,7 +290,25 @@ function showBusEmployeesInfo() {
             img2 = busEmployeesInfo.image_id_b;
             $("#realName ul li div").removeClass("none authen-status-over").addClass("authen-status-ing");
             $("#realName ul li div b").html("审核中");
-        } else if (realNameStatus == 2 || realNameStatus == 3) { //成功
+
+        } else if (realNameStatus == 2) { //待完善
+            $("#realName #name").val(busEmployeesInfo.name != null ? busEmployeesInfo.name : "");
+            $("#realName #id").val(busEmployeesInfo.ID != null ? busEmployeesInfo.ID : "");
+            $("#realName #phone").val(busEmployeesInfo.phone);
+            $("#realName input").attr("readonly", false);
+            $("#realName #phone").attr("readonly", true);
+            $("#realName #img1").attr("src", busEmployeesInfo.image_id_a != null && busEmployeesInfo.image_id_a != "" ? $.server2 + busEmployeesInfo.image_id_a : img_id_card_front);
+            $("#realName #img2").attr("src", busEmployeesInfo.image_id_b != null && busEmployeesInfo.image_id_b != "" ? $.server2 + busEmployeesInfo.image_id_b : img_id_card_back);
+            if (busEmployeesInfo.image_id_a != null && busEmployeesInfo.image_id_a != "") {
+                img1 = busEmployeesInfo.image_id_a;
+            }
+            if (busEmployeesInfo.image_id_b != null && busEmployeesInfo.image_id_b != "") {
+                img2 = busEmployeesInfo.image_id_b;
+            }
+            $("#realName ul li div").removeClass("none authen-status-ing").addClass("authen-status-over");
+            $("#realName ul li div b").html("请完善资料");
+
+        } else if ( realNameStatus == 3) { //成功
             $("#realName #name").val(busEmployeesInfo.name);
             $("#realName #id").val(busEmployeesInfo.ID);
             $("#realName #phone").val(busEmployeesInfo.phone);
@@ -291,10 +319,12 @@ function showBusEmployeesInfo() {
             img2 = busEmployeesInfo.image_id_b;
             $("#realName ul li div").removeClass("none authen-status-over").addClass("authen-status-ing");
             $("#realName ul li div b").html("审核通过");
+
         } else if(realNameStatus == 0 || realNameStatus == -1) { //未提交认证 数据无效
             $("#realName input").attr("readonly", false);
             $("#realName ul li div").addClass("none");
             $("#realName ul li div b").html("");
+
         } else if(realNameStatus == -2) { //失败
             $("#realName #name").val(busEmployeesInfo.name);
             $("#realName #id").val(busEmployeesInfo.ID);
@@ -318,7 +348,18 @@ function showBusEmployeesInfo() {
                 img3 = busEmployeesInfo.image_drivers;
                 $("#driver ul li div").removeClass("none authen-status-over").addClass("authen-status-ing");
                 $("#driver ul li div b").html("审核中");
-            } else if (driverStatus == 2 || driverStatus == 3) { //成功
+            } else if (driverStatus == 2) { //待完善
+                $("#driver input").attr("disabled", false);
+                $("#driver input").attr("readonly", false);
+                $("#driver #first-issue").val(busEmployeesInfo.first_issue != null ? busEmployeesInfo.first_issue : "");
+                $("#driver #img3").attr("src", busEmployeesInfo.image_drivers != null && busEmployeesInfo.image_drivers != "" ? $.server2 + busEmployeesInfo.image_drivers : img_driver_license);
+                if (busEmployeesInfo.image_drivers != null && busEmployeesInfo.image_drivers != "") {
+                    img3 = busEmployeesInfo.image_drivers;
+                }
+                $("#driver ul li div").removeClass("none authen-status-ing").addClass("authen-status-over");
+                $("#driver ul li div b").html("请完善资料");
+
+            } else if (driverStatus == 3) { //成功
                 $("#driver input").attr("disabled", true);
                 $("#driver input").attr("readonly", true);
                 $("#driver #first-issue").val(busEmployeesInfo.first_issue);
@@ -326,6 +367,7 @@ function showBusEmployeesInfo() {
                 img3 = busEmployeesInfo.image_drivers;
                 $("#driver ul li div").removeClass("none authen-status-over").addClass("authen-status-ing");
                 $("#driver ul li div b").html("审核通过");
+
             } else if(driverStatus == 0 || driverStatus == -1) { //未提交认证 数据无效
                 $("#driver input").attr("disabled", false);
                 $("#driver input").attr("readonly", false);
@@ -351,12 +393,12 @@ function showBusEmployeesInfo() {
 function showImg(index) {
     if(busEmployeesInfo){
         if(index < 2){
-            if (busEmployeesInfo.real_name_status > 0) {
+            if (busEmployeesInfo.real_name_status > 0 && busEmployeesInfo.real_name_status != 2) {
                 return;
             }
         }
         if(index == 2){
-            if (busEmployeesInfo.drivers_license_status > 0) {
+            if (busEmployeesInfo.drivers_license_status > 0 && busEmployeesInfo.drivers_license_status != 2) {
                 return;
             }
         }
@@ -418,7 +460,7 @@ function uploadPicture(index, base64, type, extra, last_file) {
     loadAlertShow("正在上传...");
     canvasDataURL(base64, function callback(data) {
         let params = {
-            // user_id: "57ac9ac4-dfcb-4537-9122-f5a7e2b20813",
+            // user_id: "c5fa42ae-e6d8-4e10-a7b7-4df136d3c776",
             user_id: param.user_id,
             base64: data,
             type: type,
@@ -433,7 +475,7 @@ function uploadPicture(index, base64, type, extra, last_file) {
             success: function (res) {
                 //console.log(res);
                 loadAlertHide();
-                if(res.status == 1){
+                if(res && res.status == 1){
                     let path = res.data;
                     switch (index) {
                         case 0:

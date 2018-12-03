@@ -6,6 +6,9 @@
     display: flex;
     flex-direction: column;
 }
+.none {
+    display: none;
+}
 .cancel-main .title {
     position: relative;
     width: 100%;

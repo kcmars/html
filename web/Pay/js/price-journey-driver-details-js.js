@@ -4,8 +4,8 @@
 let priceDataDriver = []; //价格详情
 $(function () {
     //获取价格详情信息
-    // getRequest(getPriceDetail);
-    getPriceDetail();
+    getRequest(getPriceDetail);
+    // getPriceDetail();
 });
 
 /**
@@ -17,15 +17,16 @@ function getPriceDetail() {
         type: 'POST',
         url: $.getDetailPayInfoOfDriver,
         data: {
-            // user_id: param.user_id,
-            // order_no: param.order_no
-            user_id: "b6795181-7632-4475-8be9-6edd26b626c1",
-            order_no: "9AO9HQE7"
+            user_id: param.user_id,
+            order_no: param.order_no
+            // user_id: "b6795181-7632-4475-8be9-6edd26b626c1",
+            // order_no: "9AO9HQE7"
         },
         success: function (res) {
             console.log(res);
             loadAlertHide();
-            if(res.status == 1){
+            if(res && res.status == 1){
+                $(".main").removeClass("none");
                 let data = res.data;
                 $("#price").text(data.pay_price);
                 if(data.start_info && data.start_info.price && parseFloat(data.start_info.price) != 0.00){
@@ -111,6 +112,7 @@ function getPriceDetail() {
                 let template = document.getElementById('template-price-detail').innerHTML;
                 document.getElementById('price-detail').innerHTML = doT.template( template )( priceDataDriver );
             } else {
+                $(".main").removeClass("none");
                 toastAlertShow(res.msg);
             }
         },

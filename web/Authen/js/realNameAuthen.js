@@ -1,5 +1,5 @@
 /**
- * Created by Administrator on 2018/7/13.
+ * Created by zp on 2018/7/13.
  */
 
 let passengerInfo; // 乘客认证信息
@@ -14,6 +14,7 @@ function getParams() {
         passengerInfo = JSON.parse(sessionStorage.getItem("passengerInfo"));
     }
     if(passengerInfo) {
+        $(".authen-main").removeClass("none");
         showPassengerRealNameInfo();
     } else {
         getPassengerRealNameInfo();
@@ -38,7 +39,8 @@ function getPassengerRealNameInfo() {
         success: function (res) {
             console.log(res);
             loadAlertHide();
-            if(res.status == 1){
+            if(res && res.status == 1){
+                $(".authen-main").removeClass("none");
                 passengerInfo = res.data;
                 sessionStorage.setItem("passengerInfo", JSON.stringify(passengerInfo));
                 showPassengerRealNameInfo();
@@ -101,7 +103,7 @@ function submitPassengerRealNameInfo() {
         success: function (res) {
             console.log(res);
             loadAlertHide();
-            if(res.status == 1){
+            if(res && res.status == 1){
                 $("input").attr("readonly",true);
                 $("#submit").removeClass("submit-btn").addClass("none");
                 toastAlertShow(res.msg, 2500);

@@ -2,8 +2,8 @@
  * Created by Administrator on 2018/9/10.
  */
 $(function () {
-   // getRequest(getParams);
-    getParams();
+   getRequest(getParams);
+    // getParams();
 });
 
 /**
@@ -11,10 +11,10 @@ $(function () {
  */
 function getParams() {
     let params = {
-        user_id: "38b8781d-5a56-47b8-98ca-a6fc9b71d8a8",
-        id: "2018091098501019"
-        // user_id: param.user_id,
-        // id: param.id
+        // user_id: "38b8781d-5a56-47b8-98ca-a6fc9b71d8a8",
+        // id: "2018091098501019"
+        user_id: param.user_id,
+        id: param.id
     };
     loadAlertShow("获取中...");
     $.ajax({

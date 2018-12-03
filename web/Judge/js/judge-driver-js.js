@@ -1,3 +1,6 @@
+/**
+ * Created by zp on 2018/8/20.
+ */
 $(function () {
     //获取评价信息
     getRequest(getRatingInfo);
@@ -11,26 +14,27 @@ let starIndex = 1; //星星选择个数
  * 获取评价信息
  */
 function getRatingInfo() {
+    let params = {
+        // user_id: "9d398738-2105-4410-8f08-17ba207bce67",
+        // order_no: "JJSHRLVV",
+        // identity: "1"
+        user_id: param.user_id,
+        order_no: param.order_no,
+        identity: "1"
+    };
+    console.log("params", params);
     loadAlertShow("加载中...");
     $.ajax({
         type: 'POST',
         url: $.getRatingInfo,
-        // data: {
-        //     user_id: "767ef565-80fa-4f73-b42e-51226dad7e42",
-        //     order_no: "1TRL6P7E",
-        //     identity: "1"
-        // },
-        data: {
-            user_id: param.user_id,
-            order_no: param.order_no,
-            identity: "1"
-        },
+        data: params,
         dataType: 'json',
         success: function (res) {
             console.log(res);
             loadAlertHide();
             result = res;
-            if (res.status == 1) { //已评价
+            if (res && res.status == 1) { //已评价
+                $("#judge-main").removeClass("none");
                 let data = res.data;
                 $(".submit, input").addClass("none");
                 $(".text").text("已评价司机");
@@ -46,14 +50,15 @@ function getRatingInfo() {
                 document.getElementById('list-content').innerHTML = doT.template(template)(data.content);
 
             } else if(res.status == 2) { //未评价
+                $("#judge-main").removeClass("none");
                 let data = res.data;
                 $(".submit, input").removeClass("none");
                 $(".text").text("请评价司机");
                 $(".judge-hint").text("指出不足");
                 let content = data.content;
-                if(content.length > 0){
+                if (content.length > 0) {
                     for (let i in content) {
-                        if(content[i].type == 1){
+                        if (content[i].type == 1) {
                             resultGood.push(content[i]);
                         } else {
                             resultBad.push(content[i]);
@@ -64,6 +69,8 @@ function getRatingInfo() {
                     let template = document.getElementById('template-judge-content-list').innerHTML;
                     document.getElementById('list-content').innerHTML = doT.template(template)(resultBad);
                 }
+            } else if (res.status == 3) { //没有获取到支付结果
+                window.location.href = "../../Util/html/payRequest.html";
             } else {
                 toastAlertShow(res.msg)
             }
@@ -127,8 +134,8 @@ function submitRating(user_id, order_no) {
     });
     content = content.substring(0, content.length-1);
     let param = {
-        // user_id: "767ef565-80fa-4f73-b42e-51226dad7e42",
-        // order_no: "1TRL6P7E",
+        // user_id: "9d398738-2105-4410-8f08-17ba207bce67",
+        // order_no: "JJSHRLVV",
         user_id: user_id,
         order_no: order_no,
         identity: "1",

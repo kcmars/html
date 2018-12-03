@@ -19,7 +19,7 @@
     <link href="../../js/date/css/mobiscroll.animation.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
-    <div class="authen-main">
+    <div class="authen-main none">
         <p>信息仅用于审核，绝对保密</p>
         <div class="line"></div>
         <div id="select-city" class="authen-title">
@@ -140,7 +140,7 @@
                 <ul>
                     <li onclick="showImg(5)">
                         <span>人车合照</span>
-                        <img id="img6" src="../img/work-license-add.jpg" alt=""/>
+                        <img id="img6" src="../img/person-car-add.jpg" alt=""/>
                         <div id="img6-status" class="authen-status none">
                             <span></span>
                             <b>审核中...</b>
@@ -155,7 +155,8 @@
     </div>
     <div id="plate-model" class="plate-model">
         <div class="model"></div>
-        <ul id="plate-short-list"></ul>
+        <ul class="plate-short-list" id="plate-short-list"></ul>
+        <ul class="plate-letter-list" id="plate-letter-list"></ul>
     </div>
     <div id="demo-model" class="none">
         <div class="model"></div>
@@ -183,7 +184,16 @@
     {{ if (it && it.length > 0){ }}
     {{ for (var i = 0; i < it.length; i++){ }}
     <li>
-        <span>{{=it[i]}}</span>
+        {{=it[i]}}
+    </li>
+    {{ } }}
+    {{ } }}
+</script>
+<script type="text/template" charset="utf-8" id='template-plate-letter-list'>
+    {{ if (it && it.length > 0){ }}
+    {{ for (var i = 0; i < it.length; i++){ }}
+    <li>
+        {{=it[i]}}
     </li>
     {{ } }}
     {{ } }}

@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="yes" name="apple-touch-fullscreen">
+    <meta content="telephone=no,email=no" name="format-detection">
+    <meta name="keywords"  content="爱运科技，爱运宝，公路运输宝，自动化调配平台，运输">
+    <meta name="description"  content="爱运科技致力于运输行业,公司基于移动互联网技术开发,以“爱运宝”及“公路运输宝”APP为主导,实现了公路运输智能服务,是中国第一个客运、货运自动化调配平台">
+    <title>爱运科技有限公司 | 推广承包商中心</title>
+    <link type="text/css" rel="stylesheet" href="../css/reset.css"/>
+    <link type="text/css" rel="stylesheet" href="../css/fonts.css"/>
+    <link type="text/css" rel="stylesheet" href="../css/index_20171019.css"/>
+    <link type="text/css" rel="stylesheet" href="../css/share.css?timer=" + new Date().getTime()/>
+    <script type="text/javascript">
+    </script>
+</head>
+<body>
+<div class="vip vipData" id="vipData">
+    <!--查看电话号码弹窗-->
+    <div class="puBox puBox1">
+        <div class="overLay"></div>
+        <div class="pu">
+            <div class="title">号码查询结果 <span class="close"></span></div>
+            <p class="info textCenter">该注册用户完整手机号为<br><span class="tel"></span></p>
+            <p class="small textCenter"><span>提示：您本月查看完整手机号的次数还剩</span><b></b></p>
+        </div>
+    </div>
+    <!--查看奖励详情弹窗-->
+    <div class="puBox puBox2">
+        <div class="overLay"></div>
+        <div class="pu">
+            <div class="title">奖励详情 <span class="close"></span></div>
+            <div class="infoContent">
+                <div class="infoContentItem clearfix">
+                    <span class="itemTitle">获奖用户：</span>
+                    <span class="itemContent tel"></span>
+                    <span class="userid" style="display: none" ></span>
+                    <span class="numDetail" onclick="lookUserPhone(1,2)"></span>
+                </div>
+                <div class="infoContentItem clearfix">
+                    <span class="itemTitle">奖励时间：</span>
+                    <span class="itemContent rewardTime"></span>
+                </div>
+                <div class="infoContentItem clearfix">
+                    <span class="itemTitle">奖励内容：</span>
+                    <span class="itemContent remark"></span>
+                </div>
+            </div>
+            <p class="small textCenter"><span>提示：您本月查看完整手机号的次数还剩</span><b></b></p>
+        </div>
+    </div>
+    <!--导航开始-->
+    <header id="header">
+        <div class="logo">
+            <div class="imgBox"><img src="../img/logo.png" alt="aiyun'logo"></div><div class="nameBox"><span class="name">爱运科技</span>
+        </div>
+        </div>
+        <div class="tab">
+            <a href="./index.html" class="navItem">关于爱运<span class="underLine"></span></a>
+            <a href="aiyunbao.html" class="navItem">爱运宝<span class="underLine"></span></a>
+            <a href="glysb.html" class="navItem">公路运输宝<span class="underLine"></span></a>
+            <a href="vip.html" class="active navItem">VIP中心<span class="underLine"></span></a>
+            <a href="commodity.html" class="navItem">奇珍“艺”宝<span class="underLine"></span></a>
+            <!--<a href="charity.html" class="active navItem">公益慈善<span class="underLine"></span></a>-->
+        </div>
+        <div class="navBarBox">
+            <div class="navBar">
+                用户入口
+                <!--<span></span>-->
+                <!--<span></span>-->
+                <!--<span></span>-->
+            </div>
+        </div>
+        <div class="tabHide">
+            <div class="tabHideInner">
+                <a href="./index.html" class="navItem">关于爱运<span class="underLine"></span></a>
+                <a href="aiyunbao.html" class="navItem">爱运宝<span class="underLine"></span></a>
+                <a href="glysb.html" class="navItem">公路运输宝<span class="underLine"></span></a>
+                <a href="vip.html" class=" active navItem">VIP中心<span class="underLine"></span></a>
+                <a href="commodity.html" class="navItem">奇珍“艺”宝<span class="underLine"></span></a>
+                <!--<a href="charity.html" class="active navItem">公益慈善<span class="underLine"></span></a>-->
+            </div>
+            <div class="navBarHide"></div>
+        </div>
+    </header>
+    <!--导航结束-->
+    <div class="slogon">
+        <div class="slogonBg">
+            <picture>
+                <source media="(max-width: 767px)" srcset="../img/banner04.jpg">
+                <source media="(min-width: 768px)" srcset="../img/banner4.jpg">
+                <img src="../img/banner04.jpg" alt="aiyunbao_section4bgMobile">
+            </picture>
+        </div>
+        <div class="wrapper">
+            <div class="wrapperTab clearfix">
+                <div class="tabItem selectBtn">
+                    <select id="select" onchange="cityRank()">
+
+                    </select>
+                </div>
+                <div class="tabItem searchBtn" id="searchBtn"><span>号码查询</span>
+                    <div class="searchInputBox">
+                        <input type="tel" class="tel" autofocus><span id="searchImg"></span>
+                    </div>
+                </div>
+                <div class="tabItem outBtn"><span>退出帐号</span></div>
+            </div>
+            <div class="wrapperContent">
+                <div class="navTab clearfix">
+                    <div class="left active w50 textCenter">
+                        <span>推广用户查询</span>
+                    </div>
+                    <div class="right w50 textCenter">
+                        <span>推广奖励查询</span>
+                    </div>
+                </div>
+                <div class="dataBoxInner">
+                    <!--推广用户查询-->
+                    <div class="userBox">
+                        <div class="title title1 clearfix">
+                            <div class="phone left"><span>手机号</span></div>
+                            <div class="date middle"><span>注册时间</span></div>
+                            <div class="phoneDetail right"><span>号码查看</span></div>
+                        </div>
+                        <div class="userListBox listBox" data-strict="true">
+                            <ul id="userList">
+                            </ul>
+                            <div class="moreBtnBox">
+                                <a href="javascript:;" class="moreBtn" onclick="loadMore()">+ 加载更多</a>
+                                <p class="msg"></p>
+                            </div>
+                        </div>
+                    </div>
+                    <!--推广奖励奖-->
+                    <div class="rewardBox">
+                        <div class="title title2 clearfix">
+                            <div class="range left"><span>投入总金额</span></div>
+                            <div class="phone middle"><span>使用金额</span></div>
+                            <div class="number right"><span>剩余金额</span></div>
+                        </div>
+                        <div id="totalMoney">
+                            <div class="left"><span></span></div>
+                            <div class="middle"><span></span></div>
+                            <div class="right"><span></span></div>
+                        </div>
+                        <div class="title title3 clearfix">
+                            <div class="range left"><span>手机号</span></div>
+                            <div class="phone middle"><span>奖励金额</span></div>
+                            <div class="number right"><span>奖励详情</span></div>
+                        </div>
+                        <div class="rewardListBox listBox" data-strict="true">
+                            <ul id="rewardList">
+                            </ul>
+                            <div class="moreBtnBox">
+                                <a href="javascript:;" class="moreBtn" onclick="loadMore()">+ 加载更多</a>
+                                <p class="msg"></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p>Copyright © 2015, Chendu Goodluck Technology Co., Ltd. All Rights Reserved.<br>成都爱运科技有限公司&nbsp;蜀ICP备&nbsp; 15001871号</p>
+    </footer>
+</div>
+<script id="list-tmpl1" type="text/template">
+    {{ if(it != null && it !=''){ }}
+    {{ for(var i=0;i<it.length;i++) { }}
+    {{ if(it[i].lookNum1>0){ }}
+    <li class="clearfix">
+        {{ }else{ }}
+    <li class="clearfix notSee">
+        {{ } }}
+        <div class="left"><span>{{=it[i].phone}}</span></div>
+        <div class="middle"><span>{{=it[i].register_time}}</span></div>
+        <div class="right" onclick="lookUserPhone({{=it[i].user_id}},1)"><span class="detailBtn">查看</span></div>
+    </li>
+    {{ } }}
+    {{ } }}
+</script>
+<script id="list-tmpl2" type="text/template">
+    {{ if(it != null && it !=''){ }}
+    {{ for(var i=0;i<it.length;i++) { }}
+    <li class="clearfix">
+        <div class="left"><span>{{=it[i].phone}}</span></div>
+        <div class="middle"><span>{{=it[i].award_money}}</span></div>
+        <div class="right" onclick="lookRawrdInfo({{=it[i].detail_id}},2)"><span class="detailBtn">查看</span></div>
+    </li>
+    {{ } }}
+    {{ } }}
+</script>
+<script src="https://cdn.bootcss.com/jquery/1.8.0/jquery.js"></script>
+<script src="../js/index_20171019.js"></script>
+<script src="../js/jquery-scrollLock.min.js"></script>
+<script src="../js/vip.js?t=20170928"></script>
+<script src="../js/doT.js"></script>
+<script src="../layer/layer.js"></script>
+</body>
+</html>
