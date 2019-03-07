@@ -15,5 +15,33 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+    <TextView
+        android:textSize="16sp"
+        android:text="完成"
+        android:id="@+id/tv_bg"
+        android:gravity="center"
+        android:background="@color/colorPrimary"
+        android:textColor="@color/colorBlack"
+        android:stateListAnimator="@drawable/btn_bg"
+        android:elevation="2dp"
+        android:focusable="true"
+        android:visibility="visible"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_web_view"
+        tools:ignore="HardcodedText,RtlHardcoded,UnusedAttribute" />
+    <Button
+        android:id="@+id/btn_web_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="WebView"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sample_text"
+        tools:ignore="HardcodedText" />
 
 </android.support.constraint.ConstraintLayout>

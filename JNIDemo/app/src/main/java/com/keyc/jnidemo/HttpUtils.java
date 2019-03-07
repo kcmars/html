@@ -1,5 +1,6 @@
 package com.keyc.jnidemo;
 
+import android.annotation.SuppressLint;
 import android.os.Handler;
 import android.os.Message;
 import android.util.Log;
@@ -19,9 +20,9 @@ import okhttp3.RequestBody;
 import okhttp3.Response;
 
 /**
- * Created by Administrator on 2019/2/20.
+ * Created by keyC on 2019/2/20.
+ * 网络请求工具类
  */
-
 public class HttpUtils {
 
     private OKHttpGetListener onOKHttpGetListener;
@@ -30,7 +31,7 @@ public class HttpUtils {
 
     /**
      * 上传参数
-     * @param params
+     * @param params 额外参数
      * @return
      */
     public RequestBody getRequestBody(HashMap<String, String> params) {
@@ -61,7 +62,11 @@ public class HttpUtils {
         return body;
     }
 
-    // /get
+    /**
+     * post请求
+     * @param url 请求地址
+     * @param params 请求参数
+     */
     public void post(final String url, final HashMap<String, String> params){
         OkHttpClient client = new OkHttpClient();
         //创建请求对象
@@ -72,7 +77,7 @@ public class HttpUtils {
 
         //开始请求
         call.enqueue(new Callback() {
-            //       失败，成功的方法都是在子线程里面，不能直接更新UI
+            // 失败，成功的方法都是在子线程里面，不能直接更新UI
             @Override
             public void onFailure(Call call, IOException e) {
                 Message message = myHandler.obtainMessage();
@@ -100,21 +105,31 @@ public class HttpUtils {
             }
         });
     }
-    //使用接口回到，将数据返回
+
+    /**
+     * 使用接口回到，将数据返回
+     */
     public interface OKHttpGetListener{
         void error(String error);
         void success(String json);
     }
-    //给外部调用的方法
+
+    /**
+     * 给外部调用的方法
+     * @param onOKHttpGetListener
+     */
     public void setOnOKHttpGetListener(OKHttpGetListener onOKHttpGetListener){
         this.onOKHttpGetListener = onOKHttpGetListener;
     }
-    //使用Handler，将数据在主线程返回
+
+    /**
+     * 使用Handler，将数据在主线程返回
+     */
+    @SuppressLint("HandlerLeak")
     class MyHandler extends Handler {
         @Override
         public void handleMessage(Message msg) {
             int w = msg.what;
-            Log.d(TAG, "handleMessage() returned: " +msg );
             if (w ==0){
                 String error = (String) msg.obj;
                 onOKHttpGetListener.error(error);

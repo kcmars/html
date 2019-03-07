@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.keyc.jnidemo.BaseActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <android.support.design.widget.AppBarLayout
+            android:theme="@style/AppTheme"
+            android:layout_width="match_parent"
+            android:layout_height="40dp">
+
+            <FrameLayout
+                android:id="@+id/fl_title_bar"
+                android:elevation="2dp"
+                android:background="@drawable/title_bar_bg"
+                android:paddingRight="10dp"
+                android:paddingLeft="10dp"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                tools:ignore="UnusedAttribute">
+
+                <TextView
+                    android:layout_gravity="center"
+                    android:textSize="16sp"
+                    android:text="标题"
+                    android:id="@+id/tv_title"
+                    android:gravity="center"
+                    android:textColor="@color/colorBlack"
+                    android:visibility="visible"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:ignore="HardcodedText,ObsoleteLayoutParam" />
+
+                <TextView
+                    android:layout_gravity="left"
+                    android:textSize="16sp"
+                    android:text="返回"
+                    android:id="@+id/tv_left"
+                    android:gravity="left|center"
+                    android:visibility="gone"
+                    android:textColor="@color/colorBlack"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:ignore="HardcodedText,RtlHardcoded" />
+
+                <ImageView
+                    android:src="@mipmap/icon_black_left"
+                    android:id="@+id/iv_left"
+                    android:layout_width="35dp"
+                    android:visibility="gone"
+                    android:layout_height="35dp"
+                    android:gravity="left|center"
+                    android:layout_gravity="left"
+                    tools:ignore="ContentDescription,RtlHardcoded" />
+
+                <TextView
+                    android:layout_gravity="right"
+                    android:textSize="16sp"
+                    android:text="完成"
+                    android:id="@+id/tv_right"
+                    android:gravity="right|center"
+                    android:textColor="@color/colorBlack"
+                    android:visibility="gone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:ignore="HardcodedText,RtlHardcoded" />
+
+                <ImageView
+                    android:src="@mipmap/icon_black_left"
+                    android:id="@+id/iv_right"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:visibility="gone"
+                    android:gravity="right|center"
+                    android:layout_gravity="right"
+                    tools:ignore="ContentDescription,RtlHardcoded" />
+            </FrameLayout>
+
+        </android.support.design.widget.AppBarLayout>
+
+        <FrameLayout
+            android:background="@color/colorBackground"
+            android:id="@+id/layout_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </FrameLayout>
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:clickable="true"
+        android:visibility="gone"
+        android:id="@+id/fl_loading"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:ignore="KeyboardInaccessibleWidget">
+
+        <ImageView
+            android:layout_gravity="center"
+            android:src="@mipmap/ic_launcher"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:ignore="ContentDescription" />
+
+    </FrameLayout>
+
+</FrameLayout>

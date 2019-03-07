@@ -1,34 +1,60 @@
 package com.keyc.jnidemo;
 
+import android.annotation.SuppressLint;
+import android.content.Intent;
+import android.os.Build;
+import android.os.Handler;
+import android.support.annotation.RequiresApi;
+import android.support.v4.view.GravityCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.webkit.WebView;
+import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.HashMap;
+import java.util.TimerTask;
 
 import static junit.framework.Assert.assertEquals;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends BaseActivity {
 
-    // Used to load the 'native-lib' library on application startup.
-    static {
-        System.loadLibrary("native-lib");
-    }
+    private static final String TAG = "MainActivity-TAG";
+    private long mBackPressedTime = -1;
 
-    private byte[] a;
-
+    @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
+    @SuppressLint("SetTextI18n")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        setTitle(R.string.app_name);
+        showLeft(R.mipmap.icon_black_left, true, "img");
+
+        TextView tv_bg = findViewById(R.id.tv_bg);
+        tv_bg.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
 
         // Example of a call to a native method
         TextView tv = (TextView) findViewById(R.id.sample_text);
+        Button mBtnWebView = (Button) findViewById(R.id.btn_web_view);
+        mBtnWebView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent();
+                intent.setClass(MainActivity.this, WebActivity.class);
+                startActivity(intent);
+            }
+        });
 //        tv.setText(stringFromJNI());
         tv.setText(JniUtils.getKey().length + "");
-        a = JniUtils.getKey();
         String ming = "{\"app_version\":\"11.21\",\"system_version\":\"12.100000\"}";
         try {
             String encrypmi = JniUtils.encrypt(ming, "12345678");
@@ -91,9 +117,44 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
+    public void onImgLeft() {
+        Log.i(TAG, "onImgLeft: ");
+//        super.onImgLeft();
+        call("13111869201");
+    }
+
+    @Override
+    public void onClick(View v) {
+        super.onClick(v);
+    }
+
+    /**
+     * 点击两次退出app
+     */
+    @Override
+    public void onBackPressed() {
+        if (mBackPressedTime == -1) {
+            mBackPressedTime = System.currentTimeMillis();
+            Toast.makeText(this, "再次点击退出", Toast.LENGTH_SHORT).show();
+            new Handler().postDelayed(new TimerTask() {
+                @Override
+                public void run() {
+                    mBackPressedTime = -1;
+                }
+            }, 2000);
+        } else {
+            super.onBackPressed();
+        }
+    }
+
     /**
      * A native method that is implemented by the 'native-lib' native library,
      * which is packaged with this application.
      */
     public native String stringFromJNI();
+
+    // Used to load the 'native-lib' library on application startup.
+    static {
+        System.loadLibrary("native-lib");
+    }
 }
