@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.keyc.mycustomview.activity.Main11Activity">
+
+    <FrameLayout
+        android:layout_weight="1"
+        android:id="@+id/fl_layout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"/>
+
+    <android.support.design.widget.TabLayout
+        android:background="@color/color_333333"
+        android:id="@+id/tab_layout"
+        app:tabIndicatorHeight="0dp"
+        android:layout_width="match_parent"
+        android:layout_height="60dp">
+
+    </android.support.design.widget.TabLayout>
+</LinearLayout>

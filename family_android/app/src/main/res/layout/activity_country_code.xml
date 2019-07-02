@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activity.CountryCodeActivity"
+    android:background="@color/white">
+
+    <FrameLayout
+        android:clickable="true"
+        android:focusable="true"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        tools:ignore="UselessParent">
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:gravity="center"
+            android:textSize="16sp"
+            android:text="选择国家\地区"
+            android:textColor="@color/colorText333333"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:ignore="HardcodedText" />
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_gravity="left|center_vertical"
+            android:src="@mipmap/icon_arrow_left_black"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:padding="12dp"
+            tools:ignore="ContentDescription,RtlHardcoded" />
+
+        <TextView
+            android:id="@+id/tv_save"
+            android:textColor="@color/colorBtn"
+            android:visibility="gone"
+            android:text=""
+            android:textSize="15sp"
+            android:gravity="center"
+            android:layout_gravity="right|center_vertical"
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            tools:ignore="HardcodedText,RtlHardcoded" />
+
+    </FrameLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical"
+        >
+
+        <LinearLayout
+            android:id="@+id/ll_top_search"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:gravity="center"
+            android:background="@color/color_0">
+
+            <EditText
+                android:id="@+id/ed_search"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@drawable/radius_bg"
+                android:drawableLeft="@mipmap/iv_search_normal"
+                android:drawablePadding="4dp"
+                android:paddingLeft="4dp"
+                android:hint="请输入关键字"
+                android:textSize="14dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                tools:ignore="HardcodedText,RtlHardcoded,RtlSymmetry,SpUsage" />
+
+        </LinearLayout>
+
+        <family.li.aiyun.view.CountryRecyclerView
+            android:id="@+id/country_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/ll_top_search"/>
+
+    </RelativeLayout>
+</LinearLayout>

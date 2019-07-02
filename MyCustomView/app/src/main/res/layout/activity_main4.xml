@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    tools:context="com.keyc.mycustomview.activity.Main4Activity">
+
+    <com.keyc.mycustomview.view.HVScrollView
+        android:background="@color/colorWhite"
+        android:id="@+id/h_v_scrollview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.keyc.mycustomview.view.FamilyTreeView
+            android:id="@+id/ftv_tree"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/colorWhite" />
+
+    </com.keyc.mycustomview.view.HVScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_enlarge"
+            android:layout_width="70dp"
+            android:layout_height="30dp"
+            android:layout_margin="10dp"
+            android:background="@drawable/shape_btn_red"
+            android:text="放大"
+            android:textColor="@android:color/white"
+            android:textSize="14sp" />
+
+        <Button
+            android:id="@+id/btn_shrink_down"
+            android:layout_width="70dp"
+            android:layout_height="30dp"
+            android:layout_margin="10dp"
+            android:background="@drawable/shape_btn_red"
+            android:text="缩小"
+            android:textColor="@android:color/white"
+            android:textSize="14sp" />
+
+    </LinearLayout>
+
+</RelativeLayout>

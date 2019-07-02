@@ -1,0 +1,114 @@
+{
+  "self": {
+    "id": 0,
+    "name": "张天一",
+    "call": "自己",
+    "tel": "13000000000",
+    "sex": "男",
+    "portrait": "",
+    "fatherId": 1,
+    "motherId": 2,
+    "spouseId": 3,
+    "mothersId": 4,
+    "fathersId": 5
+  },
+  "spouse": {
+    "id": 3,
+    "name": "唐媚",
+    "call": "妻子",
+    "tel": "13000000001",
+    "sex": "女",
+    "portrait": ""
+  },
+  "children": [{
+    "self": {
+      "id": 15,
+      "name": "张东",
+      "call": "大儿子",
+      "tel": "13000000013",
+      "sex": "男",
+      "portrait": ""
+    },
+    "spouse": {
+      "id": 25,
+      "name": "刘诗诗",
+      "call": "大儿媳",
+      "tel": "13000000041",
+      "sex": "女",
+      "portrait": ""
+    },
+    "children": [{
+      "self": {
+        "id": 28,
+        "name": "张东浩",
+        "call": "大孙子",
+        "tel": "130000000042",
+        "sex": "男",
+        "portrait": ""
+      },
+      "spouse": {
+        "id": 25,
+        "name": "刘诗诗",
+        "call": "大孙媳",
+        "tel": "13000000041",
+        "sex": "女",
+        "portrait": ""
+      },
+      "children": []
+    }, {
+      "self": {
+        "id": 29,
+        "name": "张东宇",
+        "call": "二孙子",
+        "tel": "13000000042",
+        "sex": "男",
+        "portrait": ""
+      },
+      "spouse": {
+        "id": 25,
+        "name": "刘诗诗",
+        "call": "二孙媳",
+        "tel": "13000000041",
+        "sex": "女",
+        "portrait": ""
+      },
+      "children": []
+    }, {
+      "self": {
+        "id": 30,
+        "name": "张于曼",
+        "call": "孙女",
+        "tel": "13000000043",
+        "sex": "女",
+        "portrait": ""
+      }
+    }]
+  }, {
+    "self": {
+      "id": 16,
+      "name": "张南",
+      "call": "二儿子",
+      "tel": "13000000014",
+      "sex": "男",
+      "portrait": ""
+    },
+    "spouse": {
+      "id": 25,
+      "name": "刘诗诗",
+      "call": "二儿媳",
+      "tel": "13000000041",
+      "sex": "女",
+      "portrait": ""
+    },
+    "children": [{
+      "self": {
+        "id": 28,
+        "name": "张东浩",
+        "call": "二儿孙子",
+        "tel": "130000000042",
+        "sex": "男",
+        "portrait": ""
+      }
+    }]
+  }]
+}

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/rl_container_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:divider="@null"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            />
+
+        <TextView
+            android:id="@+id/tv_letter_show"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_centerInParent="true"
+            android:background="@color/hint_color"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="40dp"
+            android:visibility="gone"
+            tools:ignore="SpUsage" />
+
+        <include layout="@layout/item_letter_layout"/>
+
+        <com.keyc.mycustomview.view.SideBarView
+            android:id="@+id/view_sidebar"
+            android:layout_width="30dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="20dp"
+            tools:ignore="RtlHardcoded">
+
+        </com.keyc.mycustomview.view.SideBarView>
+
+    </RelativeLayout>
+
+</RelativeLayout>

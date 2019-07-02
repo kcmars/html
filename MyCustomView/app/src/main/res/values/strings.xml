@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">MyCustomView</string>
+
+    <string name="tab_sub_node">SubNode</string>
+    <string name="tab_node">Node</string>
+    <string name="tab_front_view">FrontView</string>
+    <string name="tab_code_mode">CodeMode</string>
+
+    <string name="defualt_my_plan">My Plan</string>
+    <string name="same_name_file">Have the same name file!</string>
+    <string name="file_name_empty">The file name is empty!</string>
+    <string name="save_file">Save File</string>
+
+    <string name="title_add_sub_node">add SubNode</string>
+    <string name="input_a_new_node">input a new node</string>
+    <string name="enter">Enter</string>
+    <string name="delete">Delete</string>
+
+    <string name="cannot_add_node">You can not add a peer node to a root node!</string>
+    <string name="add_a_same_floor_node">Add a same floor node.</string>
+    <string name="null_node">null_node</string>
+    <string name="exit_edit">Quit</string>
+
+    <string name="add_a_sub_node">Add a sub node.</string>
+    <string name="edit_node">Edit Node</string>
+</resources>
+

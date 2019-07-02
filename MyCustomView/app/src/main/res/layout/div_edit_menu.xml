@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:div="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    div:cardBackgroundColor="@color/athens_gray"
+    div:cardCornerRadius="0dp"
+    div:cardElevation="1.5dp"
+    div:cardMaxElevation="2dp"
+    div:cardPreventCornerOverlap="false">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/action_bar_height"
+        android:background="@color/chelsea_cucumber"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="@dimen/padding_super_small">
+
+        <Button
+            android:id="@+id/btn_add_sub"
+            style="@style/TabTheme"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:drawableTop="@mipmap/iv_add_sub_node"
+            android:text="@string/tab_sub_node"/>
+
+        <Button
+            android:id="@+id/btn_add_node"
+            style="@style/TabTheme"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:drawableTop="@mipmap/iv_add_node"
+            android:text="@string/tab_node"/>
+
+        <Button
+            android:id="@+id/btn_focus_mid"
+            style="@style/TabTheme"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:drawableTop="@mipmap/iv_front_view"
+            android:text="@string/tab_front_view"/>
+
+        <Button
+            android:id="@+id/btn_code_mode"
+            style="@style/TabTheme"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:drawableTop="@mipmap/iv_code_mode"
+            android:text="@string/tab_code_mode"/>
+
+        <!--control+shift+right/left进行Text和Design的切换-->
+    </LinearLayout>
+
+</android.support.v7.widget.CardView>

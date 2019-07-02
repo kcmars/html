@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/colorBG"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <FrameLayout
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center_vertical"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+
+            <LinearLayout
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <Button
+                    android:enabled="false"
+                    android:gravity="center"
+                    android:text="近亲"
+                    android:textSize="14sp"
+                    android:textColor="@color/colorText333333"
+                    android:id="@+id/btn_near"
+                    android:layout_width="100dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/btn_left_bg"
+                    tools:ignore="ContentDescription,HardcodedText,RtlHardcoded" />
+
+                <Button
+                    android:enabled="true"
+                    android:gravity="center"
+                    android:text="族亲"
+                    android:textSize="14sp"
+                    android:textColor="@color/colorText333333"
+                    android:id="@+id/btn_kin"
+                    android:layout_width="100dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/btn_right_bg"
+                    tools:ignore="ContentDescription,HardcodedText,RtlHardcoded" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_search"
+                android:gravity="center_vertical"
+                android:layout_gravity="center_vertical|left"
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:src="@mipmap/icon_search_black"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp" />
+                <TextView
+                    android:text="搜索"
+                    android:textColor="@color/colorText333333"
+                    android:textSize="12sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:ignore="HardcodedText" />
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/iv_more"
+                android:visibility="gone"
+                android:gravity="center"
+                android:layout_gravity="center_vertical|right"
+                android:src="@mipmap/icon_more_black"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                tools:ignore="HardcodedText,RtlHardcoded,SpUsage" />
+        </FrameLayout>
+
+        <LinearLayout
+            android:background="@color/colorBG"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <WebView
+                android:id="@+id/web_view"
+                android:background="@color/colorBG"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            </WebView>
+        </LinearLayout>
+    </LinearLayout>
+</FrameLayout>

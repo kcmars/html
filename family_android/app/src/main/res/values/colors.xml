@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#333333</color>
+    <color name="colorPrimaryDark">#000000</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="white">#ffffff</color>
+    <color name="colorBG">#FCFBE7</color>
+    <color name="colorBtn">#EAC257</color>
+    <color name="colorBtn664237">#664237</color>
+    <color name="colorBtnD8D8D8">#D8D8D8</color>
+    <color name="colorText">#664237</color>
+    <color name="colorText333333">#333333</color>
+    <color name="colorText6ED300">#6ED300</color>
+    <color name="colorTextFCFBE7">#FCFBE7</color>
+    <color name="colorTextD9AD61">#D9AD61</color>
+    <color name="colorLine">#cccccc</color>
+    <color name="colorE1E1E1">#E1E1E1</color>
+    <color name="colorGray999999">#999999</color>
+    <color name="colorGray666666">#666666</color>
+    <color name="colorGrayC">#cccccc</color>
+    <color name="colorBlack2A2A2A">#2A2A2A</color>
+
+    <color name="colorFFFFFFFF">#00FFFFFF</color>
+    <color name="color04FFFFFF">#33000000</color>
+
+    <color name="color_0">#5b52b5</color>
+    <color name="color_1">#52cc97</color>
+    <color name="color_2">#7361ed</color>
+    <color name="color_3">#ff6b6b</color>
+    <color name="color_4">#D91402</color>
+    <color name="color_5">#5389f7</color>
+    <color name="color_6">#ffab58</color>
+    <color name="color_7">#ff9758</color>
+
+    <color name="hint_color">#666666</color>
+    <color name="background">#f1f1f1</color>
+    <color name="black">#000000</color>
+
+</resources>

@@ -1,0 +1,1236 @@
+[{
+  "code": "AND",
+  "number": "020",
+  "english": "Andorra",
+  "chinese": "安道尔"
+}, {
+  "code": "ARE",
+  "number": "784",
+  "english": "United Arab Emirates",
+  "chinese": "阿联酋"
+}, {
+  "code": "AFG",
+  "number": "004",
+  "english": "Afghanistan",
+  "chinese": "阿富汗"
+}, {
+  "code": "ATG",
+  "number": "028",
+  "english": "Antigua & Barbuda",
+  "chinese": "安提瓜和巴布达"
+}, {
+  "code": "AIA",
+  "number": "660",
+  "english": "Anguilla",
+  "chinese": "安圭拉"
+}, {
+  "code": "ALB",
+  "number": "008",
+  "english": "Albania",
+  "chinese": "阿尔巴尼亚"
+}, {
+  "code": "ARM",
+  "number": "051",
+  "english": "Armenia",
+  "chinese": "亚美尼亚"
+}, {
+  "code": "AGO",
+  "number": "024",
+  "english": "Angola",
+  "chinese": "安哥拉"
+}, {
+  "code": "ATA",
+  "number": "010",
+  "english": "Antarctica",
+  "chinese": "南极洲"
+}, {
+  "code": "ARG",
+  "number": "032",
+  "english": "Argentina",
+  "chinese": "阿根廷"
+}, {
+  "code": "ASM",
+  "number": "016",
+  "english": "American Samoa",
+  "chinese": "美属萨摩亚"
+}, {
+  "code": "AUT",
+  "number": "040",
+  "english": "Austria",
+  "chinese": "奥地利"
+}, {
+  "code": "AUS",
+  "number": "036",
+  "english": "Australia",
+  "chinese": "澳大利亚"
+}, {
+  "code": "ABW",
+  "number": "533",
+  "english": "Aruba",
+  "chinese": "阿鲁巴"
+}, {
+  "code": "ALA",
+  "number": "248",
+  "english": "?aland Island",
+  "chinese": "奥兰群岛"
+}, {
+  "code": "AZE",
+  "number": "031",
+  "english": "Azerbaijan",
+  "chinese": "阿塞拜疆"
+}, {
+  "code": "BIH",
+  "number": "070",
+  "english": "Bosnia & Herzegovina",
+  "chinese": "波黑"
+}, {
+  "code": "BRB",
+  "number": "052",
+  "english": "Barbados",
+  "chinese": "巴巴多斯"
+}, {
+  "code": "BGD",
+  "number": "050",
+  "english": "Bangladesh",
+  "chinese": "孟加拉"
+}, {
+  "code": "BEL",
+  "number": "056",
+  "english": "Belgium",
+  "chinese": "比利时"
+}, {
+  "code": "BFA",
+  "number": "854",
+  "english": "Burkina",
+  "chinese": "布基纳法索"
+}, {
+  "code": "BGR",
+  "number": "100",
+  "english": "Bulgaria",
+  "chinese": "保加利亚"
+}, {
+  "code": "BHR",
+  "number": "048",
+  "english": "Bahrain",
+  "chinese": "巴林"
+}, {
+  "code": "BDI",
+  "number": "108",
+  "english": "Burundi",
+  "chinese": "布隆迪"
+}, {
+  "code": "BEN",
+  "number": "204",
+  "english": "Benin",
+  "chinese": "贝宁"
+}, {
+  "code": "BLM",
+  "number": "652",
+  "english": "Saint Barthélemy",
+  "chinese": "圣巴泰勒米岛"
+}, {
+  "code": "BMU",
+  "number": "060",
+  "english": "Bermuda",
+  "chinese": "百慕大"
+}, {
+  "code": "BRN",
+  "number": "096",
+  "english": "Brunei",
+  "chinese": "文莱"
+}, {
+  "code": "BOL",
+  "number": "068",
+  "english": "Bolivia",
+  "chinese": "玻利维亚"
+}, {
+  "code": "BES",
+  "number": "535",
+  "english": "Caribbean Netherlands",
+  "chinese": "荷兰加勒比区"
+}, {
+  "code": "BRA",
+  "number": "076",
+  "english": "Brazil",
+  "chinese": "巴西"
+}, {
+  "code": "BHS",
+  "number": "044",
+  "english": "The Bahamas",
+  "chinese": "巴哈马"
+}, {
+  "code": "BTN",
+  "number": "064",
+  "english": "Bhutan",
+  "chinese": "不丹"
+}, {
+  "code": "BVT",
+  "number": "074",
+  "english": "Bouvet Island",
+  "chinese": "布韦岛"
+}, {
+  "code": "BWA",
+  "number": "072",
+  "english": "Botswana",
+  "chinese": "博茨瓦纳"
+}, {
+  "code": "BLR",
+  "number": "112",
+  "english": "Belarus",
+  "chinese": "白俄罗斯"
+}, {
+  "code": "BLZ",
+  "number": "084",
+  "english": "Belize",
+  "chinese": "伯利兹"
+}, {
+  "code": "CAN",
+  "number": "124",
+  "english": "Canada",
+  "chinese": "加拿大"
+}, {
+  "code": "CCK",
+  "number": "166",
+  "english": "Cocos (Keeling) Islands",
+  "chinese": "科科斯群岛"
+}, {
+  "code": "CAF",
+  "number": "140",
+  "english": "Central African Republic",
+  "chinese": "中非"
+}, {
+  "code": "CHE",
+  "number": "756",
+  "english": "Switzerland",
+  "chinese": "瑞士"
+}, {
+  "code": "CHL",
+  "number": "152",
+  "english": "Chile",
+  "chinese": "智利"
+}, {
+  "code": "CMR",
+  "number": "120",
+  "english": "Cameroon",
+  "chinese": "喀麦隆"
+}, {
+  "code": "COL",
+  "number": "170",
+  "english": "Colombia",
+  "chinese": "哥伦比亚"
+}, {
+  "code": "CRI",
+  "number": "188",
+  "english": "Costa Rica",
+  "chinese": "哥斯达黎加"
+}, {
+  "code": "CUB",
+  "number": "192",
+  "english": "Cuba",
+  "chinese": "古巴"
+}, {
+  "code": "CPV",
+  "number": "132",
+  "english": "Cape Verde",
+  "chinese": "佛得角"
+}, {
+  "code": "CXR",
+  "number": "162",
+  "english": "Christmas Island",
+  "chinese": "圣诞岛"
+}, {
+  "code": "CYP",
+  "number": "196",
+  "english": "Cyprus",
+  "chinese": "塞浦路斯"
+}, {
+  "code": "CZE",
+  "number": "203",
+  "english": "Czech Republic",
+  "chinese": "捷克"
+}, {
+  "code": "DEU",
+  "number": "276",
+  "english": "Germany",
+  "chinese": "德国"
+}, {
+  "code": "DJI",
+  "number": "262",
+  "english": "Djibouti",
+  "chinese": "吉布提"
+}, {
+  "code": "DNK",
+  "number": "208",
+  "english": "Denmark",
+  "chinese": "丹麦"
+}, {
+  "code": "DMA",
+  "number": "212",
+  "english": "Dominica",
+  "chinese": "多米尼克"
+}, {
+  "code": "DOM",
+  "number": "214",
+  "english": "Dominican Republic",
+  "chinese": "多米尼加"
+}, {
+  "code": "DZA",
+  "number": "012",
+  "english": "Algeria",
+  "chinese": "阿尔及利亚"
+}, {
+  "code": "ECU",
+  "number": "218",
+  "english": "Ecuador",
+  "chinese": "厄瓜多尔"
+}, {
+  "code": "EST",
+  "number": "233",
+  "english": "Estonia",
+  "chinese": "爱沙尼亚"
+}, {
+  "code": "EGY",
+  "number": "818",
+  "english": "Egypt",
+  "chinese": "埃及"
+}, {
+  "code": "ESH",
+  "number": "732",
+  "english": "Western Sahara",
+  "chinese": "西撒哈拉"
+}, {
+  "code": "ERI",
+  "number": "232",
+  "english": "Eritrea",
+  "chinese": "厄立特里亚"
+}, {
+  "code": "ESP",
+  "number": "724",
+  "english": "Spain",
+  "chinese": "西班牙"
+}, {
+  "code": "FIN",
+  "number": "246",
+  "english": "Finland",
+  "chinese": "芬兰"
+}, {
+  "code": "FJI",
+  "number": "242",
+  "english": "Fiji",
+  "chinese": "斐济群岛"
+}, {
+  "code": "FLK",
+  "number": "238",
+  "english": "Falkland Islands",
+  "chinese": "马尔维纳斯群岛（ 福克兰）"
+}, {
+  "code": "FSM",
+  "number": "583",
+  "english": "Federated States of Micronesia",
+  "chinese": "密克罗尼西亚联邦"
+}, {
+  "code": "FRO",
+  "number": "234",
+  "english": "Faroe Islands",
+  "chinese": "法罗群岛"
+}, {
+  "code": "FRA",
+  "number": "250",
+  "english": "France",
+  "chinese": "法国"
+}, {
+  "code": "GAB",
+  "number": "266",
+  "english": "Gabon",
+  "chinese": "加蓬"
+}, {
+  "code": "GRD",
+  "number": "308",
+  "english": "Grenada",
+  "chinese": "格林纳达"
+}, {
+  "code": "GEO",
+  "number": "268",
+  "english": "Georgia",
+  "chinese": "格鲁吉亚"
+}, {
+  "code": "GUF",
+  "number": "254",
+  "english": "French Guiana",
+  "chinese": "法属圭亚那"
+}, {
+  "code": "GHA",
+  "number": "288",
+  "english": "Ghana",
+  "chinese": "加纳"
+}, {
+  "code": "GIB",
+  "number": "292",
+  "english": "Gibraltar",
+  "chinese": "直布罗陀"
+}, {
+  "code": "GRL",
+  "number": "304",
+  "english": "Greenland",
+  "chinese": "格陵兰"
+}, {
+  "code": "GIN",
+  "number": "324",
+  "english": "Guinea",
+  "chinese": "几内亚"
+}, {
+  "code": "GLP",
+  "number": "312",
+  "english": "Guadeloupe",
+  "chinese": "瓜德罗普"
+}, {
+  "code": "GNQ",
+  "number": "226",
+  "english": "Equatorial Guinea",
+  "chinese": "赤道几内亚"
+}, {
+  "code": "GRC",
+  "number": "300",
+  "english": "Greece",
+  "chinese": "希腊"
+}, {
+  "code": "SGS",
+  "number": "239",
+  "english": "South Georgia and the South Sandwich Islands",
+  "chinese": "南乔治亚岛和南桑威奇群岛"
+}, {
+  "code": "GTM",
+  "number": "320",
+  "english": "Guatemala",
+  "chinese": "危地马拉"
+}, {
+  "code": "GUM",
+  "number": "316",
+  "english": "Guam",
+  "chinese": "关岛"
+}, {
+  "code": "GNB",
+  "number": "624",
+  "english": "Guinea-Bissau",
+  "chinese": "几内亚比绍"
+}, {
+  "code": "GUY",
+  "number": "328",
+  "english": "Guyana",
+  "chinese": "圭亚那"
+}, {
+  "code": "HKG",
+  "number": "344",
+  "english": "Hong Kong",
+  "chinese": "香港"
+}, {
+  "code": "HMD",
+  "number": "334",
+  "english": "Heard Island and McDonald Islands",
+  "chinese": "赫德岛和麦克唐纳群岛"
+}, {
+  "code": "HND",
+  "number": "340",
+  "english": "Honduras",
+  "chinese": "洪都拉斯"
+}, {
+  "code": "HRV",
+  "number": "191",
+  "english": "Croatia",
+  "chinese": "克罗地亚"
+}, {
+  "code": "HTI",
+  "number": "332",
+  "english": "Haiti",
+  "chinese": "海地"
+}, {
+  "code": "HUN",
+  "number": "348",
+  "english": "Hungary",
+  "chinese": "匈牙利"
+}, {
+  "code": "IDN",
+  "number": "360",
+  "english": "Indonesia",
+  "chinese": "印尼"
+}, {
+  "code": "IRL",
+  "number": "372",
+  "english": "Ireland",
+  "chinese": "爱尔兰"
+}, {
+  "code": "ISR",
+  "number": "376",
+  "english": "Israel",
+  "chinese": "以色列"
+}, {
+  "code": "IMN",
+  "number": "833",
+  "english": "Isle of Man",
+  "chinese": "马恩岛"
+}, {
+  "code": "IND",
+  "number": "356",
+  "english": "India",
+  "chinese": "印度"
+}, {
+  "code": "IOT",
+  "number": "086",
+  "english": "British Indian Ocean Territory",
+  "chinese": "英属印度洋领地"
+}, {
+  "code": "IRQ",
+  "number": "368",
+  "english": "Iraq",
+  "chinese": "伊拉克"
+}, {
+  "code": "IRN",
+  "number": "364",
+  "english": "Iran",
+  "chinese": "伊朗"
+}, {
+  "code": "ISL",
+  "number": "352",
+  "english": "Iceland",
+  "chinese": "冰岛"
+}, {
+  "code": "ITA",
+  "number": "380",
+  "english": "Italy",
+  "chinese": "意大利"
+}, {
+  "code": "JEY",
+  "number": "832",
+  "english": "Jersey",
+  "chinese": "泽西岛"
+}, {
+  "code": "JAM",
+  "number": "388",
+  "english": "Jamaica",
+  "chinese": "牙买加"
+}, {
+  "code": "JOR",
+  "number": "400",
+  "english": "Jordan",
+  "chinese": "约旦"
+}, {
+  "code": "JPN",
+  "number": "392",
+  "english": "Japan",
+  "chinese": "日本"
+}, {
+  "code": "KHM",
+  "number": "116",
+  "english": "Cambodia",
+  "chinese": "柬埔寨"
+}, {
+  "code": "KIR",
+  "number": "296",
+  "english": "Kiribati",
+  "chinese": "基里巴斯"
+}, {
+  "code": "COM",
+  "number": "174",
+  "english": "The Comoros",
+  "chinese": "科摩罗"
+}, {
+  "code": "KWT",
+  "number": "414",
+  "english": "Kuwait",
+  "chinese": "科威特"
+}, {
+  "code": "CYM",
+  "number": "136",
+  "english": "Cayman Islands",
+  "chinese": "开曼群岛"
+}, {
+  "code": "LBN",
+  "number": "422",
+  "english": "Lebanon",
+  "chinese": "黎巴嫩"
+}, {
+  "code": "LIE",
+  "number": "438",
+  "english": "Liechtenstein",
+  "chinese": "列支敦士登"
+}, {
+  "code": "LKA",
+  "number": "144",
+  "english": "Sri Lanka",
+  "chinese": "斯里兰卡"
+}, {
+  "code": "LBR",
+  "number": "430",
+  "english": "Liberia",
+  "chinese": "利比里亚"
+}, {
+  "code": "LSO",
+  "number": "426",
+  "english": "Lesotho",
+  "chinese": "莱索托"
+}, {
+  "code": "LTU",
+  "number": "440",
+  "english": "Lithuania",
+  "chinese": "立陶宛"
+}, {
+  "code": "LUX",
+  "number": "442",
+  "english": "Luxembourg",
+  "chinese": "卢森堡"
+}, {
+  "code": "LVA",
+  "number": "428",
+  "english": "Latvia",
+  "chinese": "拉脱维亚"
+}, {
+  "code": "LBY",
+  "number": "434",
+  "english": "Libya",
+  "chinese": "利比亚"
+}, {
+  "code": "MAR",
+  "number": "504",
+  "english": "Morocco",
+  "chinese": "摩洛哥"
+}, {
+  "code": "MCO",
+  "number": "492",
+  "english": "Monaco",
+  "chinese": "摩纳哥"
+}, {
+  "code": "MDA",
+  "number": "498",
+  "english": "Moldova",
+  "chinese": "摩尔多瓦"
+}, {
+  "code": "MNE",
+  "number": "499",
+  "english": "Montenegro",
+  "chinese": "黑山"
+}, {
+  "code": "MAF",
+  "number": "663",
+  "english": "Saint Martin (France)",
+  "chinese": "法属圣马丁"
+}, {
+  "code": "MDG",
+  "number": "450",
+  "english": "Madagascar",
+  "chinese": "马达加斯加"
+}, {
+  "code": "MHL",
+  "number": "584",
+  "english": "Marshall islands",
+  "chinese": "马绍尔群岛"
+}, {
+  "code": "MKD",
+  "number": "807",
+  "english": "Republic of Macedonia (FYROM)",
+  "chinese": "马其顿"
+}, {
+  "code": "MLI",
+  "number": "466",
+  "english": "Mali",
+  "chinese": "马里"
+}, {
+  "code": "MMR",
+  "number": "104",
+  "english": "Myanmar (Burma)",
+  "chinese": "缅甸"
+}, {
+  "code": "MAC",
+  "number": "446",
+  "english": "Macao",
+  "chinese": "澳门"
+}, {
+  "code": "MTQ",
+  "number": "474",
+  "english": "Martinique",
+  "chinese": "马提尼克"
+}, {
+  "code": "MRT",
+  "number": "478",
+  "english": "Mauritania",
+  "chinese": "毛里塔尼亚"
+}, {
+  "code": "MSR",
+  "number": "500",
+  "english": "Montserrat",
+  "chinese": "蒙塞拉特岛"
+}, {
+  "code": "MLT",
+  "number": "470",
+  "english": "Malta",
+  "chinese": "马耳他"
+}, {
+  "code": "MDV",
+  "number": "462",
+  "english": "Maldives",
+  "chinese": "马尔代夫"
+}, {
+  "code": "MWI",
+  "number": "454",
+  "english": "Malawi",
+  "chinese": "马拉维"
+}, {
+  "code": "MEX",
+  "number": "484",
+  "english": "Mexico",
+  "chinese": "墨西哥"
+}, {
+  "code": "MYS",
+  "number": "458",
+  "english": "Malaysia",
+  "chinese": "马来西亚"
+}, {
+  "code": "NAM",
+  "number": "516",
+  "english": "Namibia",
+  "chinese": "纳米比亚"
+}, {
+  "code": "NER",
+  "number": "562",
+  "english": "Niger",
+  "chinese": "尼日尔"
+}, {
+  "code": "NFK",
+  "number": "574",
+  "english": "Norfolk Island",
+  "chinese": "诺福克岛"
+}, {
+  "code": "NGA",
+  "number": "566",
+  "english": "Nigeria",
+  "chinese": "尼日利亚"
+}, {
+  "code": "NIC",
+  "number": "558",
+  "english": "Nicaragua",
+  "chinese": "尼加拉瓜"
+}, {
+  "code": "NLD",
+  "number": "528",
+  "english": "Netherlands",
+  "chinese": "荷兰"
+}, {
+  "code": "NOR",
+  "number": "578",
+  "english": "Norway",
+  "chinese": "挪威"
+}, {
+  "code": "NPL",
+  "number": "524",
+  "english": "Nepal",
+  "chinese": "尼泊尔"
+}, {
+  "code": "NRU",
+  "number": "520",
+  "english": "Nauru",
+  "chinese": "瑙鲁"
+}, {
+  "code": "OMN",
+  "number": "512",
+  "english": "Oman",
+  "chinese": "阿曼"
+}, {
+  "code": "PAN",
+  "number": "591",
+  "english": "Panama",
+  "chinese": "巴拿马"
+}, {
+  "code": "PER",
+  "number": "604",
+  "english": "Peru",
+  "chinese": "秘鲁"
+}, {
+  "code": "PYF",
+  "number": "258",
+  "english": "French polynesia",
+  "chinese": "法属波利尼西亚"
+}, {
+  "code": "PNG",
+  "number": "598",
+  "english": "Papua New Guinea",
+  "chinese": "巴布亚新几内亚"
+}, {
+  "code": "PHL",
+  "number": "608",
+  "english": "The Philippines",
+  "chinese": "菲律宾"
+}, {
+  "code": "PAK",
+  "number": "586",
+  "english": "Pakistan",
+  "chinese": "巴基斯坦"
+}, {
+  "code": "POL",
+  "number": "616",
+  "english": "Poland",
+  "chinese": "波兰"
+}, {
+  "code": "PCN",
+  "number": "612",
+  "english": "Pitcairn Islands",
+  "chinese": "皮特凯恩群岛"
+}, {
+  "code": "PRI",
+  "number": "630",
+  "english": "Puerto Rico",
+  "chinese": "波多黎各"
+}, {
+  "code": "PSE",
+  "number": "275",
+  "english": "Palestinian territories",
+  "chinese": "巴勒斯坦"
+}, {
+  "code": "PLW",
+  "number": "585",
+  "english": "Palau",
+  "chinese": "帕劳"
+}, {
+  "code": "PRY",
+  "number": "600",
+  "english": "Paraguay",
+  "chinese": "巴拉圭"
+}, {
+  "code": "QAT",
+  "number": "634",
+  "english": "Qatar",
+  "chinese": "卡塔尔"
+}, {
+  "code": "REU",
+  "number": "638",
+  "english": "Réunion",
+  "chinese": "留尼汪"
+}, {
+  "code": "ROU",
+  "number": "642",
+  "english": "Romania",
+  "chinese": "罗马尼亚"
+}, {
+  "code": "SRB",
+  "number": "688",
+  "english": "Serbia",
+  "chinese": "塞尔维亚"
+}, {
+  "code": "RUS",
+  "number": "643",
+  "english": "Russian Federation",
+  "chinese": "俄罗斯"
+}, {
+  "code": "RWA",
+  "number": "646",
+  "english": "Rwanda",
+  "chinese": "卢旺达"
+}, {
+  "code": "SLB",
+  "number": "090",
+  "english": "Solomon Islands",
+  "chinese": "所罗门群岛"
+}, {
+  "code": "SYC",
+  "number": "690",
+  "english": "Seychelles",
+  "chinese": "塞舌尔"
+}, {
+  "code": "SDN",
+  "number": "729",
+  "english": "Sudan",
+  "chinese": "苏丹"
+}, {
+  "code": "SWE",
+  "number": "752",
+  "english": "Sweden",
+  "chinese": "瑞典"
+}, {
+  "code": "SGP",
+  "number": "702",
+  "english": "Singapore",
+  "chinese": "新加坡"
+}, {
+  "code": "SVN",
+  "number": "705",
+  "english": "Slovenia",
+  "chinese": "斯洛文尼亚"
+}, {
+  "code": "SJM",
+  "number": "744",
+  "english": "Template:Country data SJM Svalbard",
+  "chinese": "斯瓦尔巴群岛和 扬马延岛"
+}, {
+  "code": "SVK",
+  "number": "703",
+  "english": "Slovakia",
+  "chinese": "斯洛伐克"
+}, {
+  "code": "SLE",
+  "number": "694",
+  "english": "Sierra Leone",
+  "chinese": "塞拉利昂"
+}, {
+  "code": "SMR",
+  "number": "674",
+  "english": "San Marino",
+  "chinese": "圣马力诺"
+}, {
+  "code": "SEN",
+  "number": "686",
+  "english": "Senegal",
+  "chinese": "塞内加尔"
+}, {
+  "code": "SOM",
+  "number": "706",
+  "english": "Somalia",
+  "chinese": "索马里"
+}, {
+  "code": "SUR",
+  "number": "740",
+  "english": "Suriname",
+  "chinese": "苏里南"
+}, {
+  "code": "SSD",
+  "number": "728",
+  "english": "South Sudan",
+  "chinese": "南苏丹"
+}, {
+  "code": "STP",
+  "number": "678",
+  "english": "Sao Tome & Principe",
+  "chinese": "圣多美和普林西比"
+}, {
+  "code": "SLV",
+  "number": "222",
+  "english": "El Salvador",
+  "chinese": "萨尔瓦多"
+}, {
+  "code": "SYR",
+  "number": "760",
+  "english": "Syria",
+  "chinese": "叙利亚"
+}, {
+  "code": "SWZ",
+  "number": "748",
+  "english": "Swaziland",
+  "chinese": "斯威士兰"
+}, {
+  "code": "TCA",
+  "number": "796",
+  "english": "Turks & Caicos Islands",
+  "chinese": "特克斯和凯科斯群岛"
+}, {
+  "code": "TCD",
+  "number": "148",
+  "english": "Chad",
+  "chinese": "乍得"
+}, {
+  "code": "TGO",
+  "number": "768",
+  "english": "Togo",
+  "chinese": "多哥"
+}, {
+  "code": "THA",
+  "number": "764",
+  "english": "Thailand",
+  "chinese": "泰国"
+}, {
+  "code": "TKL",
+  "number": "772",
+  "english": "Tokelau",
+  "chinese": "托克劳"
+}, {
+  "code": "TLS",
+  "number": "626",
+  "english": "Timor-Leste (East Timor)",
+  "chinese": "东帝汶"
+}, {
+  "code": "TUN",
+  "number": "788",
+  "english": "Tunisia",
+  "chinese": "突尼斯"
+}, {
+  "code": "TON",
+  "number": "776",
+  "english": "Tonga",
+  "chinese": "汤加"
+}, {
+  "code": "TUR",
+  "number": "792",
+  "english": "Turkey",
+  "chinese": "土耳其"
+}, {
+  "code": "TUV",
+  "number": "798",
+  "english": "Tuvalu",
+  "chinese": "图瓦卢"
+}, {
+  "code": "TZA",
+  "number": "834",
+  "english": "Tanzania",
+  "chinese": "坦桑尼亚"
+}, {
+  "code": "UKR",
+  "number": "804",
+  "english": "Ukraine",
+  "chinese": "乌克兰"
+}, {
+  "code": "UGA",
+  "number": "800",
+  "english": "Uganda",
+  "chinese": "乌干达"
+}, {
+  "code": "USA",
+  "number": "840",
+  "english": "United States of America (USA)",
+  "chinese": "美国"
+}, {
+  "code": "URY",
+  "number": "858",
+  "english": "Uruguay",
+  "chinese": "乌拉圭"
+}, {
+  "code": "VAT",
+  "number": "336",
+  "english": "Vatican City (The Holy See)",
+  "chinese": "梵蒂冈"
+}, {
+  "code": "VEN",
+  "number": "862",
+  "english": "Venezuela",
+  "chinese": "委内瑞拉"
+}, {
+  "code": "VGB",
+  "number": "092",
+  "english": "British Virgin Islands",
+  "chinese": "英属维尔京群岛"
+}, {
+  "code": "VIR",
+  "number": "850",
+  "english": "United States Virgin Islands",
+  "chinese": "美属维尔京群岛"
+}, {
+  "code": "VNM",
+  "number": "704",
+  "english": "Vietnam",
+  "chinese": "越南"
+}, {
+  "code": "WLF",
+  "number": "876",
+  "english": "Wallis and Futuna",
+  "chinese": "瓦利斯和富图纳"
+}, {
+  "code": "WSM",
+  "number": "882",
+  "english": "Samoa",
+  "chinese": "萨摩亚"
+}, {
+  "code": "YEM",
+  "number": "887",
+  "english": "Yemen",
+  "chinese": "也门"
+}, {
+  "code": "MYT",
+  "number": "175",
+  "english": "Mayotte",
+  "chinese": "马约特"
+}, {
+  "code": "ZAF",
+  "number": "710",
+  "english": "South Africa",
+  "chinese": "南非"
+}, {
+  "code": "ZMB",
+  "number": "894",
+  "english": "Zambia",
+  "chinese": "赞比亚"
+}, {
+  "code": "ZWE",
+  "number": "716",
+  "english": "Zimbabwe",
+  "chinese": "津巴布韦"
+}, {
+  "code": "CHN",
+  "number": "156",
+  "english": "China",
+  "chinese": "中国 内地"
+}, {
+  "code": "COG",
+  "number": "178",
+  "english": "Republic of the Congo",
+  "chinese": "刚果（布）"
+}, {
+  "code": "COD",
+  "number": "180",
+  "english": "Democratic Republic of the Congo",
+  "chinese": "刚果（金）"
+}, {
+  "code": "MOZ",
+  "number": "508",
+  "english": "Mozambique",
+  "chinese": "莫桑比克"
+}, {
+  "code": "GGY",
+  "number": "831",
+  "english": "Guernsey",
+  "chinese": "根西岛"
+}, {
+  "code": "GMB",
+  "number": "270",
+  "english": "Gambia",
+  "chinese": "冈比亚"
+}, {
+  "code": "MNP",
+  "number": "580",
+  "english": "Northern Mariana Islands",
+  "chinese": "北马里亚纳群岛"
+}, {
+  "code": "ETH",
+  "number": "231",
+  "english": "Ethiopia",
+  "chinese": "埃塞俄比亚"
+}, {
+  "code": "NCL",
+  "number": "540",
+  "english": "New Caledonia",
+  "chinese": "新喀里多尼亚"
+}, {
+  "code": "VUT",
+  "number": "548",
+  "english": "Vanuatu",
+  "chinese": "瓦努阿图"
+}, {
+  "code": "ATF",
+  "number": "260",
+  "english": "French Southern Territories",
+  "chinese": "法属南部领地"
+}, {
+  "code": "NIU",
+  "number": "570",
+  "english": "Niue",
+  "chinese": "纽埃"
+}, {
+  "code": "UMI",
+  "number": "581",
+  "english": "United States Minor Outlying Islands",
+  "chinese": "美国本土外小岛屿"
+}, {
+  "code": "COK",
+  "number": "184",
+  "english": "Cook Islands",
+  "chinese": "库克群岛"
+}, {
+  "code": "GBR",
+  "number": "826",
+  "english": "Great Britain (United Kingdom; England)",
+  "chinese": "英国"
+}, {
+  "code": "TTO",
+  "number": "780",
+  "english": "Trinidad & Tobago",
+  "chinese": "特立尼达和多巴哥"
+}, {
+  "code": "VCT",
+  "number": "670",
+  "english": "St. Vincent & the Grenadines",
+  "chinese": "圣文森特和格林纳丁斯"
+}, {
+  "code": "TWN",
+  "number": "158",
+  "english": "Taiwan",
+  "chinese": "中华民国（台湾）"
+}, {
+  "code": "NZL",
+  "number": "554",
+  "english": "New Zealand",
+  "chinese": "新西兰"
+}, {
+  "code": "SAU",
+  "number": "682",
+  "english": "Saudi Arabia",
+  "chinese": "沙特阿拉伯"
+}, {
+  "code": "LAO",
+  "number": "418",
+  "english": "Laos",
+  "chinese": "老挝"
+}, {
+  "code": "PRK",
+  "number": "408",
+  "english": "North Korea",
+  "chinese": "朝鲜 北朝鲜"
+}, {
+  "code": "KOR",
+  "number": "410",
+  "english": "South Korea",
+  "chinese": "韩国 南朝鲜"
+}, {
+  "code": "PRT",
+  "number": "620",
+  "english": "Portugal",
+  "chinese": "葡萄牙"
+}, {
+  "code": "KGZ",
+  "number": "417",
+  "english": "Kyrgyzstan",
+  "chinese": "吉尔吉斯斯坦"
+}, {
+  "code": "KAZ",
+  "number": "398",
+  "english": "Kazakhstan",
+  "chinese": "哈萨克斯坦"
+}, {
+  "code": "TJK",
+  "number": "762",
+  "english": "Tajikistan",
+  "chinese": "塔吉克斯坦"
+}, {
+  "code": "TKM",
+  "number": "795",
+  "english": "Turkmenistan",
+  "chinese": "土库曼斯坦"
+}, {
+  "code": "UZB",
+  "number": "860",
+  "english": "Uzbekistan",
+  "chinese": "乌兹别克斯坦"
+}, {
+  "code": "KNA",
+  "number": "659",
+  "english": "St. Kitts & Nevis",
+  "chinese": "圣基茨和尼维斯"
+}, {
+  "code": "SPM",
+  "number": "666",
+  "english": "Saint-Pierre and Miquelon",
+  "chinese": "圣皮埃尔和密克隆"
+}, {
+  "code": "SHN",
+  "number": "654",
+  "english": "St. Helena & Dependencies",
+  "chinese": "圣赫勒拿"
+}, {
+  "code": "LCA",
+  "number": "662",
+  "english": "St. Lucia",
+  "chinese": "圣卢西亚"
+}, {
+  "code": "MUS",
+  "number": "480",
+  "english": "Mauritius",
+  "chinese": "毛里求斯"
+}, {
+  "code": "CIV",
+  "number": "384",
+  "english": "C?te d'Ivoire",
+  "chinese": "科特迪瓦"
+}, {
+  "code": "KEN",
+  "number": "404",
+  "english": "Kenya",
+  "chinese": "肯尼亚"
+}, {
+  "code": "MNG",
+  "number": "496",
+  "english": "Mongolia",
+  "chinese": "蒙古国 蒙古"
+}]

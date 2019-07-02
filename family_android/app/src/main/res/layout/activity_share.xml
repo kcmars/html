@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".wxapi.WXEntryActivity">
+
+    <FrameLayout
+        android:clickable="true"
+        android:focusable="true"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        tools:ignore="UselessParent">
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:gravity="center"
+            android:textSize="16sp"
+            android:text="推荐分享"
+            android:textColor="@color/colorText333333"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:ignore="HardcodedText" />
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_gravity="left|center_vertical"
+            android:src="@mipmap/icon_arrow_left_black"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:padding="12dp"
+            tools:ignore="ContentDescription,RtlHardcoded" />
+
+        <TextView
+            android:id="@+id/tv_save"
+            android:textColor="@color/colorBtn"
+            android:visibility="gone"
+            android:text=""
+            android:textSize="15sp"
+            android:gravity="center"
+            android:layout_gravity="right|center_vertical"
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            tools:ignore="HardcodedText,RtlHardcoded" />
+
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:gravity="center_horizontal"
+        android:background="@color/colorBG"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/tv_text"
+            android:textColor="@color/colorText333333"
+            android:text="天下李氏一家亲"
+            android:textSize="20sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            tools:ignore="HardcodedText" />
+        
+        <FrameLayout
+            android:background="@mipmap/icon_share_bg"
+            android:layout_width="260dp"
+            android:layout_height="260dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            tools:ignore="UselessLeaf">
+
+            <ImageView
+                android:id="@+id/iv_qr_code"
+                android:layout_gravity="center"
+                android:src="@mipmap/logo"
+                android:layout_width="160dp"
+                android:layout_height="160dp"
+                tools:ignore="ContentDescription" />
+        </FrameLayout>
+
+        <TextView
+            android:textSize="16sp"
+            android:textColor="@color/colorText333333"
+            android:text="扫描二维码即可下载注册 "
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:ignore="HardcodedText" />
+        <TextView
+            android:textSize="16sp"
+            android:textColor="@color/colorText333333"
+            android:text="或通过以下方式推荐分享给李氏族亲 "
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:ignore="HardcodedText" />
+
+        <LinearLayout
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:orientation="horizontal"
+            android:layout_width="280dp"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_weight="1"
+                android:id="@+id/iv_qq"
+                android:src="@mipmap/icon_qq"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                tools:ignore="ContentDescription" />
+
+            <ImageView
+                android:layout_weight="1"
+                android:id="@+id/iv_wx"
+                android:src="@mipmap/icon_wx"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                tools:ignore="ContentDescription" />
+
+            <ImageView
+                android:layout_weight="1"
+                android:visibility="visible"
+                android:id="@+id/iv_sms"
+                android:src="@mipmap/icon_pyq"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                tools:ignore="ContentDescription" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

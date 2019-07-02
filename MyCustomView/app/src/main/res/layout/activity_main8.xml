@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context="com.keyc.mycustomview.activity.Main8Activity">
+
+    <LinearLayout
+        android:id="@+id/ll_top_search"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:gravity="center"
+        android:background="@color/color_0">
+
+        <EditText
+            android:id="@+id/ed_search"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/radius_bg"
+            android:drawableLeft="@mipmap/iv_search_normal"
+            android:drawablePadding="4dp"
+            android:paddingLeft="4dp"
+            android:hint="请输入关键字"
+            android:textSize="14dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            tools:ignore="HardcodedText,RtlHardcoded,RtlSymmetry,SpUsage" />
+
+    </LinearLayout>
+
+    <com.keyc.mycustomview.view.ContactRecyclerView
+        android:id="@+id/contact_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/ll_top_search"/>
+
+</RelativeLayout>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="padding" format="dimension"/>
+    <attr name="text" format="string"/>
+    <attr name="textSize" format="dimension"/>
+    <attr name="textColor" format="reference"/>
+    <attr name="backgroundColor" format="reference"/>
+    <attr name="lineColor" format="reference"/>
+    <attr name="radius" format="dimension"/>
+
+    <declare-styleable name="CustomView">
+        <attr name="padding"/>
+        <attr name="text"/>
+        <attr name="textSize"/>
+        <attr name="textColor"/>
+        <attr name="backgroundColor"/>
+        <attr name="lineColor"/>
+        <attr name="radius"/>
+    </declare-styleable>
+
+    <declare-styleable name="FixedGridLayout">
+        <attr name="cellWidth" format="dimension" />
+        <attr name="cellHeight" format="dimension" />
+    </declare-styleable>
+</resources>

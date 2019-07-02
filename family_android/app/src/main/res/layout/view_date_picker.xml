@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@drawable/shape_for_bottom_line_no_padding"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/txt_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:text="取消"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:id="@+id/txt_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp"
+            android:text="选择日期"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:id="@+id/txt_confirm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:text="确定"
+            android:textColor="@android:color/holo_orange_dark"
+            tools:ignore="HardcodedText" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/time_picker"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:layout_margin="16dp">
+
+        <cn.carbswang.android.numberpickerview.library.NumberPickerView
+            android:id="@+id/picker_year"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:contentDescription="picker_year"
+            app:npv_DividerColor="@color/black"
+            app:npv_ItemPaddingHorizontal="5dp"
+            app:npv_ItemPaddingVertical="5dp"
+            app:npv_ShowCount="4"
+            app:npv_TextColorNormal="@color/colorGray666666"
+            app:npv_TextColorSelected="@color/black"
+            app:npv_TextSizeNormal="14sp"
+            app:npv_TextSizeSelected="16sp"
+            app:npv_WrapSelectorWheel="false"
+            app:npv_DividerHeight="1px"
+            app:npv_RespondChangeInMainThread="false"
+            tools:ignore="HardcodedText" />
+
+        <cn.carbswang.android.numberpickerview.library.NumberPickerView
+            android:id="@+id/picker_month"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:contentDescription="picker_month"
+            app:npv_DividerColor="@color/black"
+            app:npv_ItemPaddingHorizontal="5dp"
+            app:npv_ItemPaddingVertical="5dp"
+            app:npv_ShowCount="4"
+            app:npv_TextColorNormal="@color/colorGray666666"
+            app:npv_TextColorSelected="@color/black"
+            app:npv_TextSizeNormal="14sp"
+            app:npv_TextSizeSelected="16sp"
+            app:npv_WrapSelectorWheel="false"
+            app:npv_DividerHeight="1px"
+            app:npv_RespondChangeInMainThread="false"
+            tools:ignore="HardcodedText" />
+
+        <cn.carbswang.android.numberpickerview.library.NumberPickerView
+            android:id="@+id/picker_date"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:contentDescription="picker_date"
+            app:npv_DividerColor="@color/black"
+            app:npv_ItemPaddingHorizontal="5dp"
+            app:npv_ItemPaddingVertical="5dp"
+            app:npv_ShowCount="4"
+            app:npv_TextColorNormal="@color/colorGray666666"
+            app:npv_TextColorSelected="@color/black"
+            app:npv_TextSizeNormal="14sp"
+            app:npv_TextSizeSelected="16sp"
+            app:npv_WrapSelectorWheel="false"
+            app:npv_DividerHeight="1px"
+            app:npv_RespondChangeInMainThread="false"
+            tools:ignore="HardcodedText" />
+
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,497 @@
+{
+  "data": [{
+    "id": 1,
+    "name": "老大",
+    "spouse": "老大妻",
+    "pid": null,
+    "child": [
+      {
+        "id": 2,
+        "name": "老二",
+        "spouse": "老二妻",
+        "pid": 1,
+        "child": [
+          {
+            "id": 5,
+            "name": "老三",
+            "spouse": "老三妻",
+            "pid": 2,
+            "child": [
+              {
+                "id": 10,
+                "name": "老四",
+                "spouse": "",
+                "pid": 5,
+                "child": [
+                ]
+              },
+              {
+                "id": 11,
+                "name": "老五",
+                "spouse": "老五妻",
+                "pid": 5,
+                "child": [
+                ]
+              },
+              {
+                "id": 12,
+                "name": "老六",
+                "spouse": "",
+                "pid": 5,
+                "child": [
+                ]
+              },
+              {
+                "id": 12,
+                "name": "老六",
+                "spouse": "",
+                "pid": 5,
+                "child": [
+                ]
+              },
+              {
+                "id": 12,
+                "name": "老六",
+                "spouse": "",
+                "pid": 5,
+                "child": [
+                  {
+                    "id": 12,
+                    "name": "老六",
+                    "spouse": "",
+                    "pid": 5,
+                    "child": [
+                    ]
+                  },
+                  {
+                    "id": 12,
+                    "name": "老六",
+                    "spouse": "",
+                    "pid": 5,
+                    "child": [
+                    ]
+                  },
+                  {
+                    "id": 12,
+                    "name": "老六",
+                    "spouse": "",
+                    "pid": 5,
+                    "child": [
+                      {
+                        "id": 12,
+                        "name": "老六",
+                        "spouse": "",
+                        "pid": 5,
+                        "child": [
+                        ]
+                      },
+                      {
+                        "id": 12,
+                        "name": "老六",
+                        "spouse": "",
+                        "pid": 5,
+                        "child": [
+                          {
+                            "id": 12,
+                            "name": "老六",
+                            "spouse": "",
+                            "pid": 5,
+                            "child": [
+                            ]
+                          },
+                          {
+                            "id": 12,
+                            "name": "老六",
+                            "spouse": "",
+                            "pid": 5,
+                            "child": [
+                              {
+                                "id": 12,
+                                "name": "老六",
+                                "spouse": "",
+                                "pid": 5,
+                                "child": [
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": 12,
+                "name": "老六",
+                "spouse": "",
+                "pid": 5,
+                "child": [
+                  {
+                    "id": 12,
+                    "name": "老六",
+                    "spouse": "",
+                    "pid": 5,
+                    "child": [
+                    ]
+                  },
+                  {
+                    "id": 12,
+                    "name": "老六",
+                    "spouse": "",
+                    "pid": 5,
+                    "child": [
+                      {
+                        "id": 12,
+                        "name": "老六",
+                        "spouse": "",
+                        "pid": 5,
+                        "child": [
+                          {
+                            "id": 12,
+                            "name": "老六",
+                            "spouse": "",
+                            "pid": 5,
+                            "child": [
+                            ]
+                          },
+                          {
+                            "id": 12,
+                            "name": "老六",
+                            "spouse": "",
+                            "pid": 5,
+                            "child": [
+                            ]
+                          },{
+                            "id": 12,
+                            "name": "老六",
+                            "spouse": "",
+                            "pid": 5,
+                            "child": [
+                              {
+                                "id": 12,
+                                "name": "老六",
+                                "spouse": "",
+                                "pid": 5,
+                                "child": [
+                                ]
+                              },
+                              {
+                                "id": 12,
+                                "name": "老六",
+                                "spouse": "",
+                                "pid": 5,
+                                "child": [
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "id": 12,
+                        "name": "老六",
+                        "spouse": "",
+                        "pid": 5,
+                        "child": [
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "id": 12,
+                    "name": "老六",
+                    "spouse": "",
+                    "pid": 5,
+                    "child": [
+                      {
+                        "id": 12,
+                        "name": "老六",
+                        "spouse": "",
+                        "pid": 5,
+                        "child": [
+                        ]
+                      },
+                      {
+                        "id": 12,
+                        "name": "老六",
+                        "spouse": "",
+                        "pid": 5,
+                        "child": [
+                        ]
+                      },{
+                        "id": 12,
+                        "name": "老六",
+                        "spouse": "",
+                        "pid": 5,
+                        "child": [
+                          {
+                            "id": 12,
+                            "name": "老六",
+                            "spouse": "",
+                            "pid": 5,
+                            "child": [
+                            ]
+                          },
+                          {
+                            "id": 12,
+                            "name": "老六",
+                            "spouse": "",
+                            "pid": 5,
+                            "child": [
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": 6,
+            "name": "老七",
+            "spouse": "",
+            "pid": 2,
+            "child": [
+              {
+                "id": 13,
+                "name": "老八",
+                "spouse": "老八妻",
+                "pid": 6,
+                "child": [
+                  {
+                    "id": 12,
+                    "name": "老六",
+                    "spouse": "",
+                    "pid": 5,
+                    "child": [
+                      {
+                        "id": 12,
+                        "name": "老六",
+                        "spouse": "",
+                        "pid": 5,
+                        "child": [
+                          {
+                            "id": 12,
+                            "name": "老六",
+                            "spouse": "",
+                            "pid": 5,
+                            "child": [
+                              {
+                                "id": 12,
+                                "name": "老六",
+                                "spouse": "",
+                                "pid": 5,
+                                "child": [
+                                  {
+                                    "id": 12,
+                                    "name": "老六",
+                                    "spouse": "",
+                                    "pid": 5,
+                                    "child": [
+                                    ]
+                                  }
+                                ]
+                              },
+                              {
+                                "id": 12,
+                                "name": "老六",
+                                "spouse": "",
+                                "pid": 5,
+                                "child": [
+                                ]
+                              },
+                              {
+                                "id": 12,
+                                "name": "老六",
+                                "spouse": "",
+                                "pid": 5,
+                                "child": [
+                                  {
+                                    "id": 12,
+                                    "name": "老六",
+                                    "spouse": "",
+                                    "pid": 5,
+                                    "child": [
+                                    ]
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "id": 12,
+                    "name": "老六",
+                    "spouse": "",
+                    "pid": 5,
+                    "child": [
+                    ]
+                  },
+                  {
+                    "id": 12,
+                    "name": "老六",
+                    "spouse": "",
+                    "pid": 5,
+                    "child": [
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": 12,
+                "name": "老六",
+                "spouse": "",
+                "pid": 5,
+                "child": [
+                  {
+                    "id": 12,
+                    "name": "老六",
+                    "spouse": "",
+                    "pid": 5,
+                    "child": [
+                      {
+                        "id": 12,
+                        "name": "老六",
+                        "spouse": "",
+                        "pid": 5,
+                        "child": [
+                          {
+                            "id": 12,
+                            "name": "老六",
+                            "spouse": "",
+                            "pid": 5,
+                            "child": [
+                            ]
+                          },
+                          {
+                            "id": 12,
+                            "name": "老六",
+                            "spouse": "",
+                            "pid": 5,
+                            "child": [
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": 12,
+                "name": "老六",
+                "spouse": "",
+                "pid": 5,
+                "child": [
+                  {
+                    "id": 12,
+                    "name": "老六",
+                    "spouse": "",
+                    "pid": 5,
+                    "child": [
+                    ]
+                  },
+                  {
+                    "id": 12,
+                    "name": "老六",
+                    "spouse": "",
+                    "pid": 5,
+                    "child": [
+                      {
+                        "id": 12,
+                        "name": "老六",
+                        "spouse": "",
+                        "pid": 5,
+                        "child": [
+                          {
+                            "id": 12,
+                            "name": "老六",
+                            "spouse": "",
+                            "pid": 5,
+                            "child": [
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "name": "老九",
+        "spouse": "老九妻",
+        "pid": 1,
+        "child": [
+          {
+            "id": 7,
+            "name": "老十",
+            "spouse": "老十妻",
+            "pid": 3,
+            "child": [
+              {
+                "id": 14,
+                "name": "老十一",
+                "spouse": "",
+                "pid": 7,
+                "child": [
+                ]
+              }
+            ]
+          },
+          {
+            "id": 8,
+            "name": "老十二",
+            "spouse": "",
+            "pid": 3,
+            "child": [
+              {
+                "id": 15,
+                "name": "老十三",
+                "spouse": "老十三妻",
+                "pid": 8,
+                "child": [
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "name": "老十四",
+        "spouse": "老十四妻",
+        "pid": 1,
+        "child": [
+          {
+            "id": 9,
+            "name": "老十五",
+            "spouse": "",
+            "pid": 4,
+            "child": [
+              {
+                "id": 16,
+                "name": "老十六",
+                "spouse": "",
+                "pid": 9,
+                "child": [
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+  ]
+}

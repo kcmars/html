@@ -1,0 +1,1205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBG"
+    tools:context=".activity.MainActivity">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:background="@color/colorBG"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:gravity="center"
+            android:background="@color/colorBtn"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="44dp">
+
+            <ImageView
+                android:src="@mipmap/icon_top_text"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp" />
+
+        </LinearLayout>
+
+        <FrameLayout
+            android:id="@+id/fl_content"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="0dp">
+
+        </FrameLayout>
+
+        <android.support.design.widget.TabLayout
+            android:id="@+id/tab_layout"
+            app:tabIndicatorHeight="0dp"
+            android:background="@color/colorBlack2A2A2A"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            />
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/fl_more"
+        android:visibility="gone"
+        android:clickable="true"
+        android:focusable="true"
+        android:background="@color/color04FFFFFF"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_marginTop="90dp"
+            android:layout_marginRight="11dp"
+            android:layout_gravity="right"
+            android:background="@drawable/white_bg"
+            android:orientation="vertical"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            tools:ignore="RtlHardcoded">
+
+            <TextView
+                android:id="@+id/tv_self"
+                android:layout_weight="1"
+                android:textSize="16sp"
+                android:gravity="center"
+                android:textColor="@color/colorText333333"
+                android:text="定位自己"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                tools:ignore="HardcodedText" />
+
+            <View
+                android:background="@color/colorLine"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"/>
+
+            <TextView
+                android:id="@+id/tv_add"
+                android:layout_weight="1"
+                android:textSize="16sp"
+                android:gravity="center"
+                android:textColor="@color/colorText333333"
+                android:text="添加成员"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                tools:ignore="HardcodedText" />
+
+            <View
+                android:background="@color/colorLine"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"/>
+
+            <TextView
+                android:id="@+id/tv_export"
+                android:layout_weight="1"
+                android:textSize="16sp"
+                android:gravity="center"
+                android:textColor="@color/colorText333333"
+                android:text="导出族谱"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                tools:ignore="HardcodedText" />
+
+        </LinearLayout>
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/fl_search"
+        android:visibility="gone"
+        android:clickable="true"
+        android:focusable="true"
+        android:background="@color/color04FFFFFF"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_gravity="top"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:gravity="center_vertical"
+                android:background="@color/colorE1E1E1"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="85dp"
+                tools:ignore="RtlHardcoded">
+
+                <LinearLayout
+                    android:background="@drawable/white_bg"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:layout_height="50dp">
+
+                    <ImageView
+                        android:src="@mipmap/icon_search_black"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp" />
+
+                    <EditText
+                        android:id="@+id/et_search"
+                        android:paddingLeft="10dp"
+                        android:hint="搜索姓名"
+                        android:textColor="@color/colorGray999999"
+                        android:textSize="16sp"
+                        android:background="@null"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:maxLines="1"
+                        android:maxLength="16"
+                        android:layout_height="match_parent"
+                        tools:ignore="HardcodedText,NestedWeights,RtlSymmetry" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tv_cancel"
+                    android:textSize="16sp"
+                    android:gravity="center"
+                    android:textColor="@color/colorText"
+                    android:text="取消"
+                    android:layout_marginLeft="11dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    tools:ignore="HardcodedText" />
+
+            </LinearLayout>
+
+            <com.scwang.smartrefresh.layout.SmartRefreshLayout
+                android:id="@+id/sr_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/rl_search_list"
+                        android:background="@color/white"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:overScrollMode="never"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/tv_not_more"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center|top"
+                        android:text="没有相关人员信息"
+                        android:textSize="18sp"
+                        android:background="@color/colorE1E1E1"
+                        android:visibility="gone"
+                        android:paddingTop="20dp"
+                        android:paddingBottom="20dp"
+                        tools:ignore="HardcodedText" />
+
+                </LinearLayout>
+
+            </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+        </LinearLayout>
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/fl_detail"
+        android:visibility="gone"
+        android:clickable="true"
+        android:focusable="true"
+        android:background="@color/color04FFFFFF"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_gravity="center"
+            android:layout_width="140dp"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/ll_invitation"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:background="@color/white"
+                android:gravity="center"
+                android:layout_alignParentLeft="true"
+                android:visibility="gone"
+                android:orientation="vertical"
+                android:layout_width="60dp"
+                android:layout_height="80dp"
+                tools:ignore="RtlHardcoded">
+
+                <ImageView
+                    android:src="@mipmap/icon_invitation_black"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    tools:ignore="ContentDescription" />
+
+                <TextView
+                    android:textSize="12sp"
+                    android:gravity="center"
+                    android:textColor="@color/colorText333333"
+                    android:text="邀请加入"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:ignore="HardcodedText" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_inter"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:background="@color/white"
+                android:gravity="center"
+                android:visibility="gone"
+                android:layout_alignParentRight="true"
+                android:orientation="vertical"
+                android:layout_width="60dp"
+                android:layout_height="80dp"
+                tools:ignore="RtlHardcoded">
+
+                <ImageView
+                    android:src="@mipmap/icon_inter_black"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    tools:ignore="ContentDescription" />
+
+                <TextView
+                    android:textSize="12sp"
+                    android:gravity="center"
+                    android:textColor="@color/colorText333333"
+                    android:text="互动交流"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:ignore="HardcodedText" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_share"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:background="@color/white"
+                android:gravity="center"
+                android:visibility="gone"
+                android:layout_below="@+id/ll_invitation"
+                android:layout_alignParentLeft="true"
+                android:orientation="vertical"
+                android:layout_width="60dp"
+                android:layout_height="80dp"
+                tools:ignore="RtlHardcoded">
+
+                <ImageView
+                    android:src="@mipmap/icon_share_black"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    tools:ignore="ContentDescription" />
+
+                <TextView
+                    android:textSize="12sp"
+                    android:gravity="center"
+                    android:textColor="@color/colorText333333"
+                    android:text="推荐分享"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:ignore="HardcodedText" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_chain"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:background="@color/white"
+                android:gravity="center"
+                android:layout_alignParentRight="true"
+                android:visibility="visible"
+                android:orientation="vertical"
+                android:layout_below="@+id/ll_inter"
+                android:layout_width="60dp"
+                android:layout_height="80dp"
+                tools:ignore="RtlHardcoded">
+
+                <ImageView
+                    android:src="@mipmap/icon_chain_black"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    tools:ignore="ContentDescription" />
+
+                <TextView
+                    android:textSize="12sp"
+                    android:gravity="center"
+                    android:textColor="@color/colorText333333"
+                    android:text="关系链条"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:ignore="HardcodedText" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_look"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:background="@color/white"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/ll_share"
+                android:layout_width="60dp"
+                android:layout_height="80dp"
+                tools:ignore="RtlHardcoded">
+
+                <ImageView
+                    android:id="@+id/iv_detail_head"
+                    android:src="@mipmap/icon_man_orange_circle"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    tools:ignore="ContentDescription" />
+
+                <TextView
+                    android:textSize="12sp"
+                    android:gravity="center"
+                    android:textColor="@color/colorText333333"
+                    android:text="查看详情"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:ignore="HardcodedText" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_center"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/white"
+                android:gravity="center"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/ll_chain"
+                android:orientation="vertical"
+                android:layout_width="60dp"
+                android:layout_height="80dp"
+                tools:ignore="RtlHardcoded">
+
+                <ImageView
+                    android:src="@mipmap/icon_set_center_black"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    tools:ignore="ContentDescription" />
+
+                <TextView
+                    android:textSize="12sp"
+                    android:gravity="center"
+                    android:textColor="@color/colorText333333"
+                    android:text="设为中心"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:ignore="HardcodedText" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_add"
+                android:background="@color/white"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/ll_look"
+                android:layout_width="60dp"
+                android:layout_height="80dp"
+                tools:ignore="RtlHardcoded">
+
+                <ImageView
+                    android:src="@mipmap/icon_add_person_black"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    tools:ignore="ContentDescription" />
+
+                <TextView
+                    android:textSize="12sp"
+                    android:gravity="center"
+                    android:textColor="@color/colorText333333"
+                    android:text="添加关系"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:ignore="HardcodedText" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_edit"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:background="@color/white"
+                android:gravity="center"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/ll_center"
+                android:orientation="vertical"
+                android:layout_width="60dp"
+                android:layout_height="80dp"
+                tools:ignore="RtlHardcoded">
+
+                <ImageView
+                    android:src="@mipmap/icon_edit_black"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    tools:ignore="ContentDescription" />
+
+                <TextView
+                    android:textSize="12sp"
+                    android:gravity="center"
+                    android:textColor="@color/colorText333333"
+                    android:text="编辑删除"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:ignore="HardcodedText" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/fl_add"
+        android:visibility="gone"
+        android:clickable="true"
+        android:focusable="true"
+        android:background="@color/color04FFFFFF"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:id="@+id/ll_add_father"
+                    android:background="@color/white"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:layout_width="60dp"
+                    android:layout_height="80dp"
+                    tools:ignore="RtlHardcoded">
+
+                    <ImageView
+                        android:src="@mipmap/icon_man_gray_circle"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        tools:ignore="ContentDescription" />
+
+                    <TextView
+                        android:textSize="12sp"
+                        android:gravity="center"
+                        android:textColor="@color/colorText333333"
+                        android:text="添加父亲"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        tools:ignore="HardcodedText" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_add_mother"
+                    android:layout_marginLeft="10dp"
+                    android:background="@color/white"
+                    android:gravity="center"
+                    android:visibility="gone"
+                    android:orientation="vertical"
+                    android:layout_width="60dp"
+                    android:layout_height="80dp"
+                    tools:ignore="RtlHardcoded">
+
+                    <ImageView
+                        android:src="@mipmap/icon_woman_gray_circle"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        tools:ignore="ContentDescription" />
+
+                    <TextView
+                        android:textSize="12sp"
+                        android:gravity="center"
+                        android:textColor="@color/colorText333333"
+                        android:text="添加母亲"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        tools:ignore="HardcodedText" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:id="@+id/ll_add_spouse1"
+                    android:background="@color/white"
+                    android:gravity="center"
+                    android:visibility="gone"
+                    android:orientation="vertical"
+                    android:layout_width="60dp"
+                    android:layout_height="80dp"
+                    tools:ignore="RtlHardcoded">
+
+                    <ImageView
+                        android:src="@mipmap/icon_man_gray_circle"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        tools:ignore="ContentDescription" />
+
+                    <TextView
+                        android:textSize="12sp"
+                        android:gravity="center"
+                        android:textColor="@color/colorText333333"
+                        android:text="添加丈夫"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        tools:ignore="HardcodedText" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_add_spouse2"
+                    android:background="@color/white"
+                    android:gravity="center"
+                    android:visibility="gone"
+                    android:orientation="vertical"
+                    android:layout_width="60dp"
+                    android:layout_height="80dp"
+                    tools:ignore="RtlHardcoded">
+
+                    <ImageView
+                        android:src="@mipmap/icon_woman_gray_circle"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        tools:ignore="ContentDescription" />
+
+                    <TextView
+                        android:textSize="12sp"
+                        android:gravity="center"
+                        android:textColor="@color/colorText333333"
+                        android:text="添加妻子"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        tools:ignore="HardcodedText" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_marginLeft="10dp"
+                    android:background="@color/white"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:layout_width="60dp"
+                    android:layout_height="80dp"
+                    tools:ignore="RtlHardcoded">
+
+                    <ImageView
+                        android:id="@+id/iv_head"
+                        android:src="@mipmap/icon_man_orange_circle"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        tools:ignore="ContentDescription" />
+
+                    <TextView
+                        android:id="@+id/tv_name"
+                        android:textSize="12sp"
+                        android:gravity="center"
+                        android:textColor="@color/colorText333333"
+                        android:text="姓名"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        tools:ignore="HardcodedText" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_add_sisters"
+                    android:layout_marginLeft="10dp"
+                    android:background="@color/white"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:layout_width="60dp"
+                    android:layout_height="80dp"
+                    tools:ignore="RtlHardcoded">
+
+                    <ImageView
+                        android:src="@mipmap/icon_man_gray_circle"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        tools:ignore="ContentDescription" />
+
+                    <TextView
+                        android:textSize="9sp"
+                        android:gravity="center"
+                        android:textColor="@color/colorText333333"
+                        android:text="添加兄弟姐妹"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        tools:ignore="HardcodedText,SmallSp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:id="@+id/ll_add_son"
+                    android:background="@color/white"
+                    android:gravity="center"
+                    android:visibility="gone"
+                    android:orientation="vertical"
+                    android:layout_width="60dp"
+                    android:layout_height="80dp"
+                    tools:ignore="RtlHardcoded">
+
+                    <ImageView
+                        android:src="@mipmap/icon_man_gray_circle"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        tools:ignore="ContentDescription" />
+
+                    <TextView
+                        android:textSize="12sp"
+                        android:gravity="center"
+                        android:textColor="@color/colorText333333"
+                        android:text="添加儿子"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        tools:ignore="HardcodedText" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_add_girl"
+                    android:layout_marginLeft="10dp"
+                    android:background="@color/white"
+                    android:gravity="center"
+                    android:visibility="gone"
+                    android:orientation="vertical"
+                    android:layout_width="60dp"
+                    android:layout_height="80dp"
+                    tools:ignore="RtlHardcoded">
+
+                    <ImageView
+                        android:src="@mipmap/icon_woman_gray_circle"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        tools:ignore="ContentDescription" />
+
+                    <TextView
+                        android:textSize="12sp"
+                        android:gravity="center"
+                        android:textColor="@color/colorText333333"
+                        android:text="添加女儿"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        tools:ignore="HardcodedText" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/fl_edit"
+        android:visibility="gone"
+        android:clickable="true"
+        android:focusable="true"
+        android:background="@color/color04FFFFFF"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:gravity="center"
+            android:layout_gravity="bottom"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/ll_hint"
+                android:visibility="gone"
+                android:background="@drawable/white_bg"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:layout_width="240dp"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:text="提示"
+                    android:textSize="18sp"
+                    android:textColor="@color/colorText333333"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:ignore="HardcodedText" />
+
+                <TextView
+                    android:textSize="14sp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="18dp"
+                    android:paddingLeft="28dp"
+                    android:paddingRight="28dp"
+                    android:gravity="center"
+                    android:textColor="@color/colorText333333"
+                    android:text="删除之后该人的所有信息将被 全部删除！确定删除此人吗？"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    tools:ignore="HardcodedText" />
+
+                <View
+                    android:background="@color/colorLine"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"/>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp">
+
+                    <TextView
+                        android:id="@+id/tv_off"
+                        android:gravity="center"
+                        android:text="取消"
+                        android:textSize="18sp"
+                        android:textColor="@color/colorText333333"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        tools:ignore="HardcodedText" />
+
+                    <View
+                        android:background="@color/colorLine"
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"/>
+                    <TextView
+                        android:id="@+id/tv_ok"
+                        android:gravity="center"
+                        android:text="确定"
+                        android:textSize="18sp"
+                        android:textColor="@color/color_4"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        tools:ignore="HardcodedText" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginTop="60dp"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tv_edit"
+                    android:background="@color/white"
+                    android:textSize="16sp"
+                    android:gravity="center"
+                    android:textColor="@color/colorText333333"
+                    android:text="编辑-姓名"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    tools:ignore="HardcodedText,SmallSp" />
+
+                <View
+                    android:background="@color/colorLine"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"/>
+
+                <TextView
+                    android:id="@+id/tv_delete"
+                    android:background="@color/white"
+                    android:textSize="16sp"
+                    android:gravity="center"
+                    android:textColor="@color/color_4"
+                    android:text="删除-姓名"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    tools:ignore="HardcodedText,SmallSp" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_marginTop="10dp"
+                android:id="@+id/tv_close_edit"
+                android:background="@color/white"
+                android:textSize="16sp"
+                android:gravity="center"
+                android:textColor="@color/color_4"
+                android:text="取消"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                tools:ignore="HardcodedText,SmallSp" />
+
+        </LinearLayout>
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/fl_invitation"
+        android:visibility="gone"
+        android:clickable="true"
+        android:focusable="true"
+        android:background="@color/color04FFFFFF"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp"
+            android:layout_gravity="bottom"
+            android:background="@color/white"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tv_invitation_text"
+                android:text="邀请“长子-李一”"
+                android:textSize="18sp"
+                android:paddingTop="20dp"
+                android:paddingBottom="20dp"
+                android:textColor="@color/colorText333333"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:ignore="HardcodedText" />
+
+            <View
+                android:background="@color/colorBtn"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"/>
+
+            <LinearLayout
+                android:id="@+id/ll_country"
+                android:paddingRight="7dp"
+                android:paddingLeft="7dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="50dp"
+                tools:ignore="UselessLeaf">
+
+                <TextView
+                    android:textColor="@color/colorText"
+                    android:textSize="16sp"
+                    android:text="国家/地区"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:ignore="HardcodedText" />
+
+                <TextView
+                    android:layout_weight="1"
+                    android:id="@+id/tv_country"
+                    android:textColor="@color/colorText"
+                    android:textSize="16sp"
+                    android:text="中国"
+                    android:layout_marginLeft="20dp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    tools:ignore="HardcodedText,RtlHardcoded" />
+
+                <ImageView
+                    android:src="@mipmap/icon_arrow_right_gray"
+                    android:layout_width="16dp"
+                    android:layout_height="17dp"
+                    tools:ignore="ContentDescription" />
+            </LinearLayout>
+
+            <View
+                android:background="@color/colorBtn"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"/>
+
+            <LinearLayout
+                android:paddingRight="7dp"
+                android:paddingLeft="7dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="50dp"
+                android:gravity="center_vertical"
+                tools:ignore="UselessLeaf">
+
+                <TextView
+                    android:id="@+id/tv_country_code"
+                    android:textColor="@color/colorText"
+                    android:textSize="16sp"
+                    android:text="+86"
+                    android:layout_width="wrap_content"
+                    android:minWidth="60dp"
+                    android:layout_height="wrap_content"
+                    tools:ignore="HardcodedText" />
+
+                <View
+                    android:background="@color/colorBtn"
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"/>
+
+                <EditText
+                    android:id="@+id/et_phone"
+                    android:hint="请输入手机号码"
+                    android:textSize="16sp"
+                    android:inputType="phone"
+                    android:textColor="@color/colorText"
+                    android:paddingLeft="29dp"
+                    android:maxLength="13"
+                    android:maxLines="1"
+                    android:background="@null"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    tools:ignore="HardcodedText,LabelFor,RtlHardcoded,RtlSymmetry,TextFields" />
+
+                <TextView
+                    android:id="@+id/tv_contact"
+                    android:textSize="14sp"
+                    android:textColor="@color/colorText333333"
+                    android:gravity="center_vertical"
+                    android:text="通讯录获取"
+                    android:layout_marginLeft="5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    tools:ignore="HardcodedText,RtlHardcoded" />
+            </LinearLayout>
+
+            <View
+                android:background="@color/colorBtn"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"/>
+
+            <LinearLayout
+                android:gravity="center_horizontal"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="30dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:id="@+id/btn_cancel_invitation"
+                    android:background="@drawable/btn_sex_bg"
+                    android:textColor="@color/colorText333333"
+                    android:textSize="14sp"
+                    android:text="取消"
+                    android:layout_width="130dp"
+                    android:layout_height="40dp"
+                    tools:ignore="HardcodedText" />
+
+                <Button
+                    android:id="@+id/btn_invitation"
+                    android:background="@drawable/btn_select_bg_f8e3ab"
+                    android:textColor="@color/colorText333333"
+                    android:textSize="14sp"
+                    android:text="邀请"
+                    android:layout_marginLeft="40dp"
+                    android:layout_width="130dp"
+                    android:layout_height="40dp"
+                    tools:ignore="HardcodedText,RtlHardcoded" />
+            </LinearLayout>
+        </LinearLayout>
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/fl_share"
+        android:visibility="gone"
+        android:clickable="true"
+        android:focusable="true"
+        android:background="@color/color04FFFFFF"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_gravity="bottom"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:gravity="center_horizontal"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tv_share_text"
+                    android:gravity="center"
+                    android:paddingTop="20dp"
+                    android:textColor="@color/colorText333333"
+                    android:textSize="18sp"
+                    android:text="邀请“长子-李一”"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    tools:ignore="HardcodedText" />
+
+                <TextView
+                    android:gravity="center"
+                    android:paddingTop="20dp"
+                    android:textColor="@color/colorText333333"
+                    android:textSize="16sp"
+                    android:text="通过以下方式推荐分享给被邀请者"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    tools:ignore="HardcodedText" />
+
+                <LinearLayout
+                    android:paddingBottom="20dp"
+                    android:paddingTop="20dp"
+                    android:gravity="center_horizontal"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/iv_qq"
+                        android:src="@mipmap/icon_qq"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp" />
+
+                    <ImageView
+                        android:id="@+id/iv_wx"
+                        android:src="@mipmap/icon_wx"
+                        android:layout_marginLeft="40dp"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        tools:ignore="RtlHardcoded" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_cancel_share"
+                android:background="@color/white"
+                android:gravity="center"
+                android:text="取消"
+                android:textSize="16sp"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/colorText333333"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                tools:ignore="HardcodedText" />
+        </LinearLayout>
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/fl_perfect"
+        android:visibility="gone"
+        android:clickable="true"
+        android:focusable="true"
+        android:background="@color/color04FFFFFF"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_gravity="center"
+            android:background="@drawable/white_bg"
+            android:orientation="vertical"
+            android:layout_width="240dp"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:text="提示"
+                android:textSize="18sp"
+                android:gravity="center"
+                android:layout_marginTop="18dp"
+                android:textColor="@color/colorText333333"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:ignore="HardcodedText" />
+
+            <TextView
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:text="您的个人信息尚未完善，请先完 善个人信息，方可继续后续操作！"
+                android:textSize="14sp"
+                android:textColor="@color/colorText333333"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:ignore="HardcodedText" />
+
+            <View
+                android:layout_marginTop="17dp"
+                android:background="@color/colorLine"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"/>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tv_cancel_perfect"
+                    android:textColor="@color/colorText333333"
+                    android:textSize="18sp"
+                    android:text="取消"
+                    android:layout_weight="1"
+                    android:paddingTop="6dp"
+                    android:paddingBottom="6dp"
+                    android:gravity="center"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    tools:ignore="HardcodedText" />
+
+                <View
+                    android:background="@color/colorLine"
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"/>
+
+                <TextView
+                    android:id="@+id/tv_perfect"
+                    android:textColor="#D91402"
+                    android:textSize="18sp"
+                    android:text="完善信息"
+                    android:paddingTop="6dp"
+                    android:paddingBottom="6dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    tools:ignore="HardcodedText" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </FrameLayout>
+</FrameLayout>

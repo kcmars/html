@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:width="100dp" android:height="30dp">
+        <shape android:shape="rectangle">
+            <solid android:color="#fff8e3ab" />
+            <corners android:topLeftRadius="0dp" android:topRightRadius="6dp" android:bottomLeftRadius="0dp" android:bottomRightRadius="6dp" />
+        </shape>
+    </item>
+</selector>
