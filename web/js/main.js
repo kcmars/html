@@ -1,3 +1,6 @@
+/**
+ * Created by keyC on 2017/7/21.
+ */
 $(function () {
     /**
      * 大巴车售票功能接口
@@ -40,102 +43,154 @@ $(function () {
     //支付宝下单
     $.toAlipay = ip + "Alipay/toAlipay2";
 
-    /**
-     * 分享接口地址
-     */
-    $.server1 = "http://bb4b3408.ngrok.io/";
-    $.server2 = "http://118.190.203.67:9501/";
-    var ip1 = $.server2 + "Web/";
-    //获取我的分享二维码
-    $.getShareQR = ip1 + "Share/getQRCode";
-    //获取我的分享信息
-    $.getShareContent = ip1 + "Share/getShareContent";
-    //获取我的推荐人数
-    $.getRecommendDetail = ip1 + "Share/getRecommendDetail";
 
     /**
-     * 认证接口地址
+     * IP 配置
+     * @type {string}
+     */
+    // $.server2 = "http://120.24.238.86:80/api/";  //120.24.238.86   118.190.203.67
+    $.server2 = "http://aybapi.a56999.com/";
+    // $.server1 = "http://120.24.238.86:80/api/";
+    $.server1 = "http://aybapi.a56999.com/";
+    $.ip1 = $.server1 + "Web/";
+    $.ip2 = $.server1 + "Tool/";
+    $.ip3 = $.server1 + "Api/";
+
+    // $.user_id = "b1e1c8d6-108b-475b-9df1-9ae7821b53d8";
+    $.user_id = "0e9dceae-8c37-4790-a3cc-0713880fe23e";
+
+    /**
+     * 分享相关接口
+     */
+    //获取我的分享二维码
+    $.getShareQR = $.ip1 + "Share/getQRCode";
+    //获取我的分享信息
+    $.getShareContent = $.ip1 + "Share/getShareContent";
+    //获取我的推荐人数
+    $.getRecommendDetail = $.ip1 + "Share/getRecommendDetail";
+    //分享链接注册获取图片验证码
+    $.getShareLinkImgCode = $.ip3 + "User/getImgCode";
+     //分享链接注册检测图片验证码
+    $.getShareLinkCheckImgCode = $.ip3 + "User/checkImgCode";
+    //分享链接注册获取短信验证码
+    $.getShareLinkSmsCode = $.ip3 + "User/getSmsCode";
+    //分享链接注册检测短信验证码
+    $.getShareLinkCheckSmsCode = $.ip3 + "User/checkSmsCode";
+    //分享链接注册账户检测手机号
+    $.getShareLinkCheckPhone = $.ip3 + "User/validatePhone";
+    //分享链接注册账户
+    $.getShareLinkRegister = $.ip3 + "User/register";
+    //分享链接下载地址
+    $.downloadUrl = $.ip1 + "WebShare/downloadUrl";
+
+    /**
+     * 认证相关接口
      */
     //上传认证图片
-    $.uploadPicture = $.server2 + "Api/upload";
+    $.uploadPicture = $.ip2 + "upload";
     //获取乘客实名认证
-    $.getPassengerRealNameInfo = ip1 + "Authentication/getPassengerRealNameInfo";
+    $.getPassengerRealNameInfo = $.ip1 + "Certification/getPassengerRealNameInfo";
     //提交乘客实名认证
-    $.submitPassengerRealNameInfo = ip1 + "Authentication/passenger";
+    $.submitPassengerRealNameInfo = $.ip1 + "Certification/passenger";
     //获取司机快车认证信息
-    $.getExpressDriverInfo = ip1 + "Authentication/getExpressDriverInfo";
+    $.getExpressDriverInfo = $.ip1 + "Certification/getExpressDriverInfo";
     //提交司机快车认证
-    $.submitExpressDriver = ip1 + "Authentication/expressDriver";
-    //获取司机快车认证信息
-    $.getTaxiDriverInfo = ip1 + "Authentication/getTaxiDriverInfo";
-    //提交司机快车认证
-    $.submitTaxiDriver = ip1 + "Authentication/taxiDriver";
+    $.submitExpressDriver = $.ip1 + "Certification/expressDriver";
+    //获取司机出租车认证信息
+    $.getTaxiDriverInfo = $.ip1 + "Certification/getTaxiDriverInfo";
+    //提交司机出租车认证
+    $.submitTaxiDriver = $.ip1 + "Certification/taxiDriver";
     //获取大巴车管理者认证
-    $.getBusManagerInfo = ip1 + "Authentication/getBusManagerInfo";
+    $.getBusManagerInfo = $.ip1 + "Certification/getBusManagerInfo";
     //提交大巴车管理者认证
-    $.submitBusManager = ip1 + "Authentication/busManager";
+    $.submitBusManager = $.ip1 + "Certification/busManager";
     //获取大巴车认证
-    $.getBusInfo = ip1 + "Driver/getBusInfo";
+    $.getBusInfo = $.ip1 + "Bus/getBusInfo";
     //提交大巴车认证
-    $.submitBusInfo = ip1 + "Driver/addBus";
+    $.submitBusInfo = $.ip1 + "Bus/addBus";
     //获取大巴车类型
-    $.getBusType = $.server2 + "Api/getBusType";
+    $.getBusType = $.ip2 + "getBusType";
     //获取大巴车雇员认证
-    $.getBusEmployees = ip1 + "Driver/getEmployeeInfo";
+    $.getBusEmployees = $.ip1 + "Bus/getEmployeeInfo";
+    //检查大巴车雇员是否被添加
+    $.checkUserExist = $.ip1 + "Bus/checkUserExist";
+    //更新大巴车雇员信息
+    $.updateEmployeeInfo = $.ip1 + "Bus/updateEmployeeInfo";
     //获取大巴车雇员信息
-    $.getEmployeesInfo = ip1 + "Driver/getBusEmployeeInfo";
+    $.getEmployeesInfo = $.ip1 + "Bus/getEmployeeSelfInfo";
     //提交大巴车雇员类型
-    $.submitBusEmployees = ip1 + "Driver/addEmployee";
+    $.submitBusEmployees = $.ip1 + "Bus/addEmployee";
 
     /**
      * 支付相关接口
      */
     //获取账单信息
-    $.getPayInfo = ip1 + "Pay/getPayInfo";
+    $.getPayInfo = $.ip1 + "Pay/getPayInfo";
     //下单
-    $.unifiedOrder = ip1 + "Pay/unifiedOrder";
+    $.unifiedOrder = $.ip1 + "Pay/unifiedOrder";
     //获取预估价格详情
-    $.getDetailEstimateInfo = ip1 + "Pay/getDetailEstimateInfo";
+    $.getDetailEstimateInfo = $.ip1 + "PriceDescription/getDetailEstimateInfo";
     //乘客端获取行程账单详情
-    $.getDetailPayInfo = ip1 + "Pay/getDetailPayInfo";
+    $.getDetailPayInfo = $.ip1 + "Pay/getDetailPayInfo";
     //司机端获取行程账单详情
-    $.getDetailPayInfoOfDriver = ip1 + "Pay/getDetailPayInfoOfDriver";
+    $.getDetailPayInfoOfDriver = $.ip1 + "Pay/getDetailPayInfoOfDriver";
     //获取价格配置详情
-    $.getPriceConfig = ip1 + "Pay/getPriceConfig";
+    $.getPriceConfig = $.ip1 + "PriceDescription/getPriceConfig";
     //获取钱包消息详情
-    $.getPropertyDetail = ip1 + "Common/getPropertyDetail";
+    $.getPropertyDetail = $.ip1 + "Common/getPropertyDetail";
+    //获取支付结果详情
+    $.getPayResult = $.ip1 + "Pay/orderQuery";
 
 
     /**
      * 评价相关接口
      */
     //获取评价信息
-    $.getRatingInfo = ip1 + "Judge/getRatingInfo";
+    $.getRatingInfo = $.ip1 + "Judge/getRatingInfo";
     //提交评价信息
-    $.submitRating = ip1 + "Judge/submitRating";
+    $.submitRating = $.ip1 + "Judge/submitRating";
     //获取取消理由
-    $.getCancelReason = $.server2 + "Api/getCancelReason";
+    $.getCancelReason = $.ip2 + "getCancelReason";
     //提交取消理由
-    $.submitReason = ip1 + "Common/submitReason";
+    $.submitReason = $.ip2 + "submitReason";
 
     /**
      * 地址相关接口
      */
     //获取省
-    $.getProvinces = $.server2 + "Api/getProvinces";
+    $.getProvinces = $.ip2 + "getProvinces";
     //获取城市
-    $.getCities = $.server2 + "Api/getCities";
+    $.getCities = $.ip2 + "getCities";
     //获取区县
-    $.getAds = $.server2 + "Api/getAds";
+    $.getAds = $.ip2 + "getAds";
 
     /**
      * 消息相关接口
      */
     //获取大巴车上传记录详情
-    $.getAllUploadedBus = ip1 + "BusUploader/getAllUploadedBus";
+    $.getAllUploadedBus = $.ip1 + "BusUploader/getAllUploadedBus";
     //获取重复大巴车上传者信息
-    $.getBusUploaderInfo = ip1 + "BusUploader/getBusUploaderInfo";
+    $.getBusUploaderInfo = $.ip1 + "BusUploader/getBusUploaderInfo";
 
+    /**
+     * 大巴车快速认证相关接口
+     */
+    //获取快速上传状态
+    $.getUploaderStatus = $.ip1 + "BusUploader/getUploaderStatus";
+    //快速上传名片获取负责城市
+    $.getUploaderCity = $.ip1 + "BusUploader/uploaderCity";
+    //快速上传名片
+    $.uploadInfo = $.ip1 + "BusUploader/uploadInfo";
+    //快速上传联系信息
+    $.leaveWords = $.ip1 + "BusUploader/leaveWords";
+
+    /**
+     * 车辆类型
+     */
+    //获取所有车辆类型
+    $.getAllCarType = $.ip2 + "getCars";
+    //获取车辆对应logo
+    $.carLogo = $.server2 + "Upload/cars/";
 
     $.plateShortList = ["京", "津", "沪", "渝", "黑", "吉", "辽", "甘", "陕", "贵", "云", "川", "晋", "冀", "青",
         "鲁", "豫", "苏", "皖", "浙", "闽", "赣", "湘", "鄂", "粤", "琼", "蒙", "新", "藏", "宁", "桂", "港", "澳"];
@@ -204,7 +259,7 @@ $(function () {
     /**
      * 时间格式化
      * @param str 目标时间戳字符串
-     * @param format 转换格式（"yyyy-MM-dd hh:mm:ss"）
+     * @param mforat 转换格式（"yyyy-MM-dd hh:mm:ss"）
      * @returns {*}
      */
     $.format = function(str, format){

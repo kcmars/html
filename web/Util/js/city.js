@@ -1,21 +1,21 @@
 /**
- * Created by zp on 2018/7/11.
+ * Created by keyC on 2018/7/11.
  */
-let mProvinces = []; //所有省
-let mCities = []; //省下面的城市
-let mAds = []; //城市下面的区县
-let province = ""; //选择的省
-let pro_code = ""; //选择的省code
-let city = ""; //选择的市
-let city_code = ""; //选择的市code
-let dist = ""; //选择的区
-let ad_code = ""; //选择的区code
-let thirdLayerTouchStartX = 0; //三级菜单触摸起点x位置
-let secondLayerTouchStartX = 0; //二级菜单触摸起点x位置
-let firstLayerTouchStartX = 0; //一级菜单触摸起点x位置
-let firstLayerTouchStartY = 0; //一级菜单触摸起点y位置
-let secondLayerShow = false; //二级页面是否显示
-let thirdLayerShow = false; //三级页面是否显示
+var mProvinces = []; //所有省
+var mCities = []; //省下面的城市
+var mAds = []; //城市下面的区县
+var province = ""; //选择的省
+var pro_code = ""; //选择的省code
+var city = ""; //选择的市
+var city_code = ""; //选择的市code
+var dist = ""; //选择的区
+var ad_code = ""; //选择的区code
+var thirdLayerTouchStartX = 0; //三级菜单触摸起点x位置
+var secondLayerTouchStartX = 0; //二级菜单触摸起点x位置
+var firstLayerTouchStartX = 0; //一级菜单触摸起点x位置
+var firstLayerTouchStartY = 0; //一级菜单触摸起点y位置
+var secondLayerShow = false; //二级页面是否显示
+var thirdLayerShow = false; //三级页面是否显示
 
 $(function () {
     //获取省数据
@@ -98,7 +98,7 @@ function getProvinces() {
         url: $.getProvinces,
         data: {
             user_id: param.user_id
-            // user_id: "1914974c-886b-49cc-9398-30651b0160e6"
+            // user_id: $.user_id
         },
         success: function (res) {
             console.log(res);
@@ -137,7 +137,7 @@ function getCities(obj, pro, code) {
         data: {
             user_id: param.user_id,
             pro_code: code
-            // user_id: "1914974c-886b-49cc-9398-30651b0160e6",
+            // user_id: $.user_id,
             // pro_code: code
         },
         success: function (res) {
@@ -160,7 +160,9 @@ function getCities(obj, pro, code) {
                     $("#secondLayer").removeClass("second-layer-animation-in").addClass("second-layer-animation-out");
                     let cityInfo = {   //选择城市信息
                         province: pro,
-                        pro_code: code
+                        pro_code: code,
+                        city: pro,
+                        city_code: code
                     };
                     sessionStorage.setItem("cityInfo", JSON.stringify(cityInfo));
                     $("#select-model-box").removeClass("plate-model-animation-in").addClass("plate-model-animation-out");
@@ -206,7 +208,7 @@ function getAds(obj, c, code) {
             data: {
                 user_id: param.user_id,
                 city_code: code
-                // user_id: "1914974c-886b-49cc-9398-30651b0160e6",
+                // user_id: $.user_id,
                 // city_code: code
             },
             success: function (res) {

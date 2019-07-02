@@ -1,22 +1,22 @@
 /**
- * Created by zp on 2018/7/13.
+ * Created by keyC on 2018/7/13.
+ * 大巴车经营者信息认证
  */
 var img1 = "";
 var img2 = "";
 var img3 = "";
 var img4 = "";
 var index = -1;
-let img_id_card_front = "../img/id-card-front-demo.jpg";//身份证正面照
-let img_id_card_back = "../img/id-card-back-demo.jpg";//身份证反面照
-let img_id_card_hand = "../img/id-card-hand-demo.jpg";//手持身份证正面照
-let img_enterprise_license = "../img/enterprise-license-demo.jpg";//企业营业执照照
+var img_id_card_front = "../img/id-card-front-demo.jpg";//身份证正面照
+var img_id_card_back = "../img/id-card-back-demo.jpg";//身份证反面照
+var img_id_card_hand = "../img/id-card-hand-demo.jpg";//手持身份证正面照
+var img_enterprise_license = "../img/enterprise-license-demo.jpg";//企业营业执照照
 var demoImg = [
     {text: "身份证正面照", img: img_id_card_front},
     {text: "身份证反面照", img: img_id_card_back},
     {text: "手持身份证正面照", img: img_id_card_hand},
     {text: "企业营业执照照", img: img_enterprise_license}
 ];
-
 var flag = true; //阻止点击事件
 var busManagerInfo; //大巴经营者认证信息
 
@@ -86,30 +86,27 @@ $(function () {
 
 });
 
+/**
+ * 获取参数
+ */
 function getParams() {
-    if(sessionStorage.getItem("busManagerInfo") != null){
-        busManagerInfo = JSON.parse(sessionStorage.getItem("busManagerInfo"));
-    }
-    if(busManagerInfo) {
-        $(".authen-main").removeClass("none");
-        showBusManagerInfo();
-    } else {
-        getBusManagerInfo();
-    }
-    // getBusManagerInfo();
+    getBusManagerInfo();
     //保存
     $("#submit").bind("click", function () {
         submitBusManager();
     });
-
 }
 
-//获取司机实名认证信息
+/**
+ * 获取大巴经营者认证信息
+ */
 function getBusManagerInfo() {
-    let params = {
-        // user_id: "c5fa42ae-e6d8-4e10-a7b7-4df136d3c776"
-        user_id: param.user_id
-    };
+    let params = {};
+    params.user_id = param.user_id;
+    // params.user_id = $.user_id;
+    if (param.id != null) {
+        params.id = param.id;
+    }
     loadAlertShow("获取中...");
     $.ajax({
         type: 'POST',
@@ -119,10 +116,8 @@ function getBusManagerInfo() {
             console.log(res);
             loadAlertHide();
             if(res && res.status == 1){
-                $(".authen-main").removeClass("none");
                 busManagerInfo = res.data;
                 if(busManagerInfo){
-                    sessionStorage.setItem("busManagerInfo", JSON.stringify(busManagerInfo));
                     showBusManagerInfo();
                 }
             } else {
@@ -132,17 +127,19 @@ function getBusManagerInfo() {
         error: function (err) {
             console.log(err);
             loadAlertHide();
-            window.location.href = "../../Util/html/error.html";
+            // window.location.href = "../../Util/html/error.html";
         }
     });
 }
 
-//提交司机实名认证信息
+/**
+ * 提交大巴经营者认证信息
+ */
 function submitBusManager() {
     let params = {
-        // user_id: "c5fa42ae-e6d8-4e10-a7b7-4df136d3c776",
+        // user_id: $.user_id,
         user_id: param.user_id,
-        type: $("input[name='radio']:checked").val() == "person" ? "1" : "2",
+        type: $("input[name='radio']:checked").val() == "person" ? 1 : 2,
         name: $("#name").val().trim(),
         ID: $("#id").val().trim(),
         image_id_a: img1,
@@ -216,7 +213,7 @@ function submitBusManager() {
 }
 
 /**
- * 显示司机认证信息
+ * 显示大巴经营者认证信息
  */
 function showBusManagerInfo() {
     if(busManagerInfo){
@@ -224,7 +221,7 @@ function showBusManagerInfo() {
         let realNameStatus = busManagerInfo.real_name_status;
         let companyStatus = busManagerInfo.enterprise_license_status;
         let type = busManagerInfo.type;
-        if (type == "2") {
+        if (type == 2) {
             if(realNameStatus > 0 && companyStatus > 0 && status != 2) {
                 flag = false;
                 $('input:radio').attr('disabled', true);
@@ -397,12 +394,14 @@ function showImg(index) {
         $("#file").off("change");
         setTimeout(function () {
             $("#demo-model").removeClass("demo-model").addClass("demo-none");
+            $("#demo-model > .model").unbind("click");
         }, 300);
     });
     $("#file").on("click", function () {
         $("#demo-model").animate({top: "100%", opacity: 0}, 300);
         setTimeout(function () {
             $("#demo-model").removeClass("demo-model").addClass("demo-none");
+            $("#demo-model > .model").unbind("click");
         }, 300);
     });
     $("#file").val("");
@@ -443,7 +442,7 @@ function uploadPicture(index, base64, type, extra, last_file) {
     loadAlertShow("正在上传...");
     canvasDataURL(base64, function callback(data) {
         let params = {
-            // user_id: "c5fa42ae-e6d8-4e10-a7b7-4df136d3c776",
+            // user_id: $.user_id,
             user_id: param.user_id,
             base64: data,
             type: type,
@@ -490,7 +489,7 @@ function uploadPicture(index, base64, type, extra, last_file) {
             error: function (err) {
                 console.log(err);
                 loadAlertHide();
-                window.location.href = "../../Util/html/error.html";
+                // window.location.href = "../../Util/html/error.html";
             }
         });
     });

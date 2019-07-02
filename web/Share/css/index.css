@@ -4,7 +4,7 @@ html,body {
 .share-main {
     width: 100%;
     height: 100%;
-    background-color: #ffffff;
+    background-color: #f1f2f3;
 }
 .share-main .share-img {
     width: 100%;
@@ -160,6 +160,10 @@ html,body {
 }
 .demo-model .content .qr {
     width: 4.00rem;
+    padding: 0.20rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 .demo-model .content .close {
     width: 0.40rem;

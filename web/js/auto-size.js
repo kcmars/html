@@ -1,13 +1,16 @@
 /**
- * Created by lovo_bdk on 15-12-17.
+ * Created by keyC on 2017/7/21.
  */
 !(function(win, doc) {
     function setFontSize() {
         // 获取window 宽度
         // zepto实现 $(window).width()就是这么干的
         var winWidth = window.innerWidth || 375;
-        console.log("当前移动设备屏幕宽度："+winWidth);
-        doc.documentElement.style.fontSize = (winWidth / 750) * 100 + 'px';
+        if (winWidth < 800) {
+            doc.documentElement.style.fontSize = (winWidth / 750) * 100 + 'px';
+        } else {
+            doc.documentElement.style.fontSize = '44px';
+        }
     }
     // win.onresize = function(){
     //     setFontSize();

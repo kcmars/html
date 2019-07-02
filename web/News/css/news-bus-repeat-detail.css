@@ -9,11 +9,11 @@
 .bus-repeat-list .listloading-list{
     width: 100%;
     height:calc(100% - 2.8rem);
-    overflow: scroll;
+    overflow: auto;
 }
 .bus-repeat-list ul{
     height: 100%;
-    overflow: scroll;
+    overflow: auto;
     padding: 0 0.20rem;
 }
 .bus-repeat-list ul li{

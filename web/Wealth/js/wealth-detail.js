@@ -1,5 +1,5 @@
 /**
- * Created by zp on 2018/9/10.
+ * Created by keyC on 2018/9/10.
  */
 $(function () {
    getRequest(getParams);
@@ -11,9 +11,9 @@ $(function () {
  */
 function getParams() {
     let params = {
-        // user_id: "dd828628-d646-4cc4-9791-e5921737bb13",
-        // id: "10",
-        // log_id: "2018112748561015"
+        // user_id: $.user_id,
+        // id: "",
+        // log_id: "15580818811173752898"
         user_id: param.user_id,
         id: param.id,
         log_id: param.log_id
@@ -29,7 +29,8 @@ function getParams() {
             if(res && res.status == 1){
                 $(".wealth-detail-main").removeClass("none");
                 let data = res.data;
-                $(".type").text($.getNewsType(data.type));
+                // $(".type").text($.getNewsType(data.type));
+                $(".type").text(data.remarks);
                 $(".value").text($.formatTwoDecimal(data.value));
                 let wealthDetail = [];
                 if (data.type != null) {
@@ -91,10 +92,12 @@ function getParams() {
                     };
                     wealthDetail.push(balance);
                 }
-                if (data.remarks != null || (data.extra != null && data.extra.err_msg != null)) {
+                // if (data.remarks != null || (data.extra != null && data.extra.err_msg != null)) {
+                if (data.extra != null && data.extra.err_msg != null) {
                     let remarks = {
                         text:"备注",
-                        content: (data.remarks != null ? data.remarks : "") + (data.remarks != null && data.remarks != "" && data.extra.err_msg != null && data.extra.err_msg != "" ? "，" : "") + (data.extra.err_msg != null ? data.extra.err_msg : "")
+                        // content: (data.remarks != null ? data.remarks : "") + (data.remarks != null && data.remarks != "" && data.extra.err_msg != null && data.extra.err_msg != "" ? "，" : "") + (data.extra.err_msg != null ? data.extra.err_msg : "")
+                        content: data.extra.err_msg
                     };
                     wealthDetail.push(remarks);
                 }

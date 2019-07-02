@@ -1,5 +1,6 @@
 /**
- * Created by zp on 2018/7/13.
+ * Created by keyC on 2018/7/13.
+ * 出租车认证信息
  */
 var img1 = "";
 var img2 = "";
@@ -18,6 +19,17 @@ var demoImg = [
     {text: "人车合照", img: "../img//person-car-demo.jpg"},
     {text: "服务证照", img: "../img/taxi-qualification-demo.jpg"}
 ];
+var flag1 = true; //阻止点击事件
+var taxiDriverInfo; //司机认证信息
+var taxiCityInfo = {   //选择城市信息
+    province: "",
+    pro_code: "",
+    city: "",
+    city_code: "",
+    dist: "",
+    ad_code: ""
+};
+
 $(function () {
     var realNameFlag = false;
     $("#realName-title").bind("click", function () {
@@ -107,6 +119,7 @@ $(function () {
 
     getRequest(getParams);
     // getParams();
+    // $(".authen-main").removeClass("none");
 
     /**
      * 初始化传入参数说明
@@ -143,6 +156,9 @@ $(function () {
         $("#plate-model").removeClass("plate-model-animation-out").addClass("plate-model-animation-in");
         $("#plate-model > .model").bind("click", function () {
             $("#plate-model").removeClass("plate-model-animation-in").addClass("plate-model-animation-out");
+            $("#plate-model > .model").unbind("click");
+            $("#plate-short-list li").unbind("click");
+            $("#plate-letter-list li").unbind("click");
         });
         $("#plate-short-list li").bind("click", function () {
             $(this).addClass("orange-text").siblings().removeClass("orange-text");
@@ -154,13 +170,18 @@ $(function () {
                 $("#plate-letter-list").removeClass("plate-letter-animation-in").addClass("plate-letter-animation-out");
                 $("#plate-model").removeClass("plate-model-animation-in").addClass("plate-model-animation-out");
                 $("#plate-no-short").val(short + $.plateletterList[$(this).index()]);
+                $("#plate-model > .model").unbind("click");
+                $("#plate-short-list li").unbind("click");
+                $("#plate-letter-list li").unbind("click");
             });
         });
     });
     //添加选择城市的组件
     $("#select-city").bind("click", function () {
-        if (taxiDriverInfo.province != null || taxiDriverInfo.city != null || taxiDriverInfo.dist) {
-            return;
+        if (taxiDriverInfo) {
+            if ((taxiDriverInfo.province != null && taxiDriverInfo.province != "") || (taxiDriverInfo.city != null && taxiDriverInfo.city != "") || (taxiDriverInfo.dist != null && taxiDriverInfo.dist != "")) {
+                return;
+            }
         }
         if (!flag1){
             return;
@@ -178,40 +199,28 @@ $(function () {
         });
     });
 });
-let flag1 = true; //阻止点击事件
-let taxiDriverInfo; //司机认证信息
-let taxiCityInfo = {   //选择城市信息
-    province: "",
-    pro_code: "",
-    city: "",
-    city_code: "",
-    dist: "",
-    ad_code: ""
-};
 
+/**
+ * 获取参数
+ */
 function getParams() {
-    if(sessionStorage.getItem("taxiDriverInfo") != null){
-        taxiDriverInfo = JSON.parse(sessionStorage.getItem("taxiDriverInfo"));
-    }
-    if(taxiDriverInfo) {
-        $(".authen-main").removeClass("none");
-        showTaxiDriverInfo();
-    } else {
-        getTaxiDriverInfo();
-    }
-    // getTaxiDriverInfo();
+    getTaxiDriverInfo();
     //保存
     $("#submit").bind("click", function () {
         submitTaxiDriver();
     });
 }
 
-//获取司机实名认证信息
+/**
+ * 获取司机实名认证信息
+ */
 function getTaxiDriverInfo() {
-    let params = {
-        // user_id: "1914974c-886b-49cc-9398-30651b0160e6"
-        user_id: param.user_id
-    };
+    let params = {};
+    params.user_id = param.user_id;
+    // params.user_id = $.user_id;
+    if (param.id != null) {
+        params.id = param.id;
+    }
     loadAlertShow("获取中...");
     $.ajax({
         type: 'POST',
@@ -224,27 +233,29 @@ function getTaxiDriverInfo() {
                 $(".authen-main").removeClass("none");
                 taxiDriverInfo = res.data;
                 if(taxiDriverInfo) {
-                    sessionStorage.setItem("taxiDriverInfo", JSON.stringify(taxiDriverInfo));
                     showTaxiDriverInfo();
                 }
             } else {
+                $(".authen-main").removeClass("none");
                 toastAlertShow(res.msg, 2500);
             }
         },
         error: function (err) {
             console.log(err);
             loadAlertHide();
-            window.location.href = "../../Util/html/error.html";
+            // window.location.href = "../../Util/html/error.html";
         }
     });
 }
-//提交司机实名认证信息
+/**
+ * 提交司机实名认证信息
+ */
 function submitTaxiDriver() {
     if(sessionStorage.getItem("taxiCityInfo") != null) {
         taxiCityInfo = JSON.parse(sessionStorage.getItem("taxiCityInfo"));
     }
     let params = {
-        // user_id: "1914974c-886b-49cc-9398-30651b0160e6",
+        // user_id: $.user_id,
         user_id: param.user_id,
         pro_code: taxiCityInfo.pro_code,
         pro_name: taxiCityInfo.province,
@@ -299,7 +310,7 @@ function submitTaxiDriver() {
         error: function (err) {
             console.log(err);
             loadAlertHide();
-            window.location.href = "../../Util/html/error.html";
+            // window.location.href = "../../Util/html/error.html";
         }
     });
 }
@@ -439,7 +450,8 @@ function showTaxiDriverInfo() {
             $("#driving-license #plate-no").val(taxiDriverInfo.plate_no != null ? taxiDriverInfo.plate_no : "");
             $("#driving-license #vehicle-owner").val(taxiDriverInfo.vehicle_owner != null ? taxiDriverInfo.vehicle_owner : "");
             $("#driving-license #register-date").val(taxiDriverInfo.register_date != null ? taxiDriverInfo.register_date : "");
-            $("#driving-license input").attr("readonly", true);
+            $("#driving-license #plate-no").attr("readonly", true);
+            $("#driving-license #vehicle-owner").attr("readonly", true);
             $("#driving-license #img4").attr("src", taxiDriverInfo.image_driving_a != null ? ($.server2 + taxiDriverInfo.image_driving_a) : "");
             $("#driving-license #img5").attr("src", taxiDriverInfo.image_driving_b != null ? ($.server2 + taxiDriverInfo.image_driving_b) : "");
             img4 = taxiDriverInfo.image_driving_a != null ? taxiDriverInfo.image_driving_a : "";
@@ -453,7 +465,8 @@ function showTaxiDriverInfo() {
             $("#driving-license #plate-no").val(taxiDriverInfo.plate_no != null ? taxiDriverInfo.plate_no : "");
             $("#driving-license #vehicle-owner").val(taxiDriverInfo.vehicle_owner != null ? taxiDriverInfo.vehicle_owner : "");
             $("#driving-license #register-date").val(taxiDriverInfo.register_date != null ? taxiDriverInfo.register_date : "");
-            $("#driving-license input").attr("readonly", false);
+            $("#driving-license #plate-no").attr("readonly", false);
+            $("#driving-license #vehicle-owner").attr("readonly", false);
             $("#driving-license #img4").attr("src", taxiDriverInfo.image_driving_a != null ? ($.server2 + taxiDriverInfo.image_driving_a) : "");
             $("#driving-license #img5").attr("src", taxiDriverInfo.image_driving_b != null ? ($.server2 + taxiDriverInfo.image_driving_b) : "");
             img4 = taxiDriverInfo.image_driving_a != null ? taxiDriverInfo.image_driving_a : "";
@@ -467,7 +480,8 @@ function showTaxiDriverInfo() {
             $("#driving-license #plate-no").val(taxiDriverInfo.plate_no != null ? taxiDriverInfo.plate_no : "");
             $("#driving-license #vehicle-owner").val(taxiDriverInfo.vehicle_owner != null ? taxiDriverInfo.vehicle_owner : "");
             $("#driving-license #register-date").val(taxiDriverInfo.register_date != null ? taxiDriverInfo.register_date : "");
-            $("#driving-license input").attr("readonly", true);
+            $("#driving-license #plate-no").attr("readonly", true);
+            $("#driving-license #vehicle-owner").attr("readonly", true);
             $("#driving-license #img4").attr("src", taxiDriverInfo.image_driving_a != null ? ($.server2 + taxiDriverInfo.image_driving_a) : "");
             $("#driving-license #img5").attr("src", taxiDriverInfo.image_driving_b != null ? ($.server2 + taxiDriverInfo.image_driving_b) : "");
             img4 = taxiDriverInfo.image_driving_a != null ? taxiDriverInfo.image_driving_a : "";
@@ -476,7 +490,8 @@ function showTaxiDriverInfo() {
             $("#driving-license ul li div b").html("审核通过");
         } else if(drivingLicenseStatus == 0 || drivingLicenseStatus == -1) { //未提交认证 数据无效
             $("#driving-license input").attr("disabled", false);
-            $("#driving-license input").attr("readonly", false);
+            $("#driving-license #plate-no").attr("readonly", false);
+            $("#driving-license #vehicle-owner").attr("readonly", false);
             $("#driving-license ul li div").addClass("none");
             $("#driving-license ul li div b").html("");
         } else if(drivingLicenseStatus == -2) { //失败
@@ -486,7 +501,8 @@ function showTaxiDriverInfo() {
             $("#driving-license #plate-no").val(taxiDriverInfo.plate_no != null ? taxiDriverInfo.plate_no : "");
             $("#driving-license #vehicle-owner").val(taxiDriverInfo.vehicle_owner != null ? taxiDriverInfo.vehicle_owner : "");
             $("#driving-license #register-date").val(taxiDriverInfo.register_date != null ? taxiDriverInfo.register_date : "");
-            $("#driving-license input").attr("readonly", false);
+            $("#driving-license #plate-no").attr("readonly", false);
+            $("#driving-license #vehicle-owner").attr("readonly", false);
             $("#driving-license #img4").attr("src", taxiDriverInfo.image_driving_a != null ? ($.server2 + taxiDriverInfo.image_driving_a) : "");
             $("#driving-license #img5").attr("src", taxiDriverInfo.image_driving_b != null ? ($.server2 + taxiDriverInfo.image_driving_b) : "");
             img4 = taxiDriverInfo.image_driving_a != null ? taxiDriverInfo.image_driving_a : "";
@@ -601,12 +617,14 @@ function showImg(index) {
         $("#file").off("change");
         setTimeout(function () {
             $("#demo-model").removeClass("demo-model").addClass("none");
+            $("#demo-model > .model").unbind("click");
         }, 300);
     });
     $("#file").on("click", function () {
         $("#demo-model").animate({top: "100%", opacity: 0}, 300);
         setTimeout(function () {
             $("#demo-model").removeClass("demo-model").addClass("none");
+            $("#demo-model > .model").unbind("click");
         }, 300);
     });
     $("#file").val("");
@@ -651,7 +669,7 @@ function uploadPicture(index, base64, type, extra, last_file) {
     loadAlertShow("正在上传...");
     canvasDataURL(base64, function callback(data) {
         let params = {
-            // user_id: "1914974c-886b-49cc-9398-30651b0160e6",
+            // user_id: $.user_id,
             user_id: param.user_id,
             base64: data,
             type: type,

@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="yes" name="apple-touch-fullscreen">
+    <meta content="telephone=no,email=no" name="format-detection">
+    <meta http-equiv="expires" content="0">
+    <meta http-equiv="pragma" content="no-cache">
+    <meta http-equiv="cache-control" content="no-cache">
+    <meta http-equiv="cache" content="no-cache">
+    <meta itemprop="name" content="{$title}"/>
+    <meta name="description"  itemprop="description" content="{$describe}">
+    <meta itemprop="image" content="{$img}">
+    <link rel="stylesheet" type="text/css" href="../css/reset.css">
+    <link rel="stylesheet" type="text/css" href="../css/newRecommend2.css?rnd=" + new Date().getTime()>
+    <title>爱运宝大巴承包者</title>
+    <script src="../js/flexible.debug.js"></script>
+    <script src="../js/flexible_css.debug.js"></script>
+</head>
+<body>
+<img src="../img/bg_bus.jpg" class="pct100">
+<header class="contractor-header-wrapper">
+    <img src="../img/title.png" class="pct75">
+</header>
+<section>
+    <img src="../img/contractor_title0.png"  class="title">
+    <img src="../img/contractor_content0.jpg"  class="content">
+    <p  class="description  tc">注册并为班车排班后，推荐每位大巴车乘客注册都即获现金奖，每月增收过万</p>
+</section>
+<section>
+    <img src="../img/contractor_title1.png"  class="title">
+    <img src="../img/contractor_content1.jpg"  class="content">
+    <p  class="description  tc">更多乘客能联系乘坐您的大巴车</p>
+</section>
+<section>
+    <img src="../img/contractor_title2.png"  class="title">
+    <img src="../img/contractor_content2.jpg"  class="content">
+    <p  class="description  tc">大巴车车主/司机/售票员能主动联系到精准乘客，提高上座率</p>
+</section>
+<section>
+    <img src="../img/contractor_title3.png"  class="title">
+    <img src="../img/contractor_content3.jpg"  class="content">
+    <p  class="description  tc">车辆首次排班即获现金大奖，即时提现</p>
+</section>
+<section>
+    <img src="../img/contractor_title4.png"  class="title">
+    <img src="../img/contractor_content4.jpg"  class="content">
+    <p  class="description  tc">管理司机、售票员、行驶线路，实时定位车辆</p>
+</section>
+<section>
+    <img src="../img/contractor_title5.png"  class="title">
+    <img src="../img/contractor_content5.jpg?t=20180410" class="content">
+    <p  class="description  tc">平台可代快速注册认证，您只需提供您或亲友的大巴车相关信息，剩下的就是获即时现金大奖及永久性提成</p>
+</section>
+<section>
+    <img src="../img/contractor_title6.png"  class="title">
+    <img src="../img/contractor_content6.jpg"  class="content">
+    <p  class="description  tc">无任何使用费用</p>
+</section>
+<div class="btn_wrapper_inner">
+    <div id="linkto_passenger" class="linkto_driver btn red">
+        <a>了解乘客特别优惠
+            <span class="arrow red"></span>
+        </a>
+    </div>
+    <div id="linkto_driver" class="linkto_driver btn blue">
+        <a>了解司机特别优惠
+            <span class="arrow blue"></span>
+        </a>
+    </div>
+</div>
+<footer>
+    <div class="logoBox">
+        <img src="../img/logo_no_border.png" class="logo">
+        <span class="txt">爱运宝</span>
+    </div>
+    <div class="name">成都爱运科技有限公司</div>
+</footer>
+
+<div id="download_btn" class="btn_wrapper_outer">
+    <div class="download_btn btn orange"><a>点击免费注册/下载</a></div>
+</div>
+<script type="text/javascript" src="../../../js/jquery-1.8.1.min.js"></script>
+<script>
+    $(function () {
+        var url = window.location.href;
+        var data = {};
+        if (url.indexOf('?') !== -1) {
+            var search = url.substring(url.indexOf('?') + 1);
+            var queryArray = search.split('&');
+            queryArray.forEach(function (item){
+                var itemArray = item.split('=');
+                var key = itemArray[0];
+                var value = decodeURIComponent(itemArray[1]) ? decodeURIComponent(itemArray[1]) : '';
+                data[key] = value;
+            })
+        }
+        /**
+         * 了解司机详情
+         */
+        $("#linkto_driver").bind("click",function () {
+            let url = setUrl(data, "./recommend_driver.html?rnd=" + new Date().getTime());
+            window.location.href = url;
+        });
+        /**
+         * 了解乘客详情
+         */
+        $("#linkto_passenger").bind("click",function () {
+            let url = setUrl(data, "./recommend_passenger.html?rnd=" + new Date().getTime());
+            window.location.href = url;
+        });
+        /**
+         * 去注册下载
+         */
+        $("#download_btn").bind("click",function () {
+            let url = setUrl(data, "./registerForm.html?rnd=" + new Date().getTime());
+            window.location.href = url;
+        });
+    });
+
+    /**
+     * 设置跳转链接参数
+     * @param url
+     */
+    function setUrl(data, url) {
+        if (data != null) {
+            if (data.tjtel) {
+                url += ("&tjtel=" + data.tjtel);
+                if (data.city) {
+                    url += ("&city=" + data.city);
+                    if (data.identity) {
+                        url += ("&identity=" + data.identity);
+                        if (data.type) {
+                            url += ("&type=" + data.type);
+                        }
+                    } else if (data.type) {
+                        url += ("&type=" + data.type);
+                    }
+                } else if (data.identity) {
+                    url += ("&identity=" + data.identity);
+                    if (data.type) {
+                        url += ("&type=" + data.type);
+                    }
+                } else if (data.type) {
+                    url += ("&type=" + data.type);
+                }
+            } else if (data.city) {
+                url += ("&city=" + data.city);
+                if (data.identity) {
+                    url += ("&identity=" + data.identity);
+                    if (data.type) {
+                        url += ("&type=" + data.type);
+                    }
+                } else if (data.type) {
+                    url += ("&type=" + data.type);
+                }
+            } else if (data.identity) {
+                url += ("&identity=" + data.identity);
+                if (data.type) {
+                    url += ("&type=" + data.type);
+                }
+            } else if (data.type) {
+                url += ("&type=" + data.type);
+            }
+        }
+        return url;
+    }
+</script>
+<include file="AppShare:weixin" />
+</body>
+</html>

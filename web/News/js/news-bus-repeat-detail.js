@@ -1,8 +1,8 @@
 /**
- * Created by zp on 2018/11/15.
+ * Created by keyC on 2018/11/15.
  */
-let mData = []; //数据源
-let mPage = 1; //分页
+var mData = []; //数据源
+var mPage = 1; //分页
 
 $(function () {
     getRequest(getParams);
@@ -50,7 +50,7 @@ function getDataList(type, cb, flg){
         mPage++;
     }
     // let params = {
-    //     user_id: "0c63c36f-d7da-4b9c-80f1-86397d8e0438",
+    //     user_id: $.user_id,
     //     upload_no: "75f180d4d76aceab352d5ccbe5243281",
     //     id: "12",
     //     page: mPage
@@ -108,7 +108,7 @@ function getDataList(type, cb, flg){
  */
 function lookDetail(bus_id) {
     let params = {
-        // user_id: "0c63c36f-d7da-4b9c-80f1-86397d8e0438",
+        // user_id: $.user_id,
         user_id: param.user_id,
         bus_no: bus_id
     };

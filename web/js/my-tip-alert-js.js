@@ -1,3 +1,6 @@
+/**
+ * Created by keyC on 2017/7/21.
+ */
 (function($) {
     $.tip = {
         alert: function(title, content, message, callback, btnText1) {
@@ -26,7 +29,7 @@
                 _html += '<div id="mt_btn_no">'+ btnText1 +'</div>';
                 _html += '<div id="mt_btn_ok">'+ btnText2 +'</div>';
             }
-            _html += '</div></div><img id="mt_close_img" src="../Bus/img/icon_white_close.png"></div>';
+            _html += '</div></div><img id="mt_close_img" src="../img/icon_white_close.png"></div>';
 
             //必须先将_html添加到body，再设置Css样式
             $("body").append(_html);

@@ -1,26 +1,31 @@
 /**
- * Created by zp on 2018/8/20.
+ * Created by keyC on 2018/8/20.
+ * 评价司机
  */
+var result; //内容
+var resultGood = []; //好的评价
+var resultBad = []; //不好的评价
+var starIndex = 1; //星星选择个数
+
 $(function () {
     //获取评价信息
     getRequest(getRatingInfo);
     // getRatingInfo();
 });
-let result; //内容
-let resultGood = []; //好的评价
-let resultBad = []; //不好的评价
-let starIndex = 1; //星星选择个数
+
 /**
  * 获取评价信息
  */
 function getRatingInfo() {
     let params = {
-        // user_id: "9d398738-2105-4410-8f08-17ba207bce67",
+        // user_id: $.user_id,
         // order_no: "JJSHRLVV",
-        // identity: "1"
+        // identity: "1",
+        // business_type: "1"
         user_id: param.user_id,
         order_no: param.order_no,
-        identity: "1"
+        identity: "1",
+        business_type: param.business_type
     };
     console.log("params", params);
     loadAlertShow("加载中...");
@@ -72,6 +77,7 @@ function getRatingInfo() {
             } else if (res.status == 3) { //没有获取到支付结果
                 window.location.href = "../../Util/html/payRequest.html";
             } else {
+                $("#judge-main").removeClass("none");
                 toastAlertShow(res.msg)
             }
         },
@@ -110,6 +116,8 @@ function getRatingInfo() {
                 }
             }
         }
+        $(".submit").attr("disabled", true);
+        $(".submit").addClass("active-btn");
     });
 
     //提交评价
@@ -134,7 +142,7 @@ function submitRating(user_id, order_no) {
     });
     content = content.substring(0, content.length-1);
     let param = {
-        // user_id: "9d398738-2105-4410-8f08-17ba207bce67",
+        // user_id: $.user_id,
         // order_no: "JJSHRLVV",
         user_id: user_id,
         order_no: order_no,

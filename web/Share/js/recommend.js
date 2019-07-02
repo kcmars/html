@@ -1,14 +1,21 @@
+/**
+ * Created by keyC on 2018/7/10.
+ * 获取推荐人数
+ */
 $(function () {
     getRequest(getParams);
     // getParams();
 });
 
-//获取app传递过来的参数
+/**
+ * 获取app传递过来的参数
+ */
 function getParams() {
     loadAlertShow("正在获取...");
     let params = {
-        // user_id: "f4d7daab-832e-4727-acd1-a4f4e5aee568"
-        user_id: param.user_id
+        // user_id: $.user_id,
+        user_id: param.user_id,
+        grade: 0
     };
     console.log("params", params);
     $.ajax({

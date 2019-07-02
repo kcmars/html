@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="yes" name="apple-touch-fullscreen">
+    <meta content="telephone=no,email=no" name="format-detection">
+    <meta itemprop="name" content="{$title}"/>
+    <meta name="description"  itemprop="description" content="{$describe}">
+    <meta itemprop="image" content="{$img}">
+    <title>注册爱运宝</title>
+    <script type="text/javascript" src="../../../js/auto-size.js?rnd=" + new Date().getTime()></script>
+    <link type="text/css" rel="stylesheet" href="../css/reset.css"/>
+    <link type="text/css" rel="stylesheet" href="../css/register_form.css?rnd=" + new Date().getTime()/>
+    <script src="../js/flexible.debug.js"></script>
+    <script src="../js/flexible_css.debug.js"></script>
+</head>
+<body>
+<div class="registerFormBox">
+    <a class="close" href="javascript:;" onclick="window.location.back()"></a>
+    <div class="registerFormBoxInner">
+        <div class="registerForm">
+            <div class="formHeader">
+                <img src="../img/logo_no_border.png" alt="aiyun'logo">
+                <span>共享出行，共享收益</span>
+            </div>
+            <div class="content">
+                <form action="">
+                    <div class="inputBox">
+                        <input id="phoneCheck" type="text" maxlength="11" placeholder="请输入注册手机号" required autocomplete="off"><span class="tip"></span><span class="status"></span>
+                    </div>
+                    <div class="inputBox pws_code none">
+                        <input id="passwordCheck" type="password" placeholder="请输入登录密码(6~16位)" minlength="6" maxlength="16"  required><span class="tip"></span><span class="status"></span><span class="icon-eye"></span>
+                    </div>
+                    <!--<input type="hidden" value="{$tjtel}" id="recommend_phone">-->
+                    <!--<div class="inputBox">-->
+                    <!--<input id="passwordConfirm" type="password" placeholder="请确认登录密码" minlength="6" maxlength="16" required><span class="tip"></span><span class="status"></span>-->
+                    <!--</div>-->
+                    <div class="inputBox inputImgBox clearfix img_code none">
+                        <div class="imgCodeBox">
+                            <input id="imgCode" type="text" maxlength="4" placeholder="请输入图片验证码" required autocomplete="off">
+                        </div>
+                        <div class="imgBox" id="captcha-container">
+                            <img id="img-code" src="" alt="code" onclick=""><span class="refresh">点击刷新</span>
+                        </div>
+                    </div>
+                    <div class="inputBox inputCodeBox clearfix sms_code none">
+                        <div class="messageCodeBox">
+                            <input id="messageCode" type="text" maxlength="4" placeholder="请输入短信验证码">
+                        </div>
+                        <div class="codeBtnBox">
+                            <button type="button" class="codeBtn able" onclick="getSmsCode(this,60)">获取验证码</button>
+                        </div>
+                    </div>
+                    <a href="javascript:;" class="submitBtn">免费注册</a>
+                </form>
+                <div class="protocol">
+                    <span class="check" onclick="toggleCheck()"><img src="../img/check.png" alt="check"></span> <a href="http://aiyunbaoapp.a56999.com/Home/Userprotocol/passSpeciService.html" class="text" style="text-decoration: none;color: rgb(0,0,0)">《会员注册协议条款》</a>
+                </div>
+            </div>
+            <div class="registered">
+                <div class="registered_phone"></div>
+                <span class="registered_text"></span>
+                <a href="javascript:phone()" class="download_link">点击去下载</a>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="../../../js/jquery-1.8.1.min.js"></script>
+<script type="text/javascript" src="../../../js/exif.js"></script>
+<script type="text/javascript" src="../../../js/main.js?rnd=" + new Date().getTime()></script>
+<script type="text/javascript" src="../../../js/js-activity.js?rnd=" + new Date().getTime()></script>
+<script type="text/javascript" src="../../../js/my-loading-alert-js.js?rnd=" + new Date().getTime()></script>
+<script type="text/javascript" src="../../../js/my-toast-alert-js.js?rnd=" + new Date().getTime()></script>
+<script type="text/javascript" src="../../../js/my-tip-alert-js.js?rnd=" + new Date().getTime()></script>
+<script type="text/javascript" src="../js/register_form.js?rnd=" + new Date().getTime()></script>
+<include file="AppShare:weixin" />
+</body>
+</html>

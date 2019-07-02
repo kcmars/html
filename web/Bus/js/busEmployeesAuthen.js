@@ -1,24 +1,36 @@
 /**
- * Created by zp on 2018/7/13.
+ * Created by keyC on 2018/7/13.
  */
 var img1 = "";
 var img2 = "";
 var img3 = "";
 var img4 = "";
 var index = -1;
-let img_id_card_front = "../img/id-card-front-demo.jpg";//身份证正面照
-let img_id_card_back = "../img/id-card-back-demo.jpg";//身份证反面照
-let img_driver_license = "../img/driver-license-front-demo.jpg";//驾驶证正本照
+var img_id_card_front = "../img/id-card-front-demo.jpg";//身份证正面照
+var img_id_card_back = "../img/id-card-back-demo.jpg";//身份证反面照
+var img_driver_license = "../img/driver-license-front-demo.jpg";//驾驶证正本照
 var demoImg = [
     {text: "身份证正面照", img: img_id_card_front},
     {text: "身份证反面照", img: img_id_card_back},
     {text: "驾驶证正本照", img: img_driver_license}
 ];
-
 var flag = true; //阻止点击事件
 var busEmployeesInfo; //大巴经营者认证信息
+var data = {}; //检查手机号是否被添加的token
 
 $(function () {
+    var url = window.location.href;
+    if (url.indexOf('?') !== -1) {
+        var search = url.substring(url.indexOf('?') + 1);
+        var queryArray = search.split('&');
+        queryArray.forEach(function (item){
+            var itemArray = item.split('=');
+            var key = itemArray[0];
+            var value = decodeURIComponent(itemArray[1]) ? decodeURIComponent(itemArray[1]) : '';
+            data[key] = value;
+        })
+    }
+
     var type = $("input[name='radio']:checked").val();
     if(type == "person"){
         $("#driver").addClass("none");
@@ -98,12 +110,14 @@ $(function () {
 
 });
 
+/**
+ * 获取参数
+ */
 function getParams() {
     if(sessionStorage.getItem("busEmployeesInfo") != null){
         busEmployeesInfo = JSON.parse(sessionStorage.getItem("busEmployeesInfo"));
     }
     if(busEmployeesInfo) {
-        $(".authen-main").removeClass("none");
         showBusEmployeesInfo();
     } else {
         getBusEmployeesInfo();
@@ -121,22 +135,26 @@ function getBusEmployeesInfo() {
     let params = {};
     let url = "";
     if (param.type == "selfInfo") {
-        // params.user_id = "c5fa42ae-e6d8-4e10-a7b7-4df136d3c776";
+        // params.user_id = $.user_id;
         params.user_id = param.user_id;
         url = $.getEmployeesInfo;
     } else {
         if (param.employee_id == null) {
             return;
         }
-        // params.user_id = "c5fa42ae-e6d8-4e10-a7b7-4df136d3c776";
+        if (param.id != null) {
+            params.id = param.id;
+        }
+        // params.user_id = $.user_id;
         // params.type = "1";
-        // params.employee_id = "1";
+        // params.employee_id = "118";
         params.user_id = param.user_id;
         params.type = param.type;
         params.employee_id = param.employee_id;
         url = $.getBusEmployees;
     }
     loadAlertShow("获取中...");
+    console.log(params);
     $.ajax({
         type: 'POST',
         url: url,
@@ -145,7 +163,6 @@ function getBusEmployeesInfo() {
             console.log(res);
             loadAlertHide();
             if(res && res.status == 1){
-                $(".authen-main").removeClass("none");
                 busEmployeesInfo = res.data;
                 if(busEmployeesInfo){
                     sessionStorage.setItem("busEmployeesInfo", JSON.stringify(busEmployeesInfo));
@@ -158,23 +175,29 @@ function getBusEmployeesInfo() {
         error: function (err) {
             console.log(err);
             loadAlertHide();
-            // window.location.href = "../../Util/html/error.html";
+            window.location.href = "../../Util/html/error.html";
         }
     });
 }
 
-//提交司机实名认证信息
+/**
+ * 提交司机实名认证信息
+ */
 function submitBusEmployeesInfo() {
     let params = {};
     params.user_id = param.user_id;
-    // params.user_id = "c5fa42ae-e6d8-4e10-a7b7-4df136d3c776";
+    // params.user_id = $.user_id;
+    let url = $.submitBusEmployees;
     if (param.employee_id != null) {
         params.employee_id = param.employee_id;
+        url = $.updateEmployeeInfo;
+    }
+    if (data != null && data.token != null) {
+        params.__token__ = data.token;
     }
     params.type = $("input[name='radio']:checked").val() == "driver" ? "1" : "2";
     params.name = $("#name").val().trim();
     params.ID = $("#id").val().trim();
-    params.phone = $("#phone").val().trim();
     params.image_id_a = img1;
     params.image_id_b = img2;
     params.image_drivers = img3;
@@ -186,10 +209,6 @@ function submitBusEmployeesInfo() {
     }
     if (params.ID == "" || params.ID == null) {
         toastAlertShow("请输入身份证号码");
-        return;
-    }
-    if (params.phone == "" || params.phone == null) {
-        toastAlertShow("请输入联系电话");
         return;
     }
     if (params.image_id_a == "" || params.image_id_a == null) {
@@ -213,7 +232,7 @@ function submitBusEmployeesInfo() {
     loadAlertShow("提交中...");
     $.ajax({
         type: 'POST',
-        url: $.submitBusEmployees,
+        url: url,
         data: params,
         success: function (res) {
             console.log(res);
@@ -245,8 +264,8 @@ function showBusEmployeesInfo() {
     if(busEmployeesInfo){
         let status = busEmployeesInfo.status;
         let realNameStatus = busEmployeesInfo.real_name_status;
-        let driverStatus = busEmployeesInfo.driver_license_status;
-        let type = param.type;
+        let driverStatus = busEmployeesInfo.drivers_license_status;
+        let type = busEmployeesInfo.employee_type;
         if (type == "1") {
             if(realNameStatus > 0 && driverStatus > 0 && status != 2) {
                 flag = false;
@@ -269,7 +288,7 @@ function showBusEmployeesInfo() {
             }
         }
         //注册类型
-        if (type == 1) { //1司机
+        if (type == "1") { //1司机
             $("#input1").attr("checked", "true");
             $("#driver").removeClass("none");
             $("#driver-title").removeClass("none").addClass("authen-title");
@@ -339,7 +358,7 @@ function showBusEmployeesInfo() {
             $("#realName ul li div b").html("审核失败<br/>点击重新上传");
         }
         //驾驶证信息
-        if (type == 1) {
+        if (type == "1") {
             if(driverStatus == 1) { //审核中
                 $("#driver input").attr("readonly", true);
                 $("#driver input").attr("disabled", true);
@@ -460,7 +479,7 @@ function uploadPicture(index, base64, type, extra, last_file) {
     loadAlertShow("正在上传...");
     canvasDataURL(base64, function callback(data) {
         let params = {
-            // user_id: "c5fa42ae-e6d8-4e10-a7b7-4df136d3c776",
+            // user_id: $.user_id,
             user_id: param.user_id,
             base64: data,
             type: type,

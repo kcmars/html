@@ -10,6 +10,7 @@ html,body {
     font-size: 0.28rem;
     margin: 0 auto;
     color: #333333;
+    padding-bottom: 50px;
 }
 .upload-main p {
     line-height: 0.44rem;
@@ -116,4 +117,11 @@ html,body {
     left: 0;
     z-index: 9;
     opacity: 0;
+}
+.city {
+    padding: 0.2rem;
+}
+.city select {
+    height: 0.6rem;
+    margin-left: 0.20rem;
 }

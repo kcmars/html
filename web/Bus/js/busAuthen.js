@@ -1,13 +1,18 @@
 /**
- * Created by zp on 2018/7/13.
+ * Created by keyC on 2018/7/13.
+ * 大巴车车辆认证信息
  */
-let img1 = "";
-let index = -1;
-let busTypeId = "";
-let img_road_transport= "../img/road-transport-permit-add.jpg"; //道路运输许可证
-let demoImg = [
+var img1 = "";
+var index = -1;
+var busTypeId = "";
+var img_road_transport= "../img/road-transport-permit-demo.jpg"; //道路运输许可证
+var demoImg = [
     {text: "道路运输许可证", img: img_road_transport}
 ];
+var flag = true; //阻止点击事件
+var flag3 = false; //是否展开了二级页面
+var busInfo; //大巴经营者认证信息
+
 $(function () {
     getRequest(getParams);
     // getParams();
@@ -32,10 +37,14 @@ $(function () {
         if (!flag){
             return;
         }
-        $("#plate-short-list li span").removeClass("orange-text");
+        $("#plate-short-list li").removeClass("orange-text");
         $("#plate-model").removeClass("plate-model-animation-out").addClass("plate-model-animation-in");
         $("#plate-model > .model").bind("click", function () {
             $("#plate-model").removeClass("plate-model-animation-in").addClass("plate-model-animation-out");
+            $("#plate-letter-list").removeClass("plate-letter-animation-in");
+            $("#plate-model > .model").unbind("click");
+            $("#plate-short-list li").unbind("click");
+            $("#plate-letter-list li").unbind("click");
         });
         $("#plate-short-list li").bind("click", function () {
             $(this).addClass("orange-text").siblings().removeClass("orange-text");
@@ -47,6 +56,9 @@ $(function () {
                 $("#plate-letter-list").removeClass("plate-letter-animation-in").addClass("plate-letter-animation-out");
                 $("#plate-model").removeClass("plate-model-animation-in").addClass("plate-model-animation-out");
                 $("#plate-no-short").val(short + $.plateletterList[$(this).index()]);
+                $("#plate-model > .model").unbind("click");
+                $("#plate-short-list li").unbind("click");
+                $("#plate-letter-list li").unbind("click");
             });
         });
     });
@@ -66,6 +78,8 @@ $(function () {
             $(this).find("span").addClass("orange-text");
             $("#bus-color").removeClass("plate-model-animation-in").addClass("plate-model-animation-out");
             $("#plate-color").val($.color[$(this).index()].name);
+            $("##bus-color > .model").unbind("click");
+            $("#bus-color-list li").unbind("click");
         });
     });
     //选择车辆类型
@@ -83,10 +97,12 @@ $(function () {
 
     });
 });
-//获取车辆大类型
+/**
+ * 获取车辆大类型
+ */
 function getBusType1() {
     let params = {
-        // user_id: "c5fa42ae-e6d8-4e10-a7b7-4df136d3c776",
+        // user_id: $.user_id,
         user_id: param.user_id,
         type: "1"
     };
@@ -111,6 +127,9 @@ function getBusType1() {
                         $("#bus-type2").removeClass("plate-model-animation-in").addClass("plate-model-animation-out");
                         flag3 = false;
                     }
+                    $("#bus-type-list2 li").unbind("click");
+                    $("#bus-type > .model").unbind("click");
+                    $("#bus-type-list li").unbind("click");
                 });
                 $("#bus-type-list li").bind("click", function () {
                     $("#bus-type-list li").find("span").removeClass("orange-text");
@@ -127,10 +146,13 @@ function getBusType1() {
         }
     });
 }
-//获取车辆小类型
+/**
+ * 获取车辆小类型
+ * @param type
+ */
 function getBusType2(type) {
     let params = {
-        // user_id: "c5fa42ae-e6d8-4e10-a7b7-4df136d3c776",
+        // user_id: $.user_id,
         user_id: param.user_id,
         type: type
     };
@@ -157,7 +179,9 @@ function getBusType2(type) {
                     $("#plate-type").val(data[$(this).index()].bus_class_name);
                     flag3 = false;
                     busTypeId = data[$(this).index()].bus_type_id;
-                    console.log(busTypeId);
+                    $("#bus-type-list2 li").unbind("click");
+                    $("#bus-type > .model").unbind("click");
+                    $("#bus-type-list li").unbind("click");
                 });
             } else {
                 toastAlertShow(res.msg, 2500);
@@ -170,21 +194,11 @@ function getBusType2(type) {
     });
 }
 
-var flag = true; //阻止点击事件
-var flag3 = false; //是否展开了二级页面
-var busInfo; //大巴经营者认证信息
-
+/**
+ * 获取参数
+ */
 function getParams() {
-    if(sessionStorage.getItem("busInfo") != null){
-        busInfo = JSON.parse(sessionStorage.getItem("busInfo"));
-    }
-    if(busInfo) {
-        $(".authen-main").removeClass("none");
-        showBusInfo();
-    } else {
-        getBusInfo();
-    }
-    // getBusInfo();
+    getBusInfo();
     //保存
     $("#submit").bind("click", function () {
         submitBusInfo();
@@ -198,12 +212,13 @@ function getBusInfo() {
     if (param.bus_no == null) {
         return;
     }
-    let params = {
-        // user_id: "c5fa42ae-e6d8-4e10-a7b7-4df136d3c776",
-        // bus_no: "3"
-        user_id: param.user_id,
-        bus_no: param.bus_no
-    };
+    let params = {};
+    // params.user_id = $.user_id;
+    params.user_id = param.user_id;
+    params.bus_no = param.bus_no;
+    if (param.id != null) {
+        params.id = param.id;
+    }
     loadAlertShow("获取中...");
     $.ajax({
         type: 'POST',
@@ -213,10 +228,8 @@ function getBusInfo() {
             console.log(res);
             loadAlertHide();
             if(res && res.status == 1){
-                $(".authen-main").removeClass("none");
                 busInfo = res.data;
                 if(busInfo){
-                    sessionStorage.setItem("busInfo", JSON.stringify(busInfo));
                     showBusInfo();
                 }
             } else {
@@ -231,11 +244,13 @@ function getBusInfo() {
     });
 }
 
-//提交司机实名认证信息
+/**
+ * 提交大巴车认证信息
+ */
 function submitBusInfo() {
     let params = {};
     params.user_id = param.user_id;
-    // params.user_id = "c5fa42ae-e6d8-4e10-a7b7-4df136d3c776";
+    // params.user_id = $.user_id;
     if (param.bus_no != null) {
         params.bus_no = param.bus_no;
     }
@@ -299,7 +314,7 @@ function submitBusInfo() {
         error: function (err) {
             console.log(err);
             loadAlertHide();
-            window.location.href = "../../Util/html/error.html";
+            // window.location.href = "../../Util/html/error.html";
         }
     });
 }
@@ -321,7 +336,7 @@ function showBusInfo() {
         //实名信息
         if(status == 1) { //审核中
             $("#realName #name").val(busInfo.name);
-            $("#realName #plate-no-short").val(busInfo.plate_for_short + busInfo.plate_no_alpha);
+            $("#realName #plate-no-short").val(busInfo.plate_for_short + busInfo.plate_for_alpha);
             $("#realName #plate-no").val(busInfo.plate_no);
             $("#realName #plate-color").val(busInfo.bus_color);
             $("#realName #plate-type").val(busInfo.bus_type_name);
@@ -334,7 +349,7 @@ function showBusInfo() {
 
         } else if (status == 2) { //待完善
             $("#realName #name").val(busInfo.name != null ? busInfo.name : "");
-            $("#realName #plate-no-short").val(busInfo.plate_for_short != null && busInfo.plate_no_alpha != null ? busInfo.plate_for_short + busInfo.plate_no_alpha : "");
+            $("#realName #plate-no-short").val(busInfo.plate_for_short != null && busInfo.plate_for_alpha != null ? busInfo.plate_for_short + busInfo.plate_for_alpha : "");
             $("#realName #plate-no").val(busInfo.plate_no != null ? busInfo.plate_no : "");
             $("#realName #plate-color").val(busInfo.bus_color != null ? busInfo.bus_color : "");
             $("#realName #plate-type").val(busInfo.bus_type_name != null ? busInfo.bus_type_name : "");
@@ -349,7 +364,7 @@ function showBusInfo() {
 
         } else if (status == 3) { //成功
             $("#realName #name").val(busInfo.name);
-            $("#realName #plate-no-short").val(busInfo.plate_for_short + busInfo.plate_no_alpha);
+            $("#realName #plate-no-short").val(busInfo.plate_for_short + busInfo.plate_for_alpha);
             $("#realName #plate-no").val(busInfo.plate_no);
             $("#realName #plate-color").val(busInfo.bus_color);
             $("#realName #plate-type").val(busInfo.bus_type_name);
@@ -365,7 +380,7 @@ function showBusInfo() {
             $("#realName ul li div b").html("");
         } else if(status == -2) { //失败
             $("#realName #name").val(busInfo.name);
-            $("#realName #plate-no-short").val(busInfo.plate_for_short + busInfo.plate_no_alpha);
+            $("#realName #plate-no-short").val(busInfo.plate_for_short + busInfo.plate_for_alpha);
             $("#realName #plate-no").val(busInfo.plate_no);
             $("#realName #plate-color").val(busInfo.bus_color);
             $("#realName #plate-type").val(busInfo.bus_type_name);
@@ -415,13 +430,12 @@ function showImg(index) {
     $("#file").val("");
     $("#file").off("change");
     $("#file").on("change", function () {
-        //console.log("index= ", index);
         var file = $(".file").get(0).files[0];
         var render = new FileReader();
         render.readAsDataURL(file);
         render.onload = function (e) {
             // console.log(e);
-            //console.log(e.target.result);
+            // console.log(e.target.result);
             if (index == 0) {
                 uploadPicture(0, e.target.result, 7, "A", img1);  //大巴车资质照
             }
@@ -444,7 +458,7 @@ function uploadPicture(index, base64, type, extra, last_file) {
     loadAlertShow("正在上传...");
     canvasDataURL(base64, function callback(data) {
         let params = {
-            // user_id: "c5fa42ae-e6d8-4e10-a7b7-4df136d3c776",
+            // user_id: $.user_id,
             user_id: param.user_id,
             base64: data,
             type: type,
@@ -457,7 +471,7 @@ function uploadPicture(index, base64, type, extra, last_file) {
             url: $.uploadPicture,
             data: params,
             success: function (res) {
-                //console.log(res);
+                console.log(res);
                 loadAlertHide();
                 if(res && res.status == 1){
                     let path = res.data;

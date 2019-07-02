@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+    <title>下载</title>
+    <link rel="stylesheet" href="../css/ui-dialog.css">
+</head>
+<style>
+    .btnstyle{
+        display: block;
+        width: 200px;
+        margin:0 auto;
+        text-align: center;
+        border: 1px solid #00a3f0;
+        padding:7px 0;
+        margin-top: 10px;
+        border-radius: 5px;
+    }
+    .logoimg{
+        margin:0 auto;
+        display: block;
+        margin-top: 10px;
+        margin-bottom: 20px;
+        border-radius: 5px;
+    }
+    #layout{
+        margin-top: 150px;
+    }
+    .invite_btcenter{
+        margin-top: 20px;
+    }
+</style>
+<body>
+<div id="layout"   onclick="xiazai();">
+    <img class="logoimg" src="../img/new_logo.png" width="60" height="60" alt="">
+    <botton class="btnstyle" >点击这里下载爱运宝</botton>
+    <div class="invite_btcenter">
+        该软件为正规软件,在苹果公司应用软件商店、腾讯应用宝、百度手机助手、360手机助手均已通过审核并可下载,请放心使用。</div>
+    <!--<a href="http://downloadpkg.apicloud.com/app/download?path=http://7xq236.com1.z0.glb.clouddn.com/931dbb09adb9aa294bb7da9b071c2afc_d">点击下载爱运APP</a>-->
+    <SCRIPT language=JavaScript>
+        var st = new Date();
+    </SCRIPT>
+    <IMG alt="测试图片" src="http://www.jb51.net/images/logo.gif" style="display: none">
+    <div id='showtxt'></div>
+</div>
+</body>
+<script src="../../../js/jquery-1.8.1.min.js" type="text/javascript"></script>
+<script src="../js/dialog-min.js"></script>
+<script type="text/javascript">
+    var arr=["网速低于50KB","网速在50-100KB之间","网速在100-200KB之间","网速在200-300KB之间","视频通讯"];
+    var et = new Date();
+    function xiazai(){
+        var ua = window.navigator.userAgent.toLowerCase();
+//        if(ua.match(/MicroMessenger/i) == 'micromessenger'||ua.match(/QQ/i) == "qq"){
+        if(ua.match(/QQ/i) == "qq"){
+            var d = dialog({
+                title: '温馨提示！',
+                content: "<p style='color:#d42525;font-size:32px; '>请点击普通下载</p>",
+                ok: function () {
+                    download();
+                }
+            });
+            d.showModal();
+        }else{
+            download();
+        }
+    }
+    function download(){
+        let params = {};
+        $.ajax({
+            type: 'GET',
+            url: $.downloadUrl,
+            data: params,
+            success: function (res) {
+                console.log("res", res);
+//                var filesize =35.4;  //measured in KB
+//                var speed = Math.ceil((filesize*1000)/(et - st));
+//                var scope=(speed>0 && speed<=50)?0:(speed>50 && speed<=100)?1:2;
+//                if(scope < 2){
+//                    var d = dialog({
+//                        title: '温馨提示：',
+//                        content: '您的网络状况较差，下载将耗时较长，推荐使用4G或WiFi下载',
+//                        okValue: '继续下载',
+//                        ok: function () {
+//                            window.location.href = res;
+//                            return true;
+//                        },
+//                        cancelValue: '稍后下载',
+//                        cancel: function () {
+//                            return true;
+//                        }
+//                    });
+//                    d.showModal();
+//                }else{
+//                    window.location.href = res
+//                }
+            },
+            error: function (err) {
+                console.log(err);
+            }
+        });
+    }
+</script>
+</html>

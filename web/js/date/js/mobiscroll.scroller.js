@@ -333,7 +333,7 @@
             }
 
             if (time && px != pixels[index]) {
-                // Trigger animation start event
+                // Trigger animation start Event
                 event('onAnimStart', [$markup, index, time]);
             }
 
@@ -402,7 +402,7 @@
         }
 
         function scrollToPos(time, index, manual, dir, active) {
-            // Call validation event
+            // Call validation Event
             if (event('validate', [$markup, index, time, dir]) !== false) {
                 // Set scrollers to position
                 $('.dw-ul', $markup).each(function (i) {
@@ -448,7 +448,7 @@
             var ret;
             args.push(that);
             $.each([userdef, theme, preset, settings], function (i, v) {
-                if (v && v[name]) { // Call preset event
+                if (v && v[name]) { // Call preset Event
                     ret = v[name].apply(el, args);
                 }
             });
@@ -734,7 +734,7 @@
         };
 
         /**
-        * Attach tap event to the given element.
+        * Attach tap Event to the given element.
         */
         that.tap = function (el, handler, prevent) {
             var startX,
@@ -750,7 +750,7 @@
                     startY = getCoord(ev, 'Y');
                 }).on('touchend.dw', function (ev) {
                     var that = this;
-                    // If movement is less than 20px, fire the click event handler
+                    // If movement is less than 20px, fire the click Event handler
                     if (Math.abs(getCoord(ev, 'X') - startX) < 20 && Math.abs(getCoord(ev, 'Y') - startY) < 20) {
                         // preventDefault and setTimeout are needed by iOS
                         ev.preventDefault();
@@ -1034,7 +1034,7 @@
         };
 
         /**
-        * Show mobiscroll on focus and click event of the parameter.
+        * Show mobiscroll on focus and click Event of the parameter.
         * @param {jQuery} $elm - Events will be attached to this element.
         * @param {Function} [beforeShow=undefined] - Optional function to execute before showing mobiscroll.
         */
@@ -1220,7 +1220,7 @@
         that.getValidCell = getValid;
 
         /**
-        * Triggers a mobiscroll event.
+        * Triggers a mobiscroll Event.
         */
         that.trigger = event;
 

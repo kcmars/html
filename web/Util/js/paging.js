@@ -1,14 +1,14 @@
 /**
- * Created by Administrator on 2018/8/24.
+ * Created by keyC on 2018/8/24.
  */
-let mPageNum = 10; //一页10条数据
-let mRound = 0; //一共分为几页数据
-let mRoundList = []; //当前显示出来的 round
-let mRoundListLength = 5; //定义基础展示 round 的个数
-let currentItem = 1; //表示当前第几页
-let currentIndex = 0; //表示当前选中的 round 的下标
-let mCurrentPageData = []; //当前页存放的数据
-let data = [
+var mPageNum = 10; //一页10条数据
+var mRound = 0; //一共分为几页数据
+var mRoundList = []; //当前显示出来的 round
+var mRoundListLength = 5; //定义基础展示 round 的个数
+var currentItem = 1; //表示当前第几页
+var currentIndex = 0; //表示当前选中的 round 的下标
+var mCurrentPageData = []; //当前页存放的数据
+var data = [
     1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
     2, 2, 2, 2, 2, 2, 2, 2, 2, 2,
     3, 3, 3, 3, 3, 3, 3, 3, 3, 3,

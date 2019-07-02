@@ -66,3 +66,18 @@
     text-align: center;
     padding: 0.35rem 0
 }
+.mp-main ul li {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.15rem 0.60rem;
+}
+.mp-main ul li span {
+    font-size: 0.30rem;
+    color: #666666;
+}
+.mp-main ul .active span {
+    font-size: 0.30rem;
+    color: #FE8D2A;
+}

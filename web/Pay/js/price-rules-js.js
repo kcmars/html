@@ -1,7 +1,8 @@
 /**
- * Created by zp on 2018/8/20.
+ * Created by keyC on 2018/8/20.
  */
-let priceData = []; //价格配置详情
+var priceData = []; //价格配置详情
+
 $(function () {
     //获取计价规则
     getRequest(getPriceRules);
@@ -16,10 +17,10 @@ function getPriceRules() {
         type: 'POST',
         url: $.getPriceConfig,
         data: {
+            // user_id: $.user_id,
+            // order_no: "FO7ED3P0"
             user_id: param.user_id,
             order_no: param.order_no
-            // user_id: "f119347b-5c60-40f5-91e2-f0701d2c7e8c",
-            // order_no: "1O0FE3P0"
         },
         success: function (res) {
             console.log(res);
@@ -69,8 +70,10 @@ function getPriceRules() {
                     if (data.night_config.price_per_minute != null) {
                         $("#night-price").text(data.night_config.price_per_minute + "元/公里");
                     }
-                    if (data.night_config.start_time != null && data.night_config.end_time != null) {
+                    if (data.night_config.start_time1 != null && data.night_config.end_time1 != null && data.night_config.start_time1 != "" && data.night_config.end_time1 != "") {
                         $("#night-text").text("夜间（" + $.format(data.night_config.start_time, "hh:mm") + "-次日" + $.format(data.night_config.end_time, "hh:mm") + "），加收夜间服务费");
+                    } else if (data.night_config.start_time != null && data.night_config.end_time != null) {
+                        $("#night-text").text("夜间（" + data.night_config.start_time + "-次日" + data.night_config.end_time + "），加收夜间服务费");
                     }
                 }
                 if (data.share_config != null && data.share_config.config != null) {

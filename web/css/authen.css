@@ -1,7 +1,7 @@
 .authen-main {
     width: 100%;
     height: 100%;
-    overflow: scroll;
+    overflow: auto;
     background-color: #ffffff;
     font-size: 0.28rem;
 }
@@ -19,7 +19,7 @@
     justify-content: space-between;
     align-items: center;
     padding: 0.25rem 5%;
-    color: #333333;
+    color: #FF9000;
     font-size: 0.33rem;
 }
 .authen-main .authen-title i{
@@ -160,15 +160,16 @@
 .authen-main .input .item-right .item-right-box {
     border: 0.02rem solid #cccccc;
     padding: 0.12rem;
-    margin-left: 15%;
+    margin-left: 12%;
     border-radius: 0.10rem;
     position: relative;
-    width: 2.0rem;
+    width: 2.2rem;
 }
 .authen-main .input .item-right .item-right-box input{
     text-align: center;
     border: none;
     flex: 1;
+    padding: 0;
     height: 0.38rem;
     font-size: 0.33rem;
     color: #333333;
@@ -176,7 +177,7 @@
 }
 .authen-main .input .item-right .item-right-box i{
     position: absolute;
-    top: 0.15rem;
+    top: 0.12rem;
     right: 0;
     width: 0.4rem;
     height: 0.4rem;
@@ -459,49 +460,100 @@
     -webkit-animation: slide-in 0.5s forwards;
     animation: slide-in 0.5s forwards;
 }
+/**
+    避免在Android手机上卡顿，避免使用 left right width height 等词定位
+ */
 @-webkit-keyframes slide-in {
-    0% { right: -100%}
-    100% { right: 0 }
+    0% {
+        /*right: -100%;*/
+        transform: translate(0, 0);
+    }
+    100% {
+        /*right: 0;*/
+        transform: translate(-100%, 0);
+    }
 }
 @keyframes slide-in {
-    0% { right: -100%}
-    100% { right: 0 }
+    0% {
+        /*right: -100%;*/
+        transform: translate(0, 0);
+    }
+    100% {
+        /*right: 0;*/
+        transform: translate(-100%, 0);
+    }
 }
 .plate-model-animation-out {
     -webkit-animation: slide-out 0.5s backwards;
     animation: slide-out 0.5s backwards;
 }
 @-webkit-keyframes slide-out {
-    0% { right: 0}
-    100% { right: -100% }
+    0% {
+        /*right: 0;*/
+        transform: translate(-100%, 0);
+    }
+    100% {
+        /*right: -100%;*/
+        transform: translate(0, 0);
+    }
 }
 @keyframes slide-out {
-    0% { right: 0}
-    100% { right: -100% }
+    0% {
+        /*right: 0;*/
+        transform: translate(-100%, 0);
+    }
+    100% {
+        /*right: -100%;*/
+        transform: translate(0, 0);
+    }
 }
 .plate-letter-animation-in {
     -webkit-animation: letter-slide-in 0.5s forwards;
     animation: letter-slide-in 0.5s forwards;
 }
 @-webkit-keyframes letter-slide-in {
-    0% { right: -35%}
-    100% { right: 0 }
+    0% {
+        /*right: 0;*/
+        transform: translate(0, 0);
+    }
+    100% {
+        /*right: -35%;*/
+        transform: translate(-100%, 0);
+    }
 }
 @keyframes letter-slide-in {
-    0% { right: -35%}
-    100% { right: 0 }
+    0% {
+        /*right: 0;*/
+        transform: translate(0, 0);
+    }
+    100% {
+        /*right: -35%;*/
+        transform: translate(-100%, 0);
+    }
 }
 .plate-letter-animation-out {
     -webkit-animation: letter-slide-out 0.5s backwards;
     animation: letter-slide-out 0.5s backwards;
 }
 @-webkit-keyframes letter-slide-out {
-    0% { right: 0}
-    100% { right: -35% }
+    0% {
+        /*right: -35%;*/
+        transform: translate(-100%, 0);
+    }
+    100% {
+        /*right: 0;*/
+        transform: translate(0, 0);
+    }
 }
 @keyframes letter-slide-out {
-    0% { right: 0}
-    100% { right: -35% }
+    0% {
+        /*right: -35%;*/
+        transform: translate(-100%, 0);
+    }
+    100% {
+        /*right: 0;*/
+        transform: translate(0, 0);
+    }
 }
 .select-model-box {
     position: fixed;

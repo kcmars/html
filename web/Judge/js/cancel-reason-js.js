@@ -1,5 +1,6 @@
 /**
- * Created by zp on 2018/8/21.
+ * Created by keyC on 2018/8/21.
+ * 取消订单理由
  */
 $(function () {
     getRequest(getCancelReason);
@@ -15,8 +16,8 @@ function getCancelReason() {
         type: 'POST',
         url: $.getCancelReason,
         // data: {
-        //     user_id: "803659d2-170c-41ab-946d-8cde78cb5a10",
-        //     identity: "2"
+        //     user_id: $.user_id,
+        //     identity: "1"
         // },
         data: {
             user_id: param.user_id,
@@ -33,6 +34,7 @@ function getCancelReason() {
                 let template = document.getElementById('template-cancel-reason-list').innerHTML;
                 document.getElementById('cancel-reason').innerHTML = doT.template(template)(resultReason);
             } else {
+                $(".cancel-main").removeClass("none");
                 toastAlertShow(res.msg)
             }
         },
@@ -66,38 +68,12 @@ function submitCancelReason(user_id, order_no) {
             reason = $(this).context.id;
         }
     });
-    $.ajax({
-        type: 'POST',
-        url: $.submitReason,
-        // data: {
-        //     user_id: "767ef565-80fa-4f73-b42e-51226dad7e42",
-        //     order_no: "1TRL6P7E",
-        //     reason: "1",
-        //     remark: "1"
-        // },
-        data: {
-            user_id: user_id,
-            order_no: order_no,
-            reason: reason,
-            remark: $("input").val().trim()
-        },
-        dataType: 'json',
-        success: function (res) {
-            console.log(res);
-            loadAlertHide();
-            result = res;
-            if (res.status == 1) { //已评价
-                toastAlertShow(res.msg);
-            } else {
-                toastAlertShow(res.msg)
-            }
-        },
-        error: function (err) {
-            console.log("err",err);
-            loadAlertHide();
-            window.location.href = "../../Util/html/error.html";
-        }
-    });
+    let data = {
+        reason: reason,
+        remark: $("input").val().trim()
+    };
+    paramToActivity(JSON.stringify(data));
+    closeWebview();
 }
 /**
  * 选择取消内容

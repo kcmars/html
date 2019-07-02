@@ -1,12 +1,18 @@
+/**
+ * Created by keyC on 2018/8/20.
+ * 评价乘客
+ */
+var result; //内容
+var resultGood = []; //好的评价
+var resultBad = []; //不好的评价
+var starIndex = 1; //星星选择个数
+
 $(function () {
     //获取评价信息
     getRequest(getRatingInfo);
     // getRatingInfo();
 });
-let result; //内容
-let resultGood = []; //好的评价
-let resultBad = []; //不好的评价
-let starIndex = 1; //星星选择个数
+
 /**
  * 获取评价信息
  */
@@ -16,14 +22,16 @@ function getRatingInfo() {
         type: 'POST',
         url: $.getRatingInfo,
         // data: {
-        //     user_id: "ff3110c0-8683-4a1c-a770-5dec8b675059",
-        //     order_no: "AK3TF05S",
-        //     identity: "2"
+        //     user_id: "68458887-4481-450e-9d39-95d3bcced125",
+        //     order_no: "T520A7HI",
+        //     identity: "2",
+        //     business_type: "4"
         // },
         data: {
             user_id: param.user_id,
             order_no: param.order_no,
-            identity: "2"
+            identity: "2",
+            business_type: param.business_type
         },
         dataType: 'json',
         success: function (res) {
@@ -39,7 +47,7 @@ function getRatingInfo() {
                 $(".text").text("已评价乘客");
                 $("#phone").text("尾号" + data.phone);
                 if(data.portrait != null){
-                    $("#portrait").attr("src", $.server1 + data.portrait);
+                    $("#portrait").attr("src", $.server2 + data.portrait);
                 }
                 $(".list-star li").each(function () {
                     if($(this).index() < data.star){
@@ -61,7 +69,7 @@ function getRatingInfo() {
                 $(".text").text("请评价乘客");
                 $("#phone").text("尾号" + data.phone);
                 if(data.portrait != null){
-                    $("#portrait").attr("src", $.server1 + data.portrait);
+                    $("#portrait").attr("src", $.server2 + data.portrait);
                 }
                 $(".judge-hint").text("指出不足");
                 let content = data.content;
@@ -79,6 +87,7 @@ function getRatingInfo() {
                     document.getElementById('list-content').innerHTML = doT.template(template)(resultBad);
                 }
             } else {
+                $(".judge-main").removeClass("none");
                 toastAlertShow(res.msg)
             }
         },
@@ -117,6 +126,8 @@ function getRatingInfo() {
                 }
             }
         }
+        $(".submit").attr("disabled", true);
+        $(".submit").addClass("active-btn");
     });
 
     //提交评价

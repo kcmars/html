@@ -13,7 +13,7 @@
     <link href="../../css/authen.css?rnd=" + new Date().getTime() type="text/css" rel="stylesheet">
 </head>
 <body>
-    <div class="authen-main none">
+    <div class="authen-main">
         <p>信息仅用于审核，绝对保密</p>
         <div class="line"></div>
         <div id="realName" class="authen-item">
@@ -46,7 +46,7 @@
             <div class="input">
                 <span>核载客量</span>
                 <div class="item-right">
-                    <input class="center" id="plate-seats" placeholder="车辆核载客量" type="text" value=""/>
+                    <input class="center" id="plate-seats" maxlength="2" placeholder="车辆核载客量" type="text" value=""/>
                 </div>
                 <span>座</span>
             </div>
@@ -62,7 +62,7 @@
             </ul>
         </div>
         <div id="submit" class="submit-btn">
-            保存
+            确认提交
         </div>
     </div>
     <div id="plate-model" class="plate-model">
@@ -94,7 +94,7 @@
             </div>
             <div class="upload-btn">
                 <span>上传照片</span>
-                <input id="file" class="file" type="file" accept="image/jpeg,image/gif,image/png,image/jpg" value="">
+                <input id="file" class="file" type="file" accept="image/*" value="">
             </div>
         </div>
     </div>

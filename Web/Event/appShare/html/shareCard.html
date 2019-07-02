@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Language" content="zh-CN"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="yes" name="apple-touch-fullscreen">
+    <meta content="telephone=no,email=no" name="format-detection">
+    <title>爱运宝VIP专属名片</title>
+    <script type="text/javascript" src="../../../js/auto-size.js?rnd=" + new Date().getTime()></script>
+    <link href="../../../css/main.css?rnd=" + new Date().getTime() type="text/css" rel="stylesheet">
+    <link href="../css/cards.css?rnd=" + new Date().getTime() type="text/css" rel="stylesheet">
+</head>
+<body>
+<div id="qrcodeCanvas" class="hide"></div>
+<div class="card-main">
+    <div class="text-center">专属名片</div>
+    <div class="type-wrapper">
+        <span class="type active" id="common">乘客/快车司机</span>
+        <span class="type" id="taxi">出租车司机</span>
+        <span class="type" id="bus">大巴车司机</span>
+    </div>
+    <div id="face" class="zoom4" align="center"></div>
+    <p>正面</p>
+
+    <div id="back" class="zoom4" align="center">
+        <img src="../img/back.jpg"/>
+    </div>
+    <p>背面</p>
+    <div class="text">
+        <!--<button type="button" onclick="download()" class="btn btn-warning">点击下载</button>-->
+        <span id="sub">长按</span>图片下载，随后打印，轻松推广
+    </div>
+    <div class="pu" id="myModal">
+        <div class="model"></div>
+        <div class="content">
+            <div class="modal-header">
+                <span class="title">爱运宝VIP专属名片</span>
+                <span class="close">&times;</span>
+            </div>
+            <ul>
+                <li id="user-phone"></li>
+                <li id="vip-code"></li>
+                <li>名片二维码已绑定爱运宝账号</li>
+                <li>永享扫码注册用户行程收益</li>
+            </ul>
+            <div class="modal-footer">好的</div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="../../../js/jquery-1.8.1.min.js"></script>
+<script type="text/javascript" src="http://cdn.staticfile.org/jquery.qrcode/1.0/jquery.qrcode.min.js"></script>
+<script type="text/javascript" src="../../../js/exif.js"></script>
+<script type="text/javascript" src="../../../js/js-activity.js"></script>
+<script type="text/javascript" src="../../../js/main.js?rnd=" + new Date().getTime()></script>
+<script type="text/javascript" src="../../../js/my-loading-alert-js.js?rnd=" + new Date().getTime()></script>
+<script type="text/javascript" src="../../../js/my-toast-alert-js.js?rnd=" + new Date().getTime()></script>
+<script type="text/javascript" src="../js/cards.js?rnd=" + new Date().getTime()></script>
+</body>
+</html>

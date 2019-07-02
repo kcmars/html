@@ -1,7 +1,8 @@
 /**
- * Created by Administrator on 2018/8/20.
+ * Created by keyC on 2018/8/20.
  */
-let priceData = []; //价格详情
+var priceData = []; //价格详情
+
 $(function () {
     //获取价格详情信息
     getRequest(getPriceDetail);
@@ -17,11 +18,11 @@ function getPriceDetail() {
         type: 'POST',
         url: $.getDetailEstimateInfo,
         data: {
+            // user_id: $.user_id,
+            // order_no: "I48OCQ2S",
             user_id: param.user_id,
             order_no: param.order_no,
             type: "2"
-            // user_id: "803659d2-170c-41ab-946d-8cde78cb5a10",
-            // order_no: "BTIK1M9I"
         },
         success: function (res) {
             console.log(res);

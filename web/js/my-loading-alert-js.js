@@ -1,4 +1,6 @@
-
+/**
+ * Created by keyC on 2017/7/21.
+ */
 (function($) {
     $.loading = {
         alert: function(msg) {

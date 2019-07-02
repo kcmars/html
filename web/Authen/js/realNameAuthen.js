@@ -1,8 +1,8 @@
 /**
- * Created by zp on 2018/7/13.
+ * Created by keyC on 2018/7/13.
  */
 
-let passengerInfo; // 乘客认证信息
+var passengerInfo; // 乘客认证信息
 
 $(function () {
     getRequest(getParams);
@@ -28,7 +28,7 @@ function getParams() {
 //获取实名认证审核信息
 function getPassengerRealNameInfo() {
     let params = {
-        // user_id: "6a2f6035-653e-406d-b07a-ae94d46cc42a"
+        // user_id: $.user_id
         user_id: param.user_id
     };
     loadAlertShow("获取中...");
@@ -45,6 +45,7 @@ function getPassengerRealNameInfo() {
                 sessionStorage.setItem("passengerInfo", JSON.stringify(passengerInfo));
                 showPassengerRealNameInfo();
             } else {
+                $(".authen-main").removeClass("none");
                 toastAlertShow(res.msg, 2500);
             }
         },
@@ -90,7 +91,7 @@ function submitPassengerRealNameInfo() {
         return;
     }
     let params = {
-        // user_id: "6a2f6035-653e-406d-b07a-ae94d46cc42a",
+        // user_id: $.user_id,
         user_id: param.user_id,
         name: name,
         ID: ID
@@ -114,7 +115,7 @@ function submitPassengerRealNameInfo() {
         error: function (err) {
             console.log(err);
             loadAlertHide();
-            window.location.href = "../../Util/html/error.html";
+            // window.location.href = "../../Util/html/error.html";
         }
     });
 }

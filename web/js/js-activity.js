@@ -101,6 +101,15 @@ function openShareTo(index, data) {
     }
 }
 
+//传递参数到原生
+function paramToActivity(data) {
+    if (isAndroid) {
+        AiYunInterface.paramTo(data) ;
+    } else {
+        WebViewJavascriptBridge.callHandler('paramTo', data, function(response) {})
+    }
+}
+
 //执行函数
 function getRequest(callback) {
     if (isAndroid) {

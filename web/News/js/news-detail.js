@@ -1,6 +1,7 @@
 /**
- * Created by Administrator on 2018/9/10.
+ * Created by keyC on 2018/9/10.
  */
+
 $(function () {
    getRequest(getParams);
     // getParams();

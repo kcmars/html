@@ -1,0 +1,54 @@
+{
+  "data": [{
+    "id": 1,
+    "name": "老大",
+    "name1": "老大妻",
+    "head": "http:\/\/118.190.203.67:8800\/uploads\/20190622\/e437a1f4bcb049b60dbcb3b47dbecc01.jpg",
+    "pid": 0,
+    "childrens": [
+      {
+        "id": 2,
+        "name": "老二",
+        "name1": "老二妻",
+        "head": "http:\/\/118.190.203.67:8800\/uploads\/20190622\/e437a1f4bcb049b60dbcb3b47dbecc01.jpg",
+        "pid": 1,
+        "childrens": [
+          {
+            "id": 5,
+            "name": "老三",
+            "name1": "老三妻",
+            "head": "http:\/\/118.190.203.67:8800\/uploads\/20190622\/e437a1f4bcb049b60dbcb3b47dbecc01.jpg",
+            "pid": 2,
+            "childrens": [
+              {
+                "id": 10,
+                "name": "老四",
+                "name1": "",
+                "pid": 5,
+                "childrens": [
+                ]
+              },
+              {
+                "id": 11,
+                "name": "老五",
+                "name1": "老五妻",
+                "pid": 5,
+                "childrens": [
+                ]
+              },
+              {
+                "id": 12,
+                "name": "老六",
+                "name1": "",
+                "pid": 5,
+                "childrens": [
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+  ]
+}

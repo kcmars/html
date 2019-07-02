@@ -20,14 +20,8 @@
             <span class="title-right"></span>
         </div>
         <div class="mp-alert-pay-type">
-            <div id="price-div" class="flex-row price-row">
-                <span class="span">行程费用</span>
-                <span id="price" class="span">0.00元</span>
-            </div>
-            <div id="discount-price-div" class="none">
-                <span class="span">优惠金额</span>
-                <span id="discount-price" class="span">0.00元</span>
-            </div>
+            <ul id="price-info-list">
+            </ul>
             <div class="flex-row mp-alert-pay-type-row">
                 <img class="img" src="../img/wechat_pay.png" />
                 <span class="span">微信支付</span>
@@ -44,6 +38,20 @@
         </div>
     </div>
 </body>
+<script type="text/template" charset="utf-8" id='template-price-info-list'>
+    {{ if (it && it.length > 0){ }}
+    {{ for (var i = 0; i < it.length; i++){ }}
+    {{ if(it[i].type == 1) { }}
+        <li class="active">
+    {{ } else { }}
+        <li>
+    {{ } }}
+            <span>{{=it[i].text}}</span>
+            <span>{{=it[i].price}}</span>
+        </li>
+    {{ } }}
+    {{ } }}
+</script>
 <script type="text/javascript" src="../../js/jquery-1.8.1.min.js"></script>
 <script type="text/javascript" src="../../js/exif.js"></script>
 <script type="text/javascript" src="../../js/js-activity.js?rnd=" + new Date().getTime()></script>

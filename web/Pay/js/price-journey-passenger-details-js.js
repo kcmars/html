@@ -1,7 +1,8 @@
 /**
- * Created by Administrator on 2018/8/20.
+ * Created by keyC on 2018/8/20.
  */
-let priceData = []; //价格详情
+var priceData = []; //价格详情
+
 $(function () {
     //获取价格详情信息
     getRequest(getPriceDetail);
@@ -19,8 +20,8 @@ function getPriceDetail() {
         data: {
             user_id: param.user_id,
             order_no: param.order_no
-            // user_id: "38b8781d-5a56-47b8-98ca-a6fc9b71d8a8",
-            // order_no: "9AO9HQE7"
+            // user_id: "78a39f21-085f-4a73-81c1-db6f2cbfa1a7",
+            // order_no: "497UOK8Q"
         },
         success: function (res) {
             console.log(res);
@@ -29,6 +30,14 @@ function getPriceDetail() {
                 $(".main").removeClass("none");
                 let data = res.data;
                 $("#price").text(data.pay_price);
+                if(data.price && parseFloat(data.price) != 0.00 && data.order_type == 2){
+                    let start_info = {
+                        type: 2,
+                        text: "计价器计费",
+                        price: data.price + "元"
+                    };
+                    priceData.push(start_info);
+                }
                 if(data.start_info && data.start_info.price && parseFloat(data.start_info.price) != 0.00){
                     let start_info = {
                         type: 2,
@@ -80,7 +89,7 @@ function getPriceDetail() {
                 if(data.road_bridge_fee && parseFloat(data.road_bridge_fee) != 0.00){
                     let road_bridge_fee = {
                         type: 2,
-                        text: "路桥费",
+                        text: "高速费",
                         price: data.road_bridge_fee + "元"
                     };
                     priceData.push(road_bridge_fee);
@@ -88,10 +97,10 @@ function getPriceDetail() {
                 if(data.toll_fee && parseFloat(data.toll_fee) != 0.00){
                     let toll_fee = {
                         type: 2,
-                        text: "高速费",
+                        text: "路桥费",
                         price: data.toll_fee + "元"
                     };
-                    priceData.push(parking_fee);
+                    priceData.push(toll_fee);
                 }
                 if(data.extra && data.extra.discount && parseFloat(data.extra.discount) != 0.00){
                     let discount = {
@@ -119,7 +128,7 @@ function getPriceDetail() {
         error: function (err) {
             console.log(err);
             loadAlertHide();
-            // window.location.href = "../../Util/html/error.html";
+            window.location.href = "../../Util/html/error.html";
         }
     });
 }

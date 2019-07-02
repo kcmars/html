@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="yes" name="apple-touch-fullscreen">
+    <meta content="telephone=no,email=no" name="format-detection">
+    <title>大客户中心|登录</title>
+    <link type="text/css" rel="stylesheet" href="../css/reset.css"/>
+    <link type="text/css" rel="stylesheet" href="../css/fonts.css"/>
+    <link type="text/css" rel="stylesheet" href="../css/index.css"/>
+</head>
+<body>
+<!--验证大客户帐号及密码-->
+    <div class="inputBoxOuter">
+        <div class="inputBoxInner">
+            <img src="../img/logo_out_circle.png" alt="logo" class="logo">
+            <p>登录VIP账户</p>
+            <p class="description">为获取大客户数据<br>请输入注册爱运宝App的手机号<br>及登录密码</p>
+            <div class="inputBox telInputBox">
+                <input onfocus="focus(this)" class="telInput" id="telInput" type="number" placeholder="手机号" required autocomplete="off"><span class="tip">请输入正确的手机号码</span><span class="status"></span>
+            </div>
+            <div class="inputBox pswInputBox">
+                <input onfocus="focus(this)" class="pswInput" id="pswInput" placeholder="密码" type="password" minlength="6" maxlength="16" required><span class="tip">请输入密码</span><span class="eye"></span>
+            </div>
+            <div class="inputBox clearfix captchaInputBox">
+                <input onfocus="focus(this)" class="captchaInput" id="captchaInput" placeholder="验证码" required autocomplete="off" maxlength="5">
+                <div class="captchaImgBox">
+                    <img src="/Wap/DVip/getVerifyCode" alt="图形验证码" id="captchaImg">
+                    <span class="refresh">点击刷新</span>
+                </div>
+                <span class="tip">请输入图形验证码</span>
+            </div>
+            <button class="submitBtn" id="submitBtn"> 下一步</button>
+        </div>
+    </div>
+<script src="../../../js/jquery-1.8.1.min.js"></script>
+<script>
+    $(function(){
+        //电话号码验证
+        var validNum = false;
+        $("#telInput").bind("blur",function () {
+            var $this = $(this);
+            var reg = /^1(3|4|5|7|8)[0-9]\d{8}$/;
+            var num = $("#telInput").val().trim();
+            if(num){
+                if(!reg.test(num)){
+                    $this.siblings(".status").removeClass("tick");
+                    $this.siblings(".tip").css("display","block");
+                    validNum = false;
+                }else if(reg.test(num)){
+                    $this.siblings(".tip").css("display","none");
+                    $this.siblings(".status").addClass("tick");
+                    validNum = true;
+                }
+            }else{
+                $this.val("");
+                $this.siblings(".tip").css("display","none");
+                $this.siblings(".status").removeClass("tick");
+                validNum = false;
+            }
+        });
+        //密码验证
+        $("#pswInput").bind("blur",function () {
+            if($(this).val().trim()){
+                $(this).siblings(".tip").css("display","none");
+            }
+        });
+        //图形验证码
+        $("#captchaInput").bind("blur",function () {
+            if($(this).val().trim()){
+                $(this).siblings(".tip").css("display","none");
+            }
+        });
+        //密码输入框显示隐藏
+        $(".inputBox .eye").bind("click",function () {
+            if(!$(this).hasClass("open")){
+                $(this).siblings("#pswInput").prop("type","text");
+                $(this).addClass("open");
+            } else {
+                $(this).siblings("#pswInput").prop("type","password");
+                $(this).removeClass("open");
+            }
+        });
+
+        //图形验证码点击刷新
+        $(".captchaImgBox").click(function () {
+            $("#captchaImg").attr("src","/Wap/DVip/getVerifyCode?"+Math.random());
+        });
+
+        //点击提交后
+        $(".submitBtn").bind("click",function () {
+            var password = $("#pswInput").val().trim(),
+                num = $("#telInput").val().trim(),
+                captcha = $("#captchaInput").val().trim();
+            if(!num){
+                $(".telInputBox .tip").css("display","block");
+                return false ;
+            }
+            if(!password){
+                $(".pswInputBox .tip").css("display","block");
+                return false ;
+            }
+            if(!captcha){
+                $(".captchaInputBox .tip").css("display","block");
+                return false ;
+            }
+            if(validNum && password && captcha){
+                var postData = {
+                    'phone': num,
+                    'password': password,
+                    'verifyCode': captcha
+                };
+                $.ajax({
+                    type: "POST",
+                    url: "/Wap/DVip/submitLogin",
+                    data: {
+                        phone:num,
+                        password:password,
+                        verifyCode:captcha
+                    },
+                    dataType: "json",
+                    success: function (data) {
+                        if (data.status == 1) {
+                            window.location.href = "/Wap/DVip/index.html";
+                        } else if (data.status == -1) {
+                            window.location.href = "/Wap/DVip/error.html";
+                        }else{
+                            layer.open({
+                                content: data.msg
+                                ,btn: '确定'
+                                ,end:function () {
+                                    $("#captchaImg").attr("src","/Wap/DVip/getVerifyCode?"+Math.random());
+                                }
+                            });
+                        }
+                    },
+                    error: function(err){
+                        console.log(err);
+                    }
+                })
+            }else{
+                return false ;
+            }
+        })
+    });
+    function focus(obj) {
+        var _this = obj;
+        setTimeout(function () {
+            _this.scrollIntoView(false);
+        },200)
+    }
+
+</script>
+</body>
+</html>

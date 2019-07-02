@@ -1,5 +1,5 @@
 /**
- * Created by Administrator on 2018/7/13.
+ * Created by keyC on 2018/7/13.
  */
 var img1 = "";
 var img2 = "";

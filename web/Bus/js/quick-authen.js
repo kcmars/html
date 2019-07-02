@@ -1,7 +1,16 @@
 /**
- * Created by zp on 2018/7/23.
+ * Created by keyC on 2019/1/17.
+ * 快速代注册通道
  */
 $(function () {
+    getRequest(leaveWords);
+    // leaveWords();
+});
+
+/**
+ * 提交信息
+ */
+function leaveWords() {
     $(".submit").bind("click",function(){
         var tel = $('.input_tel').val().trim();
         var name = $('.input_name').val().trim();
@@ -24,16 +33,29 @@ $(function () {
         loadAlertShow("正在提交...");
         $.ajax({
             type: 'POST',
-            url: 'http://aiyunbaoapp.a56999.com/AppWeb/Vip/mailbox',
-            data: {phone: tel, name: name},
-            success: function (data) {
+            url: $.leaveWords,
+            data: {
+                // user_id: $.user_id,
+                user_id: param.user_id,
+                phone: tel,
+                user_name: name
+            },
+            success: function (res) {
+                console.log("res", res);
                 loadAlertHide();
-                toastAlertShow(data.msg);
+                if (res) {
+                    if (res.status == 1) {
+                        toastAlertShow("提交成功");
+                    } else {
+                        toastAlertShow("提交失败");
+                    }
+                }
             },
             error: function (err) {
+                console.log("err", err);
                 loadAlertHide();
                 window.location.href = "../../Util/html/error.html";
             }
         })
     });
-});
+}
