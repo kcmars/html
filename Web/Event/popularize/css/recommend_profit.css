@@ -1,0 +1,73 @@
+html, body {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: 'PingFang SC', 'STHeitiSC-Light', 'Helvetica-Light', arial, sans-serif, 'Droid Sans Fallback';
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  background: #fff;
+  color: rgba(0, 0, 0, 0.9);
+  box-sizing: border-box; }
+a {
+  text-decoration: none; }
+
+a:hover, a:active, a:focus {
+  text-decoration: none; }
+.red_text {
+  color: red; }
+.link{
+  display: flex;
+  margin: 4px 0;
+  align-items: center;
+  justify-content: center;
+  height: 25px;
+  text-align: center;
+  font-size: 14px;
+  color: rgba(0,0,0,0.8);
+}
+.linkWrapper{
+  margin-top: 10px;
+}
+.link .arrow{
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  background:  url("/Public/Static/Wap/Activity/recommend_profit/img/arrow.png") no-repeat center;
+  background-size: 14px 14px;
+}
+.bigx_text {
+  font-size: 90px; }
+
+.big_text {
+  font-size: 28px; }
+
+.container {
+  position: relative;
+  width: 100%; }
+  .container .backgroundImg {
+    width: 100%; }
+  .container .content {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    text-align: center; }
+    .container .content .contentInner {
+      position: absolute;
+      width: 100%;
+      left: 0;
+      top: 50%;
+      -ms-transform: translateY(-50%);
+      transform: translateY(-50%); }
+      .container .content .contentInner .title {
+        font-size: 24px;
+        line-height: 1.3em;
+        font-weight: 500; }
+      .container .content .contentInner .money {
+        margin: 20px 0; }

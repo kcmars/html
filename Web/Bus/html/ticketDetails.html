@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Language" content="zh-CN"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="yes" name="apple-touch-fullscreen">
+    <meta content="telephone=no,email=no" name="format-detection">
+    <title>购票详情</title>
+    <script type="text/javascript" src="../../js/auto-size.js?rnd=" + new Date().getTime()></script>
+    <link href="../../css/main.css?rnd=" + new Date().getTime() type="text/css" rel="stylesheet">
+    <link href="../css/ticket-details-css.css?rnd=" + new Date().getTime() type="text/css" rel="stylesheet">
+    <link href="../../css/my-alert-css.css?rnd=" + new Date().getTime() type="text/css" rel="stylesheet">
+</head>
+<body>
+    <div class="flex-column ticket-details-main">
+        <div class="ticket-details-head">
+            <div id="passenger-time" class="tickets-details-head-time"></div>
+            <div class="tickets-details-head-address">
+                <span id="passenger-start-address"></span>
+                <img src="../img/icon_white_right_arrow.png" />
+                <span id="passenger-end-address"></span>
+            </div>
+            <div class="flex-row">
+                <div class="flex-row item passenger">
+                    <span>乘车人</span>
+                    <img src="../img/icon_white_down_arrow.png"/>
+                </div>
+                <div class="flex-row item m-l-r-5 phone">
+                    <span>联系电话</span>
+                    <img src="../img/icon_white_down_arrow.png"/>
+                </div>
+                <!--<div class="item">-->
+                    <!--<span>无行程备注</span>-->
+                <!--</div>-->
+            </div>
+        </div>
+        <ul>
+            <li class="flex-column ticket-details-list-item m-t-10">
+                <div class="flex-row ticket-details-list-item-head bottom-border">
+                    <img class="head" src="../img/icon_head.png">
+                    <div class="flex-column content">
+                        <span id="bus-driver-name" class="name"></span>
+                        <span id="bus-type" class="type"></span>
+                    </div>
+                    <img id="phone" class="img-btn" src="../img/call.png">
+                    <img id="location" class="img-btn" src="../img/position.png">
+                </div>
+                <div class="flex-row ticket-details-list-item-footer">
+                    <div class="flex-column item-footer-left">
+                        <div class="flex-row row">
+                            <img src="../img/icon_time.png">
+                            <span id="bus-time"></span>
+                        </div>
+                        <div class="flex-row row">
+                            <img class="icon" src="../img/icon_start.png"/>
+                            <span id="bus-start-address"></span>
+                        </div>
+                        <ul id="pass-point">
+                            <!--<li class="flex-row pass-point-row">-->
+                                <!--<img src="../img/icon_start.png">-->
+                                <!--<span>石羊场汽车站</span>-->
+                            <!--</li>-->
+                        </ul>
+                        <div class="flex-row row">
+                            <img class="icon" src="../img/icon_end.png"/>
+                            <span id="bus-end-address"></span>
+                        </div>
+                    </div>
+                    <div class="pass-point none">
+                        <span>途径点</span>
+                        <img src="../img/icon_black_down_arrow.png"/>
+                    </div>
+                    <div class="flex-column item-footer-right">
+                        <div id="bus-status-btn" class="item-footer-right-btn">
+
+                        </div>
+                        <!--<span id="evaluation" class="evaluation m-t-10">-->
+                            <!--评价-->
+                        <!--</span>-->
+                    </div>
+                </div>
+            </li>
+        </ul>
+        <div class="pop-box none">
+            <div class="pop-bg"></div>
+            <div class="pop-content">
+                <div id="pop-content" class="pop-content-l-5">
+                    <img src="../img/icon_gray_close.png">
+                    <ul id="pop-list">
+                        <!--<li class="flex-row pop-content-list-item">-->
+                            <!--<span>司机</span>-->
+                            <!--<span>李四</span>-->
+                            <!--<span>18787878787</span>-->
+                        <!--</li>-->
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script type="text/template" charset="utf-8" id='template-pass-point-list'>
+    {{ if (it && it.length > 0) { }}
+    {{ for (var i = 0; i < it.length; i++){ }}
+        <li class="flex-row pass-point-row">
+            <img src="../img/icon_start.png">
+            <span>{{=it[i].name}}</span>
+        </li>
+    {{ } }}
+    {{ } }}
+</script>
+<script type="text/template" charset="utf-8" id='template_pop-list'>
+    {{ if (it && it.length > 0){ }}
+    {{ for (var i = 0; i < it.length; i++){ }}
+    {{ if (i==0) { }}
+    <li class="pop-content-list-item">
+        {{ } else { }}
+    <li class="pop-content-list-item top-border">
+        {{ } }}
+        {{ if (it[i].user_type != undefined) { }}
+        <span>{{=$.getTypeStatus(it[i].user_type)}}</span>&nbsp;&nbsp;
+        {{ } }}
+        {{ if (it[i].name != undefined) { }}
+        <span>{{=it[i].name}}</span>&nbsp;&nbsp;
+        {{ } }}
+        {{ if (it[i].card_id != undefined) { }}
+        <span>{{=it[i].card_id}}</span>&nbsp;&nbsp;
+        {{ } }}
+        {{ if (it[i].phone != undefined) { }}
+        <span>{{=it[i].phone}}</span>&nbsp;&nbsp;
+        {{ } }}
+    </li>
+    {{ } }}
+    {{ } }}
+</script>
+<script type="text/javascript" src="../../js/jquery-1.8.1.min.js"></script>
+<script type="text/javascript" src="../../js/exif.js"></script>
+<script type="text/javascript" src="../../js/js-activity.js?rnd=" + new Date().getTime()></script>
+<script type="text/javascript" src="../../js/doT.js"></script>
+<script type="text/javascript" src="../../js/main.js?rnd=" + new Date().getTime()></script>
+<script type="text/javascript" src="../../js/my-tip-alert-js.js?rnd=" + new Date().getTime()></script>
+<script type="text/javascript" src="../../js/my-loading-alert-js.js?rnd=" + new Date().getTime()></script>
+<script type="text/javascript" src="../../js/my-toast-alert-js.js?rnd=" + new Date().getTime()></script>
+<script type="text/javascript" src="../js/ticketDetails-js.js?rnd=" + new Date().getTime()></script>
+
+</html>

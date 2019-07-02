@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+  <meta content="yes" name="apple-mobile-web-app-capable">
+  <meta content="yes" name="apple-touch-fullscreen">
+  <meta content="telephone=no,email=no" name="format-detection">
+  <meta http-equiv="expires" content="0">
+  <meta http-equiv="pragma" content="no-cache">
+  <meta http-equiv="cache-control" content="no-cache">
+  <meta http-equiv="cache" content="no-cache">
+  <meta name="description"  itemprop="description" content="{$describe}">
+  <meta itemprop="image" content="{$img}">
+  <title>每单折扣</title>
+  <link rel="stylesheet" type="text/css" href="../css/reset.css">
+  <link rel="stylesheet" type="text/css" href="../css/newRecommend2.css?rnd=" + new Date().getTime()>
+  <script src="../js/flexible.debug.js"></script>
+  <script src="../js/flexible_css.debug.js"></script>
+</head>
+<body>
+<header class="header flex_row-between">
+  <div class="flex_column-center flex3">
+    <!--<input id="city" name="city" value="{$city}" style="display: none">-->
+    <img src="../img/p_header_title@2x.png" class="img header_text flex1">
+    <div class="header_title tl" style="padding-left: 7.5%;">每单都享 <span class="discount"></span> 折</div>
+  </div>
+  <div class="right flex2">
+    <img src="../img/p_header_img2@2x.png" class="img">
+  </div>
+</header>
+<section class="first_section">
+  <img src="../img/p_title1@2x.png?t=20180122" alt="" class="title">
+  <img src="../img/p_content1@2x.jpg?t=20180122" alt="" class="content">
+</section>
+<section>
+  <img src="../img/p_title2@2x.png?t=20180122" alt="" class="title">
+  <img src="../img/p_content2@2x.jpg?t=20180122" alt="" class="content">
+</section>
+<section>
+  <img src="../img/p_title3@2x.png" alt="" class="title">
+  <img src="../img/p_content3@2x.jpg" alt="" class="content">
+</section>
+<section>
+  <img src="../img/p_title4@2x.png" alt="" class="title">
+  <img src="../img/p_content4@2x.jpg" alt="" class="content">
+</section>
+<section>
+  <img src="../img/p_title5@2x.png" alt="" class="title">
+  <img src="../img/p_content5@2x.jpg" alt="" class="content">
+</section>
+<p class="explain">*快车折扣仅针对广安、玉林地区有效</p>
+<div class="btn_wrapper_inner">
+  <div id="linkto_driver" class="linkto_driver btn blue">
+    <a>了解司机特别奖励
+      <span class="arrow blue"></span>
+    </a>
+  </div>
+  <div id="linkto_contractor" class="linkto_driver btn orange">
+    <a>了解大巴承包者奖励
+      <span class="arrow orange"></span>
+    </a>
+  </div>
+</div>
+<footer>
+  <div class="logoBox">
+    <img src="../img/logo_no_border.png" class="logo">
+    <span class="txt">爱运宝</span>
+  </div>
+  <div class="name">成都爱运科技有限公司</div>
+</footer>
+<div id="download_btn" class="btn_wrapper_outer">
+  <div class="download_btn btn red"><a>点击免费注册/下载</a></div>
+</div>
+<script type="text/javascript" src="../../../js/jquery-1.8.1.min.js"></script>
+<script>
+    $(function () {
+        var url = window.location.href;
+        var data = {};
+        if (url.indexOf('?') !== -1) {
+            var search = url.substring(url.indexOf('?') + 1);
+            var queryArray = search.split('&');
+            queryArray.forEach(function (item){
+                var itemArray = item.split('=');
+                var key = itemArray[0];
+                var value = decodeURIComponent(itemArray[1]) ? decodeURIComponent(itemArray[1]) : '';
+                data[key] = value;
+            })
+        }
+        /**
+         * 了解司机详情
+         */
+        $("#linkto_driver").bind("click",function () {
+            let url = setUrl(data, "./recommend_driver.html?rnd=" + new Date().getTime());
+            window.location.href = url;
+        });
+        /**
+         * 了解大巴车经营者详情
+         */
+        $("#linkto_contractor").bind("click",function () {
+            let url = setUrl(data, "./recommend_contractor.html?rnd=" + new Date().getTime());
+            window.location.href = url;
+        });
+        /**
+         * 去注册下载
+         */
+        $("#download_btn").bind("click",function () {
+            let url = setUrl(data, "./registerForm.html?rnd=" + new Date().getTime());
+            window.location.href = url;
+        });
+        $('.header_title').hide();
+
+//        if (data.city) {
+//            $.ajax({
+//                url: '/Wap/Discount/cityDiscount',
+//                type: 'GET',
+//                data: {city: data.city},
+//                success: function (res) {
+//                    if (res.status == 1) {
+//                        var discount = res.data.passenger_discount;
+//                        $('.discount').text(discount.toString());
+//                    } else {
+//                        $('.header_title').hide();
+//                    }
+//                }
+//            })
+//        } else {
+//            $('.header_title').hide();
+//        }
+    });
+
+    /**
+     * 设置跳转链接参数
+     * @param url
+     */
+    function setUrl(data, url) {
+        if (data != null) {
+            if (data.tjtel) {
+                url += ("&tjtel=" + data.tjtel);
+                if (data.city) {
+                    url += ("&city=" + data.city);
+                    if (data.identity) {
+                        url += ("&identity=" + data.identity);
+                        if (data.type) {
+                            url += ("&type=" + data.type);
+                        }
+                    } else if (data.type) {
+                        url += ("&type=" + data.type);
+                    }
+                } else if (data.identity) {
+                    url += ("&identity=" + data.identity);
+                    if (data.type) {
+                        url += ("&type=" + data.type);
+                    }
+                } else if (data.type) {
+                    url += ("&type=" + data.type);
+                }
+            } else if (data.city) {
+                url += ("&city=" + data.city);
+                if (data.identity) {
+                    url += ("&identity=" + data.identity);
+                    if (data.type) {
+                        url += ("&type=" + data.type);
+                    }
+                } else if (data.type) {
+                    url += ("&type=" + data.type);
+                }
+            } else if (data.identity) {
+                url += ("&identity=" + data.identity);
+                if (data.type) {
+                    url += ("&type=" + data.type);
+                }
+            } else if (data.type) {
+                url += ("&type=" + data.type);
+            }
+        }
+        return url;
+    }
+</script>
+<include file="AppShare:weixin" />
+</body>
+</html>

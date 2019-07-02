@@ -1,0 +1,50 @@
+html,body {
+    width: 100%;
+    height: 100%;
+    background-color: #EEE7E1;
+}
+ul li {
+    list-style: none;
+}
+.table-main {
+    width: 80%;
+    margin: 0 auto;
+    background-color: #ffffff;
+    padding: 20px 0;
+}
+.table-main .table-content {
+
+}
+.table-main .table-content li {
+    text-align: center;
+    font-size: 14px;
+    color: #000;
+    padding: 10px;
+    border-bottom: 1px solid #cccccc;
+}
+.table-btn {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+}
+.table-btn .table-round {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.table-btn .btn,
+.table-btn .table-round li {
+    border: 1px solid #cccccc;
+    padding: 5px 8px;
+    font-size: 14px;
+    color: #000;
+    margin: 10px;
+}
+.table-btn .btn:hover,
+.table-btn .table-round .active,
+.table-btn .table-round li:hover {
+    background-color: #006bb7;
+    color: #ffffff;
+}

@@ -1,0 +1,106 @@
+/* Basic styling */
+/* Draw the lines */
+body,html {
+  background-color: #FCFBE7;
+}
+.jOrgChart {
+  margin: 0 auto;
+}
+.jOrgChart .line {
+  height: 20px;
+  width: 1px;
+}
+.jOrgChart .line2 {
+  height: 20px;
+  width: 2px;
+}
+.jOrgChart .line3 {
+  height: 1px;
+  width: 20px;
+  background: #999999;
+  margin-top: -25px;
+}
+.jOrgChart .down {
+  background-color: #999999;
+  margin: 0px auto;
+}
+.jOrgChart .down1 {
+  width: 100%;
+  height: 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-left: -35px;
+}
+.jOrgChart .down1 span {
+  width: 1px;
+  height: 20px;
+  background-color: #999999;
+  margin-left: -1px;
+}
+
+.jOrgChart .top {
+  border-top: 1px solid #999999;
+}
+.jOrgChart .left {
+  border-right:1px solid #999999;
+}
+.jOrgChart .right {
+  border-left:1px solid #999999;
+}
+.jOrgChart td {
+  text-align: center;
+  vertical-align: top;
+  padding: 0;
+}
+.jOrgChart .node {
+  background-color: #ffffff;
+  /*border: 1px solid #cccccc;*/
+  display: inline-block;
+  z-index: 10;
+  margin: 0 2px;
+  font-size: 12px;
+}
+.jOrgChart .node img {
+  width: 59px;
+  height: 59px;
+  border: 1px solid #cccccc;
+  border-radius: 30px;
+}
+.jOrgChart .node div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: #FCFBE7;
+}
+.jOrgChart .node .active {
+  color: #EAC257;
+}
+.jOrgChart .node a {
+  font-size: 12px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  width: 60px;
+  height: 90px;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+  background-color: #FCFBE7;
+}
+.jOrgChart .node a input {
+  display: none;
+}
+.jOrgChart table {
+  margin: 0 auto;
+}
+.jOrgChart .node-container table {
+  margin: 0 auto;
+}
+.drag-active {
+  border-style: dotted !important;
+}
+.drop-hover {
+  border-style: solid !important;
+  border-color: #E05E00 !important;
+}

@@ -1,0 +1,323 @@
+.car-main {
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff;
+    font-size: 0.28rem;
+    position: relative;
+}
+.first-layer {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+}
+.layer-left {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    overflow: scroll;
+}
+.header {
+    background-color: dodgerblue;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0.40rem 0.24rem;
+    margin: 0.40rem 0.60rem;
+    border-radius: 0.10rem;
+}
+.header img {
+    width: 0.32rem;
+    height: 0.32rem;
+    margin-right: 0.20rem;
+    margin-top: -0.30rem;
+}
+.header-text {
+    display: flex;
+    flex-direction: column;
+}
+.header-text span:first-child {
+    font-size: 0.28rem;
+    color: #ffffff;
+}
+.header-text span:last-child {
+    font-size: 0.20rem;
+    color: #ffffff;
+    margin-top: 0.10rem;
+}
+.letter {
+    width: 1rem;
+    height: 100%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 1.60rem 0 0.60rem 0;
+    z-index: 1000;
+}
+.letter li {
+    height: 4%;
+    width: 1rem;
+    font-size: 0.24rem;
+    color: #333333;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.popular-brand .text-hint {
+    padding: 0.10rem 0.40rem ;
+}
+.popular-brand .text span:first-child {
+    font-size: 0.30rem;
+    color: #333333;
+    padding-right: 0.10rem;
+}
+.popular-brand .text span:last-child {
+    font-size: 0.28rem;
+    color: #666666;
+}
+.popular-brand ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 0 0.70rem 0.30rem 0.30rem;
+}
+.popular-brand ul li {
+    width: 16.66%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 0.28rem;
+    color: #333333;
+    padding: 0.10rem;
+}
+.popular-brand ul li img {
+    width: 0.52rem;
+    height: 0.52rem;
+    margin-bottom: 0.10rem;
+}
+.brand-list {
+    padding-right: 0.70rem;
+}
+.brand-list li{
+    display: flex;
+    flex-direction: column;
+}
+.brand-list li .list-letter{
+    width: 100%;
+    background-color: #eeeeee;
+    padding: 0.04rem 0.40rem;
+    font-size: 0.26rem;
+    color: #333333;
+    border-bottom: 0.02rem solid #ececec;
+    border-top: 0.02rem solid #ececec;
+}
+.brand-list-item-list {
+    display: flex;
+    flex-direction: column;
+    padding-left: 0.40rem;
+}
+.brand-list-item-list li {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    padding: 0.20rem;
+    border-bottom: 0.02rem solid #eeeeee;
+    align-items: center;
+    font-size: 0.28rem;
+    color: #333333;
+}
+.brand-list-item-list li img {
+    width: 0.52rem;
+    height: 0.52rem;
+    margin-right: 0.40rem;
+}
+.toast-box {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 20;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.toast {
+    opacity: 0.7;
+    z-index: 999999;
+    background-color: #222222;
+    border-radius: 0.10rem;
+    padding: 0.50rem;
+    color: #ffffff;
+    font-size: 0.40rem;
+}
+/** 二级菜单*/
+.second-layer {
+    width: 65%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    position: fixed;
+    z-index: 1002;
+    right: -65%;
+    top: 0;
+    border-left: 0.02rem solid #cccccc;
+    box-shadow: 0 0 1rem #cccccc;
+}
+.second-layer-animation-in {
+    -webkit-animation: second-slide-in 0.5s forwards;
+    animation: second-slide-in 0.5s forwards;
+}
+@-webkit-keyframes second-slide-in {
+    0% { right: -65%}
+    100% { right: 0 }
+}
+@keyframes second-slide-in {
+    0% { right: -65%}
+    100% { right: 0 }
+}
+.second-layer-animation-out {
+    -webkit-animation: second-slide-out 0.5s backwards;
+    animation: second-slide-out 0.5s backwards;
+}
+@-webkit-keyframes second-slide-out {
+    0% { right: 0}
+    100% { right: -65% }
+}
+@keyframes second-slide-out {
+    0% { right: 0}
+    100% { right: -65% }
+}
+.car-color-item-list,
+.car-series-item-list {
+    width: 100%;
+    overflow: scroll;
+    background-color: #eeeeee;
+}
+.car-color-item-list li,
+.car-series-item-list li{
+    width: 100%;
+    background-color: #ffffff;
+}
+.car-series {
+    height: 0.40rem;
+    opacity: 0;
+}
+.car-color-item,
+.car-series-item {
+    padding: 0.30rem 0;
+    margin-left: 0.40rem;
+    font-size: 0.28rem;
+    color: #333333;
+    border-bottom: 0.02rem solid #eeeeee;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+/** 三级菜单*/
+.third-layer {
+    width: 35%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    position: fixed;
+    z-index: 1003;
+    right: -35%;
+    top: 0;
+    border-left: 0.02rem solid #cccccc;
+    box-shadow: 0 0 1rem #cccccc;
+}
+.third-layer-animation-in {
+    -webkit-animation: third-slide-in 0.5s forwards;
+    animation: third-slide-in 0.5s forwards;
+}
+@-webkit-keyframes third-slide-in {
+    0% { right: -35%}
+    100% { right: 0 }
+}
+@keyframes third-slide-in {
+    0% { right: -35%}
+    100% { right: 0 }
+}
+.third-layer-animation-out {
+    -webkit-animation: third-slide-out 0.5s forwards;
+    animation: third-slide-out 0.5s forwards;
+}
+@-webkit-keyframes third-slide-out {
+    0% { right: 0}
+    100% { right: -35% }
+}
+@keyframes third-slide-out {
+    0% { right: 0}
+    100% { right: -35% }
+}
+.car-color {
+    background-color: #666666;
+    border: 0.02rem solid #cccccc;
+    width: 0.40rem;
+    height: 0.40rem;
+    border-radius: 0.40rem;
+    margin-right: 0.10rem;
+    text-align: justify;
+}
+/* 滑动字母索引的引用层 */
+.letter-model {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    right: 0;
+    top: 0;
+    padding: 1.60rem 0 0.60rem 0;
+    z-index: 1005;
+    background-color: #999999;
+    opacity: 0;
+}
+.letter-model li {
+    height: 4%;
+    width: 100%;
+    font-size: 0.24rem;
+    color: #333333;
+}
+/* 颜色 "白色","红色","黑色","银色","香槟色","灰色","蓝色","黄色","绿色","咖啡色","橙色","其他" */
+.orange-text {
+    color: orange;
+}
+.white {
+    background-color: white;
+}
+.red {
+    background-color: red;
+}
+.black {
+    background-color: black;
+}
+.silver {
+    background-color: silver;
+}
+.champagne {
+    background-color: sandybrown;
+}
+.gray {
+    background-color: gray;
+}
+.blue {
+    background-color: blue;
+}
+.yellow {
+    background-color: yellow;
+}
+.green {
+    background-color: green;
+}
+.coffee {
+    background-color: chocolate;
+}
+.orange {
+    background-color: orange;
+}
+.other {
+    background-color: #eeeeee;
+}

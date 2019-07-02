@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Language" content="zh-CN"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="yes" name="apple-touch-fullscreen">
+    <meta content="telephone=no,email=no" name="format-detection">
+    <title>大巴车司机雇员认证</title>
+    <script type="text/javascript" src="../../js/auto-size.js?rnd=" + new Date().getTime()></script>
+    <link href="../../css/main.css?rnd=" + new Date().getTime() type="text/css" rel="stylesheet">
+    <link href="../../css/authen.css?rnd=" + new Date().getTime() type="text/css" rel="stylesheet">
+    <!-- 手机版日期控件用于的css -->
+    <link href="../../js/date/css/mobiscroll.scroller.css" rel="stylesheet" type="text/css" />
+    <link href="../../js/date/css/mobiscroll.scroller.ios7.css" rel="stylesheet" type="text/css" />
+    <link href="../../js/date/css/mobiscroll.animation.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <div class="authen-main">
+        <p>信息仅用于审核，绝对保密</p>
+        <div class="line"></div>
+        <div class="authen-type-box">
+            <span>类型</span>
+            <div class="authen-type">
+                <div class="authen-type-item">
+                    <span>司机</span>
+                    <input id="input1" name="radio" type="radio" checked value="driver"/>
+                </div>
+                <div class="authen-type-item">
+                    <span id="span2">售票员</span>
+                    <input id="input2" name="radio" type="radio" value="person"/>
+                </div>
+            </div>
+        </div>
+        <div class="line"></div>
+        <div id="realName-title" class="authen-title">
+            <span>身份信息</span>
+            <i></i>
+        </div>
+        <div id="realName" class="authen-item">
+            <div class="input">
+                <span>真实姓名</span>
+                <input id="name" placeholder="输入姓名" maxlength="12" type="text" value=""/>
+            </div>
+            <div class="input">
+                <span>身份证号</span>
+                <input id="id" placeholder="输入身份证号" maxlength="18" type="text" value=""/>
+            </div>
+            <ul>
+                <li onclick="showImg(0)">
+                    <span>身份证正面照</span>
+                    <img id="img1" src="../img/id-card-front-add.jpg" alt=""/>
+                    <div id="img1-status" class="authen-status none">
+                        <span></span>
+                        <b>审核中...</b>
+                    </div>
+                </li>
+                <li onclick="showImg(1)">
+                    <span>身份证反面照</span>
+                    <img id="img2" src="../img/id-card-back-add.jpg" alt=""/>
+                    <div id="img2-status" class="authen-status none">
+                        <span></span>
+                        <b>审核失败<br/>点击重新上传</b>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="line"></div>
+        <div id="driver-title" class="authen-title">
+            <span>驾驶证信息</span>
+            <i></i>
+        </div>
+        <div id="driver" class="authen-item">
+            <div id="first-date" class="input">
+                <span>初次领证日期</span>
+                <input id="first-issue" class="ui-date-scroll" placeholder="选择日期" type="text"  value="" readonly/>
+            </div>
+            <ul>
+                <li onclick="showImg(2)">
+                    <span>驾驶证照</span>
+                    <img id="img3" src="../img/driver-license-front-add.jpg" alt=""/>
+                    <div id="img3-status" class="authen-status none">
+                        <span></span>
+                        <b>审核中...</b>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div id="submit" class="submit-btn">
+            确认提交
+        </div>
+    </div>
+    <div id="demo-model" class="none">
+        <div class="model"></div>
+        <div class="content">
+            <div class="title">
+                身份证正面照
+            </div>
+            <div class="legend">
+                <img src="../img/id-card-front-demo.jpg"/>
+                <p>请按照示例图提交身份证正面照</p>
+                <p>确保照片真实有效、文字清晰、无反光、无遮挡</p>
+            </div>
+            <div class="upload-btn">
+                <span>上传照片</span>
+                <input id="file" class="file" type="file" accept="image/jpeg,image/gif,image/png,image/jpg" value="">
+            </div>
+        </div>
+    </div>
+</body>
+<script type="text/javascript" src="../../js/jquery-1.8.1.min.js"></script>
+<script type="text/javascript" src="../../js/doT.js"></script>
+<script type="text/javascript" src="../../js/exif.js"></script>
+<script type="text/javascript" src="../../js/js-activity.js?rnd=" + new Date().getTime()></script>
+<script type="text/javascript" src="../../js/main.js?rnd=" + new Date().getTime()></script>
+<script type="text/javascript" src="../../js/my-loading-alert-js.js?rnd=" + new Date().getTime()></script>
+<script type="text/javascript" src="../../js/my-toast-alert-js.js?rnd=" + new Date().getTime()></script>
+<!-- 手机版日期控件用于的js -->
+<script type="text/javascript" src="../../js/date/js/mobiscroll.core.js"></script>
+<script type="text/javascript" src="../../js/date/js/mobiscroll.scroller.js"></script>
+<script type="text/javascript" src="../../js/date/js/mobiscroll.select.js"></script>
+<script type="text/javascript" src="../../js/date/js/mobiscroll.datetime.js"></script>
+<script type="text/javascript" src="../../js/date/js/mobiscroll.scroller.ios7.js"></script>
+<script type="text/javascript" src="../../js/date/js/i18n/mobiscroll.i18n.zh.js"></script>
+<script type="text/javascript" src="../../js/date/js/util.js?rnd=" + new Date().getTime()></script>
+<script type="text/javascript" src="../../js/date/js/date.js?rnd=" + new Date().getTime()></script>
+<script type="text/javascript" src="../js/busEmployeesAuthen.js?rnd=" + new Date().getTime()></script>
+</html>

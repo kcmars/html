@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Language" content="zh-CN"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="yes" name="apple-touch-fullscreen">
+    <meta content="telephone=no,email=no" name="format-detection">
+    <title>计价规则</title>
+    <script type="text/javascript" src="../../js/auto-size.js?rnd=" + new Date().getTime()></script>
+    <link href="../../css/main.css?rnd=" + new Date().getTime() type="text/css" rel="stylesheet">
+    <link href="../css/price-rules-css.css?rnd=" + new Date().getTime() type="text/css" rel="stylesheet">
+</head>
+<body>
+<div class="main-rules none">
+    <img src="../img/img_car_picture.png" alt="img">
+    <div class="title">爱运计价规则</div>
+    <div class="time-title">
+        <i></i>
+        <span>实时用车</span>
+        <i></i>
+    </div>
+    <ul id="price-detail">
+    </ul>
+    <p id="far-info-text"></p>
+    <div class="line"></div>
+    <ul>
+        <li>
+            <span>夜间费</span>
+            <span id="night-price"></span>
+        </li>
+    </ul>
+    <p id="night-text"></p>
+    <div class="line"></div>
+    <ul>
+        <li>多人拼车</li>
+    </ul>
+    <p id="share-1"></p>
+    <p id="share-2"></p>
+    <p id="share-3"></p>
+    <div class="line"></div>
+    <ul>
+        <li>拼车一口价</li>
+    </ul>
+    <p>拼车全称一口价，堵车不加价。但发生更改目的地，实际里程超出预估里程时，将恢复实时计价。</p>
+    <div class="line"></div>
+    <p>注1：里程费、时长费合计不足起步价时，将直接按起步价计费</p>
+    <p>注2：高速费、路桥费、停车费、其他费用按行驶过程中司机实际垫付费用收取</p>
+</div>
+</body>
+<script type="text/template" charset="utf-8" id='template-price-detail'>
+    {{ if (it && it.length > 0){ }}
+    {{ for (var i = 0; i < it.length; i++){ }}
+    {{ if(it[i].type == 1) { }}
+    <li class="active">
+        {{ } else { }}
+    <li>
+        {{ } }}
+        <span>{{=it[i].text}}</span>
+        <span>{{=it[i].price}}</span>
+    </li>
+    {{ } }}
+    {{ } }}
+</script>
+<script type="text/javascript" src="../../js/jquery-1.8.1.min.js"></script>
+<script type="text/javascript" src="../../js/exif.js"></script>
+<script type="text/javascript" src="../../js/js-activity.js?rnd=" + new Date().getTime()></script>
+<script type="text/javascript" src="../../js/doT.js"></script>
+<script type="text/javascript" src="../../js/main.js?rnd=" + new Date().getTime()></script>
+<script type="text/javascript" src="../../js/my-loading-alert-js.js?rnd=" + new Date().getTime()></script>
+<script type="text/javascript" src="../../js/my-toast-alert-js.js?rnd=" + new Date().getTime()></script>
+<script type="text/javascript" src="../js/price-rules-js.js?rnd=" + new Date().getTime()></script>
+</html>

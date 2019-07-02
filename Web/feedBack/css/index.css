@@ -1,0 +1,273 @@
+.clearfix:after {
+  content: '';
+  display: block;
+  clear: both;
+  height: 0; }
+
+* {
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent; }
+
+html {
+  font-size: 14px;
+  font-family: "PingFang SC";
+  color: rgba(0, 0, 0, 0.7);
+  background: #F4F5F6; }
+
+.container {
+  width: 90%;
+  margin: 0 auto; }
+
+@media (min-width: 768px) {
+  .container {
+    width: 690px; } }
+
+.left {
+  float: left !important; }
+
+.right {
+  float: right !important; }
+
+.block {
+  display: block !important; }
+
+.inline {
+  display: inline !important; }
+
+input:focus, textarea:focus, select:focus {
+  outline: none;
+  box-shadow: none; }
+
+figure {
+  position: relative;
+  width: 100%; }
+  figure img {
+    width: 100%; }
+  figure figcaption {
+    width: 200px;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    margin-left: -100px;
+    white-space: nowrap;
+    text-align: center;
+    font-size: 32px;
+    font-weight: 300;
+    color: #75C100; }
+
+.introduction {
+  margin: 1em auto; }
+  .introduction .introContent {
+    text-align: left;
+    margin-top: 0.8em;
+    line-height: 1.5em; }
+
+form {
+  font-size: 16px;
+  text-align: center; }
+  form .form-group {
+    position: relative;
+    margin: 20px 0;
+    padding: 0; }
+  form .label {
+    display: inline-block;
+    width: 20%;
+    line-height: 34px;
+    white-space: nowrap;
+    text-align: left;
+    color: rgba(0, 0, 0, 0.7); }
+  form input {
+    font-size: 16px;
+    padding: 5px;
+    color: rgba(0, 0, 0, 0.7); }
+  form .tip {
+    display: none;
+    position: absolute;
+    top: -16px;
+    left: 22%;
+    color: red;
+    font-size: 12px;
+    text-align: center; }
+  form .status {
+    display: none;
+    width: 18px;
+    height: 18px;
+    position: absolute;
+    top: 50%;
+    margin-top: -9px;
+    right: 15px;
+    background: url("../img/right.png") no-repeat;
+    background-position: center;
+    background-size: 18px 18px; }
+  form input::-webkit-input-placeholder {
+    font-size: 14px;
+    opacity: 0.7; }
+  form #inputTel, form .radioBox {
+    width: 78%;
+    height: 34px; }
+  form #inputTel, form .selectBox, form textarea, form .matterBox {
+    border: 1px solid #75C100;
+    border-radius: 4px; }
+  form .radioBox {
+    text-align: left; }
+    form .radioBox .input-group {
+      margin-right: 2em;
+      height: 34px;
+      line-height: 34px;
+      position: relative; }
+      form .radioBox .input-group input[type="radio"] {
+        display: inline-block;
+        width: 28px;
+        height: 28px;
+        margin-top: -10px;
+        position: absolute;
+        right: 0;
+        top: 50%;
+        z-index: 99;
+        opacity: 0; }
+      form .radioBox .input-group label {
+        display: inline-block;
+        position: relative;
+        cursor: pointer;
+        padding-right: 2em; }
+        form .radioBox .input-group label:before {
+          content: '';
+          display: inline-block;
+          position: absolute;
+          right: 0;
+          top: 50%;
+          margin-top: -10px;
+          box-sizing: border-box;
+          width: 20px;
+          height: 20px;
+          border: 1px solid #CECFD0;
+          border-radius: 50%;
+          background: #fff; }
+      form .radioBox .input-group input[type="radio"]:checked + label:before {
+        background: #75C100;
+        background-clip: content-box;
+        padding: 2px; }
+  form .selectBox {
+    width: 60%;
+    height: 34px; }
+    form .selectBox select {
+      width: 100%;
+      height: 100%;
+      padding-left: 5px;
+      line-height: 100%;
+      font-size: 16px;
+      color: rgba(0, 0, 0, 0.7);
+      margin: 0;
+      background: url("../img/selectBg.png") no-repeat;
+      background-size: 16px 16px;
+      background-position: 95% center;
+      appearance: none;
+      border: none;
+      -webkit-appearance: none;
+      -moz-appearance: none; }
+  form textarea, form .matterBox {
+    width: 98%; }
+    form textarea input, form .matterBox input {
+      border: none; }
+  form .matterBox #textareaMatter {
+    width: 100%;
+    background: transparent;
+    border: none;
+    resize: none; }
+  form .matterBox #previewBox {
+    width: 100%;
+    margin: 20px 0;
+    text-align: left;
+  }
+    form .matterBox #previewBox .uploadList {
+      width: 50%;
+      display: inline-block;
+      margin-bottom: 10px;
+      text-align: center; }
+      form .matterBox #previewBox .uploadList .uploadImg {
+        width: 80%;
+        max-width: 150px;
+        margin-bottom: 5px; }
+      form .matterBox #previewBox .uploadList .imgName {
+        display: inline-block;
+        max-width: 100%;
+        text-align: center;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        font-size: 12px;
+        color: rgba(0, 0, 0, 0.6);
+        font-weight: 300; }
+      form .matterBox #previewBox .uploadList .uploadDelete {
+        color: rgba(0, 0, 0, 0.7);
+        font-size: 12px;
+        font-weight: 400;
+        padding: 2px 10px;
+        color: tomato; }
+  form .matterBox .inputImgBox {
+    display: table;
+    position: relative;
+    width: 100%;
+    height: 80px; }
+    form .matterBox .inputImgBox .imgBoxLeft {
+      position: absolute;
+      left: 8px;
+      bottom: 6px;
+      width: 70px;
+      height: 70px;
+      z-index: 10;
+      overflow: hidden; }
+      form .matterBox .inputImgBox .imgBoxLeft #inputImg {
+        border: 1px solid red;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        filter: alpha(opacity=0);
+        font-size: 100px; }
+      form .matterBox .inputImgBox .imgBoxLeft .icon-add {
+        display: table;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        background: #eff0f1; }
+        form .matterBox .inputImgBox .imgBoxLeft .icon-add:before {
+          display: table-cell;
+          vertical-align: middle;
+          font-size: 50px;
+          line-height: 100%;
+          font-weight: 300; }
+    form .matterBox .inputImgBox .imgBoxRight {
+      display: table-cell;
+      vertical-align: middle;
+      width: 100%;
+      text-align: left;
+      padding: 6px 8px 6px 90px;
+      font-size: 14px;
+      line-height: 1.2em;
+      opacity: 0.7; }
+  form textarea {
+    padding: 6px 8px;
+    font-size: 14px;
+    line-height: 1.2em;
+    opacity: 0.8;
+    resize: none; }
+  form #opinionTip {
+    position: absolute;
+    bottom: -20px;
+    right: 8px;
+    font-size: 14px; }
+  form .submitBtn {
+    display: inline-block;
+    border: none;
+    width: 100%;
+    font-size: 16px;
+    padding: 15px 0;
+    margin: 20px 0;
+    background: #75c100;
+    color: rgba(255, 255, 255, 0.8); }
