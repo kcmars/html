@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Language" content="zh-CN"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="yes" name="apple-touch-fullscreen">
+    <meta content="telephone=no,email=no" name="format-detection">
+    <title>找回密码</title>
+    <script type="text/javascript" src="../js/auto-size.js?rnd=" + new Date().getTime()></script>
+    <link href="../css/main.css?rnd=" + new Date().getTime() type="text/css" rel="stylesheet">
+    <link href="../css/forget.css?rnd=" + new Date().getTime() type="text/css" rel="stylesheet">
+</head>
+<body>
+    <div class="forget-main">
+        <div class="back">返回</div>
+        <h1>找回密码</h1>
+        <div class="forget-content">
+            <div class="forget-item">
+                <span>手机号</span>
+                <input id="phone" value="" placeholder="请输入要注册的手机号">
+            </div>
+            <div class="forget-item">
+                <span>验证码</span>
+                <input id="code" value="" placeholder="请输入短信验证码">
+                <img class="code" src="../img/bus.jpg">
+            </div>
+            <div class="forget-item">
+                <span>新密码</span>
+                <input id="pwd" value="" placeholder="请设置新的登录密码">
+            </div>
+            <div class="forget-btn">提  交</div>
+        </div>
+    </div>
+</body>
+<script type="text/javascript" src="../js/jquery-1.8.1.min.js"></script>
+<script type="text/javascript" src="../js/exif.js"></script>
+<script type="text/javascript" src="../js/js-activity.js?rnd=" + new Date().getTime()></script>
+<script type="text/javascript" src="../js/main.js?rnd=" + new Date().getTime()></script>
+<script type="text/javascript" src="../js/my-loading-alert-js.js?rnd=" + new Date().getTime()></script>
+<script type="text/javascript" src="../js/my-toast-alert-js.js?rnd=" + new Date().getTime()></script>
+<script type="text/javascript">
+    $(function () {
+//        getRequest(getParams());
+        getParams();
+    });
+    
+    function getParams() {
+        //返回
+        $(".back").bind("click", function () {
+            window.history.back();
+        });
+        //提交修改密码
+        $(".forget-btn").bind("click", function () {
+
+        });
+        //获取短信验证码
+        $(".code").bind("click", function () {
+
+        });
+    }
+</script>
+</html>

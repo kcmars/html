@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="yes" name="apple-touch-fullscreen">
+    <meta content="telephone=no,email=no" name="format-detection">
+    <meta name="keywords"  content="爱运科技，爱运宝，公路运输宝，自动化调配平台，运输">
+    <meta name="description"  content="爱运科技致力于运输行业,公司基于移动互联网技术开发,以“爱运宝”及“公路运输宝”APP为主导,实现了公路运输智能服务,是中国第一个客运、货运自动化调配平台">
+    <title>爱运科技有限公司 | 推广承包商中心</title>
+    <link type="text/css" rel="stylesheet" href="../css/reset.css"/>
+    <link type="text/css" rel="stylesheet" href="../css/fonts.css"/>
+    <link type="text/css" rel="stylesheet" href="../css/index_20171019.css"/>
+    <link type="text/css" rel="stylesheet" href="../css/swiper.min.css?timer=" + new Date().getTime()/>
+    <link type="text/css" rel="stylesheet" href="../css/share.css?timer=" + new Date().getTime()/>
+    <link type="text/css" rel="stylesheet" href="../css/commodity.css?timer=" + new Date().getTime()/>
+    <script type="text/javascript">
+    </script>
+</head>
+<body>
+<div class="vip vipData commodity" id="vipData">
+    <!--查看宝贝详情弹窗-->
+    <div class="puBox puBoxCommodity">
+        <div class="overLay"></div>
+        <div class="pu">
+            <div class="swiper-container">
+                <ul id="swiper-list" class="swiper-wrapper">
+                </ul>
+                <!-- 如果需要分页器 -->
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-prev"></div><!--左箭头-->
+                <div class="swiper-button-next"></div><!--右箭头-->
+            </div>
+            <div class="detail">
+                <div class="item-row">
+                    <div class="item">
+                        <span>分类：</span>
+                        <span id="pu-type"></span>
+                    </div>
+                    <div class="item">
+                        <span>编号：</span>
+                        <span id="pu-code"></span>
+                    </div>
+                </div>
+                <div class="item">
+                    <span>价格：</span>
+                    <span id="pu-price"></span>
+                </div>
+                <div class="item">
+                    <span>描述：</span>
+                    <span id="pu-content"></span>
+                </div>
+            </div>
+            <div class="delete-commodity none">
+                删除宝贝
+            </div>
+        </div>
+    </div>
+    <!--导航开始-->
+    <header id="header">
+        <div class="logo">
+            <div class="imgBox"><img src="../img/logo.png" alt="aiyun'logo"></div><div class="nameBox"><span class="name">爱运科技</span>
+        </div>
+        </div>
+        <div class="tab">
+            <a href="index.html" class="navItem">关于爱运<span class="underLine"></span></a>
+            <a href="aiyunbao.html" class="navItem">爱运宝<span class="underLine"></span></a>
+            <a href="glysb.html" class="navItem">公路运输宝<span class="underLine"></span></a>
+            <a href="vip.html" class="navItem">VIP中心<span class="underLine"></span></a>
+            <a href="commodity.html" class="active navItem">奇珍异宝<span class="underLine"></span></a>
+        </div>
+        <div class="navBarBox">
+            <div class="navBar">
+                用户入口
+                <!--<span></span>-->
+                <!--<span></span>-->
+                <!--<span></span>-->
+            </div>
+        </div>
+        <div class="tabHide">
+            <div class="tabHideInner">
+                <a href="./index.html" class="navItem">关于爱运<span class="underLine"></span></a>
+                <a href="aiyunbao.html" class="navItem">爱运宝<span class="underLine"></span></a>
+                <a href="glysb.html" class="navItem">公路运输宝<span class="underLine"></span></a>
+                <a href="vip.html" class="navItem">VIP中心<span class="underLine"></span></a>
+                <a href="commodity.html" class="active navItem">奇珍异宝<span class="underLine"></span></a>
+            </div>
+            <div class="navBarHide"></div>
+        </div>
+    </header>
+    <!--导航结束-->
+    <div class="slogon">
+        <div class="slogonBg">
+            <picture>
+                <source media="(max-width: 767px)" srcset="../img/banner_6.jpg">
+                <source media="(min-width: 768px)" srcset="../img/banner6.jpg">
+                <img src="../img/banner6.jpg" alt="aiyunbao_section4bgMobile">
+            </picture>
+        </div>
+        <div class="wrapper">
+            <div class="wrapperTab clearfix">
+                <div class="active tabItem home">
+                    <span>首页</span>
+                </div>
+                <div class="tabItem seller">
+                    <span>卖家入口</span>
+                </div>
+                <div class="tabItem outBtn">
+                    <span>联系卖家</span>
+                </div>
+            </div>
+            <div class="wrapperContent">
+                <div class="content-home">
+                    <div class="classify">
+                        <span>分类：</span>
+                        <ul id="classify-list">
+                        </ul>
+                    </div>
+                    <div class="commodity-box">
+                        <ul id="commodity-list">
+                        </ul>
+                        <div class="moreBtnBox">
+                            <span id="loadBtn" class="none" onclick="getAllCommodity()">+ 加载更多</span>
+                            <span id="loadImg" class="loading"></span>
+                            <p id="loadMsg" class="none"></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="content-login none">
+                    <div class="content">
+                        <p class="title">卖家账户入口</p>
+                        <p class="subTitle">请输入注册爱运宝App的手机号及登录密码</p>
+                        <div class="inputBox telInputBox">
+                            <input class="telInput" id="telInput" maxlength="11" type="text" placeholder="手机号" required autocomplete="off">
+                            <span class="tip">请输入正确的手机号码</span>
+                            <span class="status"></span>
+                        </div>
+                        <div class="inputBox pswInputBox">
+                            <input class="pswInput" id="pswInput"  placeholder="密码" type="password" minlength="6" maxlength="16" required>
+                            <span class="tip">请输入密码</span>
+                            <span class="eye"></span>
+                        </div>
+                        <div class="inputBox clearfix captchaInputBox">
+                            <input class="captchaInput" id="captchaInput" placeholder="验证码" required autocomplete="off" maxlength="6">
+                            <div class="captchaImgBox">
+                                <img src="http://a56999.com/Aiyunbao/Treasure/getVerifyCode" alt="code" id="captchaImg">
+                                <span class="refresh">点击刷新</span>
+                            </div>
+                            <span class="tip">请输入图形验证码</span>
+                        </div>
+                        <button class="submitBtn" id="submitBtn">登  录</button>
+                    </div>
+                </div>
+                <div class="content-add none">
+                    <div class="content">
+                        <p class="title">添加宝贝</p>
+                        <div class="item">
+                            <span>分类：</span>
+                            <div class="inputBox">
+                                <input id="type" maxlength="10" value="" readonly="readonly" placeholder="选择商品类型"/>
+                                <span id="add-class" class="add-class none">确定添加</span>
+                            </div>
+                        </div>
+                        <div class="type none">
+                            <ul id="classify-list2">
+                            </ul>
+                        </div>
+                        <div class="item">
+                            <span>编号：</span>
+                            <div class="inputBox">
+                                <input id="code" maxlength="20" value="" placeholder="输入商品编号(数组或字母组合)"/>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <span>价格：</span>
+                            <div class="inputBox">
+                                <input id="money" type="number" maxlength="15" value="" placeholder="输入商品价格，可不填"/>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <span>描述：</span>
+                            <div class="inputBox">
+                                <input id="name" maxlength="50" value="" placeholder="输入商品名称或描述(50字内)"/>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="text">
+                                <span>上传图片：</span>
+                                <span>最多六张</span>
+                            </div>
+                            <ul id="pic-list">
+                            </ul>
+                        </div>
+                        <div class="item">
+                            <div class="text">
+                                <span>上传视频：</span>
+                                <span>最多2个</span>
+                            </div>
+                            <ul id="video-list">
+                            </ul>
+                        </div>
+                        <div class="add-btn">
+                            确定上传
+                        </div>
+                    </div>
+                </div>
+                <div class="content-contact none">
+                    <div class="model"></div>
+                    <div class="content">
+                        <p>如需购买或了解宝贝更多详情，可通过下列方式联系卖家</p>
+                        <div class="item">
+                            <span>固定电话：</span>
+                            <span id="fixed-phone"></span>
+                        </div>
+                        <div class="item">
+                            <span>手机号：</span>
+                            <span id="mobile-phone"></span>
+                        </div>
+                        <div class="item">
+                            <span>微信号：</span>
+                            <span id="weixin-phone"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p>Copyright © 2015, Chendu Goodluck Technology Co., Ltd. All Rights Reserved.<br>成都爱运科技有限公司&nbsp;蜀ICP备&nbsp; 15001871号</p>
+    </footer>
+</div>
+<script id="swiper-list-tmp" type="text/template">
+    {{ if(it != null && it !=''){ }}
+    {{ for(var i=0;i<it.length;i++) { }}
+    <li class="swiper-slide">
+        {{ if(it[i].type == 1) { }}
+            <img alt="img" src={{=it[i].src}}/>
+        {{ } else { }}
+            <video src={{=it[i].src}} controls="controls"></video>
+        {{ } }}
+    </li>
+    {{ } }}
+    {{ } }}
+</script>
+<script id="classify-list-tmp" type="text/template">
+    {{ if(it != null && it !=''){ }}
+    {{ for(var i=0;i<it.length;i++) { }}
+        {{ if (i == 0) { }}
+            <li class="active">全部</li>
+            <li>{{=it[i].type}}</li>
+        {{ } else { }}
+            <li>{{=it[i].type}}</li>
+        {{ } }}
+    {{ } }}
+    {{ } }}
+</script>
+<script id="commodity-list-tmp" type="text/template">
+    {{ if(it != null && it !=''){ }}
+    {{ for(var i=0;i<it.length;i++) { }}
+    <li onclick="lookDetail('{{=it[i].id}}')">
+        <img src={{=it[i].img[0].img}}>
+        <div class="content">
+            <p>{{=it[i].content}}</p>
+            <div class="detail">
+                {{ if(it[i].price != null && it[i].price != ''){ }}
+                    <span>&yen;{{=formatTwoDecimal(it[i].price)}}</span>
+                {{ } else{ }}
+                    <span>暂无价格</span>
+                {{ } }}
+                <span>详细&gt;</span>
+            </div>
+        </div>
+    </li>
+    {{ } }}
+    {{ } }}
+</script>
+<script id="classify-list2-tmp" type="text/template">
+    {{ if(it != null && it !=''){ }}
+    {{ for(var i=0;i<it.length;i++) { }}
+        {{ if (i == it.length -1) { }}
+            <li onclick="setClassify('{{=it[i].type}}', this)">{{=it[i].type}}</li>
+            <li class="add" onclick="addClassify()">添加分类</li>
+        {{ } else { }}
+            <li onclick="setClassify('{{=it[i].type}}', this)">{{=it[i].type}}</li>
+        {{ } }}
+    {{ } }}
+    {{ } else { }}
+        <li class="add" onclick="addClassify()">添加分类</li>
+    {{ } }}
+</script>
+<script id="pic-list-tmp" type="text/template">
+    {{ if(it != null && it !=''){ }}
+    {{ for(var i=it.length - 1;i>=0;i--) { }}
+    <li>
+        {{ if(it[i].type == 1){ }}
+            <img src={{=it[i].src}}>
+            <input id="file-pic" class="file" type="file" accept="image/jpeg,image/gif,image/png,image/jpg" value="">
+        {{ } else { }}
+            <img src={{=it[i].src}}>
+            <span onclick="deletePic('{{=i}}')"></span>
+        {{ } }}
+    </li>
+    {{ } }}
+    {{ } }}
+</script>
+<script id="video-list-tmp" type="text/template">
+    {{ if(it != null && it !=''){ }}
+    {{ for(var i=it.length - 1;i>=0;i--) { }}
+    <li>
+        {{ if(it[i].type == 1){ }}
+            <img src={{=it[i].src}}>
+            <input id="file-video" class="file" type="file" accept="video/*" value="">
+        {{ } else { }}
+            <video src={{=it[i].src}} controls="controls"></video>
+            <span onclick="deleteVideo('{{=i}}')"></span>
+        {{ } }}
+    </li>
+    {{ } }}
+    {{ } }}
+</script>
+<script src="https://cdn.bootcss.com/jquery/1.8.0/jquery.js"></script>
+<script src="../js/index_20171019.js"></script>
+<script src="../js/jquery-scrollLock.min.js"></script>
+<script src="../js/doT.js"></script>
+<script src="../layer/layer.js"></script>
+<script src="../js/swiper.min.js?timer=" + new Date().getTime()></script>
+<script src="../js/commodity.js?timer=" + new Date().getTime()></script>
+</body>
+</html>

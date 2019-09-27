@@ -1,0 +1,124 @@
+.auth-main {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    background-color: #ffffff;
+    font-size: 0.28rem;
+    position: relative;
+}
+.content-main {
+    margin-top: 1rem;
+    width: 100%;
+    height: 100%;
+    background: #f1f3f5;
+    overflow: scroll;
+}
+h2 {
+    font-size: 0.40rem;
+    color: #333333;
+    padding: 0.20rem 0.30rem;
+    margin-top: 0.30rem;
+}
+p {
+    font-size: 0.30rem;
+    color: #666666;
+    padding: 0.20rem 0.30rem;
+}
+ul {
+    margin: 0.10rem 0.30rem 0 0.30rem;
+    border-radius: 0.10rem;
+    background: #ededed;
+}
+ul li {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0.30rem 0.20rem;
+    border-bottom: 0.02rem solid #f1f3f5;
+}
+ul li h3 {
+    font-size: 0.30rem;
+    color: #259012;
+}
+ul li .status {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+}
+ul li .status span {
+    font-size: 0.20rem;
+    color: #666666;
+    padding: 0 0.10rem;
+}
+ul li .status .active {
+    color: #ff0403;
+}
+ul li .status i {
+    width: 0.2rem;
+    height: 0.2rem;
+    background: url("../img/icon_arrow_right_black.png") center no-repeat;
+    background-size: cover;
+}
+.auth-input {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 0.8rem;
+    background: #ffffff;
+    padding: 0 0.30rem;
+}
+.auth-input span {
+    font-size: 0.28rem;
+    color: #333333;
+    width: 1.5rem;
+}
+.auth-input input {
+    flex: 1;
+    font-size: 0.28rem;
+    color: #333333;
+    height: 0.75rem;
+    border:  none;
+    padding: 0 0.10rem;
+}
+.auth-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    background: #ffffff;
+}
+.auth-list li {
+    width: 40%;
+    margin: 0 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 1.26rem;
+    overflow: hidden;
+}
+.auth-list li img {
+    width: 2rem;
+    height: 2rem;
+}
+.auth-list li span {
+    font-size: 0.22rem;
+    color: #ffffff;
+    background: #259012;
+    width: 2rem;
+    padding: 0.10rem 0;
+    text-align: center;
+}
+.btn span {
+    width: 80%;
+    text-align: center;
+    display: block;
+    padding: 0.20rem 0;
+    background: #259012;
+    font-size: 0.33rem;
+    color: #ffffff;
+    margin: 0.50rem auto;
+    border-radius: 0.10rem;
+}

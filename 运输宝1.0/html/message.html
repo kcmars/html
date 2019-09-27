@@ -7,73 +7,73 @@
     <meta content="yes" name="apple-mobile-web-app-capable">
     <meta content="yes" name="apple-touch-fullscreen">
     <meta content="telephone=no,email=no" name="format-detection">
-    <title>主页</title>
+    <title>消息</title>
     <script type="text/javascript" src="../js/auto-size.js?rnd=" + new Date().getTime()></script>
     <link href="../css/base.css?rnd=" + new Date().getTime() type="text/css" rel="stylesheet">
     <link href="../css/listloading.css?rnd=" + new Date().getTime() type="text/css" rel="stylesheet">
-    <link href="../css/swiper.min.css?rnd=" + new Date().getTime() type="text/css" rel="stylesheet">
     <link href="../css/main.css?rnd=" + new Date().getTime() type="text/css" rel="stylesheet">
-    <link href="../css/home.css?rnd=" + new Date().getTime() type="text/css" rel="stylesheet">
-    <link href="../css/source.css?rnd=" + new Date().getTime() type="text/css" rel="stylesheet">
-    <link href="../css/me.css?rnd=" + new Date().getTime() type="text/css" rel="stylesheet">
-    <link href="../css/index.css?rnd=" + new Date().getTime() type="text/css" rel="stylesheet">
+    <link href="../css/message.css?rnd=" + new Date().getTime() type="text/css" rel="stylesheet">
 </head>
 <body>
-    <div class="main">
+    <div class="message-main">
         <div class="header">
             <div class="head-left">
-                <span>货主</span>
-                <img src="../img/down_arrow.png">
+                <span class="back">返回</span>
             </div>
-            <div class="title" id="city">成都市</div>
+            <div class="title">消息</div>
             <div class="head-right">
-                <span>消息</span>
+                <span></span>
             </div>
         </div>
-        <div class="role-box none">
-            <div class="model"></div>
-            <div class="role">司机</div>
+        <div class="list">
+            <div id="listloading" class="listloading-list">
+                <div>
+                    <ul id="message-list">
+                    </ul>
+                </div>
+            </div>
         </div>
-        <div id="content" class="content">
-
-        </div>
-        <ul class="footer">
-            <li class="active">
-                <i></i>
-                <span>首页</span>
-            </li>
-            <li>
-                <i></i>
-                <span>附近</span>
-            </li>
-            <li>
-                <i></i>
-                <span>更多</span>
-            </li>
-            <li>
-                <i></i>
-                <span>我的</span>
-            </li>
-        </ul>
-        <div id="btn-yun" class="btn-yun">运</div>
     </div>
 </body>
-<script type="text/template" charset="utf-8" id='template-plate-short-list'>
+<script type="text/template" charset="utf-8" id='template-message-list'>
     {{ if (it && it.length > 0){ }}
     {{ for (var i = 0; i < it.length; i++){ }}
     <li>
-        <span>{{=it[i]}}</span>
+        <div class="item-row">
+            <span>厢式货车</span>
+            <span>川A12345</span>
+            <span class="col-red">空闲</span>
+        </div>
+        <div class="item">
+            <img src="../img/bus.jpg" alt="img"/>
+            <div class="item-content">
+                <div class="item-row">
+                    <span>载重</span>
+                    <span>3.0吨</span>
+                </div>
+                <div class="item-row">
+                    <span>装货体积</span>
+                    <span>16.0方</span>
+                </div>
+                <div class="item-row">
+                    <span>长/宽/高</span>
+                    <span>4.2/2.0/1.9米</span>
+                </div>
+            </div>
+        </div>
     </li>
     {{ } }}
     {{ } }}
 </script>
 <script type="text/javascript" src="../js/jquery-1.8.1.min.js"></script>
 <script type="text/javascript" src="../js/doT.js"></script>
-<script type="text/javascript" src="../js/swiper.min.js"></script>
 <script type="text/javascript" src="../js/exif.js"></script>
 <script type="text/javascript" src="../js/js-activity.js?rnd=" + new Date().getTime()></script>
+<script type="text/javascript" src="../js/iscroll.min.js"></script>
+<script type="text/javascript" src="../js/zepto.min.js"></script>
+<script type="text/javascript" src="../js/listloading.js?rnd=" + new Date().getTime()></script>
 <script type="text/javascript" src="../js/main.js?rnd=" + new Date().getTime()></script>
 <script type="text/javascript" src="../js/my-loading-alert-js.js?rnd=" + new Date().getTime()></script>
 <script type="text/javascript" src="../js/my-toast-alert-js.js?rnd=" + new Date().getTime()></script>
-<script type="text/javascript" src="../js/index.js?rnd=" + new Date().getTime()></script>
+<script type="text/javascript" src="../js/message.js?rnd=" + new Date().getTime()></script>
 </html>

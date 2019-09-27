@@ -1,117 +1,12 @@
 $(function () {
-    /**
-     * 大巴车售票功能接口
-     */
-    // $.server = "http://192.168.1.88/";
-    $.server = "http://aiyunbaoapp.a56999.com/";
-    // var ip = "http://192.168.1.88/AppWeb/";
-    var ip = "http://aiyunbaoapp.a56999.com/AppWeb/";
-    //前往支付页面
-    // $.pay = "http://192.168.1.88:8082/Bus/html/pay.html";
-    $.pay = "http://webapp.a56999.com/Bus/html/pay.html";
-    //获取乘客行程信息
-    $.getUserOrder = ip + "Ticket/getUserOrder";
-    //预订购票
-    $.addTicket = ip + "Ticket/addTicket";
-    //添加乘客
-    $.addPassenger = ip + "UserInfo/addPassenger";
-    //获取添加的乘客列表
-    $.getPassengerList = ip + "UserInfo/getPassengerList";
-    //获取购票的大巴车信息
-    $.getTicketInfo = ip + "Ticket/getTicketInfo";
-    //提醒司机售票、乘客付款、乘客完成行程
-    $.remindMessage = ip + "Ticket/remindMessage";
-    //放弃购票或无票
-    $.abandonPayTicket = ip + "Ticket/abandonPayTicket";
-    //完成行程
-    $.completeTicket = ip + "Ticket/completeTicket";
-    //退票
-    $.returnTicket = ip + "Ticket/returnTicket";
-    //获取乘客购票信息
-    $.getPassengerTicket = ip + "Ticket/getPassengerTicket";
-    //同意购票
-    $.sellTicket = ip + "Ticket/sellTicket";
-    //获取当前车辆线路信息
-    $.getBusesLineInfo = ip + "Ticket/getBusesLineInfo";
-    //获取已预订车票的乘客列表
-    $.lineTicket = ip + "Ticket/lineTicket";
-    //微信下单
-    $.toWechatPay = ip + "OrderPay/unifiedOrder2";
-    //支付宝下单
-    $.toAlipay = ip + "Alipay/toAlipay2";
 
     /**
-     * 分享接口地址
+     * IP 地址
      */
-    $.server1 = "http://bb4b3408.ngrok.io/";
-    $.server2 = "http://118.190.203.67:9501/";
-    var ip1 = $.server2 + "Web/";
-    //获取我的分享二维码
-    $.getShareQR = ip1 + "Share/getQRCode";
-    //获取我的分享信息
-    $.getShareContent = ip1 + "Share/getShareContent";
-    //获取我的推荐人数
-    $.getRecommendDetail = ip1 + "Share/getRecommendDetail";
+    $.ip = "";
 
-    /**
-     * 认证接口地址
-     */
-    //上传认证图片
-    $.uploadPicture = ip1 + "Authentication/upload";
-    //获取乘客实名认证
-    $.getPassengerRealNameInfo = ip1 + "Authentication/getPassengerRealNameInfo";
-    //提交乘客实名认证
-    $.submitPassengerRealNameInfo = ip1 + "Authentication/passenger";
-    //获取司机快车认证信息
-    $.getExpressDriverInfo = ip1 + "Authentication/getExpressDriverInfo";
-    //提交司机快车认证
-    $.submitExpressDriver = ip1 + "Authentication/expressDriver";
-    //获取司机快车认证信息
-    $.getTaxiDriverInfo = ip1 + "Authentication/getTaxiDriverInfo";
-    //提交司机快车认证
-    $.submitTaxiDriver = ip1 + "Authentication/taxiDriver";
-
-    /**
-     * 支付相关接口
-     */
-    //获取账单信息
-    $.getPayInfo = ip1 + "Pay/getPayInfo";
-    //下单
-    $.unifiedOrder = ip1 + "Pay/unifiedOrder";
-    //获取预估价格详情
-    $.getDetailEstimateInfo = ip1 + "Pay/getDetailEstimateInfo";
-    //乘客端获取行程账单详情
-    $.getDetailPayInfo = ip1 + "Pay/getDetailPayInfo";
-    //司机端获取行程账单详情
-    $.getDetailPayInfoOfDriver = ip1 + "Pay/getDetailPayInfoOfDriver";
-    //获取价格配置详情
-    $.getPriceConfig = ip1 + "Pay/getPriceConfig";
-    //获取钱包消息详情
-    $.getPropertyDetail = ip1 + "Common/getPropertyDetail";
-
-
-    /**
-     * 评价相关接口
-     */
-    //获取评价信息
-    $.getRatingInfo = ip1 + "Judge/getRatingInfo";
-    //提交评价信息
-    $.submitRating = ip1 + "Judge/submitRating";
-    //获取取消理由
-    $.getCancelReason = ip1 + "Common/getCancelReason";
-    //提交取消理由
-    $.submitReason = ip1 + "Common/submitReason";
-
-    /**
-     * 地址相关接口
-     */
-    //获取省
-    $.getProvinces = ip1 + "Common/getProvinces";
-    //获取城市
-    $.getCities = ip1 + "Common/getCities";
-    //获取区县
-    $.getAds = ip1 + "Common/getAds";
-
+    //身份 1 货主， 2 司机
+    $.role = 1;
 
     //防止键盘把当前输入框给挡住
     $('input').on('click', function () {

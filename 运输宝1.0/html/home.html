@@ -1,48 +1,42 @@
-<!DOCTYPE html>
-<html lang="zh-CN">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="Content-Language" content="zh-CN"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
-    <meta content="yes" name="apple-mobile-web-app-capable">
-    <meta content="yes" name="apple-touch-fullscreen">
-    <meta content="telephone=no,email=no" name="format-detection">
-    <title>首页</title>
-    <script type="text/javascript" src="../js/auto-size.js?rnd=" + new Date().getTime()></script>
-    <link href="../css/swiper.min.css?rnd=" + new Date().getTime() type="text/css" rel="stylesheet">
-    <link href="../css/main.css?rnd=" + new Date().getTime() type="text/css" rel="stylesheet">
-    <link href="../css/home.css?rnd=" + new Date().getTime() type="text/css" rel="stylesheet">
-</head>
-<body>
-    <div class="home-main">
-        <div class="swiper-container">
-            <ul id="swiper-list" class="swiper-wrapper">
-            </ul>
-            <!-- 如果需要分页器 -->
-            <div class="swiper-pagination"></div>
-        </div>
+<div class="home-main">
+    <div class="swiper-container">
+        <ul id="swiper-list" class="swiper-wrapper">
+        </ul>
+        <!-- 如果需要分页器 -->
+        <div class="swiper-pagination"></div>
     </div>
-</body>
+    <div class="loop">
+        <img src="../img/bus.jpg">
+        <div id="loop-text" class="loop-text"></div>
+    </div>
+    <div class="order-info">
+        <div class="order-info-all">
+            <div class="order-info-left">运单信息</div>
+            <div class="order-info-right">
+                <span>全部运单</span>
+                <img src="../img/icon_arrow_right_black.png">
+            </div>
+        </div>
+        <ul class="order-list">
+            <li class="no-order">
+                <span>暂无进行中运单</span>
+            </li>
+        </ul>
+    </div>
+</div>
 <script type="text/template" charset="utf-8" id='template-swiper-list'>
     {{ if (it && it.length > 0){ }}
     {{ for (var i = 0; i < it.length; i++){ }}
     <li class="swiper-slide">
-        <span>Slide {{=i}}</span>
+        <img src={{=it[i]}}/>
     </li>
     {{ } }}
     {{ } }}
 </script>
-<script type="text/javascript" src="../js/jquery-1.8.1.min.js"></script>
-<script type="text/javascript" src="../js/doT.js"></script>
-<script type="text/javascript" src="../js/exif.js"></script>
-<script type="text/javascript" src="../js/swiper.min.js"></script>
-<script type="text/javascript" src="../js/js-activity.js?rnd=" + new Date().getTime()></script>
-<script type="text/javascript" src="../js/main.js?rnd=" + new Date().getTime()></script>
-<script type="text/javascript" src="../js/my-loading-alert-js.js?rnd=" + new Date().getTime()></script>
-<script type="text/javascript" src="../js/my-toast-alert-js.js?rnd=" + new Date().getTime()></script>
 <script>
     var swiper = document.getElementById('template-swiper-list').innerHTML;
-    document.getElementById('swiper-list').innerHTML = doT.template(swiper)([1,1,1]);
+    var imgs = ["../img/slide1.png", "../img/slide2.png", "../img/slide3.png"];
+    document.getElementById('swiper-list').innerHTML = doT.template(swiper)(imgs);
     var mySwiper = new Swiper ('.swiper-container', {
         loop: true, //是否循环
         autoplay: {
@@ -54,6 +48,76 @@
         pagination: {
             el: '.swiper-pagination'
         }
-    })
+    });
+    /**
+     * 文字上下跑马灯效果
+     1. 首先加如一个div。
+     2. 然后再追加一个div，此时开始滚动（第一个div慢慢从上面移除，第二个div就随着从下面浮现出来）。
+     3. 第三次进入，就不再追加div了，只是将第一个的内容（也就是innerHTML）改变成新的内容，然后再将这个div重新追加（其实是调换了位置（这点很重要））
+        到下面，然后再次滚动就看到了新的内容的div了，最后就这样反复循环。
+     */
+    var div1;           //外层div
+    var height = 30;    //外层div高度
+    var rollIndex = 0;  //当前滚动的索引
+    var millisec = 5000;    //滚动间隔时间（毫秒）
+    var intervalIds = new Array();  //计时器 id 数组
+    var datas = ["上下滚动跑马灯1"];
+    $(function () {
+        //文字轮播
+        textSwiper();
+
+        //全部运单
+        $(".order-info-right").bind("click", function () {
+            window.location.href = "./order.html";
+        });
+    });
+
+    //文字轮播
+    function textSwiper() {
+        div1 = document.getElementById("loop-text");
+        div1.style.height = height + "px";
+        //鼠标进入停止滚动
+        div1.onmouseover = function() {
+            clearInterval(intervalIds[0]);
+        };
+        //鼠标离开开始滚动
+        div1.onmouseout = function() {
+            intervalIds[0] = setInterval("addItem()", millisec);
+        };
+        addItem();  //首先加载第一项
+        intervalIds[0] = setInterval("addItem()", millisec);
+    }
+
+    //添加滚动项
+    function addItem(){
+        var content = datas[rollIndex];
+        if(div1.childNodes.length <= 1) {
+            var div = document.createElement("div");
+            div.setAttribute("class", "child");
+            div.innerHTML = content;
+            div1.appendChild(div);
+//            //设置两个 div 的背景色
+//            if(rollIndex % 2 == 0)
+//                div.style.background = "#EEE9E9";
+//            else
+//                div.style.background = "#F0FFF0";
+        } else {
+            div1.childNodes[0].innerHTML = content;
+            div1.appendChild(div1.childNodes[0]);
+            div1.scrollTop = 0; //兼容Firefox
+        }
+        rollIndex++;
+        rollIndex = rollIndex < datas.length ? rollIndex : 0;
+        if(div1.childNodes.length > 1) {
+            clearInterval(intervalIds[1]);
+            intervalIds[1] = setInterval("setScroll()", 20);
+        }
+    }
+    //设置外层div.scrollTop
+    function setScroll(){
+        div1.scrollTop++;
+        if(div1.scrollTop >= height) {
+            clearInterval(intervalIds[1]);
+        }
+    }
 </script>
-</html>

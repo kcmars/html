@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Language" content="zh-CN"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="yes" name="apple-touch-fullscreen">
+    <meta content="telephone=no,email=no" name="format-detection">
+    <title>找货-拉货</title>
+    <script type="text/javascript" src="../js/auto-size.js?rnd=" + new Date().getTime()></script>
+    <link href="../css/base.css?rnd=" + new Date().getTime() type="text/css" rel="stylesheet">
+    <link href="../css/listloading.css?rnd=" + new Date().getTime() type="text/css" rel="stylesheet">
+    <link href="../css/main.css?rnd=" + new Date().getTime() type="text/css" rel="stylesheet">
+    <link href="../css/business.css?rnd=" + new Date().getTime() type="text/css" rel="stylesheet">
+</head>
+<body>
+    <div class="business-main">
+        <div class="header">
+            <div class="head-left">
+                <span class="back">返回</span>
+            </div>
+            <div class="title">找货-拉货</div>
+            <div class="head-right">
+                <span class="order">运单</span>
+            </div>
+        </div>
+        <div class="select-type">
+            <div class="select-item">发货点</div>
+            <img src="../img/bus.jpg">
+            <div class="select-item">收货点</div>
+            <div class="select-item">
+                <span>运费价格</span>
+                <img src="../img/bus.jpg">
+            </div>
+        </div>
+        <div class="list">
+            <div id="listloading" class="listloading-list">
+                <div>
+                    <ul id="business-list">
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script type="text/template" charset="utf-8" id='template-business-list'>
+    {{ if (it && it.length > 0){ }}
+    {{ for (var i = 0; i < it.length; i++){ }}
+    <li>
+        <div class="item border-bottom">
+            <span class="col-orange">今天 12:00-13:00 装货/用车</span>
+            <span class="col-green">距您12km</span>
+        </div>
+        <div class="item-row border-bottom">
+            <img class="picture" src="../img/bus.jpg" alt="img"/>
+            <div class="item-content f1">
+                <div class="address-item">
+                    <span>发</span>
+                    <span>成都市武侯区一环路20号</span>
+                </div>
+                <div class="address-item">
+                    <span>收</span>
+                    <span>巴中市曾口镇刘家湾</span>
+                </div>
+            </div>
+            <div class="item-content">
+                <div class="item-row-distance ">
+                    <span>距离</span>
+                    <span class="distance">20km</span>
+                </div>
+                <div class="item-price col-red">
+                    <span>货主期望报价</span>
+                    <span class="price col-red">￥100.00</span>
+                </div>
+            </div>
+        </div>
+        <div class="item-row detail">
+            <span>货物详情</span>
+            <span>普货 | 家具 | 3吨 | 100方</span>
+        </div>
+        <div class="item-row detail">
+            <span>需求车辆</span>
+            <span>中货车 | 封闭 | 长4米 | 宽2米 | 高3米</span>
+        </div>
+        <div class="item border-top">
+            <span class="time">更新时间: 刚刚</span>
+            <span class="look">查看详情</span>
+        </div>
+        <div class="receipt">接  单</div>
+    </li>
+    {{ } }}
+    {{ } }}
+</script>
+<script type="text/javascript" src="../js/jquery-1.8.1.min.js"></script>
+<script type="text/javascript" src="../js/doT.js"></script>
+<script type="text/javascript" src="../js/exif.js"></script>
+<script type="text/javascript" src="../js/iscroll.min.js"></script>
+<script type="text/javascript" src="../js/zepto.min.js"></script>
+<script type="text/javascript" src="../js/listloading.js?rnd=" + new Date().getTime()></script>
+<script type="text/javascript" src="../js/js-activity.js?rnd=" + new Date().getTime()></script>
+<script type="text/javascript" src="../js/main.js?rnd=" + new Date().getTime()></script>
+<script type="text/javascript" src="../js/my-loading-alert-js.js?rnd=" + new Date().getTime()></script>
+<script type="text/javascript" src="../js/my-toast-alert-js.js?rnd=" + new Date().getTime()></script>
+<script type="text/javascript" src="../js/business.js?rnd=" + new Date().getTime()></script>
+</html>

@@ -8,3 +8,69 @@
     width: 100%;
     height: 3rem;
 }
+.swiper-slide img {
+    width: 100%;
+    height: 100%;
+}
+.loop{
+    background: #fcfcfc;
+    border-radius: 0.30rem;
+    margin: 0.20rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0 0.40rem;
+}
+.loop img {
+    width: 0.40rem;
+    height: 0.40rem;
+}
+.loop .loop-text {
+    height: 30px;
+    overflow: hidden;   /*必须设置该属性*/
+    flex: 1;
+    margin-left: 0.15rem;
+}
+.child{
+    width: 100%;
+    height: 100%;
+    line-height: 30px;
+    font-size: 0.26rem;
+    color: #555555;
+}
+.order-info {
+
+}
+.order-info-all {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background: #ffffff;
+}
+.order-info-left {
+    color: #333333;
+    font-size: 0.28rem;
+    padding: 0.30rem;
+}
+.order-info-right {
+    text-align: right;
+    flex: 1;
+    padding: 0.30rem;
+    color: #333333;
+    font-size: 0.26rem;
+}
+.order-info-right img {
+    width: 0.20rem;
+    height: 0.20rem;
+}
+.order-list {
+
+}
+.order-list .no-order {
+    border-top: 0.02rem solid #f1f3f5;
+    text-align: center;
+    color: #666666;
+    font-size: 0.28rem;
+    background: #ffffff;
+    padding: 0.40rem 0;
+}

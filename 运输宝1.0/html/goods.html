@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Language" content="zh-CN"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="yes" name="apple-touch-fullscreen">
+    <meta content="telephone=no,email=no" name="format-detection">
+    <title>发货-用车</title>
+    <script type="text/javascript" src="../js/auto-size.js?rnd=" + new Date().getTime()></script>
+    <link href="../css/swiper.min.css?rnd=" + new Date().getTime() type="text/css" rel="stylesheet">
+    <link href="../css/main.css?rnd=" + new Date().getTime() type="text/css" rel="stylesheet">
+    <link href="../css/goods.css?rnd=" + new Date().getTime() type="text/css" rel="stylesheet">
+</head>
+<body>
+    <div class="goods-main">
+        <div class="header">
+            <div class="head-left">
+                <span class="back">返回</span>
+            </div>
+            <div class="title">发货-找车</div>
+            <div class="head-right">
+                <span></span>
+            </div>
+        </div>
+        <div class="content-main">
+            <div class="title-bar">
+                <span class="active">发货</span>
+                <span>用车</span>
+            </div>
+            <div class="content">
+                <div class="content-cars ">
+                    <div class="cars-main">
+                        <div class="swiper-container">
+                            <ul id="swiper-car-list" class="swiper-wrapper">
+                            </ul>
+                            <!-- 如果需要分页器 -->
+                            <!--<div class="swiper-pagination"></div>-->
+                        </div>
+                    </div>
+                    <div class="address-info">
+                        <div class="ads-item">
+                            <img class="icon" src="../img/bus.jpg">
+                            <div class="ads-info">
+                                <span id="start-name-cars">选择卸货地址</span>
+                                <span id="start-ads-cars">选择卸货地址</span>
+                            </div>
+                        </div>
+                        <div class="ads-item">
+                            <img class="icon" src="../img/bus.jpg">
+                            <div class="ads-info">
+                                <span id="end-name-cars">选择卸货地址</span>
+                                <span id="end-ads-cars">选择卸货地址</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="time-info">
+                        <img class="icon" src="../img/bus.jpg">
+                        <input placeholder="选择时间" readonly>
+                    </div>
+                    <div class="footer-main">
+                        <div class="price-main">
+                            <span></span>
+                            <div class="price">
+                                <h3>￥118.00</h3>
+                            </div>
+                            <span>价格明细</span>
+                        </div>
+                        <div class="btns">
+                            <span>下    单</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="content-goods none">
+                    <div class="goods-info">
+                        <div class="goods-info-item">
+                            <img class="icon" src="../img/bus.jpg">
+                            <input id="goods-type" placeholder="货物类型" value="" readonly>
+                            <i></i>
+                        </div>
+                        <div class="goods-info-item">
+                            <img class="icon" src="../img/bus.jpg">
+                            <input id="goods-name" placeholder="货物名称" value="" >
+                        </div>
+                        <div class="goods-info-item">
+                            <img class="icon" src="../img/bus.jpg">
+                            <input id="goods-weight" placeholder="货物重量或体积" value="" >
+                            <span>千克</span>
+                        </div>
+                    </div>
+                    <div class="img-info">
+                        <img class="icon" src="../img/bus.jpg">
+                        <span>货物照片</span>
+                        <img id="goods-img" class="goods-img" src="../img/bus.jpg">
+                        <input id="file" type="file"  value="">
+                    </div>
+                    <div class="cars-info">
+                        <img class="icon" src="../img/bus.jpg">
+                        <input id="cars-info" placeholder="指定车辆（默认全部车型）" value="" readonly >
+                        <i></i>
+                    </div>
+                    <div class="time-info">
+                        <img class="icon" src="../img/bus.jpg">
+                        <input id="time" value="" placeholder="选择装货时间" readonly>
+                    </div>
+                    <div class="address-info">
+                        <div class="ads-item">
+                            <img class="icon" src="../img/bus.jpg">
+                            <div class="ads-info">
+                                <span id="start-name-goods">选择装货地址</span>
+                                <span id="start-ads-goods">选择装货地址</span>
+                            </div>
+                        </div>
+                        <div class="ads-item">
+                            <img class="icon" src="../img/bus.jpg">
+                            <div class="ads-info">
+                                <span id="end-name-goods">选择卸货地址</span>
+                                <span id="end-ads-goods">选择卸货地址</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="footer-main">
+                        <div class="price-main">
+                            <span></span>
+                            <div class="price">
+                                <h3>￥118.00</h3>
+                                <img class="icon" src="../img/bus.jpg">
+                            </div>
+                            <span>价格明细</span>
+                        </div>
+                        <div class="btns">
+                            <span>下    单</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script type="text/template" charset="utf-8" id='template-swiper-list'>
+    {{ if (it && it.length > 0){ }}
+    {{ for (var i = 0; i < it.length; i++){ }}
+    <li class="swiper-slide">
+        <img src={{=it[i]}}/>
+    </li>
+    {{ } }}
+    {{ } }}
+</script>
+<script type="text/javascript" src="../js/jquery-1.8.1.min.js"></script>
+<script type="text/javascript" src="../js/doT.js"></script>
+<script type="text/javascript" src="../js/exif.js"></script>
+<script type="text/javascript" src="../js/swiper.min.js"></script>
+<script type="text/javascript" src="../js/js-activity.js?rnd=" + new Date().getTime()></script>
+<script type="text/javascript" src="../js/main.js?rnd=" + new Date().getTime()></script>
+<script type="text/javascript" src="../js/my-loading-alert-js.js?rnd=" + new Date().getTime()></script>
+<script type="text/javascript" src="../js/my-toast-alert-js.js?rnd=" + new Date().getTime()></script>
+<script>
+    $(function () {
+        //返回上一页
+        $(".back").bind("click", function () {
+            window.history.back();
+        });
+        //切换拉货找车
+       $(".title-bar span").bind("click", function () {
+           var index = $(this).index();
+           $(this).addClass("active").siblings().removeClass("active");
+           if (index == 1) {
+               $(".content-goods").removeClass("none");
+               $(".content-cars").addClass("none");
+           } else {
+               $(".content-cars").removeClass("none");
+               $(".content-goods").addClass("none");
+           }
+       });
+    });
+    var swiperList = document.getElementById('template-swiper-list').innerHTML;
+    var imgs = ["../img/slide1.png", "../img/slide2.png", "../img/slide3.png", "../img/slide1.png", "../img/slide2.png", "../img/slide3.png"];
+    document.getElementById('swiper-car-list').innerHTML = doT.template(swiperList)(imgs);
+    var swiper = new Swiper('.swiper-container', {
+        effect: 'coverflow',  //slide的切换效果，默认为"slide"（位移切换），可设置为'slide'（普通切换、默认）,"fade"（淡入）"cube"（方块）"coverflow"（3d流）"flip"（3d翻转）。
+        grabCursor: true,
+        centeredSlides: true,
+        slidesPerView: 'auto',
+        coverflowEffect: {
+            rotate: 50,  //slide做3d旋转时Y轴的旋转角度。默认50。
+            stretch: 10,   //每个slide之间的拉伸值，越大slide靠得越紧。 默认0。
+            depth: 100,   //slide的位置深度。值越大z轴距离越远，看起来越小。 默认100
+            modifier: 1,  //depth和rotate和stretch的倍率，相当于depth*modifier、rotate*modifier、stretch*modifier，值越大这三个参数的效果越明显。默认1。
+            slideShadows : true  //开启slide阴影。默认 true。
+        }
+//        pagination: {
+//            el: '.swiper-pagination',
+//        }
+    });
+</script>
+</html>

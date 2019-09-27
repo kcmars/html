@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Language" content="zh-CN"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="yes" name="apple-touch-fullscreen">
+    <meta content="telephone=no,email=no" name="format-detection">
+    <title>完善司机认证信息</title>
+    <script type="text/javascript" src="../js/auto-size.js?rnd=" + new Date().getTime()></script>
+    <link href="../css/main.css?rnd=" + new Date().getTime() type="text/css" rel="stylesheet">
+    <link href="../css/auth.css?rnd=" + new Date().getTime() type="text/css" rel="stylesheet">
+</head>
+<body>
+    <div class="auth-main">
+        <div class="header">
+            <div class="head-left">
+                <span class="back">返回</span>
+            </div>
+            <div class="title">完善司机认证信息</div>
+            <div class="head-right">
+                <span></span>
+            </div>
+        </div>
+        <div class="content-main">
+            <div class="auth-input m-t-15">
+                <span>真实姓名</span>
+                <input id="name" placeholder="请填写真实姓名" value="">
+            </div>
+            <div class="auth-input m-t-2">
+                <span>身份证号</span>
+                <input id="id-card" placeholder="请填写身份证号" value="">
+            </div>
+            <div class="auth-img m-t-20">
+                <p>请拍摄并上传图片</p>
+                <ul class="auth-list">
+                    <li>
+                        <img src="../img/bus.jpg">
+                        <span>手持身份证正面照</span>
+                    </li>
+                    <li>
+                        <img src="../img/bus.jpg">
+                        <span>手持身份证背面照</span>
+                    </li>
+                    <li>
+                        <img src="../img/bus.jpg">
+                        <span>本人驾驶证</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="btn">
+                <span>下一步</span>
+            </div>
+        </div>
+    </div>
+</body>
+<script type="text/javascript" src="../js/jquery-1.8.1.min.js"></script>
+<script type="text/javascript" src="../js/doT.js"></script>
+<script type="text/javascript" src="../js/exif.js"></script>
+<script type="text/javascript" src="../js/js-activity.js?rnd=" + new Date().getTime()></script>
+<script type="text/javascript" src="../js/main.js?rnd=" + new Date().getTime()></script>
+<script type="text/javascript" src="../js/my-loading-alert-js.js?rnd=" + new Date().getTime()></script>
+<script type="text/javascript" src="../js/my-toast-alert-js.js?rnd=" + new Date().getTime()></script>
+<script>
+    $(function () {
+        //返回上一页
+        $(".back").bind("click", function () {
+            window.history.back();
+        });
+    });
+</script>
+</html>

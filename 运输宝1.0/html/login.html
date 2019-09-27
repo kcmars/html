@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Language" content="zh-CN"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="yes" name="apple-touch-fullscreen">
+    <meta content="telephone=no,email=no" name="format-detection">
+    <title>登录账号</title>
+    <script type="text/javascript" src="../js/auto-size.js?rnd=" + new Date().getTime()></script>
+    <link href="../css/main.css?rnd=" + new Date().getTime() type="text/css" rel="stylesheet">
+    <link href="../css/login.css?rnd=" + new Date().getTime() type="text/css" rel="stylesheet">
+</head>
+<body>
+    <div class="login-main">
+        <h1>登录账号</h1>
+        <div class="login-content">
+            <div class="login-item">
+                <span>手机号</span>
+                <input id="phone" value="" placeholder="请输入注册手机号">
+            </div>
+            <div class="login-item">
+                <span>密码</span>
+                <input id="pwd" value="" placeholder="请输入登录密码">
+            </div>
+            <div class="login-btn">登  录</div>
+            <div class="register-btn">去注册</div>
+            <div class="login-footer">
+                <span class="call-service">联系客服</span>
+                <span class="forget-pwd">忘记密码？</span>
+            </div>
+        </div>
+    </div>
+</body>
+<script type="text/javascript" src="../js/jquery-1.8.1.min.js"></script>
+<script type="text/javascript" src="../js/exif.js"></script>
+<script type="text/javascript" src="../js/js-activity.js?rnd=" + new Date().getTime()></script>
+<script type="text/javascript" src="../js/main.js?rnd=" + new Date().getTime()></script>
+<script type="text/javascript" src="../js/my-loading-alert-js.js?rnd=" + new Date().getTime()></script>
+<script type="text/javascript" src="../js/my-toast-alert-js.js?rnd=" + new Date().getTime()></script>
+<script type="text/javascript">
+    $(function () {
+//        getRequest(getParams());
+        getParams();
+        //登录
+        $(".login-btn").bind("click", function () {
+
+        })
+    });
+    
+    function getParams() {
+        //登录
+        $(".login-btn").bind("click", function () {
+
+        });
+        //去注册
+        $(".register-btn").bind("click", function () {
+            window.location.href = "./register.html";
+        });
+        //联系客服
+        $(".call-service").bind("click", function () {
+            window.location.href = "./service.html";
+        });
+        //找回密码
+        $(".forget-pwd").bind("click", function () {
+            window.location.href = "./forget.html";
+        });
+    }
+</script>
+</html>

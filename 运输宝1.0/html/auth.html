@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Language" content="zh-CN"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="yes" name="apple-touch-fullscreen">
+    <meta content="telephone=no,email=no" name="format-detection">
+    <title>实名认证</title>
+    <script type="text/javascript" src="../js/auto-size.js?rnd=" + new Date().getTime()></script>
+    <link href="../css/main.css?rnd=" + new Date().getTime() type="text/css" rel="stylesheet">
+    <link href="../css/auth.css?rnd=" + new Date().getTime() type="text/css" rel="stylesheet">
+</head>
+<body>
+    <div class="auth-main">
+        <div class="header">
+            <div class="head-left">
+                <span class="back">返回</span>
+            </div>
+            <div class="title">实名认证</div>
+            <div class="head-right">
+                <span></span>
+            </div>
+        </div>
+        <div class="content-main">
+            <h2>身份认证</h2>
+            <p>完成身份认证后可使用更多功能</p>
+            <h2>货主</h2>
+            <ul>
+                <li id="person">
+                    <h3>个人认证</h3>
+                    <div class="status">
+                        <span id="person-status">未提交</span>
+                        <i></i>
+                    </div>
+                </li>
+                <li id="enter">
+                    <h3>企业认证</h3>
+                    <div class="status">
+                        <span id="enter-status">未提交</span>
+                        <i></i>
+                    </div>
+                </li>
+            </ul>
+            <h2>司机</h2>
+            <ul>
+                <li id="driver">
+                    <h3>司机认证</h3>
+                    <div class="status">
+                        <span id="driver-status">未提交</span>
+                        <i></i>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</body>
+<script type="text/javascript" src="../js/jquery-1.8.1.min.js"></script>
+<script type="text/javascript" src="../js/doT.js"></script>
+<script type="text/javascript" src="../js/exif.js"></script>
+<script type="text/javascript" src="../js/js-activity.js?rnd=" + new Date().getTime()></script>
+<script type="text/javascript" src="../js/main.js?rnd=" + new Date().getTime()></script>
+<script type="text/javascript" src="../js/my-loading-alert-js.js?rnd=" + new Date().getTime()></script>
+<script type="text/javascript" src="../js/my-toast-alert-js.js?rnd=" + new Date().getTime()></script>
+<script>
+    $(function () {
+        //返回上一页
+        $(".back").bind("click", function () {
+            window.history.back();
+        });
+        $("ul li").bind("click", function () {
+            var tag = $(this)[0].id;
+            switch (tag) {
+                case "person":   //个人
+                    window.location.href =  "./authPerson.html";
+                    break;
+
+                case "enter":   //企业
+                    window.location.href =  "./authEnter.html";
+                    break;
+
+                case "driver":   //司机
+                    window.location.href =  "./authDriver.html";
+                    break;
+            }
+        });
+    });
+</script>
+</html>
