@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Language" content="zh-CN"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="yes" name="apple-touch-fullscreen">
+    <meta content="telephone=no,email=no" name="format-detection">
+    <title>我的优惠券</title>
+    <script type="text/javascript" src="../js/auto-size.js?rnd=" + new Date().getTime()></script>
+    <link href="../css/base.css?rnd=" + new Date().getTime() type="text/css" rel="stylesheet">
+    <link href="../css/listloading.css?rnd=" + new Date().getTime() type="text/css" rel="stylesheet">
+    <link href="../css/main.css?rnd=" + new Date().getTime() type="text/css" rel="stylesheet">
+    <link href="../css/myCoupon.css?rnd=" + new Date().getTime() type="text/css" rel="stylesheet">
+</head>
+<body>
+    <div class="coupon-main">
+        <div class="header">
+            <div class="head-left">
+                <span class="back">返回</span>
+            </div>
+            <div class="title">我的优惠券</div>
+            <div class="head-right">
+                <span>更多活动</span>
+            </div>
+        </div>
+        <div class="coupon-info">
+            <p>平台发放的优惠券包含以下两种：</p>
+            <p><b class="col-back">代金券：</b>只可代替运费使用</p>
+            <p><b class="col-back">免服务费券：</b>司机在平台接单可免收一次服务费</p>
+        </div>
+        <div class="list">
+            <div id="listloading" class="listloading-list">
+                <div>
+                    <ul id="coupon-list" class="coupon-list">
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="detail-footer">
+            <span class="coupon">联系客服</span>
+            <span class="activity">更多活动</span>
+        </div>
+    </div>
+</body>
+<script type="text/template" charset="utf-8" id='template-coupon-list'>
+    {{ if (it && it.length > 0){ }}
+    {{ for (var i = 0; i < it.length; i++){ }}
+    <li onclick="lookShareDetail()">
+        <img src="../img/slide1.png">
+    </li>
+    {{ } }}
+    {{ } }}
+</script>
+<script type="text/javascript" src="../js/jquery-1.8.1.min.js"></script>
+<script type="text/javascript" src="../js/doT.js"></script>
+<script type="text/javascript" src="../js/exif.js"></script>
+<script type="text/javascript" src="../js/iscroll.min.js"></script>
+<script type="text/javascript" src="../js/zepto.min.js"></script>
+<script type="text/javascript" src="../js/listloading.js?rnd=" + new Date().getTime()></script>
+<script type="text/javascript" src="../js/js-activity.js?rnd=" + new Date().getTime()></script>
+<script type="text/javascript" src="../js/main.js?rnd=" + new Date().getTime()></script>
+<script type="text/javascript" src="../js/my-loading-alert-js.js?rnd=" + new Date().getTime()></script>
+<script type="text/javascript" src="../js/my-toast-alert-js.js?rnd=" + new Date().getTime()></script>
+<script type="text/javascript" src="../js/myCoupon.js?rnd=" + new Date().getTime()></script>
+</html>

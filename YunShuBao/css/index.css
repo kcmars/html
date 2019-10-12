@@ -1,0 +1,141 @@
+.main {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    background-color: #ffffff;
+    font-size: 0.28rem;
+    position: relative;
+ }
+.main .header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    box-shadow: #aeaeae 0 0 0.20rem 0;
+    height: 1rem;
+}
+.main .header span {
+    font-size: 0.30rem;
+    color: #000000;
+    padding: 0.30rem 0.20rem;
+    text-align: center;
+}
+.main .header .city {
+    flex: 1;
+    color: #000000;
+    font-size: 0.32rem;
+}
+.main .content {
+    flex: 1;
+    background-color: #f5f9f9;
+    overflow: hidden;
+}
+.main .footer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    box-shadow: #aeaeae 0 0 0.20rem 0.01rem;
+    height: 1rem;
+}
+.main .footer  li {
+    flex: 1;
+    text-align: center;
+    padding: 0.20rem;
+    color: #6e6e6e;
+}
+.main .footer .text-color {
+    color: #259012;
+}
+.main .change {
+    position: absolute;
+    top: 1.30rem;
+    left: 0.20rem;
+    z-index: 68;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: #333333;
+    padding: 0.10rem 0.20rem;
+    opacity: 0.9;
+    border-radius: 0.40rem;
+    border: 0.02rem solid #FFFFFF;
+}
+.main .change span {
+    font-size: 0.22rem;
+    color: #FFFFFF;
+    text-align: center;
+}
+.main .change-box {
+    position: absolute;
+    top: -100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 70;
+}
+.main .change-box .model {
+    width: 100%;
+    height: 100%;
+    background-color: #000000;
+    opacity: 0.3;
+}
+.main .change-box .box {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 72;
+    background-color: #FFFFFF;
+}
+.main .change-box .box li {
+    padding: 0.30rem 0;
+    text-align: center;
+    font-size: 0.30rem;
+    color: #000000;
+    border-bottom: 0.02rem solid #cccccc;
+}
+.move-button {
+    position: absolute;
+    right: 0.20rem;
+    bottom: 1.2rem;
+    width: 60px;
+    height: 60px;
+    z-index: 9999;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: #259012;
+    border-radius: 50%;
+    font-size: 0.28rem;
+    color: #FFFFFF;
+}
+.dot:before{
+    content:' ';
+    background-color: #259012;
+    border-radius: 50%;
+}
+.dot:after {
+    content:' ';
+    position: absolute;
+    z-index:1;
+    background-color: #259012;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0,0,0,.3) inset;
+    -webkit-animation: waveCircle 1.5s ease infinite normal ;
+}
+@keyframes waveCircle {
+    0% {
+        left: 30px;
+        top: 30px;
+        width:0;
+        height:0;
+    }
+    100% {
+        left: 0;
+        top: 0;
+        opacity: 0;
+        width: 60px;
+        height: 60px;
+    }
+}

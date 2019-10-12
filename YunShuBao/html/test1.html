@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<script type="text/javascript" src="../js/jquery-1.8.1.min.js"></script>
+<script type="text/javascript">
+    $(function () {
+        $(".search_nav li").bind("click", function () {
+            $(this).addClass("current").siblings().removeClass("current");
+            let index = $(this).index();
+            if (index == 1) {
+                $(".search_classify").addClass("none");
+            } else {
+                $(".search_classify").removeClass("none");
+            }
+        });
+    });
+    function gotosearch(){
+        let text = $(".search_classify .active").text();
+        console.log(text);
+        switch (text) {
+            case "期刊":
+                window.open("http://scholar.cnki.net/result.aspx?q="+$("#searchOne").val());
+                break;
+            case "博硕士论文":
+                window.open("http://scholar.cnki.net/result.aspx?q="+$("#searchOne").val());
+                break;
+            case "工具书":
+                window.open("http://scholar.cnki.net/result.aspx?q="+$("#searchOne").val());
+                break;
+            case "图书":
+                window.open("http://scholar.cnki.net/result.aspx?q="+$("#searchOne").val());
+                break;
+            default:break;
+        }
+//        window.open("http://scholar.cnki.net/result.aspx?q="+$("#searchOne").val());
+        //location.href="http://scholar.cnki.net/result.aspx?q="+$("#searchOne").val();
+    }
+    function gotosearchtwo(){
+        //location.href="http://scholar.cnki.net/result.aspx?q="+$("#searchTwo").val();
+    }
+    function gosearch(obj){
+        $(obj).addClass("active").siblings().removeClass("active");
+    }
+</script>
+<body>
+<style>
+    .search{ width:600px; float:left; margin:0 0 20px 0;}
+    .search_inner{ background-color:#f4f4f4; padding:45px 30px 45px 30px; width:420px; margin-right:10px; float:left;}
+    .search_nav{ padding-left:20px;}
+    .search_nav li{ float:left;}
+    .search_nav li a{ display:block; width:105px; line-height:30px; background-color:#fff; border-radius:4px 4px 0 0; font-family:"微软雅黑"; font-size:14px; color:#666; padding-left:28px;}
+    .search_nav .current{ background-color:#b38f52; color:#FFF;}
+    .search_s{ width:420px; height:120px; background-image:url(../images/index_search_03.jpg); background-repeat:no-repeat;}
+    .box{display:none;}
+    .cur{display:block;}
+    .search_s div{ padding: 25px 15px 0 15px;}
+    .search_classify{
+        padding:5px 0;
+    }
+    .search_classify span{
+        display: block;
+        float: left;
+        padding: 5px;
+        margin: 0 5px;
+        color:#000;
+        border-radius: 10px;
+    }
+    .search_classify span:active{
+        background:#297acc;
+        color:#fff;
+    }
+    .none {
+        display: none;
+    }
+    .search_1_t{ width:280px; line-height:30px; height:30px; font-size:14px; font-family:"微软雅黑"; color:#666; vertical-align:central; padding-left:6px; border:0; border:1px solid #c4c4c4; border-radius:4px 0 0 4px;}
+    .search_s div:hover .search_1_t{ border:1px solid #b38f52;}
+    .search_s div:hover .search_1_s{ background-color:#b38f52;  border:1px solid #b38f52; color:#FFF;}
+    .search_1_s{ width:50px; line-height:30px; *height:32px; *border:0; font-size:14px; font-family:"微软雅黑"; color:#fff; background-color:#c4c4c4; border:none; vertical-align:central; cursor:pointer; border:0; border:1px solid #c4c4c4; border-radius:0 4px 4px 0;}
+    .search_button{ float:left;}
+    .search_button li{ width:110px; line-height:44px; background-color:#67b3b1; font-family:"微软雅黑"; font-size:14px; margin-bottom:21px;}
+    .search_button li:last-child{ margin-bottom:0px;}
+    .search_button li a{color:#FFF;}
+    .search_button li a:hover{ color:#f7e98d;}
+    .search_button li img{ padding:14px 6px 0 12px; *padding:2px 6px 0 12px;}
+    .search_nav .current{ background-color:#b38f52; color:#FFF;}
+</style>
+<div class="search">
+    <div class="search_inner">
+        <ul class="search_nav">
+            <li class="current">电子资源搜索</li>
+            <li>馆藏检索</li>
+            <div class="clear"></div>
+        </ul>
+        <div class="search_s">
+            <div class="search_classify">
+                <span class="active" onclick="gosearch(this)">期刊</span>
+                <span onclick="gosearch(this)">博硕士论文</span>
+                <span onclick="gosearch(this)">工具书</span>
+                <span onclick="gosearch(this)">图书</span>
+            </div>
+            <div class="cur box"><input type="text" value="中外文医学检索" class="search_1_t" onFocus="if(value==defaultValue){value='';this.style.color='#000'}" onBlur="if(!value){value=defaultValue;this.style.color='#999'}" style="color:#999999" id="searchOne" /><input type="submit" value="检索"  class="search_1_s" onclick="gotosearch()" /></div>
+            <div class="box"><input type="text" value="中外文馆藏检索" class="search_1_t" onFocus="if(value==defaultValue){value='';this.style.color='#000'}" onBlur="if(!value){value=defaultValue;this.style.color='#999'}" style="color:#999999" id="searchTwo" /><input type="submit" value="检索"  class="search_1_s" onclick="gotosearchtwo()" /></div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

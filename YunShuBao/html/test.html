@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+    <link href="../css/svg-base.css" rel="stylesheet" type="text/css">
+    <script src="../js/jquery-1.8.1.min.js"></script>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        html,
+        body {
+            margin: 0 0;
+            padding: 0;
+            height: 100%;
+        }
+        body {
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            background: #212121;
+            font-family: 'Roboto', Helvetica, Arial, sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 100%;
+        }
+        /* svg最外层 */
+        .donut {
+            position: relative;
+        }
+        /* 文字最外层 */
+        .donut__copy {
+            text-align: center;
+            width: 100%;
+            height: 100%;
+            padding-top: 1.2rem;
+            top: 0;
+            left: 0;
+            position: absolute;
+        }
+        .donut__title {
+            display: block;
+            margin: 0;
+            padding: 0;
+        }
+        .donut-speed {
+            font-size:0.26rem;
+            color: rgba(255, 255, 255, 0.7);
+            display:block;
+            text-align: center;
+        }
+        /* 中间文字和% 样式 */
+        .donut__title,
+        .donut__spic {
+            color: #ffffff;
+            font-weight: 200;
+        }
+        /* 中间文字 */
+        .donut__title {
+            font-size: 1rem;
+            position: relative;
+            margin-top:0.4rem;
+        }
+        /* % 符号 */
+        .donut__spic {
+            position: absolute;
+            top: 0.5rem;
+            font-size: 0.26rem;
+            line-height: 1em;
+            color: rgba(255, 255, 255, 0.4);
+        }
+        /* svg 旋转 */
+        .donut__svg {
+            transform: rotate(90deg);
+        }
+        /* 线条渲染  cubic-bezier  是贝塞尔曲线*/
+        /*
+        SVG元素有两个画笔属性 stroke-dasharray 和 stroke-dashoffset，前者是用来定义画笔线型（stroke pattern），后者定义线型起始点位置。这两个属性可以用来构造很多的图形效果（尤其是虚线），在这里我们使用其中一个特例，即无间隔的单个线条填充。填满整个圆周的长度为2*3.14*半径 = 周长（圆周长计算公式为Circumstance =2*PI*Radius）*/
+        .donut__svg__circle--one {
+            stroke-dasharray: 12.566370614359173rem;
+            stroke-dashoffset: 12.566370614359173rem;
+            transition: stroke-dashoffset 1200ms cubic-bezier(.28,.56,0,1.04);
+        }
+    </style>
+</head>
+<body>
+<div class="donut">
+    <svg width="4.4rem" height="4.4rem" xmlns="http://www.w3.org/2000/svg" version="1.1" class="donut__svg">
+        <circle id="donut-graph-x" class="donut__svg__scrim" r="2rem" cy="2.2rem" cx="2.2rem" stroke-width="0.25rem" stroke="#333" fill="none" />
+        <circle id="donut-graph" class="donut__svg__circle--one" r="2rem" cy="2.2rem" cx="2.2rem" stroke-width="0.25rem" stroke="url(#purple)" stroke-linejoin="round" stroke-linecap="round" fill="none" />
+
+        <defs>
+            <linearGradient id="purple" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" stop-color="#92ce56" />
+                <stop offset="100%" stop-color="#59ce61" />
+            </linearGradient>
+        </defs>
+
+    </svg>
+    <div class="donut__copy">
+        <span class="donut__title">
+            <span class="js-donut-figure"></span>
+            <span class="donut__spic">s</span>
+        </span>
+    </div>
+</div>
+<script>
+    window.onload = function () {
+        'use strict';
+
+        var ProgressCircle = (function() {
+            function ProgressCircle(percent, radius, elementClass) {
+                this._percent = percent;
+                this._radius = radius;
+                this._elementClass = elementClass;
+            }
+
+            ProgressCircle.prototype.calcDashOffset = function() {
+                var circumference;
+                circumference = Math.PI * (2 * this._radius);   //计算圆圈的周长
+                return Math.round(circumference - this._percent / 100 * circumference) / 100 + 'rem';  //计算圆圈要渲染的 长度
+            };
+
+            //渲染进度条
+            ProgressCircle.prototype.createCSS = function() {
+                return $("." + this._elementClass + " .donut__svg .donut__svg__circle--one").css('stroke-dashoffset', this.calcDashOffset());
+            };
+
+            //读数效果
+            ProgressCircle.prototype.updateText = function() {
+                var num, i, s,_this;
+                num = $("." + this._elementClass + " .js-donut-figure");
+                i = 0;
+                _this = this;
+                s = setInterval(function(){
+                    i++;
+                    console.log(i, _this._percent);
+                    if(i >= _this._percent){
+                        clearInterval(s);
+                    }
+                    num.html(i);
+                },10);
+
+            };
+
+            ProgressCircle.prototype.init = function() {
+                var _this = this;
+                setTimeout(function(){
+                    _this.updateText();
+                    return _this.createCSS();
+                },1000);
+            };
+
+            return ProgressCircle;
+
+        })();
+
+        var progress = new ProgressCircle(50, 200, 'donut');
+        progress.init();
+    }
+</script>
+</body>
+</html>

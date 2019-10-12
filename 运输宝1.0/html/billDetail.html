@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Language" content="zh-CN"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="yes" name="apple-touch-fullscreen">
+    <meta content="telephone=no,email=no" name="format-detection">
+    <title>账单详情</title>
+    <script type="text/javascript" src="../js/auto-size.js?rnd=" + new Date().getTime()></script>
+    <link href="../css/main.css?rnd=" + new Date().getTime() type="text/css" rel="stylesheet">
+    <link href="../css/billDetail.css?rnd=" + new Date().getTime() type="text/css" rel="stylesheet">
+</head>
+<body>
+    <div class="billDetail-main">
+        <div class="header">
+            <div class="head-left">
+                <span class="back">返回</span>
+            </div>
+            <div class="title">账单详情</div>
+            <div class="head-right">
+                <span></span>
+            </div>
+        </div>
+        <div class="content-main">
+            <h1>+5.00</h1>
+            <ul class="bill-list">
+                <li>
+                    <span>账单号</span>
+                    <span>wx20201220123015555</span>
+                </li>
+                <li>
+                    <span>类型</span>
+                    <span>充值</span>
+                </li>
+                <li>
+                    <span>方式</span>
+                    <span>微信</span>
+                </li>
+                <li>
+                    <span>账号</span>
+                    <span>131****1111</span>
+                </li>
+                <li>
+                    <span>账户余额</span>
+                    <span>￥500.00</span>
+                </li>
+                <li>
+                    <span>时间</span>
+                    <span>2020-12-20 12:30:30</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+</body>
+<script type="text/javascript" src="../js/jquery-1.8.1.min.js"></script>
+<script type="text/javascript" src="../js/doT.js"></script>
+<script type="text/javascript" src="../js/exif.js"></script>
+<script type="text/javascript" src="../js/js-activity.js?rnd=" + new Date().getTime()></script>
+<script type="text/javascript" src="../js/main.js?rnd=" + new Date().getTime()></script>
+<script type="text/javascript" src="../js/my-loading-alert-js.js?rnd=" + new Date().getTime()></script>
+<script type="text/javascript" src="../js/my-toast-alert-js.js?rnd=" + new Date().getTime()></script>
+<script type="text/javascript">
+    $(function () {
+        //返回上一页
+       $(".back").bind("click", function () {
+           window.history.back();
+       })
+    });
+</script>
+</html>

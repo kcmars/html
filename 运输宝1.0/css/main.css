@@ -38,7 +38,7 @@ body {
     display: flex;
     flex-direction: column;
     line-height:1;
-    font-family: "微软雅黑", serif;
+    font-family: "STHeiti","Microsoft YaHei","黑体","宋体",sans-serif;
     background-color: #f1f3f5;
 }
 ::-webkit-scrollbar{

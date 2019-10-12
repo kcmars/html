@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Language" content="zh-CN"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="yes" name="apple-touch-fullscreen">
+    <meta content="telephone=no,email=no" name="format-detection">
+    <title>车辆选择</title>
+    <script type="text/javascript" src="../js/auto-size.js?rnd=" + new Date().getTime()></script>
+    <link href="../css/main.css?rnd=" + new Date().getTime() type="text/css" rel="stylesheet">
+    <link href="../css/truck.css?rnd=" + new Date().getTime() type="text/css" rel="stylesheet">
+</head>
+<body>
+    <div class="truck-main">
+        <ul id="truck-list">
+
+        </ul>
+    </div>
+</body>
+<script type="text/template" charset="utf-8" id='template-truck-list'>
+    {{ if (it && it.length > 0){ }}
+    {{ for (var i = 0; i < it.length; i++){ }}
+    <li>
+        <div class="truck-item">
+            <div class="truck-norms">
+                <p>{{=it[i].truck_name}}</p>
+                <div class="truck-norms-item">
+                    <span>载重</span>
+                    <span>{{=it[i].truck_weight}}吨</span>
+                </div>
+                <div class="truck-norms-item">
+                    <span>装货体积</span>
+                    <span>{{=it[i].truck_volume}}方</span>
+                </div>
+                <div class="truck-norms-item">
+                    <span>长/宽/高</span>
+                    <span>{{=it[i].truck_length}}/{{=it[i].truck_width}}/{{=it[i].truck_height}}米</span>
+                </div>
+            </div>
+            <div class="truck-img">
+                <img alt="truck" src={{=it[i].truck_img}}/>
+            </div>
+        </div>
+        {{ if (it[i].truck_type == 2) { }}
+            <div class="truck-type-box">
+                <p>特殊规格</p>
+                <div class="truck-type">
+                    {{ for (var n = 0; n < it[i].truck_norms.length; n++) { }}
+                        <span class="active">{{=it[i].truck_norms[n]}}</span>
+                    {{ } }}
+                </div>
+            </div>
+        {{ } }}
+    </li>
+    {{ } }}
+    {{ } }}
+</script>
+<script type="text/javascript" src="../js/jquery-1.8.1.min.js"></script>
+<script type="text/javascript" src="../js/doT.js"></script>
+<script type="text/javascript" src="../js/main.js?rnd=" + new Date().getTime()></script>
+<script type="text/javascript" src="../js/truck.js?rnd=" + new Date().getTime()></script>
+</html>

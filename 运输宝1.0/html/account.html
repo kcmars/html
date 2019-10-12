@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Language" content="zh-CN"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="yes" name="apple-touch-fullscreen">
+    <meta content="telephone=no,email=no" name="format-detection">
+    <title>我的账户</title>
+    <script type="text/javascript" src="../js/auto-size.js?rnd=" + new Date().getTime()></script>
+    <link href="../css/main.css?rnd=" + new Date().getTime() type="text/css" rel="stylesheet">
+    <link href="../css/account.css?rnd=" + new Date().getTime() type="text/css" rel="stylesheet">
+</head>
+<body>
+    <div class="account-main">
+        <div class="header">
+            <div class="head-left">
+                <span class="back">返回</span>
+            </div>
+            <div class="title">我的账户</div>
+            <div class="head-right">
+                <span>账单</span>
+            </div>
+        </div>
+        <div class="content-main">
+            <img src="../img/bus.jpg">
+            <span>我的资产</span>
+            <h1>￥300.00</h1>
+            <div class="btn coupon">我的优惠券</div>
+            <div class="btn recharge">充值</div>
+            <div class="btn withdraw">提现</div>
+            <div class="btn bank">银行卡</div>
+        </div>
+    </div>
+</body>
+<script type="text/javascript" src="../js/jquery-1.8.1.min.js"></script>
+<script type="text/javascript" src="../js/doT.js"></script>
+<script type="text/javascript" src="../js/exif.js"></script>
+<script type="text/javascript" src="../js/js-activity.js?rnd=" + new Date().getTime()></script>
+<script type="text/javascript" src="../js/main.js?rnd=" + new Date().getTime()></script>
+<script type="text/javascript" src="../js/my-loading-alert-js.js?rnd=" + new Date().getTime()></script>
+<script type="text/javascript" src="../js/my-toast-alert-js.js?rnd=" + new Date().getTime()></script>
+<script>
+    $(function () {
+        //返回上一页
+        $(".back").bind("click", function () {
+            window.history.back();
+        });
+        //账单
+        $(".head-right").bind("click", function () {
+            window.location.href = "../html/bill.html";
+        });
+        //我的优惠券
+        $(".coupon").bind("click", function () {
+            window.location.href = "../html/myCoupon.html";
+        });
+        //充值
+        $(".recharge").bind("click", function () {
+            window.location.href = "../html/recharge.html";
+        });
+        //提现
+        $(".withdraw").bind("click", function () {
+            window.location.href = "../html/withdraw.html";
+        });
+        //银行卡
+        $(".bank").bind("click", function () {
+            window.location.href = "../html/bank.html";
+        });
+    });
+</script>
+</html>

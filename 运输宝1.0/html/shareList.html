@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Language" content="zh-CN"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="yes" name="apple-touch-fullscreen">
+    <meta content="telephone=no,email=no" name="format-detection">
+    <title>分享-邀请成员</title>
+    <script type="text/javascript" src="../js/auto-size.js?rnd=" + new Date().getTime()></script>
+    <link href="../css/base.css?rnd=" + new Date().getTime() type="text/css" rel="stylesheet">
+    <link href="../css/listloading.css?rnd=" + new Date().getTime() type="text/css" rel="stylesheet">
+    <link href="../css/main.css?rnd=" + new Date().getTime() type="text/css" rel="stylesheet">
+    <link href="../css/shareList.css?rnd=" + new Date().getTime() type="text/css" rel="stylesheet">
+</head>
+<body>
+    <div class="shareList-main">
+        <div class="header">
+            <div class="head-left">
+                <span class="back">返回</span>
+            </div>
+            <div class="title">分享-邀请成员</div>
+            <div class="head-right">
+                <span></span>
+            </div>
+        </div>
+        <div class="shareList-info">
+            <div class="shareList-info-item">
+                <span>今日邀请人数：</span>
+                <span class="col-red">5</span>
+                <span>人</span>
+            </div>
+            <div class="shareList-info-item">
+                <span>历史邀请总人数：</span>
+                <span class="col-red">5</span>
+                <span>人</span>
+            </div>
+        </div>
+        <div class="list">
+            <div id="listloading" class="listloading-list">
+                <div>
+                    <ul id="shareList-list" class="shareList-list">
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script type="text/template" charset="utf-8" id='template-shareList-list'>
+    {{ if (it && it.length > 0){ }}
+    {{ for (var i = 0; i < it.length; i++){ }}
+    <li onclick="lookShareDetail()">
+        <div class="item-row">
+            <span class="item-row-title">邀请用户133****1231</span>
+            <span class="item-row-time">刚刚</span>
+        </div>
+        <div class="item-row">
+            <span class="item-row-content">获得5元代金券</span>
+            <span class="item-row-look">查看详情</span>
+        </div>
+    </li>
+    {{ } }}
+    {{ } }}
+</script>
+<script type="text/javascript" src="../js/jquery-1.8.1.min.js"></script>
+<script type="text/javascript" src="../js/doT.js"></script>
+<script type="text/javascript" src="../js/exif.js"></script>
+<script type="text/javascript" src="../js/iscroll.min.js"></script>
+<script type="text/javascript" src="../js/zepto.min.js"></script>
+<script type="text/javascript" src="../js/listloading.js?rnd=" + new Date().getTime()></script>
+<script type="text/javascript" src="../js/js-activity.js?rnd=" + new Date().getTime()></script>
+<script type="text/javascript" src="../js/main.js?rnd=" + new Date().getTime()></script>
+<script type="text/javascript" src="../js/my-loading-alert-js.js?rnd=" + new Date().getTime()></script>
+<script type="text/javascript" src="../js/my-toast-alert-js.js?rnd=" + new Date().getTime()></script>
+<script type="text/javascript" src="../js/shareList.js?rnd=" + new Date().getTime()></script>
+</html>

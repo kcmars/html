@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Language" content="zh-CN"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="yes" name="apple-touch-fullscreen">
+    <meta content="telephone=no,email=no" name="format-detection">
+    <title>主页</title>
+    <script type="text/javascript" src="../js/auto-size.js?rnd=" + new Date().getTime()></script>
+    <link href="../css/base.css?rnd=" + new Date().getTime() type="text/css" rel="stylesheet">
+    <link href="../css/listloading.css?rnd=" + new Date().getTime() type="text/css" rel="stylesheet">
+    <link href="../css/main.css?rnd=" + new Date().getTime() type="text/css" rel="stylesheet">
+    <link href="../css/source.css?rnd=" + new Date().getTime() type="text/css" rel="stylesheet">
+    <link href="../css/me.css?rnd=" + new Date().getTime() type="text/css" rel="stylesheet">
+    <link href="../css/index.css?rnd=" + new Date().getTime() type="text/css" rel="stylesheet">
+</head>
+<body>
+    <div class="main">
+        <div class="header">
+            <span>运输宝</span>
+            <span class="city">成都市</span>
+            <span>消息</span>
+        </div>
+        <div id="content" class="content">
+
+        </div>
+        <ul class="footer">
+            <li class="text-color">首页</li>
+            <li>附近</li>
+            <li>发现</li>
+            <li>我的</li>
+        </ul>
+        <div id="change" class="change">
+            <span>我要发货</span>
+        </div>
+        <div class="change-box">
+            <div class="model"></div>
+            <ul class="box">
+                <li>我要发货</li>
+                <li>我要拉货</li>
+            </ul>
+        </div>
+        <div id="move-button" class="move-button">
+            <div class="dot">
+                点击发货
+            </div>
+        </div>
+    </div>
+</body>
+<script type="text/template" charset="utf-8" id='template-plate-short-list'>
+    {{ if (it && it.length > 0){ }}
+    {{ for (var i = 0; i < it.length; i++){ }}
+    <li>
+        <img alt="img" src={{=it[i]}}/>
+    </li>
+    {{ } }}
+    {{ } }}
+</script>
+<script src="https://webapi.amap.com/maps?v=1.4.10&key=1d4d2ecf500b855815e2c7d8ddbb2e76&plugin=AMap.Autocomplete,AMap.PlaceSearch"></script>
+<script type="text/javascript" src="../js/jquery-1.8.1.min.js"></script>
+<script type="text/javascript" src="../js/doT.js"></script>
+<script type="text/javascript" src="../js/exif.js"></script>
+<script type="text/javascript" src="../js/js-activity.js?rnd=" + new Date().getTime()></script>
+<script type="text/javascript" src="../js/main.js?rnd=" + new Date().getTime()></script>
+<script type="text/javascript" src="../js/my-loading-alert-js.js?rnd=" + new Date().getTime()></script>
+<script type="text/javascript" src="../js/my-toast-alert-js.js?rnd=" + new Date().getTime()></script>
+<script type="text/javascript" src="../js/index.js?rnd=" + new Date().getTime()></script>
+</html>

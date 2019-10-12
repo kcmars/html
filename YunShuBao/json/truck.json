@@ -1,0 +1,79 @@
+[
+  {
+    "truck_type": 1,
+    "truck_name": "小面包车",
+    "truck_weight": 0.8,
+    "truck_volume": 2.0,
+    "truck_length": 1.7,
+    "truck_width": 1.1,
+    "truck_height": 1.1,
+    "truck_img": "../img/bus.jpg",
+    "truck_norms": []
+  },
+  {
+    "truck_type": 1,
+    "truck_name": "中面包车",
+    "truck_weight": 1.25,
+    "truck_volume": 4.5,
+    "truck_length": 2.7,
+    "truck_width": 1.4,
+    "truck_height": 1.2,
+    "truck_img": "../img/bus.jpg",
+    "truck_norms": []
+  },
+  {
+    "truck_type": 2,
+    "truck_name": "微卡",
+    "truck_weight": 1.0,
+    "truck_volume": 4.0,
+    "truck_length": 2.6,
+    "truck_width": 1.5,
+    "truck_height": 1.5,
+    "truck_img": "../img/bus.jpg",
+    "truck_norms": ["平板", "栏板", "仓栅", "厢式", "自卸"]
+  },
+  {
+    "truck_type": 2,
+    "truck_name": "轻卡",
+    "truck_weight": 3.0,
+    "truck_volume": 16.0,
+    "truck_length": 4.2,
+    "truck_width": 2.0,
+    "truck_height": 1.9,
+    "truck_img": "../img/bus.jpg",
+    "truck_norms": ["平板", "栏板", "仓栅", "厢式", "自卸"]
+  },
+  {
+    "truck_type": 2,
+    "truck_name": "中卡",
+    "truck_weight": 5.0,
+    "truck_volume": 24.0,
+    "truck_length": 5.2,
+    "truck_width": 2.4,
+    "truck_height": 2.4,
+    "truck_img": "../img/bus.jpg",
+    "truck_norms": ["平板", "栏板", "仓栅", "厢式", "自卸"]
+  },
+  {
+    "truck_type": 2,
+    "truck_name": "重卡",
+    "truck_weight": 15.0,
+    "truck_volume": 60.0,
+    "truck_length": 9.6,
+    "truck_width": 2.4,
+    "truck_height": 2.6,
+    "truck_img": "../img/bus.jpg",
+    "truck_norms": ["平板", "栏板", "仓栅", "厢式"]
+  },
+  {
+    "truck_type": 2,
+    "truck_name": "特殊车辆",
+    "truck_weight": 0.8,
+    "truck_volume": 4.0,
+    "truck_length": 2.6,
+    "truck_width": 1.5,
+    "truck_height": 1.2,
+    "truck_img": "../img/bus.jpg",
+    "truck_norms": ["灌装", "冷藏"]
+  }
+]

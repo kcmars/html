@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Language" content="zh-CN"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="yes" name="apple-touch-fullscreen">
+    <meta content="telephone=no,email=no" name="format-detection">
+    <title>充值</title>
+    <script type="text/javascript" src="../js/auto-size.js?rnd=" + new Date().getTime()></script>
+    <link href="../css/main.css?rnd=" + new Date().getTime() type="text/css" rel="stylesheet">
+    <link href="../css/recharge.css?rnd=" + new Date().getTime() type="text/css" rel="stylesheet">
+</head>
+<body>
+    <div class="recharge-main">
+        <div class="header">
+            <div class="head-left">
+                <span class="back">返回</span>
+            </div>
+            <div class="title">充值</div>
+            <div class="head-right">
+                <span>添加账户</span>
+            </div>
+        </div>
+        <div class="content-main">
+            <div class="price">
+                <span>输入充值金额（元）</span>
+                <input class="" value="" name="price" maxlength="10">
+            </div>
+            <ul class="recharge-list">
+                <li>
+                    <span>微信（131****1212）</span>
+                    <input checked name="recharge" type="radio" class="" value="">
+                </li>
+                <li>
+                    <span>支付宝（131****1212）</span>
+                    <input name="recharge" type="radio" class="" value="">
+                </li>
+                <li>
+                    <span>中国农业银行（622848*********1212）</span>
+                    <input name="recharge" type="radio" class="" value="">
+                </li>
+                <li>
+                    <span>中国建设银行（622848*********1212）</span>
+                    <input name="recharge" type="radio" class="" value="">
+                </li>
+            </ul>
+            <div class="btn">确定充值</div>
+        </div>
+    </div>
+</body>
+<script type="text/javascript" src="../js/jquery-1.8.1.min.js"></script>
+<script type="text/javascript" src="../js/doT.js"></script>
+<script type="text/javascript" src="../js/exif.js"></script>
+<script type="text/javascript" src="../js/js-activity.js?rnd=" + new Date().getTime()></script>
+<script type="text/javascript" src="../js/main.js?rnd=" + new Date().getTime()></script>
+<script type="text/javascript" src="../js/my-loading-alert-js.js?rnd=" + new Date().getTime()></script>
+<script type="text/javascript" src="../js/my-toast-alert-js.js?rnd=" + new Date().getTime()></script>
+<script type="text/javascript">
+    $(function () {
+        //返回上一页
+       $(".back").bind("click", function () {
+           window.history.back();
+       });
+        //添加账户
+        $(".head-right").bind("click", function () {
+            window.location.href = "../html/addAccount.html";
+        });
+    });
+</script>
+</html>

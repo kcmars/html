@@ -30,6 +30,11 @@
                 <span>密码</span>
                 <input id="pwd" value="" placeholder="请设置登录密码">
             </div>
+            <p class="select-role">选个身份吧，可在首页左上角切换</p>
+            <ul>
+               <li class="active">货主</li>
+               <li>司机</li>
+            </ul>
             <div class="register-protocol">
                 <input type="checkbox" class="checkbox">
                 <a class="protocol">《用户服务与隐私协议》</a>
@@ -50,7 +55,7 @@
 //        getRequest(getParams());
         getParams();
     });
-    
+    var role = 1;  //身份 1 货主， 2 司机
     function getParams() {
         //注册
         $(".register-btn").bind("click", function () {
@@ -63,6 +68,19 @@
         //获取短信验证码
         $(".code").bind("click", function () {
 
+        });
+        //选择身份
+        $("ul li").bind("click", function () {
+            var index = $(this).index();
+            $(this).addClass("active").siblings().removeClass("active");
+            switch (index) {
+                case 0:
+                    role = 1;  //货主
+                    break;
+                case 1:
+                    role = 2;  //司机
+                    break;
+            }
         });
         //服务协议
         $(".protocol").bind("click", function () {

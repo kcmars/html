@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>视频加缩略图及文件上传</title>
+</head>
+<style>
+    .row{width: 100%; clear: both;}
+    .w50{width: 50%; float: left;}
+    .w50 video{max-width: 100%;}
+</style>
+<body>
+<form id="infoLogoForm" enctype='multipart/form-data'>
+    <input id="file" name="file" type="file" value="" placeholder="点击上传" />
+    <div class="row">
+        <div id="video" class="w50"></div>
+        <div id="imgSmallView" class="w50"></div>
+    </div>
+    <div class="w50" id="video1"></div>
+</form>
+</body>
+<script type="text/javascript" src="../js/jquery-1.8.1.min.js" language="javascript"></script>
+<script type="text/javascript">
+    "use strict";
+    $('#file').on('change', function() {
+        var files = this.files,
+            video = $('#video').find('video'),
+            videoURL = null,
+            windowURL = window.URL || window.webkitURL;
+        if (files && files[0]) {
+            videoURL = windowURL.createObjectURL(files[0]);
+            $('#video').html('<video src="' + videoURL + '" controls="controls"></video>');
+            setTimeout(function() {
+                createIMG();
+                upload();
+            }, 500);
+        }
+    }).trigger('change');
+    var createIMG = function() {
+        var scale = 0.25,
+            video = $('#video').find('video')[0],
+            canvas = document.createElement("canvas"),
+            canvasFill = canvas.getContext('2d');
+        canvas.width = video.videoWidth * scale;
+        canvas.height = video.videoHeight * scale;
+        canvasFill.drawImage(video, 0, 0, canvas.width, canvas.height);
+        var src = canvas.toDataURL("image/jpeg");
+        $('#imgSmallView').html('<img id="imgSmallView" src="' + src + '" alt="预览图" />');
+    };
+    var upload = function() {
+        console.log("param", $('#infoLogoForm')[0]);
+        console.log("param", new FormData($('#infoLogoForm')[0]));
+        $.ajax({
+            url: "http://192.168.1.88/Aiyunbao/Treasure/fiel",
+            type: 'POST',
+            cache: false,
+            data: new FormData($('#infoLogoForm')[0]),
+            processData: false,
+            contentType: false,
+            dataType:"json",
+            beforeSend: function(){
+            },
+            success : function(res) {
+                console.log("uploadCommodity", res);
+                $('#video1').html('<video src="' + res.url + '" controls="controls"></video>');
+            },
+            error: function (err) {
+                console.log("err", err);
+            }
+        });
+    };
+</script>
+</html>

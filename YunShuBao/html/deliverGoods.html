@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Language" content="zh-CN"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="yes" name="apple-touch-fullscreen">
+    <meta content="telephone=no,email=no" name="format-detection">
+    <title>发货-找车</title>
+    <script type="text/javascript" src="../js/auto-size.js?rnd=" + new Date().getTime()></script>
+    <link href="../css/main.css?rnd=" + new Date().getTime() type="text/css" rel="stylesheet">
+    <link href="../css/deliver-goods.css?rnd=" + new Date().getTime() type="text/css" rel="stylesheet">
+</head>
+<body>
+<div class="main">
+    <div class="title-bar">
+        <i></i>
+        <span class="city">发货-找车</span>
+    </div>
+    <div class="content">
+        <div id="map" class="map"></div>
+        <div id="address" class="address">
+            <ul>
+                <li>
+                    <div></div>
+                    <div>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <div></div>
+                </li>
+            </ul>
+        </div>
+        <div id="info" class="info">
+
+        </div>
+    </div>
+</div>
+</body>
+<script src="https://webapi.amap.com/maps?v=1.4.10&key=1d4d2ecf500b855815e2c7d8ddbb2e76&plugin=AMap.Autocomplete,AMap.PlaceSearch"></script>
+<script type="text/javascript" src="../js/jquery-1.8.1.min.js"></script>
+<script type="text/javascript" src="../js/doT.js"></script>
+<script type="text/javascript" src="../js/exif.js"></script>
+<script type="text/javascript" src="../js/js-activity.js?rnd=" + new Date().getTime()></script>
+<script type="text/javascript" src="../js/main.js?rnd=" + new Date().getTime()></script>
+<script type="text/javascript" src="../js/my-loading-alert-js.js?rnd=" + new Date().getTime()></script>
+<script type="text/javascript" src="../js/my-toast-alert-js.js?rnd=" + new Date().getTime()></script>
+<script type="text/javascript" src="../js/deliver-goods.js?rnd=" + new Date().getTime()></script>
+<script type="text/javascript">
+    //初始化地图
+    var map = new AMap.Map('map', {
+        resizeEnable: true, //是否监控地图容器尺寸变化
+        zoom: 11 //初始地图级别
+    });
+    //    var map = new AMap.Map('map', {
+    //        center:[117.000923,36.675807],
+    //        zoom:18
+    //    });
+    var marker = new AMap.Marker({
+        position:[117.000923,36.675807]//位置
+    });
+    map.add(marker);//添加到地图
+    //添加点标记，并使用自己的icon
+    new AMap.Marker({
+        map: map,
+        position: [117.000923, 36.671761],
+        icon: new AMap.Icon({
+            size: new AMap.Size(40, 50),  //图标大小
+            image: "https://webapi.amap.com/theme/v1.3/images/newpc/way_btn2.png",
+            imageOffset: new AMap.Pixel(0, -60)
+        })
+    });
+    var circle = new AMap.Circle({
+        center: new AMap.LngLat("117.000923", "36.675807"),// 圆心位置
+        radius: 20, //半径
+        strokeColor: "#e97780", //线颜色
+        strokeOpacity: 0.35, //线透明度
+        strokeWeight: 1, //线粗细度
+        fillColor: "#e97780", //填充颜色
+        fillOpacity: 0.35//填充透明度
+    });
+    circle.setMap(map);
+    map.setFitView();
+    AMap.plugin('AMap.Geolocation', function() {
+        var geolocation = new AMap.Geolocation({
+            enableHighAccuracy: true,//是否使用高精度定位，默认:true
+            timeout: 10000,          //超过10秒后停止定位，默认：5s
+            buttonPosition:'RB',    //定位按钮的停靠位置
+            buttonOffset: new AMap.Pixel(10, 20),//定位按钮与设置的停靠位置的偏移量，默认：Pixel(10, 20)
+            zoomToAccuracy: true   //定位成功后是否自动调整地图视野到定位点
+
+        });
+        map.addControl(geolocation);
+        geolocation.getCurrentPosition(function(status,result){
+            if(status=='complete'){
+                onComplete(result)
+            }else{
+                onError(result)
+            }
+        });
+    });
+    //解析定位结果
+    function onComplete(data) {
+        console.log("onComplete=", data);
+    }
+    //解析定位错误信息
+    function onError(data) {
+        console.log("onError=", data.message);
+    }
+</script>
+</html>

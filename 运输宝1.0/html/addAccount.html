@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Language" content="zh-CN"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="yes" name="apple-touch-fullscreen">
+    <meta content="telephone=no,email=no" name="format-detection">
+    <title>添加账户</title>
+    <script type="text/javascript" src="../js/auto-size.js?rnd=" + new Date().getTime()></script>
+    <link href="../css/main.css?rnd=" + new Date().getTime() type="text/css" rel="stylesheet">
+    <link href="../css/addAccount.css?rnd=" + new Date().getTime() type="text/css" rel="stylesheet">
+</head>
+<body>
+    <div class="addAccount-main">
+        <div class="header">
+            <div class="head-left">
+                <span class="back">返回</span>
+            </div>
+            <div class="title">添加账户</div>
+            <div class="head-right">
+                <span></span>
+            </div>
+        </div>
+        <div class="content-main">
+            <ul class="addAccount-list">
+                <li>
+                    <span>选择账户</span>
+                    <select class="" value="" >
+                        <option>微信</option>
+                        <option>支付宝</option>
+                        <option>中国农业银行</option>
+                        <option>中国建设银行</option>
+                        <option>中国工商银行</option>
+                        <option>中国人民银行</option>
+                    </select>
+                </li>
+                <li>
+                    <span>账号</span>
+                    <input placeholder="请输入账号" class="" value="">
+                </li>
+                <li>
+                    <span>验证码</span>
+                    <input id="code" value="" placeholder="请输入短信验证码">
+                    <img class="code"  src="../img/bus.jpg">
+                </li>
+            </ul>
+            <div class="btn">确定</div>
+        </div>
+    </div>
+</body>
+<script type="text/javascript" src="../js/jquery-1.8.1.min.js"></script>
+<script type="text/javascript" src="../js/doT.js"></script>
+<script type="text/javascript" src="../js/exif.js"></script>
+<script type="text/javascript" src="../js/js-activity.js?rnd=" + new Date().getTime()></script>
+<script type="text/javascript" src="../js/main.js?rnd=" + new Date().getTime()></script>
+<script type="text/javascript" src="../js/my-loading-alert-js.js?rnd=" + new Date().getTime()></script>
+<script type="text/javascript" src="../js/my-toast-alert-js.js?rnd=" + new Date().getTime()></script>
+<script type="text/javascript">
+    $(function () {
+        //返回上一页
+       $(".back").bind("click", function () {
+           window.history.back();
+       });
+    });
+</script>
+</html>

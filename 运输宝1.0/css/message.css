@@ -58,3 +58,19 @@
 .item-row .col-red {
     color: red;
 }
+.item-row .item-row-title {
+    font-size: 0.30rem;
+    color: #000000;
+}
+.item-row .item-row-time {
+    font-size: 0.26rem;
+    color: #fd8227;
+}
+.item-row .item-row-content {
+    font-size: 0.26rem;
+    color: #555555;
+}
+.item-row .item-row-look {
+    font-size: 0.24rem;
+    color: #333333;
+}

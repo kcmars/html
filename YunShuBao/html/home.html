@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Language" content="zh-CN"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="yes" name="apple-touch-fullscreen">
+    <meta content="telephone=no,email=no" name="format-detection">
+    <title>首页</title>
+    <script type="text/javascript" src="../js/auto-size.js?rnd=" + new Date().getTime()></script>
+    <link href="../css/swiper.min.css?rnd=" + new Date().getTime() type="text/css" rel="stylesheet">
+    <link href="../css/main.css?rnd=" + new Date().getTime() type="text/css" rel="stylesheet">
+    <link href="../css/home.css?rnd=" + new Date().getTime() type="text/css" rel="stylesheet">
+</head>
+<body>
+    <div class="home-main">
+        <div class="swiper-container">
+            <ul id="swiper-list" class="swiper-wrapper">
+            </ul>
+            <!-- 如果需要分页器 -->
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-prev"></div><!--左箭头-->
+            <div class="swiper-button-next"></div><!--右箭头-->
+        </div>
+
+        <div class="img">
+            <img src="../img/aaaa.jpg">
+        </div>
+    </div>
+</body>
+<script type="text/template" charset="utf-8" id='template-swiper-list'>
+    {{ if (it && it.length > 0){ }}
+    {{ for (var i = 0; i < it.length; i++){ }}
+    <li class="swiper-slide">
+        <img alt="img" src={{=it[i]}}/>
+    </li>
+    {{ } }}
+    {{ } }}
+</script>
+<script type="text/javascript" src="../js/jquery-1.8.1.min.js"></script>
+<script type="text/javascript" src="../js/doT.js"></script>
+<script type="text/javascript" src="../js/exif.js"></script>
+<script type="text/javascript" src="../js/swiper.min.js"></script>
+<script type="text/javascript" src="../js/js-activity.js?rnd=" + new Date().getTime()></script>
+<script type="text/javascript" src="../js/main.js?rnd=" + new Date().getTime()></script>
+<script type="text/javascript" src="../js/my-loading-alert-js.js?rnd=" + new Date().getTime()></script>
+<script type="text/javascript" src="../js/my-toast-alert-js.js?rnd=" + new Date().getTime()></script>
+<script>
+    let data = ["../img/bus.jpg"];
+    var swiper = document.getElementById('template-swiper-list').innerHTML;
+    document.getElementById('swiper-list').innerHTML = doT.template(swiper)(data);
+    let mySwiper = new Swiper ('.swiper-container', {
+        loop: false, //是否循环
+//        autoplay: {
+//            delay: 3000,
+//            stopOnLastSlide: false, //当切换到最后一个slide时是否停止自动切换。（loop模式下无效）
+//            disableOnInteraction: false //用户操作swiper之后，是否禁止autoplay
+//        },
+        navigation: { //左右箭头
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev'
+        },
+        // 如果需要分页器
+        pagination: {
+            el: '.swiper-pagination'
+        }
+    });
+</script>
+</html>

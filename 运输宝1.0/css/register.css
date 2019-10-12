@@ -52,6 +52,31 @@ h1 {
     margin-left: 0.20rem;
     padding: 0 0.10rem;
 }
+.select-role {
+    font-size: 0.26rem;
+    color: #333333;
+    text-align: center;
+    margin: 0.20rem 0;
+}
+ul {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+ul li {
+    padding: 0.15rem 0.30rem;
+    border: 0.020rem solid #cccccc;
+    font-size: 0.28rem;
+    color: #333333;
+    border-radius: 0.10rem;
+    margin: 0 0.20rem;
+}
+ul .active {
+    border: 0.020rem solid #259012;
+    font-size: 0.28rem;
+    color: #259012;
+}
 .register-protocol {
     display: flex;
     flex-direction: row;

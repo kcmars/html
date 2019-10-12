@@ -32,7 +32,7 @@ function getParams() {
 
 let mData = [];
 let page = 1;
-//获取推荐用户列表信息
+//获取消息列表
 function getDataList(type, cb, flg){
     if (type == "refresh") {
         mData = [];
@@ -72,8 +72,8 @@ function getDataList(type, cb, flg){
     //             }
     //             var template = document.getElementById('template-message-list').innerHTML;
     //             if (type == "refresh") {
-    //                 $("#share-recommend-list").empty();
-    //                 $('#share-recommend-list').append(doT.template(template)(data));
+    //                 $("#message-list").empty();
+    //                 $('#message-list').append(doT.template(template)(data));
     //             } else {
     //                 if(mData.length!=10){
     //                     flg = true;
@@ -82,7 +82,7 @@ function getDataList(type, cb, flg){
     //             }
     //         } else {
     //             if (type == "refresh") {
-    //                 $("#share-recommend-list").empty();
+    //                 $("#message-list").empty();
     //             } else {
     //                 flg = true;
     //                 page--;
@@ -98,4 +98,19 @@ function getDataList(type, cb, flg){
     //     }
     // });
     cb(flg);
+}
+
+/**
+ * 查看消息详情
+ * @param type 消息类型
+ */
+function lookDetail(type) {
+    switch (type) {
+        case 0:
+            break;
+
+        case 1:
+            window.location.href = "../html/shareDetail.html";
+            break;
+    }
 }
