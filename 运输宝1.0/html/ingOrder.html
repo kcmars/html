@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Language" content="zh-CN"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="yes" name="apple-touch-fullscreen">
+    <meta content="telephone=no,email=no" name="format-detection">
+    <title>进行中</title>
+    <script type="text/javascript" src="../js/auto-size.js?rnd=" + new Date().getTime()></script>
+    <link href="../css/main.css?rnd=" + new Date().getTime() type="text/css" rel="stylesheet">
+    <link href="../css/ingOrder.css?rnd=" + new Date().getTime() type="text/css" rel="stylesheet">
+</head>
+<body>
+    <div class="ingOrder-main">
+        <div class="header">
+            <div class="head-left">
+                <span class="back">返回</span>
+            </div>
+            <div class="title">进行中</div>
+            <div class="head-right">
+                <span></span>
+            </div>
+        </div>
+        <div id="map" class="map"></div>
+    </div>
+</body>
+<script type="text/javascript" src="https://webapi.amap.com/maps?v=1.4.10&key=84ecc957766e13d9d3b7483bc7937e03"></script>
+<script type="text/javascript" src="../js/jquery-1.8.1.min.js"></script>
+<script type="text/javascript" src="../js/doT.js"></script>
+<script type="text/javascript" src="../js/exif.js"></script>
+<script type="text/javascript" src="../js/js-activity.js?rnd=" + new Date().getTime()></script>
+<script type="text/javascript" src="../js/main.js?rnd=" + new Date().getTime()></script>
+<script type="text/javascript" src="../js/my-loading-alert-js.js?rnd=" + new Date().getTime()></script>
+<script type="text/javascript" src="../js/my-toast-alert-js.js?rnd=" + new Date().getTime()></script>
+<script>
+    //初始化地图
+    var map = new AMap.Map('map', {
+        center:[104.11317,30.67531],
+        zoom:18,
+        roam: true,
+    });
+    //添加maker
+    var marker = new AMap.Marker({
+        position:[104.11317,30.67531]//位置
+    });
+    map.add(marker);//添加到地图
+    //添加点标记，并使用自己的icon
+    new AMap.Marker({
+        map: map,
+        position: [104.11317, 30.67531],
+        icon: new AMap.Icon({
+            size: new AMap.Size(40, 50),  //图标大小
+            image: "https://webapi.amap.com/theme/v1.3/images/newpc/way_btn2.png",
+            imageOffset: new AMap.Pixel(0, -60)
+        })
+    });
+    //添加背景颜色标记
+    var circle = new AMap.Circle({
+        center: new AMap.LngLat("104.11317", "30.67531"),// 圆心位置
+        radius: 20, //半径
+        strokeColor: "#e97780", //线颜色
+        strokeOpacity: 0.35, //线透明度
+        strokeWeight: 1, //线粗细度
+        fillColor: "#e97780", //填充颜色
+        fillOpacity: 0.35//填充透明度
+    });
+    circle.setMap(map);
+    map.setFitView();
+    AMap.plugin('AMap.Geolocation', function() {
+        var geolocation = new AMap.Geolocation({
+            enableHighAccuracy: true,//是否使用高精度定位，默认:true
+            timeout: 10000,          //超过10秒后停止定位，默认：5s
+            buttonPosition:'RB',    //定位按钮的停靠位置
+            buttonOffset: new AMap.Pixel(10, 20),//定位按钮与设置的停靠位置的偏移量，默认：Pixel(10, 20)
+            zoomToAccuracy: true   //定位成功后是否自动调整地图视野到定位点
+
+        });
+        map.addControl(geolocation);
+        geolocation.getCurrentPosition(function(status,result){
+            if(status=='complete'){
+                onComplete(result)
+            }else{
+                onError(result)
+            }
+        });
+    });
+    //解析定位结果
+    function onComplete(data) {
+//        document.getElementById('status').innerHTML='定位成功'
+        console.log(data);
+        var str = [];
+        str.push('定位结果：' + data.position);
+        str.push('定位类别：' + data.location_type);
+        if(data.accuracy){
+            str.push('精度：' + data.accuracy + ' 米');
+        }//如为IP精确定位结果则没有精度信息
+        str.push('是否经过偏移：' + (data.isConverted ? '是' : '否'));
+        console.log(str);
+//        document.getElementById('result').innerHTML = str.join('<br>');
+    }
+    //解析定位错误信息
+    function onError(data) {
+        console.log(data.message);
+//        document.getElementById('status').innerHTML='定位失败'
+//        document.getElementById('result').innerHTML = '失败原因排查信息:'+data.message;
+    }
+    $(function () {
+        //返回上一页
+        $(".back").bind("click", function () {
+            window.history.back();
+        });
+    });
+</script>
+</html>

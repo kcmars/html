@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Language" content="zh-CN"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="yes" name="apple-touch-fullscreen">
+    <meta content="telephone=no,email=no" name="format-detection">
+    <title>选择地址</title>
+    <script type="text/javascript" src="../js/auto-size.js?rnd=" + new Date().getTime()></script>
+    <link href="../css/main.css?rnd=" + new Date().getTime() type="text/css" rel="stylesheet">
+    <link href="../css/city.css?rnd=" + new Date().getTime() type="text/css" rel="stylesheet">
+    <link href="../css/mapAddress.css?rnd=" + new Date().getTime() type="text/css" rel="stylesheet">
+</head>
+<body>
+    <div class="map-address-main">
+        <div class="header">
+            <div class="head-left">
+                <span class="back">全国</span>
+                <img src="../img/down_arrow.png">
+            </div>
+            <div class="title">
+                <input class="keyword" id="keyword" placeholder="请输入关键字查询地址">
+            </div>
+            <div class="head-right">
+                <span>取消</span>
+            </div>
+        </div>
+        <div class="content-main">
+            <ul id="address-list" class="address-list">
+                <li>未搜索到匹配地址</li>
+            </ul>
+        </div>
+    </div>
+    <div id="select-model-box" class="select-model-box">
+
+    </div>
+</body>
+<script type="text/template" charset="utf-8" id='template-address-list'>
+    {{ if (it && it.length > 0){ }}
+    {{ for (var i = 0; i < it.length; i++){ }}
+    <li onclick="selected()">
+        <div class="name">{{=it[i].name}}</div>
+        <div class="address">{{=it[i].district}}{{=it[i].address}}</div>
+    </li>
+    {{ } }}
+    {{ } }}
+</script>
+<script type="text/javascript" src="../js/jquery-1.8.1.min.js"></script>
+<script type="text/javascript" src="../js/doT.js"></script>
+<script type="text/javascript" src="../js/exif.js"></script>
+<script type="text/javascript" src="../js/js-activity.js?rnd=" + new Date().getTime()></script>
+<script type="text/javascript" src="../js/main.js?rnd=" + new Date().getTime()></script>
+<script type="text/javascript" src="../js/my-loading-alert-js.js?rnd=" + new Date().getTime()></script>
+<script type="text/javascript" src="../js/my-toast-alert-js.js?rnd=" + new Date().getTime()></script>
+<script type="text/javascript" src="https://webapi.amap.com/maps?v=1.4.10&key=1d4d2ecf500b855815e2c7d8ddbb2e76"></script>
+<script>
+    $(function () {
+        AMap.plugin('AMap.Autocomplete', function(){});
+        $("#keyword").bind("input propertychange",function(event){
+            serachAddress();
+        });
+        $(".head-right").bind("click", function () {
+            window.history.back();
+        });
+        //添加选择城市的组件
+        $(".head-left").bind("click", function () {
+            $.ajax({
+                type:"get",
+                url: "citys.html",
+                async:true,
+                success:function(data){
+                    if (data != null) {
+                        $("#select-model-box").removeClass("plate-model-animation-out").addClass("plate-model-animation-in");
+                        $("#select-model-box").empty();
+                        $("#select-model-box").html(data);
+                    }
+                },
+                error: function (error) {
+                    console.log("error", error);
+                }
+            });
+        });
+    });
+
+    //选中地址
+    function selected() {
+
+    }
+    /**
+     * 搜索地址
+     */
+    function serachAddress() {
+        // 实例化Autocomplete
+        var autoOptions = {
+            //city 限定城市，默认全国
+            city: $(".back").text()
+        };
+        var autoComplete= new AMap.Autocomplete(autoOptions);
+        autoComplete.search($("#keyword").val(), function(status, result) {
+            // 搜索成功时，result即是对应的匹配数据
+            console.log(status);
+            console.log(result);
+            if(status == "complete"){
+                var template = document.getElementById('template-address-list').innerHTML;
+                $("#address-list").empty();
+                $('#address-list').append(doT.template(template)(result.tips));
+            } else {
+                $("#address-list").empty();
+                $("#address-list").append("<li>未搜索到匹配地址</li>")
+            }
+        });
+    }
+</script>
+</html>

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Language" content="zh-CN"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="yes" name="apple-touch-fullscreen">
+    <meta content="telephone=no,email=no" name="format-detection">
+    <title>订单详情</title>
+    <link href="../../css/public/main.css" type="text/css" rel="stylesheet">
+    <script>
+        document.write('<link type="text/css" rel="stylesheet" href="../../css/freight/order.css?rnd='+new Date().getTime()+'">');
+    </script>
+</head>
+<body>
+    <div class="order">
+        <div class="header">
+            <div class="head-item head-left" onclick="goBack()">
+                <img src="../../img/other/arrow_left_black.png" alt="back">
+            </div>
+            <div id="title" class="title">订单详情</div>
+            <div class="head-item head-right">
+            </div>
+        </div>
+        <div class="content">
+            <div class="order-row flex-row">
+                <div class="status">
+                    订单已完成
+                </div>
+                <div class="b-b">
+                    <div class="cancel" onclick="onCancel()">取消</div>
+                    <div class="judge" onclick="onJudge()">评价</div>
+                    <div class="feed" onclick="onFeedBack()">反馈</div>
+                </div>
+            </div>
+            <div class="order-row">
+                <ul id="order-t" class="order-t">
+                    <li class="active">
+                        <span class="time">2020-02-24 15:55</span>
+                        <span class="text">已签收，订单完成</span>
+                    </li>
+                    <li>
+                        <span class="time">2020-02-24 15:50</span>
+                        <span class="text">货物已到达目的地，等待签收</span>
+                    </li>
+                    <li>
+                        <span class="time">2020-02-24 09:30</span>
+                        <span class="text">装货完毕，前往目的地</span>
+                    </li>
+                    <li>
+                        <span class="time">2020-02-24 07:00</span>
+                        <span class="text">车主已到达出发地点，准备装货</span>
+                    </li>
+                    <li>
+                        <span class="time">2020-02-23 16:45</span>
+                        <span class="text">车主已接单，等待前往出发地点</span>
+                    </li>
+                    <li>
+                        <span class="time">2020-02-23 16:42</span>
+                        <span class="text">下单成功，等待车主接单</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="order-row">
+                <div class="item-row">
+                    <img class="logo" src="../../img/logo/logo124x124.png" alt="logo">
+                    <span class="name">货物名称</span>
+                    <span class="price">￥120.00</span>
+                </div>
+                <div class="item-row">
+                    <div class="ad">
+                        <div class="ad-item">
+                            <span>装货时间：</span>
+                            <span class="address">2020-12-12 12:00 - 14:00</span>
+                        </div>
+                        <div class="ad-item">
+                            <span>装：</span>
+                            <span class="address">四川省成都市武侯区武侯大道12号四川省成都市武侯区武侯大道12号</span>
+                        </div>
+                        <div class="ad-item">
+                            <span>卸：</span>
+                            <span class="address">四川省巴中市江北大道中段4号</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="item-row">
+                    <span class="truck">小货车（低栏）</span>
+                    <span class="truck">2.5m*1.8m*0.4m*0.8t</span>
+                </div>
+                <div class="item-row">
+                    <span class="r-n">郝师傅（好运物流公司）</span>
+                    <img class="phone" src="../../img/logo/logo124x124.png" alt="phone">
+                </div>
+            </div>
+            <div class="order-row">
+                <div class="row">
+                    <span class="row-l">订单编号</span>
+                    <span class="row-c" id="no">15151112164121</span>
+                    <span class="row-r" onclick="onCopy()">复制</span>
+                </div>
+                <div class="row">
+                    <span class="row-l">下单时间</span>
+                    <span class="row-c">2020-12-12 12:12:12</span>
+                </div>
+                <div class="row">
+                    <span class="row-l">支付方式</span>
+                    <span class="row-c">在线支付（微信）</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script type="text/javascript" src="../../js/public/jquery-1.8.1.min.js"></script>
+<script>
+    document.write('<script type="text/javascript" src="../../js/public/http.js?rnd='+new Date().getTime()+'"><\/script>');
+    document.write('<script type="text/javascript" src="../../js/public/tool.js?rnd='+new Date().getTime()+'"><\/script>');
+    document.write('<script type="text/javascript" src="../../js/public/loading.js?rnd='+new Date().getTime()+'"><\/script>');
+    document.write('<script type="text/javascript" src="../../js/public/toast.js?rnd='+new Date().getTime() +'"><\/script>');
+</script>
+<script>
+
+    /**
+     * 取消订单
+     */
+    function onCancel() {
+        console.log("onCancel");
+    }
+
+    /**
+     * 去评价
+     */
+    function onJudge() {
+        window.location.href = "./judge.html?v=" + new Date().getTime();
+    }
+
+    /**
+     * 去反馈
+     */
+    function onFeedBack() {
+        window.location.href = "./feedBack.html?v=" + new Date().getTime();
+    }
+
+    /**
+     * 复制订单号
+     */
+    function onCopy() {
+        let no = $("#no").text();
+        console.log(no);
+        $.toastAlertShow("复制成功!");
+    }
+
+</script>
+</html>

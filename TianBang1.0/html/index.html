@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Language" content="zh-CN"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="yes" name="apple-touch-fullscreen">
+    <meta content="telephone=no,email=no" name="format-detection">
+    <title>天帮生活</title>
+    <link href="../css/public/main.css" type="text/css" rel="stylesheet">
+    <script>
+        document.write('<link type="text/css" rel="stylesheet" href="../css/base/index.css?rnd='+new Date().getTime()+'">');
+    </script>
+</head>
+<body>
+<div class="main index">
+    <div class="header">
+        <div class="head-item head-left">
+            <span>[-]</span>
+        </div>
+        <div class="title" id="city">成都市</div>
+        <div class="head-item head-right" onclick="openPage('message')">
+            <span>消息</span>
+            <i></i>
+        </div>
+    </div>
+    <div id="content" class="content">
+        <iframe id="0_index" src="./base/home.html" width="100%" height="100%" class=""></iframe>
+        <iframe id="1_index" src="./base/more.html" width="100%" height="100%" class="none"></iframe>
+        <iframe id="2_index" src="./base/me.html" width="100%" height="100%" class="none"></iframe>
+    </div>
+    <ul id="tab-footer-index" class="footer">
+        <li class="active">
+            <i></i>
+            <span>首页</span>
+        </li>
+        <li>
+            <i></i>
+            <span>更多</span>
+        </li>
+        <li>
+            <i></i>
+            <span>我的</span>
+        </li>
+    </ul>
+</div>
+</body>
+<script type="text/javascript" src="../js/public/jquery-1.8.1.min.js"></script>
+<script>
+    document.write('<script type="text/javascript" src="../js/public/http.js?rnd='+new Date().getTime()+'"><\/script>');
+</script>
+<script type="text/javascript">
+    $("#tab-footer-index li").on("click", function () {
+        let index = $(this).index();
+        $(this).addClass("active").siblings().removeClass("active");
+        $("#"+index+"_index").removeClass("none").siblings().addClass("none");
+    });
+
+    // 打开业务页面
+    function openPage(page) {
+        console.log(page);
+        window.location.href = $.srcStatic + page + "/index.html?v=" + new Date().getTime();
+    }
+
+</script>
+</html>

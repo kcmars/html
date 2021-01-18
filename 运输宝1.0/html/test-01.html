@@ -1,0 +1,99 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>3d相册</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color:tomato;
+            /* 视觉效果 */
+            perspective: 500px;
+        }
+
+        ul {
+            margin: 100px auto;
+            width: 240px;
+            height: 350px;
+            background-color: #fff;
+            list-style: none;
+            position: relative;
+            transition: all 1s;
+            /* 开始3d效果, 父盒子开始了3d效果之后，3d空间就被打开了，子元素就可以不用去设置该属性了; */
+            transform-style: preserve-3d;
+            /* 改变旋转轴的位置 */
+            transform-origin: bottom;
+        }
+
+        ul:hover {
+            transform: rotateX(45deg);
+        }
+
+        li {
+            width: 240px;
+            height: 350px;
+            border: 1px solid gold;
+            position: absolute;
+            /* 改变旋转轴的位置为左侧 */
+            transform-origin: left;
+            background-color: #fff;
+        }
+
+        li:nth-child(5) {
+            background: url("../img/slide1.png") left top/ 100% 100% no-repeat;
+        }
+        li:nth-child(4) {
+            background: url("../img/slide2.png") left top/ 100% 100% no-repeat;
+        }
+        li:nth-child(3) {
+            background: url("../img/slide3.png") left top/ 100% 100% no-repeat;
+        }
+        li:nth-child(2) {
+            background: url("../img/slide1.png") left top/ 100% 100% no-repeat;
+        }
+
+        li:nth-child(1) {
+            background: url("../img/slide2.png") left top/ 100% 100% no-repeat;
+        }
+
+        ul:hover li:nth-child(5) {
+            transition: all 1s 1s;
+            transform: rotateY(-170deg);
+        }
+
+        ul:hover li:nth-child(4) {
+            transition: all 1s 2s;
+            transform: rotateY(-150deg);
+        }
+
+        ul:hover li:nth-child(3) {
+            transition: all 1s 3s;
+
+            transform: rotateY(-130deg);
+        }
+
+        ul:hover li:nth-child(2) {
+            transition: all 1s 4s;
+            transform: rotateY(-110deg);
+        }
+    </style>
+
+</head>
+<body>
+<ul>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+</ul>
+</body>
+</html>

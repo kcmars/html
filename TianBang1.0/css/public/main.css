@@ -1,0 +1,48 @@
+* {
+    margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+    box-sizing: border-box;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+    text-decoration: none;
+    list-style: none;
+}
+input {
+    -webkit-tap-highlight-color: transparent; /* 针对ios手机点击出现灰色背景*/
+}
+html {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+body {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    line-height: 1;
+    font-family: "微软雅黑", serif;
+    background-color: #f1f3f5;
+}
+::-webkit-scrollbar{
+    width: 0;
+}
+.none {
+    display: none;
+}
+.flex-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.flex-column {
+    display: flex;
+    flex-direction: column;
+}
+.of-scroll {
+    overflow: scroll;
+    flex: 1;
+}

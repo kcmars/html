@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Language" content="zh-CN"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="yes" name="apple-touch-fullscreen">
+    <meta content="telephone=no,email=no" name="format-detection">
+    <title>订单</title>
+    <link href="../../css/public/main.css" type="text/css" rel="stylesheet">
+    <link href="../../css/public/base.css" type="text/css" rel="stylesheet">
+    <link href="../../css/public/listloading.css" type="text/css" rel="stylesheet">
+    <script>
+        document.write('<link type="text/css" rel="stylesheet" href="../../css/freight/order.css?rnd='+new Date().getTime()+'">');
+    </script>
+</head>
+<body>
+    <div class="order-main">
+        <div class="title-bar">
+            <span class="active">全部订单</span>
+            <span>进行中</span>
+            <span>待评价</span>
+            <span>退款</span>
+            <span>已完成</span>
+        </div>
+        <div id="listloading" class="listloading-list">
+            <div>
+                <ul id="order-list" class="order-list">
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+<script type="text/template" charset="utf-8" id='template-order-list'>
+    {{ if (it && it.length > 0){ }}
+    {{ for (var i = 0; i < it.length; i++){ }}
+    <li>
+        <div class="item-row">
+            <img class="logo" src="../../img/logo/logo124x124.png" alt="logo">
+            <span class="name t-e">货物名称</span>
+            <span class="status">进行中</span>
+        </div>
+        <div class="item-row">
+            <div class="ad">
+                <div class="ad-item">
+                    <span>装货时间：</span>
+                    <span class="address">2020-12-12 12:00 - 14:00</span>
+                </div>
+                <div class="ad-item">
+                    <span>装：</span>
+                    <span class="address t-e">四川省成都市武侯区武侯大道12号四川省成都市武侯区武侯大道12号</span>
+                </div>
+                <div class="ad-item">
+                    <span>卸：</span>
+                    <span class="address t-e">四川省巴中市江北大道中段4号</span>
+                </div>
+            </div>
+            <div class="price">￥120.00</div>
+        </div>
+        <div class="item-row">
+            <span class="truck">小货车（低栏）</span>
+            <span class="truck">2.5m*1.8m*0.4m*0.8t</span>
+        </div>
+        <div class="item-row">
+            <div class="time">刚刚</div>
+            <div class="b-b">
+                <div class="judge" onclick="onJudge()">评价</div>
+                <div class="detail" onclick="onDetail()">详情</div>
+            </div>
+        </div>
+    </li>
+    {{ } }}
+    {{ } }}
+</script>
+<script type="text/javascript" src="../../js/public/jquery-1.8.1.min.js"></script>
+<script type="text/javascript" src="../../js/public/doT.js"></script>
+<script type="text/javascript" src="../../js/public/iscroll.min.js"></script>
+<script type="text/javascript" src="../../js/public/zepto.min.js"></script>
+<script type="text/javascript" src="../../js/public/listloading.js"></script>
+<script>
+    document.write('<script type="text/javascript" src="../../js/public/http.js?rnd='+new Date().getTime()+'"><\/script>');
+    document.write('<script type="text/javascript" src="../../js/public/loading.js?rnd='+new Date().getTime()+'"><\/script>');
+    document.write('<script type="text/javascript" src="../../js/public/toast.js?rnd='+new Date().getTime() +'"><\/script>');
+</script>
+<script>
+    let listLoading;
+
+    $(function () {
+       $(".title-bar span").bind("click", function () {
+           let index = $(this).index();
+           $(this).addClass("active").siblings().removeClass("active");
+           if(listLoading != null) {
+               $("#order-list").empty();
+               listLoading.destroy();
+               getParams();
+           } else {
+               getParams();
+           }
+       });
+       getParams();
+    });
+
+    //获取app传递过来的参数
+    function getParams() {
+        //添加下拉刷新和上拉加载功能
+        listLoading = new Listloading('#listloading', {
+            disableTime: true,  // 是否需要显示时间
+            pullUpAction : function(cb){   // 上拉加载更多
+                let flg = false;
+                getDataList("loadMore", cb, flg);
+            },
+            pullDownAction : function(cb, flg){  // 下拉刷新
+                getDataList("refresh", cb, flg);
+            },
+            Realtimetxt: '松开刷新',
+            loaderendtxt: '已经到底了',
+            iscrollOptions: {
+                scrollbars: false   // 显示iscroll滚动条
+            }
+        });
+    }
+
+    let mData = [];
+    let page = 1;
+    function getDataList(type, cb, flg){
+        if (type === "refresh") {
+            mData = [];
+            page = 1;
+        } else {
+            page++;
+        }
+        let data = [1,2,3,4,5,56,6,7,7,77,7,7,7];
+        let template = document.getElementById('template-order-list').innerHTML;
+        if (type === "refresh") {
+            $("#order-list").empty();
+            $('#order-list').append(doT.template(template)(data));
+        } else {
+            if(mData.length!==10){
+                flg = true;
+            }
+            $('#order-list').append(doT.template(template)(data));
+        }
+        cb(flg);
+    }
+
+    /**
+     * 去评价
+     */
+    function onJudge() {
+        parent.openPage("judge");
+    }
+
+    /**
+     * 去详情
+     */
+    function onDetail() {
+        parent.openPage("orderDetail");
+    }
+
+</script>
+</html>

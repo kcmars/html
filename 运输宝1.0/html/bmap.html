@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="https://webapi.amap.com/maps?v=1.4.10&key=84ecc957766e13d9d3b7483bc7937e03"></script>
+    <style>
+        html, body {
+            width: 100%;
+            height: 100%;
+        }
+        .top {
+            height: 1000px;
+            width: 100%;
+            background: #FCD3C5;
+        }
+        .map {
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="top"></div>
+    <div id="map" class="map"></div>
+</body>
+<script type="text/javascript">
+    var map = new AMap.Map('map', {
+        center: [117.000923,36.675807],
+        zoom: 1,
+        enableScrollWheelZoom: true,     //开启鼠标滚轮缩放
+    });
+</script>
+</html>

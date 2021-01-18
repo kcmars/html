@@ -1,0 +1,51 @@
+<div class="car-main">
+    <div id="firstLayer" class="first-layer">
+        <div class="layer-left">
+            <ul id="province-list" class="province-list">
+            </ul>
+        </div>
+    </div>
+    <div id="secondLayer" class="second-layer">
+        <ul id="city-list" class="city-item-list">
+        </ul>
+    </div>
+    <div id="thirdLayer" class="third-layer">
+        <ul id="ad-list" class="ad-item-list">
+        </ul>
+    </div>
+</div>s
+<script type="text/template" charset="utf-8" id='template-province-list'>
+    {{ if (it && it.length > 0){ }}
+    {{ for (var i = 0; i < it.length; i++){ }}
+    <li onclick="getCities(this, '{{=it[i].province}}', '{{=it[i].province_code}}')">
+        <!--<img alt="logo" src="../img/icon_arrow_right_black.png"/>-->
+        <span>{{=it[i].province}}</span>
+    </li>
+    {{ } }}
+    {{ } }}
+</script>
+<script type="text/template" charset="utf-8" id='template-city-list'>
+    {{ if (it && it.length > 0){ }}
+    {{ for (var i = 0; i < it.length; i++){ }}
+    <li onclick="getAds(this, '{{=it[i].city}}',  '{{=it[i].code}}')">
+        <div class="city-item">
+            <span>
+            {{=it[i].city}}
+            </span>
+        </div>
+    </li>
+    {{ } }}
+    {{ } }}
+</script>
+<script type="text/template" charset="utf-8" id='template-ad-list'>
+    {{ if (it && it.length > 0){ }}
+    {{ for (var i = 0; i < it.length; i++){ }}
+    <li onclick="selectAds(this, '{{=it[i].district}}', '{{=it[i].district_code}}')">
+        <div class="ad-item">
+            <span>{{=it[i].district}}</span>
+        </div>
+    </li>
+    {{ } }}
+    {{ } }}
+</script>
+<script type="text/javascript" src="../js/city.js?rnd=" + new Date().getTime()></script>

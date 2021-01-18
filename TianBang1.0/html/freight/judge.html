@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Language" content="zh-CN"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="yes" name="apple-touch-fullscreen">
+    <meta content="telephone=no,email=no" name="format-detection">
+    <title>订单详情</title>
+    <link href="../../css/public/main.css" type="text/css" rel="stylesheet">
+    <script>
+        document.write('<link type="text/css" rel="stylesheet" href="../../css/freight/judge.css?rnd='+new Date().getTime()+'">');
+    </script>
+</head>
+<body>
+    <div class="judge">
+        <div class="header">
+            <div class="head-item head-left" onclick="goBack()">
+                <img src="../../img/other/arrow_left_black.png" alt="back">
+            </div>
+            <div id="title" class="title">评价</div>
+            <div class="head-item head-right">
+            </div>
+        </div>
+        <div class="content">
+            <div class="t-t">
+                <i></i>
+                <span>请对本次服务做出评价</span>
+                <i></i>
+            </div>
+            <div class="j-fen">
+                <span class="fen">0.0</span>
+                <span>分</span>
+            </div>
+            <div class="slide">
+                向右拖动滑块进行打分
+                <div class="slide-b">
+                    <span class="slide-p">祝您生活愉快~</span>
+                    <i class="slide-i"></i>
+                </div>
+            </div>
+            <ul id="judge-list" class="judge-list">
+
+            </ul>
+            <div class="mark">
+                <textarea id="mark" rows="5" placeholder="说点什么呢"></textarea>
+            </div>
+            <div class="btn" onclick="onJudge()">提交评价</div>
+        </div>
+    </div>
+</body>
+<script type="text/template" charset="utf-8" id='template-judge-list'>
+    {{ if (it && it.length > 0){ }}
+    {{ for (var i = 0; i < it.length; i++){ }}
+    <li onclick="selectJudge(this)">
+        {{=it[i]}}
+    </li>
+    {{ } }}
+    {{ } }}
+</script>
+<script type="text/javascript" src="../../js/public/jquery-1.8.1.min.js"></script>
+<script type="text/javascript" src="../../js/public/doT.js"></script>
+<script>
+    document.write('<script type="text/javascript" src="../../js/public/http.js?rnd='+new Date().getTime()+'"><\/script>');
+    document.write('<script type="text/javascript" src="../../js/public/tool.js?rnd='+new Date().getTime()+'"><\/script>');
+    document.write('<script type="text/javascript" src="../../js/public/loading.js?rnd='+new Date().getTime()+'"><\/script>');
+    document.write('<script type="text/javascript" src="../../js/public/toast.js?rnd='+new Date().getTime() +'"><\/script>');
+</script>
+<script>
+    let startX = 0; // 滑块的触摸起点
+    let cpData = ["服务态度不好", "不准时", "不上报到站信息", "言词不文明", "恶意怼人", "恶意闹事", "人身攻击"];
+    let hpData = ["服务态度良好", "非常准时", "信息及时上报", "和气友善", "善意助人"];
+
+    $(function () {
+        setData(cpData);
+
+        // 评价滑块移动开始事件
+        $(".slide-i").on("touchstart", function (event) {
+            startX = event.originalEvent.targetTouches[0].clientX;
+        });
+        // 评价滑块移动事件
+        $(".slide-i").on("touchmove", function (event) {
+            let mX = event.originalEvent.targetTouches[0].clientX;
+            // 临界值判断，当滑块已经滑动到两端时不再滑动
+            // 这里以覆盖部分的宽度值和移动的宽度来判断
+            let width = $(".slide-p").width();
+            let mW = mX - startX;
+            let w = width;
+            let l = width;
+            if(width <= 35) {
+                if (mW <= 0) {
+                    w = 35;
+                    l = 35;
+                } else {
+                    w = w + mW;
+                    l = l + mW;
+                }
+            } else if (width >= 215) {
+                if (mW >= 0) {
+                    w = 215;
+                    l = 215;
+                } else {
+                    w = w + mW;
+                    l = l + mW;
+                }
+            } else {
+                w = w + mW;
+                l = l + mW;
+            }
+            $(".slide-p").css("width", w);
+            $(".slide-i").css("left", l);
+            startX = mX;
+            let fen = (Math.abs((w - 35))/(180/5)).toFixed(1);
+            $(".fen").text(fen);
+            if(fen >= 4.0) {
+                setData(hpData);
+            } else {
+                setData(cpData);
+            }
+            judgeActive();
+        });
+
+        // 输入评价监听
+        $("#mark").on("input", function () {
+            judgeActive();
+        })
+    });
+
+    /**
+     * 设置评论内容
+     */
+    function setData(data) {
+        let template = document.getElementById('template-judge-list').innerHTML;
+        $("#judge-list").empty();
+        $('#judge-list').append(doT.template(template)(data));
+    }
+
+    /**
+     * 选择评价内容
+     */
+    function selectJudge(obj) {
+        if($(obj).hasClass("active")) {
+            $(obj).removeClass("active");
+        } else {
+            $(obj).addClass("active");
+        }
+        judgeActive();
+    }
+
+    /**
+     * 进行评价操作后才可提交
+     */
+    function judgeActive() {
+        let fen = parseFloat($(".fen").text());
+        if(fen > 0 || $(".judge-list li").hasClass("active") || $("#mark").val().length > 0) {
+            $(".btn").addClass("active");
+        } else {
+            $(".btn").removeClass("active");
+        }
+    }
+
+    /**
+     * 提交评价
+     */
+    function onJudge() {
+        if($(".btn").hasClass("active")) {
+
+        } else {
+            $.toastAlertShow("请做出评价后提交!");
+        }
+    }
+</script>
+</html>

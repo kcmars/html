@@ -1,0 +1,114 @@
+.freight {
+    display: flex;
+    width: 100%;
+    max-width: 500px;
+    height: 100%;
+    flex-direction: column;
+    background-color: #ffffff;
+}
+.freight .header {
+    display: flex;
+    flex-direction: row;
+    padding: 15px;
+}
+.freight .header .head-item {
+    width: 40px;
+    position: relative;
+}
+.freight .header .head-item img {
+    display: block;
+    width: 20px;
+    height: auto;
+}
+.freight .header .head-item i {
+    position: absolute;
+    z-index: 1;
+    right: 0;
+    top: -5px;
+    width: 10px;
+    height: 10px;
+    background: #ee0909;
+    border-radius: 10px;
+}
+.freight .header .title {
+    flex: 1;
+    text-align: center;
+    font-size: 20px;
+    color: #000000;
+}
+.freight .content {
+    flex: 1;
+    background-color: #f1f3f5;
+    overflow: hidden;
+}
+.freight .footer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border-top: 1px solid #f1f3f5;
+}
+.freight .footer li {
+    flex: 1;
+    font-size: 14px;
+    text-align: center;
+    color: #919191;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 0;
+    position: relative;
+}
+.freight .footer li:active {
+    background: #f1f3f5;
+}
+.freight .footer  li .icon {
+    display: block;
+    width: 25px;
+    height: 25px;
+    margin-bottom: 5px;
+}
+.freight .footer  li .sign {
+    position: absolute;
+    z-index: 1;
+    right: 30%;
+    top: 5px;
+    width: 10px;
+    height: 10px;
+    background: #ee0909;
+    border-radius: 10px;
+}
+.freight .footer  li:nth-child(1) .icon {
+    background: url("../../img/freight/tab1-b.png") center no-repeat;
+    background-size: cover;
+}
+.freight .footer  li:nth-child(2) .icon {
+    background: url("../../img/freight/tab2-b.png") center no-repeat;
+    background-size: cover;
+}
+.freight .footer  li:nth-child(3) .icon {
+    background: url("../../img/freight/tab3-b.png") center no-repeat;
+    background-size: cover;
+}
+.freight .footer  li:nth-child(4) .icon {
+    background: url("../../img/freight/tab4-b.png") center no-repeat;
+    background-size: cover;
+}
+.freight .footer  .active:nth-child(1) .icon {
+    background: url("../../img/freight/tab1-a.png") center no-repeat;
+    background-size: cover;
+}
+.freight .footer  .active:nth-child(2) .icon {
+    background: url("../../img/freight/tab2-a.png") center no-repeat;
+    background-size: cover;
+}
+.freight .footer  .active:nth-child(3) .icon {
+    background: url("../../img/freight/tab3-a.png") center no-repeat;
+    background-size: cover;
+}
+.freight .footer  .active:nth-child(4) .icon {
+    background: url("../../img/freight/tab4-a.png") center no-repeat;
+    background-size: cover;
+}
+.freight .footer .active {
+    color: #259012;
+}

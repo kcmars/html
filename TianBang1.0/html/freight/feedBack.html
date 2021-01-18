@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Language" content="zh-CN"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="yes" name="apple-touch-fullscreen">
+    <meta content="telephone=no,email=no" name="format-detection">
+    <title>反馈中心</title>
+    <link href="../../css/public/main.css" type="text/css" rel="stylesheet">
+    <script>
+        document.write('<link type="text/css" rel="stylesheet" href="../../css/freight/feed.css?rnd='+new Date().getTime()+'">');
+    </script>
+</head>
+<body>
+    <div class="feed">
+        <div class="header">
+            <div class="head-item head-left" onclick="goBack()">
+                <img src="../../img/other/arrow_left_black.png" alt="back">
+            </div>
+            <div id="title" class="title">反馈中心</div>
+            <div class="head-item head-right">
+            </div>
+        </div>
+        <div class="content">
+            <div class="f-item">
+                <span>订单编号</span>
+                <span>f2020202201546404</span>
+            </div>
+            <ul id="feed-list" class="feed-list">
+
+            </ul>
+            <div class="mark">
+                <textarea id="mark" rows="5" placeholder="说点什么呢"></textarea>
+            </div>
+            <div class="btn" onclick="onFeedBack()">提交反馈</div>
+        </div>
+    </div>
+</body>
+<script type="text/template" charset="utf-8" id='template-feed-list'>
+    {{ if (it && it.length > 0){ }}
+    {{ for (var i = 0; i < it.length; i++){ }}
+    <li onclick="selectFeed(this)">
+        {{=it[i]}}
+    </li>
+    {{ } }}
+    {{ } }}
+</script>
+<script type="text/javascript" src="../../js/public/jquery-1.8.1.min.js"></script>
+<script type="text/javascript" src="../../js/public/doT.js"></script>
+<script>
+    document.write('<script type="text/javascript" src="../../js/public/http.js?rnd='+new Date().getTime() +'"><\/script>');
+    document.write('<script type="text/javascript" src="../../js/public/tool.js?rnd='+new Date().getTime() +'"><\/script>');
+    document.write('<script type="text/javascript" src="../../js/public/loading.js?rnd='+new Date().getTime() +'"><\/script>');
+    document.write('<script type="text/javascript" src="../../js/public/toast.js?rnd='+new Date().getTime() +'"><\/script>');
+</script>
+<script>
+    let feedData = ["电话号码错误", "订单信息有误", "严重超时", "线下收钱", "言词不文明", "恶意怼人", "恶意闹事", "人身攻击"];
+    $(function () {
+        setData(feedData);
+
+        // 输入反馈监听
+        $("#mark").on("input", function () {
+            feedActive();
+        })
+    });
+
+    /**
+     * 设置反馈内容
+     */
+    function setData(data) {
+        let template = document.getElementById('template-feed-list').innerHTML;
+        $("#feed-list").empty();
+        $('#feed-list').append(doT.template(template)(data));
+    }
+
+    /**
+     * 选择评价内容
+     */
+    function selectFeed(obj) {
+        if($(obj).hasClass("active")) {
+            $(obj).removeClass("active");
+        } else {
+            $(obj).addClass("active");
+        }
+        feedActive();
+    }
+
+    /**
+     * 进行反馈操作后才可提交
+     */
+    function feedActive() {
+        if($(".feed-list li").hasClass("active") || $("#mark").val().length > 0) {
+            $(".btn").addClass("active");
+        } else {
+            $(".btn").removeClass("active");
+        }
+    }
+
+    /**
+     * 提交反馈
+     */
+    function onFeedBack() {
+        if($(".btn").hasClass("active")) {
+
+        } else {
+            $.toastAlertShow("请做出反馈后提交!");
+        }
+    }
+</script>
+</html>

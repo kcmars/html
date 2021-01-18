@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Language" content="zh-CN"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="yes" name="apple-touch-fullscreen">
+    <meta content="telephone=no,email=no" name="format-detection">
+    <title>用车</title>
+    <link href="../../css/public/swiper.min.css" type="text/css" rel="stylesheet">
+    <link href="../../css/public/main.css" type="text/css" rel="stylesheet">
+    <script>
+        document.write('<link type="text/css" rel="stylesheet" href="../../css/freight/seek.css?rnd='+new Date().getTime()+'">');
+    </script>
+</head>
+<body>
+<div class="seek">
+    <div class="cars-main">
+        <div class="swiper-container">
+            <ul id="swiper-car-list" class="swiper-wrapper">
+            </ul>
+            <!-- 如果需要分页器 -->
+            <!--<div class="swiper-pagination"></div>-->
+        </div>
+    </div>
+    <div class="address-info">
+        <div class="flex-row">
+            <div class="ads-item">
+                <img class="icon" src="../../img/logo/logo124x124.png">
+                <div class="ads-info">
+                    <span id="start-name1">选择用车地址</span>
+                    <span id="start-ads1">选择用车地址</span>
+                </div>
+            </div>
+            <img class="add" src="../../img/freight/add.png">
+        </div>
+        <div class="flex-row">
+            <div class="ads-item">
+                <img class="icon" src="../../img/logo/logo124x124.png">
+                <div class="ads-info">
+                    <span id="start-name2">添加用车地址</span>
+                    <span id="start-ads2">添加用车地址</span>
+                </div>
+            </div>
+            <img class="add" src="../../img/freight/delete.png">
+        </div>
+    </div>
+    <div class="time-info">
+        <img class="icon" src="../../img/logo/logo124x124.png">
+        <span class="b-t">预约用车时间</span>
+        <span id="b-time" class="b-time">2020-20-20 20:20</span>
+        <i></i>
+    </div>
+    <div class="extra-info">
+        <img class="icon" src="../../img/logo/logo124x124.png">
+        <span class="e-t">额外附加信息</span>
+        <span id="e-text" class="e-text">无</span>
+        <i></i>
+    </div>
+    <div class="hours-info">
+        <img class="icon" src="../../img/logo/logo124x124.png">
+        <span class="b-title">用车时长（小时）</span>
+        <div class="s-num">
+            <span>-</span>
+            <div id="s-hours">1</div>
+            <span>+</span>
+        </div>
+    </div>
+    <div class="b-box">
+        <div class="b-price">
+            <div class="price">
+                ￥118.00
+            </div>
+            <span>价格明细</span>
+        </div>
+        <div class="btn">
+            立即预约
+        </div>
+    </div>
+</div>
+</body>
+<script type="text/template" charset="utf-8" id='template-swiper-list'>
+    {{ if (it && it.length > 0){ }}
+    {{ for (var i = 0; i < it.length; i++){ }}
+    <li class="swiper-slide">
+        <img src={{=it[i]}} />
+    </li>
+    {{ } }}
+    {{ } }}
+</script>
+<script type="text/javascript" src="../../js/public/jquery-1.8.1.min.js"></script>
+<script type="text/javascript" src="../../js/public/doT.js"></script>
+<script type="text/javascript" src="../../js/public/swiper.min.js"></script>
+<script>
+    document.write('<script type="text/javascript" src="../../js/public/http.js?rnd='+new Date().getTime()+'"><\/script>');
+    document.write('<script type="text/javascript" src="../../js/public/loading.js?rnd='+new Date().getTime()+'"><\/script>');
+    document.write('<script type="text/javascript" src="../../js/public/toast.js?rnd='+new Date().getTime() +'"><\/script>');
+</script>
+<script>
+    let swiperList = document.getElementById('template-swiper-list').innerHTML;
+    let imgs = ["../../img/freight/slide.png", "../../img/freight/slide.png", "../../img/freight/slide.png"];
+    document.getElementById('swiper-car-list').innerHTML = doT.template(swiperList)(imgs);
+    let swiper = new Swiper('.swiper-container', {
+        effect: 'coverflow',  //slide的切换效果，默认为"slide"（位移切换），可设置为'slide'（普通切换、默认）,"fade"（淡入）"cube"（方块）"coverflow"（3d流）"flip"（3d翻转）。
+        grabCursor: true,
+        centeredSlides: true,
+        slidesPerView: 'auto',
+        coverflowEffect: {
+            rotate: 50,  //slide做3d旋转时Y轴的旋转角度。默认50。
+            stretch: 10,   //每个slide之间的拉伸值，越大slide靠得越紧。 默认0。
+            depth: 100,   //slide的位置深度。值越大z轴距离越远，看起来越小。 默认100
+            modifier: 1,  //depth和rotate和stretch的倍率，相当于depth*modifier、rotate*modifier、stretch*modifier，值越大这三个参数的效果越明显。默认1。
+            slideShadows : true  //开启slide阴影。默认 true。
+        }
+//        pagination: {
+//            el: '.swiper-pagination',
+//        }
+    });
+</script>
+</html>

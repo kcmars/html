@@ -1,0 +1,95 @@
+.feed {
+    width: 100%;
+    height: 100%;
+    max-width: 500px;
+    background-color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+}
+.feed .header {
+    display: flex;
+    flex-direction: row;
+    padding: 15px;
+}
+.feed .header .head-item {
+    width: 40px;
+    position: relative;
+}
+.feed .header .head-item img {
+    display: block;
+    width: 20px;
+    height: auto;
+}
+.feed .header .head-item i {
+    position: absolute;
+    z-index: 1;
+    right: 0;
+    top: -5px;
+    width: 10px;
+    height: 10px;
+    background: #ee0909;
+    border-radius: 10px;
+}
+.feed .header .title {
+    flex: 1;
+    text-align: center;
+    font-size: 20px;
+    color: #000000;
+}
+.feed .content {
+    flex: 1;
+    background-color: #f1f3f5;
+    overflow-y: scroll;
+    padding: 0 5px;
+}
+.feed-list {
+    width: 85%;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    background: #FFFFFF;
+    padding: 5px;
+}
+.feed-list li {
+    border: 1px solid #666666;
+    color: #666666;
+    border-radius: 5px;
+    padding: 5px 10px;
+    margin: 5px;
+    font-size: 14px;
+}
+.feed-list .active {
+    border: 1px solid #fd8227;
+    background: #fd8227;
+    color: #FFFFFF;
+}
+.mark {
+    width: 85%;
+    margin: 20px auto;
+}
+.mark textarea {
+    width: 99%;
+    font-size: 16px;
+    color: #333333;
+    line-height: 20px;
+    border: none;
+}
+.btn {
+    text-align: center;
+    width: 60%;
+    margin: 20px auto;
+    padding: 10px 0;
+    color: #FFFFFF;
+    background: #bab9b9;
+    border-radius: 25px;
+}
+.active {
+    background: #fd8227;
+    color: #FFFFFF;
+}
+.btn:active {
+    transform: scale(0.95, 0.95);
+    -webkit-transform: scale(0.95, 0.95);  /*兼容-webkit-引擎浏览器*/
+    -moz-transform: scale(0.95, 0.95);     /*兼容-moz-引擎浏览器*/
+}

@@ -1,0 +1,183 @@
+.judge {
+    width: 100%;
+    height: 100%;
+    max-width: 500px;
+    background-color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+}
+.judge .header {
+    display: flex;
+    flex-direction: row;
+    padding: 15px;
+}
+.judge .header .head-item {
+    width: 40px;
+    position: relative;
+}
+.judge .header .head-item img {
+    display: block;
+    width: 20px;
+    height: auto;
+}
+.judge .header .head-item i {
+    position: absolute;
+    z-index: 1;
+    right: 0;
+    top: -5px;
+    width: 10px;
+    height: 10px;
+    background: #ee0909;
+    border-radius: 10px;
+}
+.judge .header .title {
+    flex: 1;
+    text-align: center;
+    font-size: 20px;
+    color: #000000;
+}
+.judge .content {
+    flex: 1;
+    background-color: #f1f3f5;
+    overflow-y: scroll;
+    padding: 0 5px;
+}
+.content .t-t {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 0;
+}
+.content .t-t span {
+    font-size: 16px;
+    color: #666666;
+}
+.content .t-t i {
+    background-color: #d5d5dc;
+    height: 1px;
+    flex: 1;
+    margin: 0 2%;
+}
+.j-fen {
+    width: 80px;
+    height: 80px;
+    border: 2px solid #fd8227;
+    border-radius: 40px;
+    line-height: 80px;
+    text-align: center;
+    margin: 10px auto;
+}
+.j-fen span {
+    font-size: 10px;
+    color: #fd8227;
+}
+.j-fen .fen {
+    font-size: 30px;
+    color: #fd8227;
+    font-weight: bold;
+}
+.slide {
+    width: 250px;
+    height: 40px;
+    border-radius: 25px;
+    background: #dbdbdb;
+    margin: 30px auto;
+    position: relative;
+    line-height: 40px;
+    text-align: right;
+    padding-right: 25px;
+    color: #FFFFFF;
+    font-size: 14px;
+}
+.slide .slide-b {
+    width: 250px;
+    height: 40px;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+.slide .slide-b .slide-i {
+    width: 70px;
+    height: 40px;
+    border-radius: 20px;
+    border: 1px solid #fd8227;
+    background-image: url("../../img/logo/logo180x100.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    display: block;
+    position: absolute;
+    z-index: 2;
+    margin-left: -35px;
+    top: 0;
+    left: 35px;
+}
+.slide .slide-b .slide-p {
+    width: 35px;
+    height: 40px;
+    background: #fd8227;
+    border-bottom-left-radius: 20px;
+    border-top-left-radius: 20px;
+    display: block;
+    text-align: center;
+    line-height: 40px;
+    color: #FFFFFF;
+    font-size: 14px;
+    overflow: hidden;
+}
+.judge-list {
+    width: 85%;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    background: #FFFFFF;
+    padding: 5px;
+}
+.judge-list li {
+    border: 1px solid #666666;
+    color: #666666;
+    border-radius: 5px;
+    padding: 5px 10px;
+    margin: 5px;
+    font-size: 14px;
+}
+.judge-list .active {
+    border: 1px solid #fd8227;
+    background: #fd8227;
+    color: #FFFFFF;
+}
+.mark {
+    width: 85%;
+    margin: 20px auto;
+}
+.mark textarea {
+    width: 100%;
+    font-size: 16px;
+    color: #333333;
+    line-height: 20px;
+    border: none;
+    background: #FFFFFF;
+    padding: 5px;
+}
+.btn {
+    text-align: center;
+    width: 60%;
+    margin: 20px auto;
+    padding: 10px 0;
+    color: #FFFFFF;
+    background: #bab9b9;
+    border-radius: 25px;
+}
+.active {
+    background: #fd8227;
+    color: #FFFFFF;
+}
+.btn:active {
+    transform: scale(0.95, 0.95);
+    -webkit-transform: scale(0.95, 0.95);  /*兼容-webkit-引擎浏览器*/
+    -moz-transform: scale(0.95, 0.95);     /*兼容-moz-引擎浏览器*/
+}

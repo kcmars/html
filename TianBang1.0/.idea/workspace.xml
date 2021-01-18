@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="b49abdd0-004d-4e1b-9d49-7606dd84e23b" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/css/base/home.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/base/index.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/base/me.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/freight/bigInfo.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/freight/feed.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/freight/index.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/freight/judge.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/freight/move.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/freight/order.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/freight/rule.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/freight/seek.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/freight/send.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/message/message.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/public/base.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/public/listloading.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/public/main.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/public/swiper.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/html/base/home.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/html/base/me.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/html/base/more.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/html/freight/bigInfo.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/html/freight/feedBack.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/html/freight/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/html/freight/judge.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/html/freight/move.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/html/freight/order.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/html/freight/orderDetail.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/html/freight/rule.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/html/freight/seek.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/html/freight/send.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/html/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/html/message/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/banner/banner1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/banner/banner2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/banner/banner3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/freight/add.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/freight/delete.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/freight/slide.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/freight/star_grey.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/freight/star_yellow.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/freight/tab1-a.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/freight/tab1-b.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/freight/tab2-a.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/freight/tab2-b.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/freight/tab3-a.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/freight/tab3-b.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/freight/tab4-a.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/freight/tab4-b.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/logo/logo124x124.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/logo/logo180x100.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/other/arrow_left_black.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/other/arrow_right_black.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/other/bg.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/other/bg1.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/other/head.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/tab/slide1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/tab/slide2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/tab/slide3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/public/alert.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/public/auto-size.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/public/doT.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/public/http.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/public/iscroll.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/public/jquery-1.8.1.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/public/listloading.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/public/loading.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/public/swiper.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/public/toast.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/public/tool.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/public/zepto.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../运输宝1.0/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../运输宝1.0/.idea/workspace.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="JavaScript File" />
+        <option value="CSS File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="hiddenUrls">
+      <set>
+        <option value="https://github.com/kcmars/html" />
+      </set>
+    </option>
+  </component>
+  <component name="ProjectId" id="1iqfeh93vjp6sJJBGB7RDCBWhV1" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/html/freight" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="settings.editor.selected.configurable" value="project.propDebugger" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\我的项目\html\TianBang1.0\html\freight" />
+      <recent name="E:\我的项目\html\TianBang1.0\img\freight" />
+      <recent name="E:\我的项目\html\TianBang1.0\img\logo" />
+      <recent name="E:\我的项目\html\TianBang1.0\css\freight" />
+      <recent name="E:\我的项目\html\TianBang1.0\css\base" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\我的项目\html\TianBang1.0\js\public" />
+      <recent name="E:\我的项目\html\TianBang1.0\css\public" />
+      <recent name="E:\我的项目\html\TianBang1.0\css\message" />
+      <recent name="E:\我的项目\html\TianBang1.0\html\message" />
+      <recent name="E:\我的项目\html\TianBang1.0\img\other" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="b49abdd0-004d-4e1b-9d49-7606dd84e23b" name="Default Changelist" comment="" />
+      <created>1602640140039</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1602640140039</updated>
+      <workItem from="1602640141069" duration="9637000" />
+      <workItem from="1602727831178" duration="602000" />
+      <workItem from="1602814831110" duration="597000" />
+      <workItem from="1603160380742" duration="2185000" />
+      <workItem from="1603187108428" duration="334000" />
+      <workItem from="1603243630118" duration="2247000" />
+      <workItem from="1604026342290" duration="589000" />
+      <workItem from="1604281593346" duration="672000" />
+      <workItem from="1604371527382" duration="3557000" />
+      <workItem from="1604456347833" duration="3831000" />
+      <workItem from="1604540310736" duration="5809000" />
+      <workItem from="1604884946079" duration="327000" />
+      <workItem from="1604885295543" duration="2675000" />
+      <workItem from="1604907964805" duration="21000" />
+      <workItem from="1605147055018" duration="1469000" />
+      <workItem from="1605148740185" duration="24000" />
+      <workItem from="1605148868459" duration="45000" />
+      <workItem from="1605239394320" duration="1035000" />
+      <workItem from="1605662965209" duration="13365000" />
+      <workItem from="1605748939927" duration="428000" />
+      <workItem from="1605749445794" duration="7000" />
+      <workItem from="1605749800092" duration="54000" />
+      <workItem from="1605749872836" duration="34000" />
+      <workItem from="1605749949002" duration="74000" />
+      <workItem from="1605752818734" duration="15314000" />
+      <workItem from="1605835025638" duration="5244000" />
+      <workItem from="1606180439756" duration="16696000" />
+      <workItem from="1606267122096" duration="14105000" />
+      <workItem from="1606353281424" duration="2892000" />
+      <workItem from="1606439825452" duration="10292000" />
+      <workItem from="1606463348084" duration="7108000" />
+      <workItem from="1606699404304" duration="4020000" />
+      <workItem from="1606894811755" duration="11114000" />
+      <workItem from="1606957587601" duration="883000" />
+      <workItem from="1606958499812" duration="9405000" />
+      <workItem from="1606976247691" duration="11645000" />
+      <workItem from="1607045019295" duration="1466000" />
+      <workItem from="1607303636965" duration="6348000" />
+      <workItem from="1607403589784" duration="10000" />
+      <workItem from="1607653538976" duration="2502000" />
+      <workItem from="1607909489301" duration="4158000" />
+      <workItem from="1609119532456" duration="7375000" />
+      <workItem from="1609206395689" duration="1447000" />
+      <workItem from="1609292050091" duration="1200000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="623" y="199" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1605770346494">
+      <screen x="0" y="0" width="1920" height="1032" />
+    </state>
+    <state x="623" y="199" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1032@0.0.1920.1032" timestamp="1605770346494" />
+    <state x="458" y="2" key="CommitChangelistDialog2" timestamp="1606977514453">
+      <screen x="0" y="0" width="1920" height="1032" />
+    </state>
+    <state x="458" y="2" key="CommitChangelistDialog2/0.0.1920.1032@0.0.1920.1032" timestamp="1606977514453" />
+    <state x="686" y="209" key="FileChooserDialogImpl" timestamp="1606203992119">
+      <screen x="0" y="0" width="1920" height="1032" />
+    </state>
+    <state x="686" y="209" key="FileChooserDialogImpl/0.0.1920.1032@0.0.1920.1032" timestamp="1606203992119" />
+    <state x="335" y="56" key="SettingsEditor" timestamp="1605753688371">
+      <screen x="0" y="0" width="1920" height="1032" />
+    </state>
+    <state x="335" y="56" key="SettingsEditor/0.0.1920.1032@0.0.1920.1032" timestamp="1605753688371" />
+    <state x="531" y="227" key="run.anything.popup" timestamp="1607306697420">
+      <screen x="0" y="0" width="1920" height="1032" />
+    </state>
+    <state x="531" y="227" key="run.anything.popup/0.0.1920.1032@0.0.1920.1032" timestamp="1607306697420" />
+    <state x="539" y="-1" width="840" height="1034" key="search.everywhere.popup" timestamp="1606189757027">
+      <screen x="0" y="0" width="1920" height="1032" />
+    </state>
+    <state x="539" y="-1" width="840" height="1034" key="search.everywhere.popup/0.0.1920.1032@0.0.1920.1032" timestamp="1606189757027" />
+  </component>
+</project>

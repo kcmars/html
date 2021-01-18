@@ -1,0 +1,296 @@
+.order-main {
+    width: 100%;
+    height: 100%;
+    background: #f1f3f5;
+    max-width: 500px;
+}
+.title-bar {
+    background: #ffffff;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid #f1f3f5;
+}
+.title-bar span {
+    flex: 1;
+    text-align: center;
+    font-size: 16px;
+    color: #666666;
+    padding: 15px 0;
+}
+.title-bar .active {
+    color: #259012;
+    border-bottom: 1px solid #259012;
+}
+.listloading-list {
+    width: 100%;
+    height: 100%;
+    overflow: scroll;
+}
+.order-list {
+    height: 100%;
+    overflow: scroll;
+}
+.order-list li {
+    background: #ffffff;
+    padding: 0 15px;
+    margin: 5px 10px;
+    border-radius: 10px;
+}
+.item-row {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid #f1f3f5;
+}
+.item-row .logo {
+    width: 40px;
+    height: auto;
+}
+.item-row .name {
+    flex: 1;
+    color: #333333;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 0 10px;
+    line-height: 20px;
+}
+.item-row .status {
+    color: #555555;
+    font-size: 14px;
+}
+.item-row .ad {
+    flex: 1;
+    overflow: hidden;
+}
+.item-row .ad .ad-item {
+    font-size: 14px;
+    color: #333333;
+    display: flex;
+    flex-direction: row;
+    padding: 5px 0;
+    line-height: 20px;
+}
+.item-row .ad .ad-item .address {
+    flex: 1;
+}
+.t-e {
+    overflow: hidden;
+    text-overflow:ellipsis;
+    white-space: nowrap;
+}
+.item-row .price {
+    color: #fea409;
+    font-size: 18px;
+}
+.item-row .truck {
+    font-size: 14px;
+    color: #333333;
+    padding: 5px 0;
+}
+.item-row .r-n {
+    font-size: 14px;
+    color: #333333;
+    padding: 5px 0;
+}
+.item-row .phone {
+    width: 30px;
+    height: auto;
+    margin-right: 10px;
+}
+.item-row .time {
+    color: #555555;
+    font-size: 12px;
+}
+.b-b {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+}
+.b-b .judge {
+    background: #fd8227;
+    color: #ffffff;
+    font-size: 14px;
+    padding: 5px 15px;
+    margin-right: 20px;
+    border: 1px solid #fd8227;
+    border-radius: 5px;
+}
+.b-b .detail {
+    background: #FFFFFF;
+    border: 1px solid #333333;
+    color: #333333;
+    font-size: 14px;
+    padding: 5px 15px;
+    border-radius: 5px;
+}
+.b-b .feed {
+    background: #FFFFFF;
+    border: 1px solid #333333;
+    color: #333333;
+    font-size: 14px;
+    padding: 5px 15px;
+    border-radius: 5px;
+}
+.b-b .cancel {
+    background: #FFFFFF;
+    border: 1px solid #333333;
+    color: #333333;
+    font-size: 14px;
+    margin-right: 20px;
+    padding: 5px 15px;
+    border-radius: 5px;
+}
+.b-b .judge:active,
+.b-b .cancel:active,
+.b-b .detail:active,
+.b-b .feed:active,
+.order-row .row .row-r:active {
+    transform: scale(0.95, 0.95);
+    -webkit-transform: scale(0.95, 0.95);  /*兼容-webkit-引擎浏览器*/
+    -moz-transform: scale(0.95, 0.95);     /*兼容-moz-引擎浏览器*/
+}
+.order {
+    width: 100%;
+    height: 100%;
+    background: #ffffff;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+}
+.order .header {
+    display: flex;
+    flex-direction: row;
+    padding: 15px;
+}
+.order .header .head-item {
+    width: 40px;
+    position: relative;
+}
+.order .header .head-item img {
+    display: block;
+    width: 20px;
+    height: auto;
+}
+.order .header .head-item i {
+    position: absolute;
+    z-index: 1;
+    right: 0;
+    top: -5px;
+    width: 10px;
+    height: 10px;
+    background: #ee0909;
+    border-radius: 10px;
+}
+.order .header .title {
+    flex: 1;
+    text-align: center;
+    font-size: 20px;
+    color: #000000;
+}
+.order .content {
+    flex: 1;
+    background-color: #f1f3f5;
+    overflow-y: scroll;
+    padding: 0 5px;
+}
+.order-row {
+    position: relative;
+    padding: 10px;
+    background: #FFFFFF;
+    border-radius: 10px;
+    margin: 5px 0;
+}
+.order-row .status {
+    font-size: 16px;
+    font-weight: 600;
+    color: #000000;
+}
+.order-t {
+
+}
+.order-t:after {
+    content: '';
+    width: 1px;
+    position: absolute;
+    top: 23px;
+    bottom: 23px;
+    left: 155px;
+    z-index: 1;
+    background: #C5C5C5;
+}
+.order-t li {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+}
+.order-t li .time {
+    width: 130px;
+    text-align: right;
+    padding: 10px 0;
+    font-size: 15px;
+    color: #999999;
+}
+.order-t li .text {
+    flex: 1;
+    padding: 10px 0 10px 30px;
+    font-size: 15px;
+    color: #999999;
+}
+.order-t li .text:after {
+    content: '';
+    width: 10px;
+    height: 10px;
+    background: #C5C5C5;
+    border: 1px solid #FFFFFF;
+    position: absolute;
+    border-radius: 50%;
+    left: 139px;
+    top: 12px;
+    z-index: 2;
+}
+.order-t .active .time,
+.order-t .active .text {
+    font-size: 15px;
+    color: #fd8227;
+}
+.order-t .active .text:after {
+    content: '';
+    width: 10px;
+    height: 10px;
+    background: #fd8227;
+    border: 1px solid #FFFFFF;
+    position: absolute;
+    border-radius: 50%;
+    left: 139px;
+    top: 12px;
+    z-index: 2;
+}
+.order-row .row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0;
+}
+.order-row .row .row-l {
+    font-size: 14px;
+    color: #333333;
+}
+.order-row .row .row-c {
+    font-size: 14px;
+    color: #333333;
+}
+.order-row .row .row-r {
+    font-size: 14px;
+    color: #333333;
+    border: 1px solid #333333;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
